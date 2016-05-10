@@ -12,6 +12,9 @@ namespace Test
         {
             Console.WriteLine("Hello World, I love GitHub!");
             Console.WriteLine("tests");
+
+            Console.Write("Hoi bart, werkt dit?");
+            //hallo hallo
             //HELLOOOOOOOOOOO IVO
             //HET WERKT BITCHES
         }
