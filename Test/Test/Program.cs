@@ -21,6 +21,7 @@ namespace Test
             for (int homos; homos < 9001; homos++)
             {
                 Console.Write("homo");
+                //#fuckyou
             }
                 Console.ReadKey();
         }
