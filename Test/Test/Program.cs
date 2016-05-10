@@ -17,6 +17,7 @@ namespace Test
             //hallo hallo
             //HELLOOOOOOOOOOO IVO
             //HET WERKT BITCHES
+            Console.WriteLine("CykaBlyat idi nahuy");
         }
 
     }
