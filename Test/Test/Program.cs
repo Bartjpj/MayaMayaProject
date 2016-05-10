@@ -18,6 +18,11 @@ namespace Test
             //HELLOOOOOOOOOOO IVO
             //HET WERKT BITCHES
             Console.WriteLine("CykaBlyat idi nahuy");
+            for (int homos; homos < 9001; homos++)
+            {
+                Console.Write("homo");
+            }
+                Console.ReadKey();
         }
 
     }
