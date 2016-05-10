@@ -14,6 +14,7 @@ namespace Test
             Console.WriteLine("tests");
 
             Console.Write("Hoi bart, werkt dit?");
+            //hallo hallo
         }
     }
 }
