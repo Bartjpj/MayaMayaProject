@@ -24,6 +24,7 @@ namespace Test
                 //#fuckyou
             }
                 Console.ReadKey();
+            //rekterino
         }
 
     }
