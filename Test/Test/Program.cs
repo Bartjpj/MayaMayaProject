@@ -25,6 +25,15 @@ namespace Test
             }
                 Console.ReadKey();
             //rekterino
+
+            if(hacking intensifies > 9000)
+            {
+                hack NSA;
+            }
+            else
+            {
+                hack EARTH;
+            }
         }
 
     }
