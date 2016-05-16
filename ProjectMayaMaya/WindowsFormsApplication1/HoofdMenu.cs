@@ -22,7 +22,7 @@ namespace WindowsFormsApplication1
         {
             keukenBestellingOverzicht keukenWindowOpenen = new keukenBestellingOverzicht();
             keukenWindowOpenen.Show();
-            this.Close();
+            this.Hide();
         }
     }
 }
