@@ -31,18 +31,23 @@ namespace WindowsFormsApplication1
 
         private void txt_PersoneelsID_TextChanged(object sender, EventArgs e)
         {
-            string inlogCode = this.txt_PersoneelsID.ToString(); // invoer inlogcode voor een personeelslid 
-            
+            int inlogCode = Convert.ToInt32(this.txt_PersoneelsID); // invoer inlogcode voor een personeelslid 
+            string wachtwoordDummy = "altijdfout"; // dit is om bij de authenticator te checken welke sender het is.
+            Authenticatie.bedieningAuthenticatie(inlogCode, wachtwoordDummy);
         }
 
         private void txt_Wachtwoord_TextChanged(object sender, EventArgs e)
         {
             string wachtWoord = this.txt_Wachtwoord.ToString(); // invoer wachtwoord voor een personeelslid
+            int inlogcodeDummy = 1;
+            Authenticatie.bedieningAuthenticatie(inlogcodeDummy, wachtWoord);
         }
 
         private void btn_inloggen_Click(object sender, EventArgs e)
         {
-
+            string wachtwoordDummy = "altijdfout";
+            int inlogcodeDummy = 1;
+            Authenticatie.bedieningAuthenticatie(inlogcodeDummy, wachtwoordDummy);
         }
     }
 }
