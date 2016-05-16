@@ -24,5 +24,24 @@ namespace WindowsFormsApplication1
             keukenWindowOpenen.Show();
             this.Hide();
         }
+
+        private void btn_HMnaarBar_Click(object sender, EventArgs e)
+        {
+            BarOverzicht barWindowOpenen = new BarOverzicht();
+            barWindowOpenen.Show();
+            this.Hide();
+        }
+
+        private void btn_HMnaarBediening_Click(object sender, EventArgs e)
+        {
+            InlogSchermBediening bedieningWindowOpenen = new InlogSchermBediening();
+            bedieningWindowOpenen.Show();
+            this.Hide();
+        }
+
+        private void btn_ExitWindows_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

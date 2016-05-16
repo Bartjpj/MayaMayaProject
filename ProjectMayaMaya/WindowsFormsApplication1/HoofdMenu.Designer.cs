@@ -56,6 +56,7 @@
             this.btn_HMnaarBediening.TabIndex = 2;
             this.btn_HMnaarBediening.Text = "Bediening";
             this.btn_HMnaarBediening.UseVisualStyleBackColor = true;
+            this.btn_HMnaarBediening.Click += new System.EventHandler(this.btn_HMnaarBediening_Click);
             // 
             // btn_HMnaarBar
             // 
@@ -66,6 +67,7 @@
             this.btn_HMnaarBar.TabIndex = 3;
             this.btn_HMnaarBar.Text = "Bar";
             this.btn_HMnaarBar.UseVisualStyleBackColor = true;
+            this.btn_HMnaarBar.Click += new System.EventHandler(this.btn_HMnaarBar_Click);
             // 
             // lbl_HMtekst
             // 
@@ -95,6 +97,7 @@
             this.btn_ExitWindows.TabIndex = 6;
             this.btn_ExitWindows.Text = "Exit naar Windows";
             this.btn_ExitWindows.UseVisualStyleBackColor = true;
+            this.btn_ExitWindows.Click += new System.EventHandler(this.btn_ExitWindows_Click);
             // 
             // HoofdMenu
             // 
@@ -107,6 +110,7 @@
             this.Controls.Add(this.btn_HMnaarBar);
             this.Controls.Add(this.btn_HMnaarBediening);
             this.Controls.Add(this.btn_HMnaarKeuken);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "HoofdMenu";
             this.Text = "HoofdMenu";
             this.ResumeLayout(false);
