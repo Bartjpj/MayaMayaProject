@@ -8,14 +8,15 @@ namespace WindowsFormsApplication1
 {
     public class Authenticatie
     {
-        public static bool bedieningAuthenticatie(int x, string ww)
+        public bool inlogcode;
+        public bool wachtwoord;
+        public bool bedieningAuthenticatie(int x, string ww)
         {
-            bool inlogcode;
-            bool wachtwoord;
+            
             if (x != 1) {
                 if (x == 2552)
                 {
-                    inlogcode = true;
+                    this.inlogcode = true;
                 }
             }
 
@@ -23,7 +24,7 @@ namespace WindowsFormsApplication1
             {
                 if (ww == "Welkom123")
                 {
-                    wachtwoord = true;
+                    this.wachtwoord = true;
                 }
             }
 
