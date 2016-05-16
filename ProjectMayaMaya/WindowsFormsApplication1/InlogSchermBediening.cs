@@ -28,5 +28,21 @@ namespace WindowsFormsApplication1
             TerugNaarHoofdmenu.Show();
             this.Hide();
         }
+
+        private void txt_PersoneelsID_TextChanged(object sender, EventArgs e)
+        {
+            string inlogCode = this.txt_PersoneelsID.ToString(); // invoer inlogcode voor een personeelslid 
+            
+        }
+
+        private void txt_Wachtwoord_TextChanged(object sender, EventArgs e)
+        {
+            string wachtWoord = this.txt_Wachtwoord.ToString(); // invoer wachtwoord voor een personeelslid
+        }
+
+        private void btn_inloggen_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

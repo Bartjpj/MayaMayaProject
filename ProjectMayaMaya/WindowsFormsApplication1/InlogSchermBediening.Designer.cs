@@ -63,6 +63,7 @@
             this.txt_PersoneelsID.Name = "txt_PersoneelsID";
             this.txt_PersoneelsID.Size = new System.Drawing.Size(255, 20);
             this.txt_PersoneelsID.TabIndex = 2;
+            this.txt_PersoneelsID.TextChanged += new System.EventHandler(this.txt_PersoneelsID_TextChanged);
             // 
             // txt_Wachtwoord
             // 
@@ -70,6 +71,7 @@
             this.txt_Wachtwoord.Name = "txt_Wachtwoord";
             this.txt_Wachtwoord.Size = new System.Drawing.Size(255, 20);
             this.txt_Wachtwoord.TabIndex = 3;
+            this.txt_Wachtwoord.TextChanged += new System.EventHandler(this.txt_Wachtwoord_TextChanged);
             // 
             // lbl_wachtwoord
             // 
@@ -90,6 +92,7 @@
             this.btn_inloggen.TabIndex = 5;
             this.btn_inloggen.Text = "Inloggen";
             this.btn_inloggen.UseVisualStyleBackColor = true;
+            this.btn_inloggen.Click += new System.EventHandler(this.btn_inloggen_Click);
             // 
             // lbl_Bedieninglogininfo
             // 
