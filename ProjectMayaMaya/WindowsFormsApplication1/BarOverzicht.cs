@@ -16,5 +16,12 @@ namespace WindowsFormsApplication1
         {
             InitializeComponent();
         }
+
+        private void btn_BARnaarHM_Click(object sender, EventArgs e)
+        {
+            HoofdMenu TerugNaarHoofdmenu = new HoofdMenu();
+            TerugNaarHoofdmenu.Show();
+            this.Hide();
+        }
     }
 }

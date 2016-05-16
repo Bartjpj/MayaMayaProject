@@ -21,5 +21,12 @@ namespace WindowsFormsApplication1
         {
 
         }
+
+        private void btn_KeukenNaarHoofdmenu_Click(object sender, EventArgs e)
+        {
+            HoofdMenu TerugNaarHoofdmenu = new HoofdMenu();
+            TerugNaarHoofdmenu.Show();
+            this.Hide();
+        }
     }
 }

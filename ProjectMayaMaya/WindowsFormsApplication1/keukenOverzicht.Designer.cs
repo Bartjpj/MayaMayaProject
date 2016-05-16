@@ -41,9 +41,9 @@
             this.groep_BestellingKeukenX.Controls.Add(this.verticaal_ScrollBar);
             this.groep_BestellingKeukenX.Controls.Add(this.lbl_BestellingKeukenX);
             this.groep_BestellingKeukenX.Location = new System.Drawing.Point(11, 51);
-            this.groep_BestellingKeukenX.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groep_BestellingKeukenX.Margin = new System.Windows.Forms.Padding(2);
             this.groep_BestellingKeukenX.Name = "groep_BestellingKeukenX";
-            this.groep_BestellingKeukenX.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groep_BestellingKeukenX.Padding = new System.Windows.Forms.Padding(2);
             this.groep_BestellingKeukenX.Size = new System.Drawing.Size(254, 179);
             this.groep_BestellingKeukenX.TabIndex = 0;
             this.groep_BestellingKeukenX.TabStop = false;
@@ -68,13 +68,14 @@
             // 
             // btn_KeukenNaarHoofdmenu
             // 
-            this.btn_KeukenNaarHoofdmenu.Location = new System.Drawing.Point(617, 370);
-            this.btn_KeukenNaarHoofdmenu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_KeukenNaarHoofdmenu.Location = new System.Drawing.Point(576, 349);
+            this.btn_KeukenNaarHoofdmenu.Margin = new System.Windows.Forms.Padding(2);
             this.btn_KeukenNaarHoofdmenu.Name = "btn_KeukenNaarHoofdmenu";
-            this.btn_KeukenNaarHoofdmenu.Size = new System.Drawing.Size(134, 28);
+            this.btn_KeukenNaarHoofdmenu.Size = new System.Drawing.Size(175, 49);
             this.btn_KeukenNaarHoofdmenu.TabIndex = 1;
             this.btn_KeukenNaarHoofdmenu.Text = "Terug naar hoofdmenu";
             this.btn_KeukenNaarHoofdmenu.UseVisualStyleBackColor = true;
+            this.btn_KeukenNaarHoofdmenu.Click += new System.EventHandler(this.btn_KeukenNaarHoofdmenu_Click);
             // 
             // lbl_OpenstaandeBestellingenKeuken
             // 
@@ -94,7 +95,7 @@
             this.Controls.Add(this.lbl_OpenstaandeBestellingenKeuken);
             this.Controls.Add(this.btn_KeukenNaarHoofdmenu);
             this.Controls.Add(this.groep_BestellingKeukenX);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "keukenBestellingOverzicht";
             this.Text = "keukenBestellingOverzicht";
             this.groep_BestellingKeukenX.ResumeLayout(false);

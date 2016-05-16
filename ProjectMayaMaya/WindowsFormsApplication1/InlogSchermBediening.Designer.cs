@@ -103,12 +103,13 @@
             // 
             // btn_INLOGGENnaarHM
             // 
-            this.btn_INLOGGENnaarHM.Location = new System.Drawing.Point(542, 341);
+            this.btn_INLOGGENnaarHM.Location = new System.Drawing.Point(542, 391);
             this.btn_INLOGGENnaarHM.Name = "btn_INLOGGENnaarHM";
-            this.btn_INLOGGENnaarHM.Size = new System.Drawing.Size(209, 89);
+            this.btn_INLOGGENnaarHM.Size = new System.Drawing.Size(209, 39);
             this.btn_INLOGGENnaarHM.TabIndex = 7;
             this.btn_INLOGGENnaarHM.Text = "Terug naar Hoofdmenu";
             this.btn_INLOGGENnaarHM.UseVisualStyleBackColor = true;
+            this.btn_INLOGGENnaarHM.Click += new System.EventHandler(this.btn_INLOGGENnaarHM_Click);
             // 
             // InlogSchermBediening
             // 
@@ -123,7 +124,7 @@
             this.Controls.Add(this.txt_PersoneelsID);
             this.Controls.Add(this.lbl_personeelid);
             this.Controls.Add(this.btn_INLOGnaarHM);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "InlogSchermBediening";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

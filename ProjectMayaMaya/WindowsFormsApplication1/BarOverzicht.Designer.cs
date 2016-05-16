@@ -60,6 +60,7 @@
             this.btn_BARnaarHM.TabIndex = 2;
             this.btn_BARnaarHM.Text = "Terug naar Hoofdmenu";
             this.btn_BARnaarHM.UseVisualStyleBackColor = true;
+            this.btn_BARnaarHM.Click += new System.EventHandler(this.btn_BARnaarHM_Click);
             // 
             // BarOverzicht
             // 
