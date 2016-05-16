@@ -39,19 +39,22 @@
             // btn_HMnaarKeuken
             // 
             this.btn_HMnaarKeuken.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_HMnaarKeuken.Location = new System.Drawing.Point(187, 187);
+            this.btn_HMnaarKeuken.Location = new System.Drawing.Point(249, 230);
+            this.btn_HMnaarKeuken.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_HMnaarKeuken.Name = "btn_HMnaarKeuken";
-            this.btn_HMnaarKeuken.Size = new System.Drawing.Size(390, 49);
+            this.btn_HMnaarKeuken.Size = new System.Drawing.Size(520, 60);
             this.btn_HMnaarKeuken.TabIndex = 0;
             this.btn_HMnaarKeuken.Text = "Keuken";
             this.btn_HMnaarKeuken.UseVisualStyleBackColor = true;
+            this.btn_HMnaarKeuken.Click += new System.EventHandler(this.btn_HMnaarKeuken_Click);
             // 
             // btn_HMnaarBediening
             // 
             this.btn_HMnaarBediening.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_HMnaarBediening.Location = new System.Drawing.Point(187, 348);
+            this.btn_HMnaarBediening.Location = new System.Drawing.Point(249, 428);
+            this.btn_HMnaarBediening.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_HMnaarBediening.Name = "btn_HMnaarBediening";
-            this.btn_HMnaarBediening.Size = new System.Drawing.Size(387, 45);
+            this.btn_HMnaarBediening.Size = new System.Drawing.Size(516, 55);
             this.btn_HMnaarBediening.TabIndex = 2;
             this.btn_HMnaarBediening.Text = "Bediening";
             this.btn_HMnaarBediening.UseVisualStyleBackColor = true;
@@ -59,9 +62,10 @@
             // btn_HMnaarBar
             // 
             this.btn_HMnaarBar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_HMnaarBar.Location = new System.Drawing.Point(187, 266);
+            this.btn_HMnaarBar.Location = new System.Drawing.Point(249, 327);
+            this.btn_HMnaarBar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_HMnaarBar.Name = "btn_HMnaarBar";
-            this.btn_HMnaarBar.Size = new System.Drawing.Size(390, 49);
+            this.btn_HMnaarBar.Size = new System.Drawing.Size(520, 60);
             this.btn_HMnaarBar.TabIndex = 3;
             this.btn_HMnaarBar.Text = "Bar";
             this.btn_HMnaarBar.UseVisualStyleBackColor = true;
@@ -70,9 +74,10 @@
             // 
             this.lbl_HMtekst.AutoSize = true;
             this.lbl_HMtekst.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_HMtekst.Location = new System.Drawing.Point(284, 9);
+            this.lbl_HMtekst.Location = new System.Drawing.Point(379, 11);
+            this.lbl_HMtekst.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_HMtekst.Name = "lbl_HMtekst";
-            this.lbl_HMtekst.Size = new System.Drawing.Size(211, 42);
+            this.lbl_HMtekst.Size = new System.Drawing.Size(265, 54);
             this.lbl_HMtekst.TabIndex = 4;
             this.lbl_HMtekst.Text = "Hoofdmenu";
             // 
@@ -80,32 +85,35 @@
             // 
             this.lbl_aanwijzingtekst.AutoSize = true;
             this.lbl_aanwijzingtekst.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_aanwijzingtekst.Location = new System.Drawing.Point(183, 123);
+            this.lbl_aanwijzingtekst.Location = new System.Drawing.Point(244, 151);
+            this.lbl_aanwijzingtekst.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_aanwijzingtekst.Name = "lbl_aanwijzingtekst";
-            this.lbl_aanwijzingtekst.Size = new System.Drawing.Size(240, 24);
+            this.lbl_aanwijzingtekst.Size = new System.Drawing.Size(307, 29);
             this.lbl_aanwijzingtekst.TabIndex = 5;
             this.lbl_aanwijzingtekst.Text = "Gelieve uw afdeling kiezen:";
             // 
             // btn_ExitWindows
             // 
-            this.btn_ExitWindows.Location = new System.Drawing.Point(586, 482);
+            this.btn_ExitWindows.Location = new System.Drawing.Point(781, 593);
+            this.btn_ExitWindows.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_ExitWindows.Name = "btn_ExitWindows";
-            this.btn_ExitWindows.Size = new System.Drawing.Size(196, 75);
+            this.btn_ExitWindows.Size = new System.Drawing.Size(261, 92);
             this.btn_ExitWindows.TabIndex = 6;
             this.btn_ExitWindows.Text = "Exit naar Windows";
             this.btn_ExitWindows.UseVisualStyleBackColor = true;
             // 
             // HoofdMenu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(794, 569);
+            this.ClientSize = new System.Drawing.Size(1059, 700);
             this.Controls.Add(this.btn_ExitWindows);
             this.Controls.Add(this.lbl_aanwijzingtekst);
             this.Controls.Add(this.lbl_HMtekst);
             this.Controls.Add(this.btn_HMnaarBar);
             this.Controls.Add(this.btn_HMnaarBediening);
             this.Controls.Add(this.btn_HMnaarKeuken);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "HoofdMenu";
             this.Text = "HoofdMenu";
             this.ResumeLayout(false);
