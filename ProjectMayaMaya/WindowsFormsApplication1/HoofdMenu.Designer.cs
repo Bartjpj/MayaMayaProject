@@ -40,7 +40,7 @@
             // 
             this.btn_HMnaarKeuken.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_HMnaarKeuken.Location = new System.Drawing.Point(249, 230);
-            this.btn_HMnaarKeuken.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_HMnaarKeuken.Margin = new System.Windows.Forms.Padding(4);
             this.btn_HMnaarKeuken.Name = "btn_HMnaarKeuken";
             this.btn_HMnaarKeuken.Size = new System.Drawing.Size(520, 60);
             this.btn_HMnaarKeuken.TabIndex = 0;
@@ -52,23 +52,25 @@
             // 
             this.btn_HMnaarBediening.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_HMnaarBediening.Location = new System.Drawing.Point(249, 428);
-            this.btn_HMnaarBediening.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_HMnaarBediening.Margin = new System.Windows.Forms.Padding(4);
             this.btn_HMnaarBediening.Name = "btn_HMnaarBediening";
             this.btn_HMnaarBediening.Size = new System.Drawing.Size(516, 55);
             this.btn_HMnaarBediening.TabIndex = 2;
             this.btn_HMnaarBediening.Text = "Bediening";
             this.btn_HMnaarBediening.UseVisualStyleBackColor = true;
+            this.btn_HMnaarBediening.Click += new System.EventHandler(this.btn_HMnaarBediening_Click);
             // 
             // btn_HMnaarBar
             // 
             this.btn_HMnaarBar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_HMnaarBar.Location = new System.Drawing.Point(249, 327);
-            this.btn_HMnaarBar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_HMnaarBar.Margin = new System.Windows.Forms.Padding(4);
             this.btn_HMnaarBar.Name = "btn_HMnaarBar";
             this.btn_HMnaarBar.Size = new System.Drawing.Size(520, 60);
             this.btn_HMnaarBar.TabIndex = 3;
             this.btn_HMnaarBar.Text = "Bar";
             this.btn_HMnaarBar.UseVisualStyleBackColor = true;
+            this.btn_HMnaarBar.Click += new System.EventHandler(this.btn_HMnaarBar_Click);
             // 
             // lbl_HMtekst
             // 
@@ -95,12 +97,13 @@
             // btn_ExitWindows
             // 
             this.btn_ExitWindows.Location = new System.Drawing.Point(781, 593);
-            this.btn_ExitWindows.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_ExitWindows.Margin = new System.Windows.Forms.Padding(4);
             this.btn_ExitWindows.Name = "btn_ExitWindows";
             this.btn_ExitWindows.Size = new System.Drawing.Size(261, 92);
             this.btn_ExitWindows.TabIndex = 6;
             this.btn_ExitWindows.Text = "Exit naar Windows";
             this.btn_ExitWindows.UseVisualStyleBackColor = true;
+            this.btn_ExitWindows.Click += new System.EventHandler(this.btn_ExitWindows_Click);
             // 
             // HoofdMenu
             // 
@@ -113,7 +116,7 @@
             this.Controls.Add(this.btn_HMnaarBar);
             this.Controls.Add(this.btn_HMnaarBediening);
             this.Controls.Add(this.btn_HMnaarKeuken);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "HoofdMenu";
             this.Text = "HoofdMenu";
             this.ResumeLayout(false);
