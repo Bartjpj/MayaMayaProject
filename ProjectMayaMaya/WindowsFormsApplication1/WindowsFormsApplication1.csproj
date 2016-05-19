@@ -52,6 +52,12 @@
     <Compile Include="BarOverzicht.Designer.cs">
       <DependentUpon>BarOverzicht.cs</DependentUpon>
     </Compile>
+    <Compile Include="BestellingMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BestellingMenu.Designer.cs">
+      <DependentUpon>BestellingMenu.cs</DependentUpon>
+    </Compile>
     <Compile Include="inlogFoutAlert.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -86,6 +92,9 @@
     </Compile>
     <EmbeddedResource Include="BarOverzicht.resx">
       <DependentUpon>BarOverzicht.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BestellingMenu.resx">
+      <DependentUpon>BestellingMenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="inlogFoutAlert.resx">
       <DependentUpon>inlogFoutAlert.cs</DependentUpon>
