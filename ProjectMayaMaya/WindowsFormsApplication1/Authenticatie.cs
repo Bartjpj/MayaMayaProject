@@ -13,14 +13,11 @@ namespace WindowsFormsApplication1
         public bool bedieningAuthenticatie(int inlogCode)
         {
 
-            if (inlogCode == 1)
-            {
-                inlogBoolean = false;
                 if (inlogCode == 2552)
                 {
                     inlogBoolean = true;
                 }
-            }
+            
             
             if (inlogBoolean)
             {
