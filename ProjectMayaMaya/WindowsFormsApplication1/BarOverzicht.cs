@@ -12,7 +12,7 @@ namespace WindowsFormsApplication1
 {
     public partial class BarOverzicht : Form
     {
-        protected override void OnLoad(EventArgs e)
+        protected override void OnLoad(EventArgs e) // is de verwijzing, niets veranderen AUB
         {
             base.OnLoad(e);
             this.Location = Owner.Location;
@@ -27,7 +27,7 @@ namespace WindowsFormsApplication1
         {
             HoofdMenu TerugNaarHoofdmenu = new HoofdMenu();
             TerugNaarHoofdmenu.Show();
-            TerugNaarHoofdmenu.Left = this.Left;
+            TerugNaarHoofdmenu.Left = this.Left; // geeft de grote aan van deze form voor het te openen form
             TerugNaarHoofdmenu.Top = this.Top;
             TerugNaarHoofdmenu.Size = this.Size;
             this.Hide();
