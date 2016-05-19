@@ -35,7 +35,7 @@ namespace WindowsFormsApplication1
         private void btn_HMnaarBediening_Click(object sender, EventArgs e)
         {
             InlogSchermBediening bedieningWindowOpenen = new InlogSchermBediening();
-            bedieningWindowOpenen.Show();
+            bedieningWindowOpenen.Show(this);
             this.Hide();
         }
 
