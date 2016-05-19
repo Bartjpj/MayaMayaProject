@@ -38,8 +38,19 @@ namespace WindowsFormsApplication1
         private void btn_inloggen_Click(object sender, EventArgs e)
         {
             int inlogCode = txt_PersoneelsID_TextChanged(sender, e);
-            
-            
+            Authenticatie authenticatie = new Authenticatie();
+            bool juisteCode = authenticatie.bedieningAuthenticatie(inlogCode);
+            if (juisteCode)
+            {
+                TafelOverzicht inloggen = new TafelOverzicht();
+                inloggen.Show();
+                this.Hide();
+            }
+            else
+            {
+                inlogFoutAlert inlogFout = new inlogFoutAlert();
+                inlogFout.Show();
+            }
         }
     }
 }
