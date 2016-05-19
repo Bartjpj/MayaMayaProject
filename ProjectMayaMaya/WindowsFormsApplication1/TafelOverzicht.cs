@@ -21,6 +21,9 @@ namespace WindowsFormsApplication1
         {
             HoofdMenu TerugNaarHoofdmenu = new HoofdMenu();
             TerugNaarHoofdmenu.Show();
+            TerugNaarHoofdmenu.Left = this.Left;
+            TerugNaarHoofdmenu.Top = this.Top;
+            TerugNaarHoofdmenu.Size = this.Size;
             this.Hide();
         }
 

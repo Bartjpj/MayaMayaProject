@@ -12,6 +12,12 @@ namespace WindowsFormsApplication1
 {
     public partial class BarOverzicht : Form
     {
+        protected override void OnLoad(EventArgs e)
+        {
+            base.OnLoad(e);
+            this.Location = Owner.Location;
+            this.Size = Owner.Size;
+        }
         public BarOverzicht()
         {
             InitializeComponent();
@@ -21,6 +27,9 @@ namespace WindowsFormsApplication1
         {
             HoofdMenu TerugNaarHoofdmenu = new HoofdMenu();
             TerugNaarHoofdmenu.Show();
+            TerugNaarHoofdmenu.Left = this.Left;
+            TerugNaarHoofdmenu.Top = this.Top;
+            TerugNaarHoofdmenu.Size = this.Size;
             this.Hide();
         }
     }

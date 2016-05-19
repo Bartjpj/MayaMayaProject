@@ -21,14 +21,14 @@ namespace WindowsFormsApplication1
         private void btn_HMnaarKeuken_Click(object sender, EventArgs e)
         {
             keukenBestellingOverzicht keukenWindowOpenen = new keukenBestellingOverzicht(); // instantie van class keukenBestelling overzicht
-            keukenWindowOpenen.Show();  // Opent het form keukenWindowOpenen, het object van KeukenBestellingOverzicht.
+            keukenWindowOpenen.Show(this);  // Opent het form keukenWindowOpenen, het object van KeukenBestellingOverzicht.
             this.Hide(); // window/form die open stond verbergen
         }
 
         private void btn_HMnaarBar_Click(object sender, EventArgs e)
         {
             BarOverzicht barWindowOpenen = new BarOverzicht();
-            barWindowOpenen.Show();
+            barWindowOpenen.Show(this);
             this.Hide();
         }
 
