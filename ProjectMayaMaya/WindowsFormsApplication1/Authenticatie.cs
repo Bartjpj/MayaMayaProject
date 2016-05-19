@@ -8,18 +8,21 @@ namespace WindowsFormsApplication1
 {
     public class Authenticatie
     {
-        public bool inlogcode;
+        public bool inlogBoolean;
 
         public bool bedieningAuthenticatie(int inlogCode)
         {
-            
-           
-            if (inlogCode == 2552)
+
+            if (inlogCode == 1)
             {
-                inlogcode = true;
+                inlogBoolean = false;
+                if (inlogCode == 2552)
+                {
+                    inlogBoolean = true;
+                }
             }
             
-            if (inlogcode)
+            if (inlogBoolean)
             {
                 return true;
             }
