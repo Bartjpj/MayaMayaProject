@@ -30,6 +30,7 @@
         {
             this.cbox_selecteerkaart = new System.Windows.Forms.ComboBox();
             this.lbl_selecteerkaart = new System.Windows.Forms.Label();
+            this.btn_BestellingMENUnaarHM = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // cbox_selecteerkaart
@@ -52,11 +53,22 @@
             this.lbl_selecteerkaart.TabIndex = 1;
             this.lbl_selecteerkaart.Text = "Selecteer Menu Kaart";
             // 
+            // btn_BestellingMENUnaarHM
+            // 
+            this.btn_BestellingMENUnaarHM.Location = new System.Drawing.Point(387, 294);
+            this.btn_BestellingMENUnaarHM.Name = "btn_BestellingMENUnaarHM";
+            this.btn_BestellingMENUnaarHM.Size = new System.Drawing.Size(188, 43);
+            this.btn_BestellingMENUnaarHM.TabIndex = 2;
+            this.btn_BestellingMENUnaarHM.Text = "Terug naar Hoofdmenu";
+            this.btn_BestellingMENUnaarHM.UseVisualStyleBackColor = true;
+            this.btn_BestellingMENUnaarHM.Click += new System.EventHandler(this.btn_BestellingMENUnaarHM_Click);
+            // 
             // BestellingMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(601, 414);
+            this.Controls.Add(this.btn_BestellingMENUnaarHM);
             this.Controls.Add(this.lbl_selecteerkaart);
             this.Controls.Add(this.cbox_selecteerkaart);
             this.Name = "BestellingMenu";
@@ -70,6 +82,7 @@
 
         private System.Windows.Forms.ComboBox cbox_selecteerkaart;
         private System.Windows.Forms.Label lbl_selecteerkaart;
+        private System.Windows.Forms.Button btn_BestellingMENUnaarHM;
 
     }
 }

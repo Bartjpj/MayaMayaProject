@@ -29,7 +29,11 @@ namespace WindowsFormsApplication1
 
         private void btn_Tafel1_Click(object sender, EventArgs e)
         {
-            btn_Tafel1.BackColor = Color.Red;
+            BestellingMenu BestellingMenuOpenen = new BestellingMenu();
+            BestellingMenuOpenen.Show(this); // verwijst naar winform in grote van parent window (zie OnLoad in te openen form)
+            this.Hide();
+            
+            //btn_Tafel1.BackColor = Color.Red;
         }
     }
 }

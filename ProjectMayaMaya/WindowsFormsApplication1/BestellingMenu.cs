@@ -16,17 +16,21 @@ namespace WindowsFormsApplication1
         {
             InitializeComponent();
         }
-
-        private void treeView1_AfterSelect(object sender, TreeViewEventArgs e)
-        {
-            
-        }
-
         private void cbox_selecteerkaart_SelectedIndexChanged(object sender, EventArgs e)
         {
             cbox_selecteerkaart.Items.Add("Dranken");
             cbox_selecteerkaart.Items.Add("Lunch");
             cbox_selecteerkaart.Items.Add("Diner");
+        }
+
+        private void btn_BestellingMENUnaarHM_Click(object sender, EventArgs e)
+        {
+            HoofdMenu TerugNaarHoofdmenu = new HoofdMenu();
+            TerugNaarHoofdmenu.Show();
+            TerugNaarHoofdmenu.Left = this.Left; // geeft de grote aan van deze form voor het te openen form
+            TerugNaarHoofdmenu.Top = this.Top;
+            TerugNaarHoofdmenu.Size = this.Size;
+            this.Hide();
         }
     }
 }
