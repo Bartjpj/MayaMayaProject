@@ -62,5 +62,10 @@ namespace WindowsFormsApplication1
                 inlogFout.ShowDialog(this);
             }
         }
+
+        private void txt_PersoneelsID_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar); // zorgt ervoor dat bij een keypress er geen letters worden getolereerd.
+        }
     }
 }
