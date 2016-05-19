@@ -29,25 +29,17 @@ namespace WindowsFormsApplication1
             this.Hide();
         }
 
-        private void txt_PersoneelsID_TextChanged(object sender, EventArgs e)
+        private int txt_PersoneelsID_TextChanged(object sender, EventArgs e)
         {
             int inlogCode = Convert.ToInt32(this.txt_PersoneelsID); // invoer inlogcode voor een personeelslid 
-            string wachtwoordDummy = "altijdfout"; // dit is om bij de authenticator te checken welke sender het is.
-            Authenticatie.bedieningAuthenticatie(inlogCode, wachtwoordDummy);
-        }
-
-        private void txt_Wachtwoord_TextChanged(object sender, EventArgs e)
-        {
-            string wachtWoord = this.txt_Wachtwoord.ToString(); // invoer wachtwoord voor een personeelslid
-            int inlogcodeDummy = 1;
-            Authenticatie.bedieningAuthenticatie(inlogcodeDummy, wachtWoord);
+            return inlogCode; //geef inlogcode terug aan inlogbutton. Vanuit de button wordt de authenticatie geregeld.
         }
 
         private void btn_inloggen_Click(object sender, EventArgs e)
         {
-            string wachtwoordDummy = "altijdfout";
-            int inlogcodeDummy = 1;
-            Authenticatie.bedieningAuthenticatie(inlogcodeDummy, wachtwoordDummy);
+            int inlogCode = txt_PersoneelsID_TextChanged(sender, e);
+            
+            
         }
     }
 }
