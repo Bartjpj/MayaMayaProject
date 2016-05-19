@@ -40,15 +40,8 @@ namespace WindowsFormsApplication1
 
         private int txt_PersoneelsID_TextChanged(object sender, EventArgs e)
         {
-            try
-            {
                 int inlogCode = Convert.ToInt32(txt_PersoneelsID.Text); // invoer inlogcode voor een personeelslid 
                 return inlogCode; //geef inlogcode terug aan inlogbutton. Vanuit de button wordt de authenticatie geregeld.
-            }
-            catch
-            {
-                return 1;
-            }
         }
 
         private void btn_inloggen_Click(object sender, EventArgs e)
