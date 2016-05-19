@@ -40,16 +40,16 @@ namespace WindowsFormsApplication1
 
         private int txt_PersoneelsID_TextChanged(object sender, EventArgs e)
         {
-            int inlogCode = Convert.ToInt32(this.txt_PersoneelsID); // invoer inlogcode voor een personeelslid 
+            int inlogCode = Convert.ToInt32(txt_PersoneelsID.Text); // invoer inlogcode voor een personeelslid 
             return inlogCode; //geef inlogcode terug aan inlogbutton. Vanuit de button wordt de authenticatie geregeld.
         }
 
         private void btn_inloggen_Click(object sender, EventArgs e)
         {
-            int inlogCode = txt_PersoneelsID_TextChanged(sender, e);
-            Authenticatie authenticatie = new Authenticatie();
-            bool juisteCode = authenticatie.bedieningAuthenticatie(inlogCode);
-            if (juisteCode)
+            int inlogCode = txt_PersoneelsID_TextChanged(sender, e); //grijp de inlogcode van de inlogcode tekstbox
+            Authenticatie authenticatie = new Authenticatie(); // run authenticatie die gaat kijken of het ingevoerde nummer in de database voorkomt
+            bool juisteCode = authenticatie.bedieningAuthenticatie(inlogCode); // juistecode neemt boolwaarde van authenticatie aan (false is verkeerd, true is goed)
+            if (juisteCode) // ga naar tafeloverzicht als het true is, geef een alert als het false.
             {
                 TafelOverzicht inloggen = new TafelOverzicht();
                 inloggen.Show();
