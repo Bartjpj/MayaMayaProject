@@ -58,7 +58,8 @@ namespace WindowsFormsApplication1
             else
             {
                 inlogFoutAlert inlogFout = new inlogFoutAlert();
-                inlogFout.Show();
+                inlogFout.StartPosition = FormStartPosition.CenterParent;
+                inlogFout.ShowDialog(this);
             }
         }
     }
