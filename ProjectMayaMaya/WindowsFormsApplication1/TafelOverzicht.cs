@@ -33,7 +33,7 @@ namespace WindowsFormsApplication1
             BestellingMenuOpenen.Show(this); // verwijst naar winform in grote van parent window (zie OnLoad in te openen form)
             this.Hide();
             
-            //btn_Tafel1.BackColor = Color.Red;
+            btn_Tafel1.BackColor = Color.Red;
         }
     }
 }
