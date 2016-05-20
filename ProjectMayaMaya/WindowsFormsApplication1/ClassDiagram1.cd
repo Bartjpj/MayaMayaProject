@@ -1,14 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="WindowsFormsApplication1.BestellingMenu" Collapsed="true">
-    <Position X="0.5" Y="0.5" Width="1.5" />
+    <Position X="0.75" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAIAAAACQAAABCAACAAAACEAMAAAAAAAAACAAEAAA=</HashCode>
       <FileName>BestellingMenu.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="WindowsFormsApplication1.Rekening">
-    <Position X="3.75" Y="1" Width="1.5" />
+    <Position X="3" Y="1" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AABAABAAAAgAAAAAABAAAAAAAgAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Rekening.cs</FileName>
