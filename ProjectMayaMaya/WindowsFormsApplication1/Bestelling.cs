@@ -13,8 +13,7 @@ namespace WindowsFormsApplication1
         {
 
         }
-        private bool keukenGereedmelden;
-        private bool barGereedmelden;
+ 
 
         public Tafel Tafel
         {

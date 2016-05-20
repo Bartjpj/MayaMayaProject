@@ -7,6 +7,7 @@ namespace WindowsFormsApplication1
 {
     public class KeukenPersoneelsLid : PersoneelLid
     {
+        private bool keukenGereedmelden;
         private void bestellingIsGereed()
         {
 

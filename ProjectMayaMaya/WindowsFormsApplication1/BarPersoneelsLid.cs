@@ -11,6 +11,7 @@ namespace WindowsFormsApplication1
         {
 
         }
+        private bool barGereedmelden;
 
     }
 }

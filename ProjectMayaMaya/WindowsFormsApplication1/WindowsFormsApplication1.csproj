@@ -90,7 +90,9 @@
       <DependentUpon>HoofdMenu.cs</DependentUpon>
     </Compile>
     <Compile Include="KeukenPersoneelsLid.cs" />
+    <Compile Include="MenuCategorie.cs" />
     <Compile Include="MenuItemDAO.cs" />
+    <Compile Include="MenuKaart.cs" />
     <Compile Include="PersoneelLid.cs" />
     <Compile Include="PersoneelsLid.cs" />
     <Compile Include="PersoneelsLidDAO.cs" />
