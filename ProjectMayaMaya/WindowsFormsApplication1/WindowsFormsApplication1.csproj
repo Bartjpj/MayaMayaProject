@@ -54,6 +54,9 @@
       <DependentUpon>BarOverzicht.cs</DependentUpon>
     </Compile>
     <Compile Include="BarPersoneelsLid.cs" />
+    <Compile Include="Bestelling.cs" />
+    <Compile Include="BestellingDAO.cs" />
+    <Compile Include="BestellingItem.cs" />
     <Compile Include="BestellingMenu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -72,6 +75,7 @@
     <Compile Include="InlogSchermBediening.Designer.cs">
       <DependentUpon>InlogSchermBediening.cs</DependentUpon>
     </Compile>
+    <Compile Include="Item.cs" />
     <Compile Include="Kelner.cs" />
     <Compile Include="keukenOverzicht.cs">
       <SubType>Form</SubType>
@@ -86,8 +90,10 @@
       <DependentUpon>HoofdMenu.cs</DependentUpon>
     </Compile>
     <Compile Include="KeukenPersoneelsLid.cs" />
+    <Compile Include="MenuItemDAO.cs" />
     <Compile Include="PersoneelLid.cs" />
     <Compile Include="PersoneelsLid.cs" />
+    <Compile Include="PersoneelsLidDAO.cs" />
     <Compile Include="PersoneelslidID.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

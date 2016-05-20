@@ -10,7 +10,18 @@ namespace WindowsFormsApplication1
         rekeningEnum betaalWijze; // er zijn 3 betaalwijzes pin, contant creditcard
         
         public double totaaPrijs; //veld om totaalprijs in te stoppen
-        public int hoeveelheidMenuitem; // veld om de hoeveelheidMenu-items aan te geven
+        public int hoeveelheidMenuitem;
+
+        public Bestelling Bestelling
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        } // veld om de hoeveelheidMenu-items aan te geven
 
         private void berekenTotaalPrijs(){
         }

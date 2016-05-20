@@ -5,13 +5,7 @@ using System.Text;
 
 namespace WindowsFormsApplication1
 {
-    public class Tafel
+    public class BestellingDAO
     {
-        public int Tafel_id;
-
-        public void isBezet()
-        {
-
-        }
     }
 }

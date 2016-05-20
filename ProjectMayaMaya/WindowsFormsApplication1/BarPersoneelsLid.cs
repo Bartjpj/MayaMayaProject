@@ -7,13 +7,10 @@ namespace WindowsFormsApplication1
 {
     public class BarPersoneelsLid : PersoneelLid
     {
-        private void bestellingGereedMelden()
+        private void bestellingIsGereed()
         {
 
         }
-        private void isGereed()
-        {
 
-        }
     }
 }
