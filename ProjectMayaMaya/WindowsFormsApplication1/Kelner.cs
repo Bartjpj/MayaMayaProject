@@ -5,7 +5,7 @@ using System.Text;
 
 namespace WindowsFormsApplication1
 {
-    public class Kelner
+    public class Kelner : PersoneelLid
     {
         private void bestellingOpnemen()
         {
@@ -15,6 +15,13 @@ namespace WindowsFormsApplication1
         {
 
         }
-        private void rekeningAfdrukken();
+        private void rekeningAfdrukken()
+        {
+
+        }
+        private void zieTafels()
+        {
+
+        }
     }
 }

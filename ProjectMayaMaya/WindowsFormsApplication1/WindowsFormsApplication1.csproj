@@ -85,6 +85,7 @@
     <Compile Include="HoofdMenu.Designer.cs">
       <DependentUpon>HoofdMenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="KeukenPersoneelsLid.cs" />
     <Compile Include="PersoneelLid.cs" />
     <Compile Include="PersoneelsLid.cs" />
     <Compile Include="PersoneelslidID.cs" />
@@ -92,6 +93,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Rekening.cs" />
     <Compile Include="rekeningEnum.cs" />
+    <Compile Include="Tafel.cs" />
     <Compile Include="TafelOverzicht.cs">
       <SubType>Form</SubType>
     </Compile>

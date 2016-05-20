@@ -5,13 +5,13 @@ using System.Text;
 
 namespace WindowsFormsApplication1
 {
-    public class BarPersoneelsLid : PersoneelLid
+    public class KeukenPersoneelsLid : PersoneelLid
     {
         private void bestellingGereedMelden()
         {
 
         }
-        private void isGereed()
+        private void bestellingKlaarmaken()
         {
 
         }
