@@ -53,6 +53,7 @@
     <Compile Include="BarOverzicht.Designer.cs">
       <DependentUpon>BarOverzicht.cs</DependentUpon>
     </Compile>
+    <Compile Include="BarPersoneelsLid.cs" />
     <Compile Include="BestellingMenu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -71,6 +72,7 @@
     <Compile Include="InlogSchermBediening.Designer.cs">
       <DependentUpon>InlogSchermBediening.cs</DependentUpon>
     </Compile>
+    <Compile Include="Kelner.cs" />
     <Compile Include="keukenOverzicht.cs">
       <SubType>Form</SubType>
     </Compile>
