@@ -48,6 +48,7 @@
             this.groep_BestellingKeukenX.TabIndex = 0;
             this.groep_BestellingKeukenX.TabStop = false;
             this.groep_BestellingKeukenX.Text = "Bestelling X";
+            this.groep_BestellingKeukenX.Enter += new System.EventHandler(this.groep_BestellingKeukenX_Enter);
             // 
             // verticaal_ScrollBar
             // 
