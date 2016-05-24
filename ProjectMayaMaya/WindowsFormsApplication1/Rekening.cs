@@ -7,7 +7,7 @@ namespace WindowsFormsApplication1
 {
     public class Rekening
     {
-        rekeningEnum betaalWijze; // er zijn 3 betaalwijzes pin, contant creditcard
+        rekeningEnum BetaalwijzeEnum; // er zijn 3 betaalwijzes pin, contant creditcard
         
         public double totaaPrijs; //veld om totaalprijs in te stoppen
         public int hoeveelheidMenuitem;
