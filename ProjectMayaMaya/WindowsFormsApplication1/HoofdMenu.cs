@@ -17,7 +17,6 @@ namespace WindowsFormsApplication1
             InitializeComponent();
 
         }
-
         private void btn_HMnaarKeuken_Click(object sender, EventArgs e)
         {
             keukenBestellingOverzicht keukenWindowOpenen = new keukenBestellingOverzicht(); // instantie van class keukenBestelling overzicht
