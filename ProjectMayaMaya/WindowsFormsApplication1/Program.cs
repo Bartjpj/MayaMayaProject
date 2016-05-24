@@ -14,11 +14,7 @@ namespace WindowsFormsApplication1
         /// The main entry point for the application.
         /// </summary>
         /// 
-        private void testSQL(){
-        string connString = ConfigurationManager.ConnectionStrings["BestellingConnectionStringSQL"].ConnectionString;
-        
-        }
-       
+      
         [STAThread]
         static void Main()
         {

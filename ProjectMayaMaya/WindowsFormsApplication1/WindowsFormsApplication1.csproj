@@ -64,6 +64,7 @@
     <Compile Include="BestellingMenu.Designer.cs">
       <DependentUpon>BestellingMenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="DatabaseConnectie.cs" />
     <Compile Include="inlogFoutAlert.cs">
       <SubType>Form</SubType>
     </Compile>
