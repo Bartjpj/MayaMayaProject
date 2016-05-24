@@ -52,6 +52,22 @@ namespace WindowsFormsApplication1
             string connString = ConfigurationManager
                 .ConnectionStrings["BestellingConnectionStringSQL"]
                 .ConnectionString;
+            SqlConnection conn = new SqlConnection(connString);
+            conn.Open();
+
+            SqlCommand command = new SqlCommand("SELECT * FROM Personeelslid", conn);
+            SqlDataReader reader = command.ExecuteReader();
+
+            while (reader.Read())
+            {
+                int personeel_id = (int)reader["personeeld_id"];
+                int tafel_id = (int)reader["tafel_id"];
+                int bestelling_id = (int)reader["tafel_id"];
+                string naam = (string)reader["naam"];
+                string functie = (string)reader["functie"];
+                int barnotificatie_id = (int)reader["barnotificatie_id"];
+                int keukennotificatie_id = (int)reader["keukennotificatie_id"];
+            }
 
 
 
