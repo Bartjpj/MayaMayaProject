@@ -8,6 +8,8 @@ namespace WindowsFormsApplication1
     public class Bestelling
     {
         private int bestelling_id;
+
+     
        
         private void isBetaald()
         {
