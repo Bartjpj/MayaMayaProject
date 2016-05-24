@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Configuration;
+using System.Data.SqlClient;
 
 namespace WindowsFormsApplication1
 {
@@ -31,6 +33,29 @@ namespace WindowsFormsApplication1
             TerugNaarHoofdmenu.Top = this.Top;
             TerugNaarHoofdmenu.Size = this.Size;
             this.Hide();
+        }
+
+        private void gbox_BarBestelling_Enter(object sender, EventArgs e)
+        {
+            string connString = ConfigurationManager.ConnectionStrings["BestellingConnectionStringSQL"].ConnectionString;
+            SqlConnection conn = new SqlConnection(connString); // connectieobject wordt aangemaakt
+
+            conn.Open();   // connectie wordt opengezet 
+
+            SqlCommand command = new SqlCommand("SELECT * FROM Bestelling INNER JOIN BestellingItems ON Bestelling.bestelling_id = BestellingItems.bestelling_id;");
+            
+            
+            SqlDataReader reader = command.ExecuteReader(); // datareaderobject
+
+            while (reader.Read())
+            {
+                int bestelling_id = (int)reader["bestelling_id"];
+                int tafel_id = (int)reader["tafel_id"];
+                int ItemId = (int)reader["ItemId"];
+                // maak bestellingoverzicht object aan en voeg deze gegevens toe aan het bestellingsoverzicht
+            }
+
+            conn.Close(); 
         }
     }
 }
