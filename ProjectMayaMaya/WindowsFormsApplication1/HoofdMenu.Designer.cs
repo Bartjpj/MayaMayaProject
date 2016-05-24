@@ -32,41 +32,47 @@
             this.btn_HMnaarBediening = new System.Windows.Forms.Button();
             this.btn_HMnaarBar = new System.Windows.Forms.Button();
             this.lbl_HMtekst = new System.Windows.Forms.Label();
-            this.lbl_aanwijzingtekst = new System.Windows.Forms.Label();
             this.btn_ExitWindows = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btn_HMnaarKeuken
             // 
+            this.btn_HMnaarKeuken.BackColor = System.Drawing.Color.Maroon;
+            this.btn_HMnaarKeuken.Enabled = false;
             this.btn_HMnaarKeuken.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_HMnaarKeuken.Location = new System.Drawing.Point(187, 187);
+            this.btn_HMnaarKeuken.ForeColor = System.Drawing.Color.White;
+            this.btn_HMnaarKeuken.Location = new System.Drawing.Point(12, 187);
             this.btn_HMnaarKeuken.Name = "btn_HMnaarKeuken";
-            this.btn_HMnaarKeuken.Size = new System.Drawing.Size(390, 49);
+            this.btn_HMnaarKeuken.Size = new System.Drawing.Size(770, 73);
             this.btn_HMnaarKeuken.TabIndex = 0;
             this.btn_HMnaarKeuken.Text = "Keuken";
-            this.btn_HMnaarKeuken.UseVisualStyleBackColor = true;
+            this.btn_HMnaarKeuken.UseVisualStyleBackColor = false;
             this.btn_HMnaarKeuken.Click += new System.EventHandler(this.btn_HMnaarKeuken_Click);
             // 
             // btn_HMnaarBediening
             // 
+            this.btn_HMnaarBediening.BackColor = System.Drawing.Color.Maroon;
             this.btn_HMnaarBediening.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_HMnaarBediening.Location = new System.Drawing.Point(187, 348);
+            this.btn_HMnaarBediening.ForeColor = System.Drawing.Color.Transparent;
+            this.btn_HMnaarBediening.Location = new System.Drawing.Point(12, 266);
             this.btn_HMnaarBediening.Name = "btn_HMnaarBediening";
-            this.btn_HMnaarBediening.Size = new System.Drawing.Size(387, 45);
+            this.btn_HMnaarBediening.Size = new System.Drawing.Size(770, 73);
             this.btn_HMnaarBediening.TabIndex = 2;
             this.btn_HMnaarBediening.Text = "Bediening";
-            this.btn_HMnaarBediening.UseVisualStyleBackColor = true;
+            this.btn_HMnaarBediening.UseVisualStyleBackColor = false;
             this.btn_HMnaarBediening.Click += new System.EventHandler(this.btn_HMnaarBediening_Click);
             // 
             // btn_HMnaarBar
             // 
+            this.btn_HMnaarBar.BackColor = System.Drawing.Color.Maroon;
             this.btn_HMnaarBar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_HMnaarBar.Location = new System.Drawing.Point(187, 266);
+            this.btn_HMnaarBar.ForeColor = System.Drawing.Color.White;
+            this.btn_HMnaarBar.Location = new System.Drawing.Point(12, 345);
             this.btn_HMnaarBar.Name = "btn_HMnaarBar";
-            this.btn_HMnaarBar.Size = new System.Drawing.Size(390, 49);
+            this.btn_HMnaarBar.Size = new System.Drawing.Size(770, 76);
             this.btn_HMnaarBar.TabIndex = 3;
             this.btn_HMnaarBar.Text = "Bar";
-            this.btn_HMnaarBar.UseVisualStyleBackColor = true;
+            this.btn_HMnaarBar.UseVisualStyleBackColor = false;
             this.btn_HMnaarBar.Click += new System.EventHandler(this.btn_HMnaarBar_Click);
             // 
             // lbl_HMtekst
@@ -78,16 +84,6 @@
             this.lbl_HMtekst.Size = new System.Drawing.Size(211, 42);
             this.lbl_HMtekst.TabIndex = 4;
             this.lbl_HMtekst.Text = "Hoofdmenu";
-            // 
-            // lbl_aanwijzingtekst
-            // 
-            this.lbl_aanwijzingtekst.AutoSize = true;
-            this.lbl_aanwijzingtekst.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_aanwijzingtekst.Location = new System.Drawing.Point(183, 123);
-            this.lbl_aanwijzingtekst.Name = "lbl_aanwijzingtekst";
-            this.lbl_aanwijzingtekst.Size = new System.Drawing.Size(240, 24);
-            this.lbl_aanwijzingtekst.TabIndex = 5;
-            this.lbl_aanwijzingtekst.Text = "Gelieve uw afdeling kiezen:";
             // 
             // btn_ExitWindows
             // 
@@ -105,7 +101,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(794, 569);
             this.Controls.Add(this.btn_ExitWindows);
-            this.Controls.Add(this.lbl_aanwijzingtekst);
             this.Controls.Add(this.lbl_HMtekst);
             this.Controls.Add(this.btn_HMnaarBar);
             this.Controls.Add(this.btn_HMnaarBediening);
@@ -124,7 +119,6 @@
         private System.Windows.Forms.Button btn_HMnaarBediening;
         private System.Windows.Forms.Button btn_HMnaarBar;
         private System.Windows.Forms.Label lbl_HMtekst;
-        private System.Windows.Forms.Label lbl_aanwijzingtekst;
         private System.Windows.Forms.Button btn_ExitWindows;
     }
 }
