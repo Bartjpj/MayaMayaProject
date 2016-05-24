@@ -67,5 +67,7 @@ namespace WindowsFormsApplication1
         {
             e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar); // zorgt ervoor dat bij een keypress er geen letters worden getolereerd.
         }
+
+
     }
 }
