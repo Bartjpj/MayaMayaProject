@@ -32,9 +32,9 @@ namespace WindowsFormsApplication1
 
             if (rbtn_BestellingOpnemen.Checked)
             {
-            BestellingMenu BestellingMenuOpenen = new BestellingMenu();
-            BestellingMenuOpenen.Show(this); // verwijst naar winform in grote van parent window (zie OnLoad in te openen form)
-            this.Hide();
+                BestellingMenu BestellingMenuOpenen = new BestellingMenu();
+                BestellingMenuOpenen.Show(this); // verwijst naar winform in grote van parent window (zie OnLoad in te openen form)
+                this.Hide();
             }
             else
             {
@@ -48,6 +48,33 @@ namespace WindowsFormsApplication1
 
         private void rbtn_BestellingOpnemen_CheckedChanged(object sender, EventArgs e)
         {
+        }
+
+        //zetten van int voor de timer
+        int hour, min, sec, ms = 0;
+
+        private void tm_tafel1_Tick(object sender, EventArgs e)
+        {
+            lbl_tijdtafel1.Text = hour + ":" + min + ":" + sec;
+            ms++;
+            if (ms > 10)
+            {
+                sec++;
+                ms = 0;
+            }
+            else
+                ms++;
+
+            if (sec > 60)
+            {
+                min++;
+                sec = 0;
+            }
+            if (min > 60)
+            {
+                hour++;
+                min = 0;
+            }
         }
     }
 }
