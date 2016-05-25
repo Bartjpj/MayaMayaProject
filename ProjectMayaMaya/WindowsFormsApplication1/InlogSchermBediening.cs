@@ -51,18 +51,13 @@ namespace WindowsFormsApplication1
         {
             PersoneelsLidDAO personeelDatabaseActies = new PersoneelsLidDAO(); // maakt nieuwe instantie van personeelslidDAO aan.
             personeelDatabaseActies.haalPersoneelslid_IDTabelOp(); // haalt volledige tabel van Personeelslid op en zet deze in een lijst.
-            
-            
 
-
-
-
-
-
+            Klantenlijst personeelsTabel = new Klantenlijst(0, 0, 0, "", "", 0, 0); //maak een instantie van constructor zodat we daar de lijst vandaan kunnen halen.
 
             int inlogCode = txt_PersoneelsID_TextChanged(sender, e); //grijp de inlogcode van de inlogcode tekstbox
-            Klantenlijst authenticatie = new Klantenlijst(); // run authenticatie die gaat kijken of het ingevoerde nummer in de database voorkomt
-            bool juisteCode = authenticatie.bedieningAuthenticatie(inlogCode); // juistecode neemt boolwaarde van authenticatie aan (false is verkeerd, true is goed)
+            bool juisteCode = personeelsTabel.bedieningAuthenticatie(inlogCode); // juistecode neemt boolwaarde van authenticatie aan (false is verkeerd, true is goed)
+            
+
             if (juisteCode) // ga naar tafeloverzicht als het true is, geef een alert als het false.
             {
                 TafelOverzicht inloggen = new TafelOverzicht();

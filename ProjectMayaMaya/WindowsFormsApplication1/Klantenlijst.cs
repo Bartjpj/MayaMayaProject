@@ -27,15 +27,22 @@ namespace WindowsFormsApplication1
             this.functie = functie;
             this.barnotificatie_id = barnotificatie_id;
             this.keukennotificatie_id = keukennotificatie_id;
-        } // deze functie zorgt ervoor dat alle variabelen overal toegankelijk zijn.
-
+        } // deze constructor zorgt ervoor dat alle variabelen overal toegankelijk zijn.
 
         public bool inlogBoolean;
 
         public bool bedieningAuthenticatie(int inlogCode)
         {
+            int juisteInlogcode;
+            int i = 0;
+            foreach(int personeel_id in klantenlijstList) {
 
+            }
 
+            while (true)
+            {
+                juisteInlogcode = klantenlijstList[i];
+            }
             
                 if (inlogCode == 2552)
                 {
