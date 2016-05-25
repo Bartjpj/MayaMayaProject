@@ -47,7 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="asdf.cs" />
-    <Compile Include="Authenticatie.cs" />
+    <Compile Include="Klantenlijst.cs" />
     <Compile Include="BarOverzicht.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -69,6 +69,8 @@ namespace WindowsFormsApplication1
                 int keukennotificatie_id = (int)reader["keukennotificatie_id"];
             }
 
+            Klantenlijst klantX = new Klantenlijst(personeel_id, tafel_id, bestelling_id, naam, functie, barnotificatie_id, keukennotificatie_id);
+
 
 
 
@@ -77,7 +79,7 @@ namespace WindowsFormsApplication1
 
 
             int inlogCode = txt_PersoneelsID_TextChanged(sender, e); //grijp de inlogcode van de inlogcode tekstbox
-            Authenticatie authenticatie = new Authenticatie(); // run authenticatie die gaat kijken of het ingevoerde nummer in de database voorkomt
+            Klantenlijst authenticatie = new Klantenlijst(); // run authenticatie die gaat kijken of het ingevoerde nummer in de database voorkomt
             bool juisteCode = authenticatie.bedieningAuthenticatie(inlogCode); // juistecode neemt boolwaarde van authenticatie aan (false is verkeerd, true is goed)
             if (juisteCode) // ga naar tafeloverzicht als het true is, geef een alert als het false.
             {
