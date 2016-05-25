@@ -27,6 +27,15 @@ namespace WindowsFormsApplication1
             this.Hide();
         }
 
+
+
+        private void rbtn_BestellingOpnemen_CheckedChanged(object sender, EventArgs e)
+        {
+        }
+
+
+        //-----------------TAFELS--------------------------------:
+        //1
         private void btn_Tafel1_Click(object sender, EventArgs e)
         {
 
@@ -45,14 +54,137 @@ namespace WindowsFormsApplication1
 
             btn_Tafel1.BackColor = Color.Red;
         }
-
-        private void rbtn_BestellingOpnemen_CheckedChanged(object sender, EventArgs e)
+        //2
+        private void btn_Tafel2_Click(object sender, EventArgs e)
         {
+            if (rbtn_BestellingOpnemen.Checked)
+            {
+                BestellingMenu BestellingMenuOpenen = new BestellingMenu();
+                BestellingMenuOpenen.Show(this); 
+                this.Hide();
+            }
+            else
+            {
+            }
         }
 
+        //3
+        private void btn_Tafel3_Click(object sender, EventArgs e)
+        {
+            if (rbtn_BestellingOpnemen.Checked)
+            {
+                BestellingMenu BestellingMenuOpenen = new BestellingMenu();
+                BestellingMenuOpenen.Show(this);
+                this.Hide();
+            }
+            else
+            {
+            }
+        }
+        
+        //4
+        private void btn_Tafel4_Click(object sender, EventArgs e)
+        {
+            if (rbtn_BestellingOpnemen.Checked)
+            {
+                BestellingMenu BestellingMenuOpenen = new BestellingMenu();
+                BestellingMenuOpenen.Show(this);
+                this.Hide();
+            }
+            else
+            {
+            }
+        }
+        
+        //5
+        private void btn_Tafel5_Click(object sender, EventArgs e)
+        {
+            if (rbtn_BestellingOpnemen.Checked)
+            {
+                BestellingMenu BestellingMenuOpenen = new BestellingMenu();
+                BestellingMenuOpenen.Show(this);
+                this.Hide();
+            }
+            else
+            {
+            }
+        }
+       
+        //6
+        private void btn_Tafel6_Click(object sender, EventArgs e)
+        {
+            if (rbtn_BestellingOpnemen.Checked)
+            {
+                BestellingMenu BestellingMenuOpenen = new BestellingMenu();
+                BestellingMenuOpenen.Show(this);
+                this.Hide();
+            }
+            else
+            {
+            }
+        }
+
+        //7
+        private void btn_Tafel7_Click(object sender, EventArgs e)
+        {
+            if (rbtn_BestellingOpnemen.Checked)
+            {
+                BestellingMenu BestellingMenuOpenen = new BestellingMenu();
+                BestellingMenuOpenen.Show(this);
+                this.Hide();
+            }
+            else
+            {
+            }
+        }
+
+        //8
+        private void btn_Tafel8_Click(object sender, EventArgs e)
+        {
+            if (rbtn_BestellingOpnemen.Checked)
+            {
+                BestellingMenu BestellingMenuOpenen = new BestellingMenu();
+                BestellingMenuOpenen.Show(this);
+                this.Hide();
+            }
+            else
+            {
+            }
+        }
+
+        //9
+        private void btn_Tafel9_Click(object sender, EventArgs e)
+        {
+            if (rbtn_BestellingOpnemen.Checked)
+            {
+                BestellingMenu BestellingMenuOpenen = new BestellingMenu();
+                BestellingMenuOpenen.Show(this);
+                this.Hide();
+            }
+            else
+            {
+            }
+        }
+
+        //10
+        private void btn_Tafel10_Click(object sender, EventArgs e)
+        {
+            if (rbtn_BestellingOpnemen.Checked)
+            {
+                BestellingMenu BestellingMenuOpenen = new BestellingMenu();
+                BestellingMenuOpenen.Show(this);
+                this.Hide();
+            }
+            else
+            {
+            }
+        }
+        
+        //---------------TIMERS-------------------------:
         //zetten van int voor de timer
         int hour, min, sec, ms = 0;
 
+        //1
         private void tm_tafel1_Tick(object sender, EventArgs e)
         {
             lbl_tijdtafel1.Text = hour + ":" + min + ":" + sec;
@@ -76,5 +208,6 @@ namespace WindowsFormsApplication1
                 min = 0;
             }
         }
+
     }
 }
