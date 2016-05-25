@@ -9,6 +9,17 @@ namespace WindowsFormsApplication1
     {
         private int bestelling_id;
 
+        public int Bestelling_id
+        {
+            get { return bestelling_id; }
+            private set { bestelling_id = value; }
+        }
+        private int tafel_id;
+        private DateTime besteldatum;
+        private int voorraad;
+        private int kaart_id;
+        private bool betaald;
+      
      
        
         private void isBetaald()
