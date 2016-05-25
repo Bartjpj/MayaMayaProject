@@ -8,7 +8,7 @@ namespace WindowsFormsApplication1
 {
     public class Klantenlijst
     {
-
+        //Alle delen van de database kolommen worden hier aangemaakt.
         public int personeel_id;
         public int tafel_id;
         public int bestelling_id;
@@ -16,6 +16,7 @@ namespace WindowsFormsApplication1
         public string functie;
         public int barnotificatie_id;
         public int keukennotificatie_id;
+        public List<Klantenlijst> klantenlijstList = new List<Klantenlijst>(); //dit is de lijst waar de personeelslidtabel in opgeslagen zal worden.
 
         public Klantenlijst(int personeel_id, int tafel_id, int bestelling_id, string naam, string functie, int barnotificatie_id, int keukennotificatie_id)
         {
@@ -26,7 +27,7 @@ namespace WindowsFormsApplication1
             this.functie = functie;
             this.barnotificatie_id = barnotificatie_id;
             this.keukennotificatie_id = keukennotificatie_id;
-        }
+        } // deze functie zorgt ervoor dat alle variabelen overal toegankelijk zijn.
 
 
         public bool inlogBoolean;
@@ -34,6 +35,8 @@ namespace WindowsFormsApplication1
         public bool bedieningAuthenticatie(int inlogCode)
         {
 
+
+            
                 if (inlogCode == 2552)
                 {
                     inlogBoolean = true;
