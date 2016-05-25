@@ -39,9 +39,10 @@ namespace WindowsFormsApplication1
             this.Hide();
         }
 
+
         private void btn_ExitWindows_Click(object sender, EventArgs e)
         {
-            this.Close();
+        this.Close();
         }
     }
 }

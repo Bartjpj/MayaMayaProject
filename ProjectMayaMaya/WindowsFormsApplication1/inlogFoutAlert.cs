@@ -16,5 +16,10 @@ namespace WindowsFormsApplication1
         {
             InitializeComponent();
         }
+
+        private void inlogFoutAlert_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
