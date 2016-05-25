@@ -181,7 +181,7 @@
             // rbtn_BestellingAfrekenen
             // 
             this.rbtn_BestellingAfrekenen.AutoSize = true;
-            this.rbtn_BestellingAfrekenen.Location = new System.Drawing.Point(606, 115);
+            this.rbtn_BestellingAfrekenen.Location = new System.Drawing.Point(606, 101);
             this.rbtn_BestellingAfrekenen.Name = "rbtn_BestellingAfrekenen";
             this.rbtn_BestellingAfrekenen.Size = new System.Drawing.Size(122, 17);
             this.rbtn_BestellingAfrekenen.TabIndex = 12;
@@ -287,7 +287,7 @@
             // 
             this.lbl_Kiestafel.AutoSize = true;
             this.lbl_Kiestafel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Kiestafel.Location = new System.Drawing.Point(283, 26);
+            this.lbl_Kiestafel.Location = new System.Drawing.Point(283, 31);
             this.lbl_Kiestafel.Name = "lbl_Kiestafel";
             this.lbl_Kiestafel.Size = new System.Drawing.Size(135, 24);
             this.lbl_Kiestafel.TabIndex = 23;

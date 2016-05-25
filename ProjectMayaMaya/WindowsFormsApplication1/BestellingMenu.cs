@@ -50,7 +50,7 @@ namespace WindowsFormsApplication1
             cbox_selecteerkaart.Items.Remove("Dranken");
             cbox_selecteerkaart.Items.Remove("Lunch");
             cbox_selecteerkaart.Items.Remove("Diner");
-            
+
             //vul de dropdown box
             cbox_selecteerkaart.Items.Add("Dranken");
             cbox_selecteerkaart.Items.Add("Lunch");
@@ -65,6 +65,13 @@ namespace WindowsFormsApplication1
             TerugNaarTafelOverzicht.Top = this.Top;
             TerugNaarTafelOverzicht.Size = this.Size;
             this.Hide();
+        }
+
+        private void lbl_lijn1_Click(object sender, EventArgs e)
+        {
+            lbl_lijn1.AutoSize = false;
+            lbl_lijn1.Height = 2;
+            lbl_lijn1.BorderStyle = BorderStyle.Fixed3D;
         }
     }
 }
