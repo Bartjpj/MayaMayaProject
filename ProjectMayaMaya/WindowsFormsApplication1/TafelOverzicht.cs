@@ -29,11 +29,25 @@ namespace WindowsFormsApplication1
 
         private void btn_Tafel1_Click(object sender, EventArgs e)
         {
+
+            if (rbtn_BestellingOpnemen.Checked)
+            {
             BestellingMenu BestellingMenuOpenen = new BestellingMenu();
             BestellingMenuOpenen.Show(this); // verwijst naar winform in grote van parent window (zie OnLoad in te openen form)
             this.Hide();
-            
+            }
+            else
+            {
+                inlogFoutAlert foutmelding = new inlogFoutAlert();
+                foutmelding.StartPosition = FormStartPosition.CenterParent;
+                foutmelding.ShowDialog(this); //error omdat er nu nog geen rekening scherm is.
+            }
+
             btn_Tafel1.BackColor = Color.Red;
+        }
+
+        private void rbtn_BestellingOpnemen_CheckedChanged(object sender, EventArgs e)
+        {
         }
     }
 }
