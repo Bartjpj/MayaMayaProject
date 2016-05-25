@@ -27,10 +27,9 @@ namespace WindowsFormsApplication1
             this.Hide();
         }
 
-
-
         private void rbtn_BestellingOpnemen_CheckedChanged(object sender, EventArgs e)
         {
+
         }
 
 
@@ -45,11 +44,17 @@ namespace WindowsFormsApplication1
                 BestellingMenuOpenen.Show(this); // verwijst naar winform in grote van parent window (zie OnLoad in te openen form)
                 this.Hide();
             }
-            else
+            else if(rbtn_BestellingAfrekenen.Checked)
             {
                 inlogFoutAlert foutmelding = new inlogFoutAlert();
                 foutmelding.StartPosition = FormStartPosition.CenterParent;
                 foutmelding.ShowDialog(this); //error omdat er nu nog geen rekening scherm is.
+            }
+            else
+            {
+                inlogFoutAlert foutmelding = new inlogFoutAlert();
+                foutmelding.StartPosition = FormStartPosition.CenterParent;
+                foutmelding.ShowDialog(this);
             }
 
             btn_Tafel1.BackColor = Color.Red;
@@ -63,8 +68,17 @@ namespace WindowsFormsApplication1
                 BestellingMenuOpenen.Show(this); 
                 this.Hide();
             }
+            else if (rbtn_BestellingAfrekenen.Checked)
+            {
+                inlogFoutAlert foutmelding = new inlogFoutAlert();
+                foutmelding.StartPosition = FormStartPosition.CenterParent;
+                foutmelding.ShowDialog(this); //error omdat er nu nog geen rekening scherm is.
+            }
             else
             {
+                inlogFoutAlert foutmelding = new inlogFoutAlert();
+                foutmelding.StartPosition = FormStartPosition.CenterParent;
+                foutmelding.ShowDialog(this);
             }
         }
 
@@ -77,8 +91,17 @@ namespace WindowsFormsApplication1
                 BestellingMenuOpenen.Show(this);
                 this.Hide();
             }
+            else if (rbtn_BestellingAfrekenen.Checked)
+            {
+                inlogFoutAlert foutmelding = new inlogFoutAlert();
+                foutmelding.StartPosition = FormStartPosition.CenterParent;
+                foutmelding.ShowDialog(this); //error omdat er nu nog geen rekening scherm is.
+            }
             else
             {
+                inlogFoutAlert foutmelding = new inlogFoutAlert();
+                foutmelding.StartPosition = FormStartPosition.CenterParent;
+                foutmelding.ShowDialog(this);
             }
         }
         
@@ -91,8 +114,17 @@ namespace WindowsFormsApplication1
                 BestellingMenuOpenen.Show(this);
                 this.Hide();
             }
+            else if (rbtn_BestellingAfrekenen.Checked)
+            {
+                inlogFoutAlert foutmelding = new inlogFoutAlert();
+                foutmelding.StartPosition = FormStartPosition.CenterParent;
+                foutmelding.ShowDialog(this); //error omdat er nu nog geen rekening scherm is.
+            }
             else
             {
+                inlogFoutAlert foutmelding = new inlogFoutAlert();
+                foutmelding.StartPosition = FormStartPosition.CenterParent;
+                foutmelding.ShowDialog(this);
             }
         }
         
@@ -105,8 +137,17 @@ namespace WindowsFormsApplication1
                 BestellingMenuOpenen.Show(this);
                 this.Hide();
             }
+            else if (rbtn_BestellingAfrekenen.Checked)
+            {
+                inlogFoutAlert foutmelding = new inlogFoutAlert();
+                foutmelding.StartPosition = FormStartPosition.CenterParent;
+                foutmelding.ShowDialog(this); //error omdat er nu nog geen rekening scherm is.
+            }
             else
             {
+                inlogFoutAlert foutmelding = new inlogFoutAlert();
+                foutmelding.StartPosition = FormStartPosition.CenterParent;
+                foutmelding.ShowDialog(this);
             }
         }
        
@@ -119,8 +160,17 @@ namespace WindowsFormsApplication1
                 BestellingMenuOpenen.Show(this);
                 this.Hide();
             }
+            else if (rbtn_BestellingAfrekenen.Checked)
+            {
+                inlogFoutAlert foutmelding = new inlogFoutAlert();
+                foutmelding.StartPosition = FormStartPosition.CenterParent;
+                foutmelding.ShowDialog(this); //error omdat er nu nog geen rekening scherm is.
+            }
             else
             {
+                inlogFoutAlert foutmelding = new inlogFoutAlert();
+                foutmelding.StartPosition = FormStartPosition.CenterParent;
+                foutmelding.ShowDialog(this);
             }
         }
 
@@ -133,8 +183,17 @@ namespace WindowsFormsApplication1
                 BestellingMenuOpenen.Show(this);
                 this.Hide();
             }
+            else if (rbtn_BestellingAfrekenen.Checked)
+            {
+                inlogFoutAlert foutmelding = new inlogFoutAlert();
+                foutmelding.StartPosition = FormStartPosition.CenterParent;
+                foutmelding.ShowDialog(this); //error omdat er nu nog geen rekening scherm is.
+            }
             else
             {
+                inlogFoutAlert foutmelding = new inlogFoutAlert();
+                foutmelding.StartPosition = FormStartPosition.CenterParent;
+                foutmelding.ShowDialog(this);
             }
         }
 
@@ -147,8 +206,17 @@ namespace WindowsFormsApplication1
                 BestellingMenuOpenen.Show(this);
                 this.Hide();
             }
+            else if (rbtn_BestellingAfrekenen.Checked)
+            {
+                inlogFoutAlert foutmelding = new inlogFoutAlert();
+                foutmelding.StartPosition = FormStartPosition.CenterParent;
+                foutmelding.ShowDialog(this); //error omdat er nu nog geen rekening scherm is.
+            }
             else
             {
+                inlogFoutAlert foutmelding = new inlogFoutAlert();
+                foutmelding.StartPosition = FormStartPosition.CenterParent;
+                foutmelding.ShowDialog(this);
             }
         }
 
@@ -161,8 +229,17 @@ namespace WindowsFormsApplication1
                 BestellingMenuOpenen.Show(this);
                 this.Hide();
             }
+            else if (rbtn_BestellingAfrekenen.Checked)
+            {
+                inlogFoutAlert foutmelding = new inlogFoutAlert();
+                foutmelding.StartPosition = FormStartPosition.CenterParent;
+                foutmelding.ShowDialog(this); //error omdat er nu nog geen rekening scherm is.
+            }
             else
             {
+                inlogFoutAlert foutmelding = new inlogFoutAlert();
+                foutmelding.StartPosition = FormStartPosition.CenterParent;
+                foutmelding.ShowDialog(this);
             }
         }
 
@@ -175,8 +252,17 @@ namespace WindowsFormsApplication1
                 BestellingMenuOpenen.Show(this);
                 this.Hide();
             }
+            else if (rbtn_BestellingAfrekenen.Checked)
+            {
+                inlogFoutAlert foutmelding = new inlogFoutAlert();
+                foutmelding.StartPosition = FormStartPosition.CenterParent;
+                foutmelding.ShowDialog(this); //error omdat er nu nog geen rekening scherm is.
+            }
             else
             {
+                inlogFoutAlert foutmelding = new inlogFoutAlert();
+                foutmelding.StartPosition = FormStartPosition.CenterParent;
+                foutmelding.ShowDialog(this);
             }
         }
         
