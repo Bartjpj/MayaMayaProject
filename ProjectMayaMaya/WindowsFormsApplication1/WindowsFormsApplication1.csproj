@@ -46,6 +46,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="asdf.cs" />
+    <Compile Include="Klantenlijst.cs" />
     <Compile Include="Authenticatie.cs" />
     <Compile Include="BarOverzicht.cs">
       <SubType>Form</SubType>
