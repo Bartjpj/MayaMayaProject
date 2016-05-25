@@ -15,6 +15,7 @@ namespace WindowsFormsApplication1
         public HoofdMenu()
         {
             InitializeComponent();
+            DatabaseConnectie database = new DatabaseConnectie();
 
         }
         private void btn_HMnaarKeuken_Click(object sender, EventArgs e)

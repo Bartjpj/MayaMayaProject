@@ -30,8 +30,13 @@ namespace WindowsFormsApplication1
         }
         public void printRekening(){}
         public void betaalWijze(rekeningEnum betaalWijze){}
-        
 
+        public string geefFeedback()
+        {
+            string feedback = Console.ReadLine(); // mogelijkheid om feedback te geven dit wordt ingevoerd in een string of iets dergelijks
+
+            return feedback;
+        }
       
         }
     }

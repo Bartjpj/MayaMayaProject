@@ -9,6 +9,8 @@ namespace WindowsFormsApplication1
     {
         private void bestellingOpnemen()
         {
+            // hier moet de voorraad bewerkt worden als er een bestelling wordt gedaan.
+            // een bestelling moet opgeslagen worden in de database of iets dergelijks. Zodat aan het einde van de dag alle bestellingen gezien kunnen worden
 
         }
         private void bestellingAfronden()
@@ -23,5 +25,11 @@ namespace WindowsFormsApplication1
         {
 
         }
+
+        private bool wijzigBestelling()
+        {
+            return true;
+        }
+
     }
 }

@@ -37,5 +37,10 @@ namespace WindowsFormsApplication1
             TerugNaarHoofdmenu.Size = this.Size;
             this.Hide();
         }
+
+        private void groep_BestellingKeukenX_Enter(object sender, EventArgs e)
+        {
+            // bestellingoverzicht moet hier komen en die moet zichtbaar zijn voor alle personeelsleden. En gereedgemeld kunnen worden door bijv. chefkok of barman.
+        }
     }
 }

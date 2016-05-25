@@ -18,5 +18,10 @@ namespace WindowsFormsApplication1
         {
 
         }
+
+        public void updateBestelling() // personeelsleden moeten status kunnen updaten van bestellingen. En de tijd kunnen zien, hoe lang geleden iets besteld is.
+        {
+
+        }
     }
 }
