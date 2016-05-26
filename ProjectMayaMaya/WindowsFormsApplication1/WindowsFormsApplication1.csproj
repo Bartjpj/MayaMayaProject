@@ -53,7 +53,6 @@
       <DependentUpon>DatabaseDummyForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Klantenlijst.cs" />
-    <Compile Include="Authenticatie.cs" />
     <Compile Include="BarOverzicht.cs">
       <SubType>Form</SubType>
     </Compile>
