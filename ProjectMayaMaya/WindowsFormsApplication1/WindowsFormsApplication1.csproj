@@ -108,9 +108,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Rekening.cs" />
     <Compile Include="rekeningEnum.cs" />
-    <Compile Include="RoundButton.cs">
-      <SubType>Component</SubType>
-    </Compile>
     <Compile Include="Tafel.cs" />
     <Compile Include="TafelOverzicht.cs">
       <SubType>Form</SubType>
