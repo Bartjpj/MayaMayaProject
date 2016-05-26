@@ -44,5 +44,10 @@ namespace WindowsFormsApplication1
         {
 
         }
+
+        private void gbox_bestelling3_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }

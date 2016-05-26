@@ -44,18 +44,6 @@ namespace WindowsFormsApplication1
 
         }
 
-        private void cbox_selecteerkaart_Click(object sender, EventArgs e)
-        {
-            //clear de dropdown box
-            cbox_selecteerkaart.Items.Remove("Dranken");
-            cbox_selecteerkaart.Items.Remove("Lunch");
-            cbox_selecteerkaart.Items.Remove("Diner");
-
-            //vul de dropdown box
-            cbox_selecteerkaart.Items.Add("Dranken");
-            cbox_selecteerkaart.Items.Add("Lunch");
-            cbox_selecteerkaart.Items.Add("Diner");
-        }
 
         private void btn_BestellingMENUnaarTAFELOVERZICHT_Click(object sender, EventArgs e)
         {
@@ -67,11 +55,10 @@ namespace WindowsFormsApplication1
             this.Hide();
         }
 
-        private void lbl_lijn1_Click(object sender, EventArgs e)
+
+        private void btn_Lunchkaart_Click(object sender, EventArgs e)
         {
-            lbl_lijn1.AutoSize = false;
-            lbl_lijn1.Height = 2;
-            lbl_lijn1.BorderStyle = BorderStyle.Fixed3D;
+
         }
     }
 }
