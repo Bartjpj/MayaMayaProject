@@ -54,12 +54,5 @@ namespace WindowsFormsApplication1
             TerugNaarTafelOverzicht.Size = this.Size;
             this.Hide();
         }
-
-        private void lbl_lijn1_Click(object sender, EventArgs e)
-        {
-            lbl_lijn1.AutoSize = false;
-            lbl_lijn1.Height = 2;
-            lbl_lijn1.BorderStyle = BorderStyle.Fixed3D;
-        }
     }
 }
