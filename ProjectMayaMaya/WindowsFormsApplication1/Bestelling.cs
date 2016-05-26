@@ -52,6 +52,7 @@ namespace WindowsFormsApplication1
           
             SqlDataReader reader = command.ExecuteReader(); // datareaderobject
 
+            connectie.Close();
           
         }
         private void isBetaald()
