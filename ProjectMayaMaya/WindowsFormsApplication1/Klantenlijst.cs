@@ -29,35 +29,22 @@ namespace WindowsFormsApplication1
             this.keukennotificatie_id = keukennotificatie_id;
         } // deze constructor zorgt ervoor dat alle variabelen overal toegankelijk zijn.
 
-        public bool inlogBoolean;
 
         public bool bedieningAuthenticatie(int inlogCode)
         {
-            int juisteInlogcode;
+            bool inlogbool = false;
             int i = 0;
-            foreach(int personeel_id in klantenlijstList) {
-
-            }
-
-            while (true)
-            {
-                juisteInlogcode = klantenlijstList[i];
-            }
-            
-                if (inlogCode == 2552)
+            int tryInlogCode = inlogCode;
+            foreach(Klantenlijst personeel_id in klantenlijstList) {
+                
+                if (klantenlijstList[0].personeel_id == tryInlogCode)
                 {
-                    inlogBoolean = true;
+                    inlogbool = true;
                 }
-            
-            
-            if (inlogBoolean)
-            {
-                return true;
+                i++;
             }
-            else
-            {
-                return false;
-            }
+            return inlogbool;
+
         }
     }
 }
