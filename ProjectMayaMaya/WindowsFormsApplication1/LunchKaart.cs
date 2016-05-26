@@ -25,9 +25,13 @@ namespace WindowsFormsApplication1
 
         private void btn_addg_id1_Click(object sender, EventArgs e)
         {
-
+            
         }
 
+        private void btn_addg_id4_Click(object sender, EventArgs e)
+        {
+
+        }
 
     }
 }
