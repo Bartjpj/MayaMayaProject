@@ -11,6 +11,7 @@ namespace WindowsFormsApplication1
 {
     class DAOBarOverzicht
     {
+        
         protected SqlConnection dbConnection; // connectieobject wordt aangemaakt
         public DAOBarOverzicht(SqlConnection dbConnection)
         {

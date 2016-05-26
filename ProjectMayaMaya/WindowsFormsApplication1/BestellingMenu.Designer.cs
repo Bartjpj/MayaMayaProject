@@ -46,11 +46,11 @@
             // 
             // btn_BestellingMENUnaarTAFELOVERZICHT
             // 
-            this.btn_BestellingMENUnaarTAFELOVERZICHT.BackColor = System.Drawing.Color.Maroon;
-            this.btn_BestellingMENUnaarTAFELOVERZICHT.ForeColor = System.Drawing.Color.White;
+            this.btn_BestellingMENUnaarTAFELOVERZICHT.BackColor = System.Drawing.Color.Transparent;
+            this.btn_BestellingMENUnaarTAFELOVERZICHT.ForeColor = System.Drawing.Color.Black;
             this.btn_BestellingMENUnaarTAFELOVERZICHT.Location = new System.Drawing.Point(12, 12);
             this.btn_BestellingMENUnaarTAFELOVERZICHT.Name = "btn_BestellingMENUnaarTAFELOVERZICHT";
-            this.btn_BestellingMENUnaarTAFELOVERZICHT.Size = new System.Drawing.Size(99, 40);
+            this.btn_BestellingMENUnaarTAFELOVERZICHT.Size = new System.Drawing.Size(134, 40);
             this.btn_BestellingMENUnaarTAFELOVERZICHT.TabIndex = 3;
             this.btn_BestellingMENUnaarTAFELOVERZICHT.Text = "Terug naar TafelOverzicht";
             this.btn_BestellingMENUnaarTAFELOVERZICHT.UseVisualStyleBackColor = false;
@@ -66,6 +66,7 @@
             this.btn_Lunchkaart.TabIndex = 4;
             this.btn_Lunchkaart.Text = "LUNCH";
             this.btn_Lunchkaart.UseVisualStyleBackColor = false;
+            this.btn_Lunchkaart.Click += new System.EventHandler(this.btn_Lunchkaart_Click);
             // 
             // btn_dinerkaart
             // 

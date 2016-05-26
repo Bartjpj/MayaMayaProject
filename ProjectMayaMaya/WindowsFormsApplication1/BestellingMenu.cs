@@ -54,5 +54,13 @@ namespace WindowsFormsApplication1
             TerugNaarTafelOverzicht.Size = this.Size;
             this.Hide();
         }
+
+
+        private void btn_Lunchkaart_Click(object sender, EventArgs e)
+        {
+            LunchKaart openLunchKaart = new LunchKaart();
+            openLunchKaart.Show(this);
+            this.Hide();
+        }
     }
 }
