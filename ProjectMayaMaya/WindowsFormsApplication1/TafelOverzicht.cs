@@ -273,7 +273,7 @@ namespace WindowsFormsApplication1
         //1
         private void tm_tafel1_Tick(object sender, EventArgs e)
         {
-            lbl_tijdtafel1.Text = hour + ":" + min + ":" + sec;
+            lbl_tijdtafel1.Text = min + ": Min";
             ms++;
             if (ms > 10)
             {
@@ -288,11 +288,20 @@ namespace WindowsFormsApplication1
                 min++;
                 sec = 0;
             }
+
+            if (min >= 30)
+            {
+                btn_Tafel1.BackColor = Color.Maroon;
+            }
             if (min > 60)
             {
                 hour++;
                 min = 0;
             }
+        }
+
+        private void lbl_tijdtafel1_Click(object sender, EventArgs e)
+        {
         }
 
     }
