@@ -33,7 +33,6 @@
             this.btn_HMnaarBar = new System.Windows.Forms.Button();
             this.lbl_HMtekst = new System.Windows.Forms.Label();
             this.btn_ExitWindows = new System.Windows.Forms.Button();
-            this.rbtn_HMnaarWINDOWS = new WindowsFormsApplication1.RoundButton();
             this.SuspendLayout();
             // 
             // btn_HMnaarKeuken
@@ -96,23 +95,12 @@
             this.btn_ExitWindows.UseVisualStyleBackColor = true;
             this.btn_ExitWindows.Click += new System.EventHandler(this.btn_ExitWindows_Click);
             // 
-            // rbtn_HMnaarWINDOWS
-            // 
-            this.rbtn_HMnaarWINDOWS.BackColor = System.Drawing.Color.Maroon;
-            this.rbtn_HMnaarWINDOWS.ForeColor = System.Drawing.Color.White;
-            this.rbtn_HMnaarWINDOWS.Location = new System.Drawing.Point(715, 12);
-            this.rbtn_HMnaarWINDOWS.Name = "rbtn_HMnaarWINDOWS";
-            this.rbtn_HMnaarWINDOWS.Size = new System.Drawing.Size(67, 63);
-            this.rbtn_HMnaarWINDOWS.TabIndex = 7;
-            this.rbtn_HMnaarWINDOWS.Text = "X";
-            this.rbtn_HMnaarWINDOWS.UseVisualStyleBackColor = false;
-            // 
             // HoofdMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(794, 569);
-            this.Controls.Add(this.rbtn_HMnaarWINDOWS);
+
             this.Controls.Add(this.btn_ExitWindows);
             this.Controls.Add(this.lbl_HMtekst);
             this.Controls.Add(this.btn_HMnaarBar);
@@ -133,6 +121,5 @@
         private System.Windows.Forms.Button btn_HMnaarBar;
         private System.Windows.Forms.Label lbl_HMtekst;
         private System.Windows.Forms.Button btn_ExitWindows;
-        private RoundButton rbtn_HMnaarWINDOWS;
     }
 }
