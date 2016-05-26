@@ -46,14 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DatabaseDummyForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="DatabaseDummyForm.Designer.cs">
-      <DependentUpon>DatabaseDummyForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="Klantenlijst.cs" />
-    <Compile Include="Authenticatie.cs" />
     <Compile Include="BarOverzicht.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -127,9 +120,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="BestellingMenu.resx">
       <DependentUpon>BestellingMenu.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="DatabaseDummyForm.resx">
-      <DependentUpon>DatabaseDummyForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="inlogFoutAlert.resx">
       <DependentUpon>inlogFoutAlert.cs</DependentUpon>

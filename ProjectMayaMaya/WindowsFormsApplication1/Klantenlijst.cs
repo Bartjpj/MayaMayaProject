@@ -10,23 +10,17 @@ namespace WindowsFormsApplication1
     {
         //Alle delen van de database kolommen worden hier aangemaakt.
         public int personeel_id;
-        public int tafel_id;
-        public int bestelling_id;
         public string naam;
         public string functie;
-        public int barnotificatie_id;
-        public int keukennotificatie_id;
+        public int code;
         public List<Klantenlijst> klantenlijstList = new List<Klantenlijst>(); //dit is de lijst waar de personeelslidtabel in opgeslagen zal worden.
 
-        public Klantenlijst(int personeel_id, int tafel_id, int bestelling_id, string naam, string functie, int barnotificatie_id, int keukennotificatie_id)
+        public Klantenlijst(int personeel_id, string naam, string functie, int code)
         {
             this.personeel_id = personeel_id;
-            this.tafel_id = tafel_id;
-            this.bestelling_id = bestelling_id;
             this.naam = naam;
             this.functie = functie;
-            this.barnotificatie_id = barnotificatie_id;
-            this.keukennotificatie_id = keukennotificatie_id;
+            this.code = code;
         } // deze constructor zorgt ervoor dat alle variabelen overal toegankelijk zijn.
 
 
@@ -35,9 +29,9 @@ namespace WindowsFormsApplication1
             bool inlogbool = false;
             int i = 0;
             int tryInlogCode = inlogCode;
-            foreach(Klantenlijst personeel_id in klantenlijstList) {
+            foreach(Klantenlijst code in klantenlijstList) {
                 
-                if (klantenlijstList[0].personeel_id == tryInlogCode)
+                if (klantenlijstList[0].code == tryInlogCode)
                 {
                     inlogbool = true;
                 }
