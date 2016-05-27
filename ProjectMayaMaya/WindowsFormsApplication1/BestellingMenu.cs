@@ -12,6 +12,8 @@ namespace WindowsFormsApplication1
 {
     public partial class BestellingMenu : Form
     {
+        int tafelgetal = 0;
+
         protected override void OnLoad(EventArgs e) // is de verwijzing, niets veranderen AUB
         {
             base.OnLoad(e);
@@ -78,6 +80,11 @@ namespace WindowsFormsApplication1
             DrankenKaart opendrankenkaart = new DrankenKaart();
             opendrankenkaart.Show(this);
             this.Hide();
+        }
+
+        public void tafelgetalWijzigen(int tafelGetal)
+        {
+            tafelgetal = tafelGetal;
         }
 
         public void btn_stuurbestelling_Click(object sender, EventArgs e)
