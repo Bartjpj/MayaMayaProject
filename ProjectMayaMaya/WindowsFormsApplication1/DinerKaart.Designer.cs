@@ -48,13 +48,13 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.btn_LUNCHnaarDRANKEN = new System.Windows.Forms.Button();
-            this.btn_addg_id9 = new System.Windows.Forms.Button();
-            this.btn_addg_id8 = new System.Windows.Forms.Button();
-            this.btn_addg_id7 = new System.Windows.Forms.Button();
+            this.btn_addg_id21 = new System.Windows.Forms.Button();
+            this.btn_addg_id20 = new System.Windows.Forms.Button();
+            this.btn_addg_id19 = new System.Windows.Forms.Button();
             this.lbl_nagerechten = new System.Windows.Forms.Label();
-            this.btn_addg_id6 = new System.Windows.Forms.Button();
+            this.btn_addg_id18 = new System.Windows.Forms.Button();
             this.btn_addg_id16 = new System.Windows.Forms.Button();
-            this.btn_addg_id4 = new System.Windows.Forms.Button();
+            this.btn_addg_id17 = new System.Windows.Forms.Button();
             this.lbl_Hoofdgerechten = new System.Windows.Forms.Label();
             this.btn_addg_id13 = new System.Windows.Forms.Button();
             this.btn_addg_id12 = new System.Windows.Forms.Button();
@@ -63,6 +63,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.btn_addg_id14 = new System.Windows.Forms.Button();
             this.btn_addg_id15 = new System.Windows.Forms.Button();
+            this.btn_DINERnaarBESTELLING = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lbl_btwlaagwaarde
@@ -248,33 +249,34 @@
             this.btn_LUNCHnaarDRANKEN.TabIndex = 55;
             this.btn_LUNCHnaarDRANKEN.Text = "Dranken";
             this.btn_LUNCHnaarDRANKEN.UseVisualStyleBackColor = false;
+            this.btn_LUNCHnaarDRANKEN.Click += new System.EventHandler(this.btn_LUNCHnaarDRANKEN_Click);
             // 
-            // btn_addg_id9
+            // btn_addg_id21
             // 
-            this.btn_addg_id9.Location = new System.Drawing.Point(213, 363);
-            this.btn_addg_id9.Name = "btn_addg_id9";
-            this.btn_addg_id9.Size = new System.Drawing.Size(96, 37);
-            this.btn_addg_id9.TabIndex = 54;
-            this.btn_addg_id9.Text = "3 soorten Boerenkaas";
-            this.btn_addg_id9.UseVisualStyleBackColor = true;
+            this.btn_addg_id21.Location = new System.Drawing.Point(213, 363);
+            this.btn_addg_id21.Name = "btn_addg_id21";
+            this.btn_addg_id21.Size = new System.Drawing.Size(96, 37);
+            this.btn_addg_id21.TabIndex = 54;
+            this.btn_addg_id21.Text = "Port e Fromage";
+            this.btn_addg_id21.UseVisualStyleBackColor = true;
             // 
-            // btn_addg_id8
+            // btn_addg_id20
             // 
-            this.btn_addg_id8.Location = new System.Drawing.Point(111, 363);
-            this.btn_addg_id8.Name = "btn_addg_id8";
-            this.btn_addg_id8.Size = new System.Drawing.Size(96, 37);
-            this.btn_addg_id8.TabIndex = 53;
-            this.btn_addg_id8.Text = "Verse Madeleines";
-            this.btn_addg_id8.UseVisualStyleBackColor = true;
+            this.btn_addg_id20.Location = new System.Drawing.Point(111, 363);
+            this.btn_addg_id20.Name = "btn_addg_id20";
+            this.btn_addg_id20.Size = new System.Drawing.Size(96, 37);
+            this.btn_addg_id20.TabIndex = 53;
+            this.btn_addg_id20.Text = "Cherry Baby";
+            this.btn_addg_id20.UseVisualStyleBackColor = true;
             // 
-            // btn_addg_id7
+            // btn_addg_id19
             // 
-            this.btn_addg_id7.Location = new System.Drawing.Point(9, 363);
-            this.btn_addg_id7.Name = "btn_addg_id7";
-            this.btn_addg_id7.Size = new System.Drawing.Size(96, 37);
-            this.btn_addg_id7.TabIndex = 52;
-            this.btn_addg_id7.Text = "Witte Chocolade Taart";
-            this.btn_addg_id7.UseVisualStyleBackColor = true;
+            this.btn_addg_id19.Location = new System.Drawing.Point(9, 363);
+            this.btn_addg_id19.Name = "btn_addg_id19";
+            this.btn_addg_id19.Size = new System.Drawing.Size(96, 37);
+            this.btn_addg_id19.TabIndex = 52;
+            this.btn_addg_id19.Text = "Café Suprise";
+            this.btn_addg_id19.UseVisualStyleBackColor = true;
             // 
             // lbl_nagerechten
             // 
@@ -286,14 +288,14 @@
             this.lbl_nagerechten.TabIndex = 51;
             this.lbl_nagerechten.Text = "Nagerechten";
             // 
-            // btn_addg_id6
+            // btn_addg_id18
             // 
-            this.btn_addg_id6.Location = new System.Drawing.Point(213, 300);
-            this.btn_addg_id6.Name = "btn_addg_id6";
-            this.btn_addg_id6.Size = new System.Drawing.Size(96, 37);
-            this.btn_addg_id6.TabIndex = 50;
-            this.btn_addg_id6.Text = "Linguini";
-            this.btn_addg_id6.UseVisualStyleBackColor = true;
+            this.btn_addg_id18.Location = new System.Drawing.Point(213, 300);
+            this.btn_addg_id18.Name = "btn_addg_id18";
+            this.btn_addg_id18.Size = new System.Drawing.Size(96, 37);
+            this.btn_addg_id18.TabIndex = 50;
+            this.btn_addg_id18.Text = "Herten Biefstuk";
+            this.btn_addg_id18.UseVisualStyleBackColor = true;
             // 
             // btn_addg_id16
             // 
@@ -304,14 +306,14 @@
             this.btn_addg_id16.Text = "Kabbeljouw";
             this.btn_addg_id16.UseVisualStyleBackColor = true;
             // 
-            // btn_addg_id4
+            // btn_addg_id17
             // 
-            this.btn_addg_id4.Location = new System.Drawing.Point(111, 300);
-            this.btn_addg_id4.Name = "btn_addg_id4";
-            this.btn_addg_id4.Size = new System.Drawing.Size(96, 37);
-            this.btn_addg_id4.TabIndex = 48;
-            this.btn_addg_id4.Text = "Herten Stoofpot";
-            this.btn_addg_id4.UseVisualStyleBackColor = true;
+            this.btn_addg_id17.Location = new System.Drawing.Point(111, 300);
+            this.btn_addg_id17.Name = "btn_addg_id17";
+            this.btn_addg_id17.Size = new System.Drawing.Size(96, 37);
+            this.btn_addg_id17.TabIndex = 48;
+            this.btn_addg_id17.Text = "Gebakken Ossenhaas";
+            this.btn_addg_id17.UseVisualStyleBackColor = true;
             // 
             // lbl_Hoofdgerechten
             // 
@@ -388,11 +390,22 @@
             this.btn_addg_id15.Text = "Consommé";
             this.btn_addg_id15.UseVisualStyleBackColor = true;
             // 
+            // btn_DINERnaarBESTELLING
+            // 
+            this.btn_DINERnaarBESTELLING.Location = new System.Drawing.Point(9, 12);
+            this.btn_DINERnaarBESTELLING.Name = "btn_DINERnaarBESTELLING";
+            this.btn_DINERnaarBESTELLING.Size = new System.Drawing.Size(96, 34);
+            this.btn_DINERnaarBESTELLING.TabIndex = 78;
+            this.btn_DINERnaarBESTELLING.Text = "Terug naar Bestelling Menu";
+            this.btn_DINERnaarBESTELLING.UseVisualStyleBackColor = true;
+            this.btn_DINERnaarBESTELLING.Click += new System.EventHandler(this.btn_DINERnaarBESTELLING_Click);
+            // 
             // DinerKaart
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(615, 446);
+            this.Controls.Add(this.btn_DINERnaarBESTELLING);
             this.Controls.Add(this.btn_addg_id15);
             this.Controls.Add(this.btn_addg_id14);
             this.Controls.Add(this.label3);
@@ -416,13 +429,13 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btn_LUNCHnaarDRANKEN);
-            this.Controls.Add(this.btn_addg_id9);
-            this.Controls.Add(this.btn_addg_id8);
-            this.Controls.Add(this.btn_addg_id7);
+            this.Controls.Add(this.btn_addg_id21);
+            this.Controls.Add(this.btn_addg_id20);
+            this.Controls.Add(this.btn_addg_id19);
             this.Controls.Add(this.lbl_nagerechten);
-            this.Controls.Add(this.btn_addg_id6);
+            this.Controls.Add(this.btn_addg_id18);
             this.Controls.Add(this.btn_addg_id16);
-            this.Controls.Add(this.btn_addg_id4);
+            this.Controls.Add(this.btn_addg_id17);
             this.Controls.Add(this.lbl_Hoofdgerechten);
             this.Controls.Add(this.btn_addg_id13);
             this.Controls.Add(this.btn_addg_id12);
@@ -457,13 +470,13 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btn_LUNCHnaarDRANKEN;
-        private System.Windows.Forms.Button btn_addg_id9;
-        private System.Windows.Forms.Button btn_addg_id8;
-        private System.Windows.Forms.Button btn_addg_id7;
+        private System.Windows.Forms.Button btn_addg_id21;
+        private System.Windows.Forms.Button btn_addg_id20;
+        private System.Windows.Forms.Button btn_addg_id19;
         private System.Windows.Forms.Label lbl_nagerechten;
-        private System.Windows.Forms.Button btn_addg_id6;
+        private System.Windows.Forms.Button btn_addg_id18;
         private System.Windows.Forms.Button btn_addg_id16;
-        private System.Windows.Forms.Button btn_addg_id4;
+        private System.Windows.Forms.Button btn_addg_id17;
         private System.Windows.Forms.Label lbl_Hoofdgerechten;
         private System.Windows.Forms.Button btn_addg_id13;
         private System.Windows.Forms.Button btn_addg_id12;
@@ -472,5 +485,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btn_addg_id14;
         private System.Windows.Forms.Button btn_addg_id15;
+        private System.Windows.Forms.Button btn_DINERnaarBESTELLING;
     }
 }
