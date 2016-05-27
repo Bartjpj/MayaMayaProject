@@ -62,5 +62,22 @@ namespace WindowsFormsApplication1
             openLunchKaart.Show(this);
             this.Hide();
         }
+
+        private void txtbox_fooi_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_drankmenu_Click(object sender, EventArgs e)
+        {
+            DrankenKaart opendrankenkaart = new DrankenKaart();
+            opendrankenkaart.Show(this);
+            this.Hide();
+        }
     }
 }

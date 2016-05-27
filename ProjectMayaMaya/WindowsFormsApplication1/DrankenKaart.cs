@@ -12,6 +12,13 @@ namespace WindowsFormsApplication1
 {
     public partial class DrankenKaart : Form
     {
+
+        protected override void OnLoad(EventArgs e) // is de verwijzing, niets veranderen AUB
+        {
+            base.OnLoad(e);
+            this.Location = Owner.Location;
+            this.Size = Owner.Size;
+        }
         public DrankenKaart()
         {
             InitializeComponent();
@@ -20,6 +27,13 @@ namespace WindowsFormsApplication1
         private void button1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btn_DRANKENnaarBESTELMENU_Click(object sender, EventArgs e)
+        {
+            //BestellingMenu openBestellingmenu = new BestellingMenu();
+            openBestellingmenu.Show(this);
+            this.Hide();
         }
     }
 }
