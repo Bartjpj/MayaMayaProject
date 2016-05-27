@@ -31,7 +31,7 @@ namespace WindowsFormsApplication1
 
         private void btn_DRANKENnaarBESTELMENU_Click(object sender, EventArgs e)
         {
-            //BestellingMenu openBestellingmenu = new BestellingMenu();
+            BestellingMenu openBestellingmenu = new BestellingMenu();
             openBestellingmenu.Show(this);
             this.Hide();
         }
