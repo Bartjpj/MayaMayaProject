@@ -9,6 +9,8 @@ namespace WindowsFormsApplication1
 {
     public class PersoneelsLidDAO
     {
+
+
         public void haalPersoneelslid_IDTabelOp()
         {
             string connString = ConfigurationManager

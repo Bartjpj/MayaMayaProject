@@ -36,7 +36,6 @@ namespace WindowsFormsApplication1
         }
 
 
-        private void GetAll();
 
         public Tafel Tafel
         {

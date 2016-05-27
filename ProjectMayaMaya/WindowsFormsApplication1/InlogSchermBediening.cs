@@ -56,7 +56,7 @@ namespace WindowsFormsApplication1
 
             int inlogCode = txt_PersoneelsID_TextChanged(sender, e); //grijp de inlogcode van de inlogcode tekstbox
             bool juisteCode = personeelsTabel.bedieningAuthenticatie(inlogCode); // juistecode neemt boolwaarde van authenticatie aan (false is verkeerd, true is goed)
-            
+           // lbl_personeelsleden.Text = personeelsTabel.ToString();
 
             if (juisteCode) // ga naar tafeloverzicht als het true is, geef een alert als het false.
             {
