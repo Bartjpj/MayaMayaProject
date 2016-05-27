@@ -16,6 +16,8 @@ namespace WindowsFormsApplication1
         {
             InitializeComponent();
             DatabaseConnectie database = new DatabaseConnectie();
+            Bestelling bestelling1 = new Bestelling(1, 2, DateTime.Today, 300, 2, true);
+        
 
         }
         private void btn_HMnaarKeuken_Click(object sender, EventArgs e)

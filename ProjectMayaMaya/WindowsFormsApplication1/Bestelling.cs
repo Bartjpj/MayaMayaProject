@@ -16,21 +16,16 @@ namespace WindowsFormsApplication1
         //    get { return bestelling_id; }
          //   private set { bestelling_id = value; }
        // }
-        private int tafel_id = 1;
+        private int tafel_id;
         private DateTime besteldatum;
         private int voorraad;
         private int kaart_id;
         private bool betaald;
 
-        public Bestelling()
-        {
-
-        }
-
         public Bestelling(int bestelling_id, int tafelId, DateTime besteldatum, int voorraad, int kaartid, bool betaald)
         {
             this.bestelling_id = bestelling_id;
-            this.tafel_id = tafelId;
+            this.tafel_id = tafel_id;
             this.besteldatum = besteldatum;
             this.voorraad = voorraad;
             this.kaart_id = kaart_id;
@@ -38,23 +33,7 @@ namespace WindowsFormsApplication1
 
         }
 
-        private void neemBestellingOp()
-        {
 
-            string connString = ConfigurationManager.ConnectionStrings["BestellingConnectionStringSQL"].ConnectionString;
-
-            SqlConnection connectie = new SqlConnection(connString);
-            connectie.Open();
-
-            string sql = String.Format("INSERT INTO Bestelling(bestelling_id, tafel_id)" + "values('{0}','{2}')", bestelling_id, tafel_id);
-            SqlCommand command = new SqlCommand(sql, connectie);
-            int rowsAffected = command.ExecuteNonQuery();
-          
-            SqlDataReader reader = command.ExecuteReader(); // datareaderobject
-
-            connectie.Close();
-          
-        }
         private void isBetaald()
         {
 
