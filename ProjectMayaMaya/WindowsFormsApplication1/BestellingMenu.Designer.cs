@@ -150,6 +150,7 @@
             this.btn_stuurbestelling.TabIndex = 12;
             this.btn_stuurbestelling.Text = "Stuur";
             this.btn_stuurbestelling.UseVisualStyleBackColor = true;
+            this.btn_stuurbestelling.Click += new System.EventHandler(this.btn_stuurbestelling_Click);
             // 
             // btn_printbestelling
             // 

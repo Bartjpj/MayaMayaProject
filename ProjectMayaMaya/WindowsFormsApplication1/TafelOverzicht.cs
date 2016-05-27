@@ -34,10 +34,11 @@ namespace WindowsFormsApplication1
 
 
         //-----------------TAFELS--------------------------------:
+        public int tafelgetal;
         //1
-        private void btn_Tafel1_Click(object sender, EventArgs e)
+        public void btn_Tafel1_Click(object sender, EventArgs e)
         {
-
+            tafelgetal = 1;
             if (rbtn_BestellingOpnemen.Checked)
             {
                 BestellingMenu BestellingMenuOpenen = new BestellingMenu();
@@ -57,10 +58,9 @@ namespace WindowsFormsApplication1
                 foutmelding.ShowDialog(this);
             }
 
-            btn_Tafel1.BackColor = Color.Red;
         }
         //2
-        private void btn_Tafel2_Click(object sender, EventArgs e)
+        public void btn_Tafel2_Click(object sender, EventArgs e)
         {
             if (rbtn_BestellingOpnemen.Checked)
             {
@@ -83,7 +83,7 @@ namespace WindowsFormsApplication1
         }
 
         //3
-        private void btn_Tafel3_Click(object sender, EventArgs e)
+        public void btn_Tafel3_Click(object sender, EventArgs e)
         {
             if (rbtn_BestellingOpnemen.Checked)
             {
@@ -106,7 +106,7 @@ namespace WindowsFormsApplication1
         }
         
         //4
-        private void btn_Tafel4_Click(object sender, EventArgs e)
+        public void btn_Tafel4_Click(object sender, EventArgs e)
         {
             if (rbtn_BestellingOpnemen.Checked)
             {
@@ -129,7 +129,7 @@ namespace WindowsFormsApplication1
         }
         
         //5
-        private void btn_Tafel5_Click(object sender, EventArgs e)
+        public void btn_Tafel5_Click(object sender, EventArgs e)
         {
             if (rbtn_BestellingOpnemen.Checked)
             {
@@ -152,7 +152,7 @@ namespace WindowsFormsApplication1
         }
        
         //6
-        private void btn_Tafel6_Click(object sender, EventArgs e)
+        public void btn_Tafel6_Click(object sender, EventArgs e)
         {
             if (rbtn_BestellingOpnemen.Checked)
             {
@@ -175,7 +175,7 @@ namespace WindowsFormsApplication1
         }
 
         //7
-        private void btn_Tafel7_Click(object sender, EventArgs e)
+        public void btn_Tafel7_Click(object sender, EventArgs e)
         {
             if (rbtn_BestellingOpnemen.Checked)
             {
@@ -198,7 +198,7 @@ namespace WindowsFormsApplication1
         }
 
         //8
-        private void btn_Tafel8_Click(object sender, EventArgs e)
+        public void btn_Tafel8_Click(object sender, EventArgs e)
         {
             if (rbtn_BestellingOpnemen.Checked)
             {
@@ -221,7 +221,7 @@ namespace WindowsFormsApplication1
         }
 
         //9
-        private void btn_Tafel9_Click(object sender, EventArgs e)
+        public void btn_Tafel9_Click(object sender, EventArgs e)
         {
             if (rbtn_BestellingOpnemen.Checked)
             {
@@ -244,7 +244,7 @@ namespace WindowsFormsApplication1
         }
 
         //10
-        private void btn_Tafel10_Click(object sender, EventArgs e)
+        public void btn_Tafel10_Click(object sender, EventArgs e)
         {
             if (rbtn_BestellingOpnemen.Checked)
             {
@@ -271,7 +271,7 @@ namespace WindowsFormsApplication1
         int hour, min, sec, ms = 0;
 
         //1
-        private void tm_tafel1_Tick(object sender, EventArgs e)
+        public void tm_tafel1_Tick(object sender, EventArgs e)
         {
             lbl_tijdtafel1.Text = min + ": Min";
             ms++;
@@ -300,7 +300,7 @@ namespace WindowsFormsApplication1
             }
         }
 
-        private void lbl_tijdtafel1_Click(object sender, EventArgs e)
+        public void lbl_tijdtafel1_Click(object sender, EventArgs e)
         {
         }
 

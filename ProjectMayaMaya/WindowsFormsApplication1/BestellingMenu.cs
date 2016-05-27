@@ -79,5 +79,16 @@ namespace WindowsFormsApplication1
             opendrankenkaart.Show(this);
             this.Hide();
         }
+
+        public void btn_stuurbestelling_Click(object sender, EventArgs e)
+        {
+            int tafelnr = tafelgetal;
+            if (tafelnr == 1)
+            {
+            TafelOverzicht.tm_tafel1.Start();
+            TafelOverzicht.btn_Tafel1.BackColor = Color.Red;
+            }
+
+        }
     }
 }
