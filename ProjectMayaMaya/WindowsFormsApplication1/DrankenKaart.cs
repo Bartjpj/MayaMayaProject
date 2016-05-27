@@ -10,40 +10,30 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApplication1
 {
-    public partial class LunchKaart : Form
+    public partial class DrankenKaart : Form
     {
+
         protected override void OnLoad(EventArgs e) // is de verwijzing, niets veranderen AUB
         {
             base.OnLoad(e);
             this.Location = Owner.Location;
             this.Size = Owner.Size;
         }
-        public LunchKaart()
+        public DrankenKaart()
         {
             InitializeComponent();
         }
 
-        private void btn_addg_id1_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void btn_addg_id4_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void btn_LUNCHnaarKIESKAART_Click(object sender, EventArgs e)
+        private void btn_DRANKENnaarBESTELMENU_Click(object sender, EventArgs e)
         {
-            BestellingMenu openBestellingKaarten = new BestellingMenu();
-            openBestellingKaarten.Show(this);
+            BestellingMenu openBestellingmenu = new BestellingMenu();
+            openBestellingmenu.Show(this);
             this.Hide();
         }
-
-        private void btn_LUNCHnaarDRANKEN_Click(object sender, EventArgs e)
-        {
-
-        }
-
     }
 }

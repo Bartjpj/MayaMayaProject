@@ -21,9 +21,8 @@ namespace WindowsFormsApplication1
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new HoofdMenu());
-            BestellingDAO bestellingDAO = new BestellingDAO();
-            bestellingDAO.GetAll();
-            
+            Bestelling bestelling1 = new Bestelling(1, 2, DateTime.Today, 300, 2, true);
+
 
             
         }

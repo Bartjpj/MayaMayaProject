@@ -33,6 +33,8 @@
             this.btn_inloggen = new System.Windows.Forms.Button();
             this.lbl_Bedieninglogininfo = new System.Windows.Forms.Label();
             this.btn_INLOGGENnaarHM = new System.Windows.Forms.Button();
+            this.btn_InloggenSkippen = new System.Windows.Forms.Button();
+            this.lbl_personeelsleden = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lbl_personeelid
@@ -83,17 +85,37 @@
             this.btn_INLOGGENnaarHM.UseVisualStyleBackColor = true;
             this.btn_INLOGGENnaarHM.Click += new System.EventHandler(this.btn_INLOGGENnaarHM_Click);
             // 
+            // btn_InloggenSkippen
+            // 
+            this.btn_InloggenSkippen.Location = new System.Drawing.Point(455, 208);
+            this.btn_InloggenSkippen.Name = "btn_InloggenSkippen";
+            this.btn_InloggenSkippen.Size = new System.Drawing.Size(91, 34);
+            this.btn_InloggenSkippen.TabIndex = 8;
+            this.btn_InloggenSkippen.Text = "Skip inloggen";
+            this.btn_InloggenSkippen.UseVisualStyleBackColor = true;
+            this.btn_InloggenSkippen.Click += new System.EventHandler(this.btn_InloggenSkippen_Click);
+            // 
+            // lbl_personeelsleden
+            // 
+            this.lbl_personeelsleden.AutoSize = true;
+            this.lbl_personeelsleden.Location = new System.Drawing.Point(49, 271);
+            this.lbl_personeelsleden.Name = "lbl_personeelsleden";
+            this.lbl_personeelsleden.Size = new System.Drawing.Size(0, 13);
+            this.lbl_personeelsleden.TabIndex = 9;
+            // 
             // InlogSchermBediening
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(823, 503);
+            this.Controls.Add(this.lbl_personeelsleden);
+            this.Controls.Add(this.btn_InloggenSkippen);
             this.Controls.Add(this.btn_INLOGGENnaarHM);
             this.Controls.Add(this.lbl_Bedieninglogininfo);
             this.Controls.Add(this.btn_inloggen);
             this.Controls.Add(this.txt_PersoneelsID);
             this.Controls.Add(this.lbl_personeelid);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "InlogSchermBediening";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -110,6 +132,8 @@
         private System.Windows.Forms.Button btn_inloggen;
         private System.Windows.Forms.Label lbl_Bedieninglogininfo;
         private System.Windows.Forms.Button btn_INLOGGENnaarHM;
+        private System.Windows.Forms.Button btn_InloggenSkippen;
+        private System.Windows.Forms.Label lbl_personeelsleden;
     }
 }
 

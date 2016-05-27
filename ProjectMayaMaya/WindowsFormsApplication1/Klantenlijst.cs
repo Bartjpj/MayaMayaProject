@@ -10,6 +10,7 @@ namespace WindowsFormsApplication1
     {
         //Alle delen van de database kolommen worden hier aangemaakt.
         public int personeel_id;
+        public int MyProperty { get; set; }
         public string naam;
         public string functie;
         public int code;
@@ -37,6 +38,8 @@ namespace WindowsFormsApplication1
                 }
                 i++;
             }
+            
+
             return inlogbool;
 
         }

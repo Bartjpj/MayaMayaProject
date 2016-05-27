@@ -7,11 +7,8 @@ namespace WindowsFormsApplication1
 {
     public class Tafel
     {
-        public int Tafel_id;
-
-        public void isBezet()
-        {
-
-        }
+        // properties van Tafel
+        public int TafelId { get; set; }
+        public bool Bezet { get; set; }
     }
 }
