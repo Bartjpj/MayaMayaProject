@@ -13,7 +13,6 @@ namespace WindowsFormsApplication1
         public string naam;
         public string functie;
         public int code;
-        public List<Klantenlijst> personeelsTabel = new List<Klantenlijst>();
 
         public Klantenlijst(int personeel_id, string naam, string functie, int code)
         {

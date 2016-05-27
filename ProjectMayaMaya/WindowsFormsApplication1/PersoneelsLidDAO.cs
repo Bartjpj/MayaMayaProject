@@ -9,7 +9,7 @@ namespace WindowsFormsApplication1
 {
     public class PersoneelsLidDAO
     {
-        public List<Klantenlijst> klantenlijstList = new List<Klantenlijst>(); //dit is de lijst waar de personeelslidtabel in opgeslagen zal worden.
+        
 
         public bool haalPersoneelslid_IDTabelOp(int inlogcode)
         {
@@ -23,6 +23,8 @@ namespace WindowsFormsApplication1
             SqlDataReader reader = command.ExecuteReader();
             int rowsAffected = command.ExecuteNonQuery();
 
+            List<Klantenlijst> personeelIDtable = new List<Klantenlijst>();
+
             while (reader.Read())
             {
                 int personeel_id = (int)reader["personeel_id"];
@@ -31,7 +33,7 @@ namespace WindowsFormsApplication1
                 int code = (int)reader["code"];
 
                 Klantenlijst klantX = new Klantenlijst(personeel_id, naam, functie, code);
-                klantenlijstList.Add(klantX);
+                personeelIDtable.Add(klantX);
             }
 
             bool juisteCode = false;
