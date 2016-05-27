@@ -23,15 +23,12 @@ namespace WindowsFormsApplication1
 
             while (reader.Read())
             {
-                int personeel_id = (int)reader["personeeld_id"];
-                int tafel_id = (int)reader["tafel_id"];
-                int bestelling_id = (int)reader["tafel_id"];
+                int personeel_id = (int)reader["personeel_id"];
                 string naam = (string)reader["naam"];
                 string functie = (string)reader["functie"];
-                int barnotificatie_id = (int)reader["barnotificatie_id"];
-                int keukennotificatie_id = (int)reader["keukennotificatie_id"];
+                int code = (int)reader["code"];
 
-                Klantenlijst klantX = new Klantenlijst(personeel_id, tafel_id, bestelling_id, naam, functie, barnotificatie_id, keukennotificatie_id);
+                Klantenlijst klantX = new Klantenlijst(personeel_id, naam, functie, code);
                 klantX.klantenlijstList.Add(klantX);
             }
             

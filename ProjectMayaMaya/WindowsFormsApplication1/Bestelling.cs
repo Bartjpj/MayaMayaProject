@@ -16,17 +16,19 @@ namespace WindowsFormsApplication1
         //    get { return bestelling_id; }
          //   private set { bestelling_id = value; }
        // }
-        private int tafel_id;
-        private DateTime besteldatum;
-        private int voorraad;
-        private int kaart_id;
-        private bool betaald;
+       
+        private int tafel_id { get; set; }
+        public DateTime datumtijd { get; set; }
+        public int voorraad { get; set; }
+        public int kaart_id { get; set; }
+        public bool betaald { get; set; }
+       
 
         public Bestelling(int bestelling_id, int tafelId, DateTime besteldatum, int voorraad, int kaartid, bool betaald)
         {
             this.bestelling_id = bestelling_id;
             this.tafel_id = tafel_id;
-            this.besteldatum = besteldatum;
+            this.datumtijd = datumtijd;
             this.voorraad = voorraad;
             this.kaart_id = kaart_id;
             this.betaald = betaald;
@@ -34,11 +36,7 @@ namespace WindowsFormsApplication1
         }
 
 
-        private void isBetaald()
-        {
-
-        }
- 
+       private void GetAll()
 
         public Tafel Tafel
         {

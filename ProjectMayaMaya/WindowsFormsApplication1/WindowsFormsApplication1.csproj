@@ -46,11 +46,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DatabaseDummyForm.cs">
+    <Compile Include="DrankenKaart.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DatabaseDummyForm.Designer.cs">
-      <DependentUpon>DatabaseDummyForm.cs</DependentUpon>
+    <Compile Include="DrankenKaart.Designer.cs">
+      <DependentUpon>DrankenKaart.cs</DependentUpon>
     </Compile>
     <Compile Include="Klantenlijst.cs" />
     <Compile Include="BarOverzicht.cs">
@@ -127,8 +127,8 @@
     <EmbeddedResource Include="BestellingMenu.resx">
       <DependentUpon>BestellingMenu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DatabaseDummyForm.resx">
-      <DependentUpon>DatabaseDummyForm.cs</DependentUpon>
+    <EmbeddedResource Include="DrankenKaart.resx">
+      <DependentUpon>DrankenKaart.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="inlogFoutAlert.resx">
       <DependentUpon>inlogFoutAlert.cs</DependentUpon>

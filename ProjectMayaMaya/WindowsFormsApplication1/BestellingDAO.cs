@@ -16,6 +16,7 @@ namespace WindowsFormsApplication1
 
         }
         public List<Bestelling> bestellingOpgehaald = new List<Bestelling>();
+        
         public void haalBestellingOp()
         {
 
@@ -40,9 +41,9 @@ namespace WindowsFormsApplication1
                 bestellingOpgehaald.Add(opgehaaldeBestelling);
             
             }
-
+           
             connectie.Close();
-
+           
         }
     }
 }
