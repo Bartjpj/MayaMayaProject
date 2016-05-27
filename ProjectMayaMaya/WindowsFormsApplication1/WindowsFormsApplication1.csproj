@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DinerKaart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DinerKaart.Designer.cs">
+      <DependentUpon>DinerKaart.cs</DependentUpon>
+    </Compile>
     <Compile Include="DrankenKaart.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -126,6 +132,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="BestellingMenu.resx">
       <DependentUpon>BestellingMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DinerKaart.resx">
+      <DependentUpon>DinerKaart.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DrankenKaart.resx">
       <DependentUpon>DrankenKaart.cs</DependentUpon>
