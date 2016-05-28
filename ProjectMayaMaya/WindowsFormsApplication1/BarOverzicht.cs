@@ -15,27 +15,30 @@ namespace WindowsFormsApplication1
     public partial class BarOverzicht : Form
     {
         BestellingDAO bestellingDAO;
-        List<Bestelling> bestellingslijst;
-
+        List<Bestelling> bestellingslijst = new List<Bestelling>();
+       
         protected override void OnLoad(EventArgs e) // is de verwijzing, niets veranderen AUB
         {
             base.OnLoad(e);
             this.Location = Owner.Location;
             this.Size = Owner.Size;
         }
-        public BarOverzicht()
-        {
-
-        }
+     
         public BarOverzicht(BestellingDAO bestellingDAO) // geef een bestellingDAO als constructor mee.
         {
-            InitializeComponent();
+           InitializeComponent();
 
-            this.bestellingDAO = bestellingDAO; // zet bestellingDAO
+           this.bestellingDAO = bestellingDAO; // zet bestellingdao
+          
+           bestellingslijst = bestellingDAO.haalBestellingOp(); // haal de bestelling op
+           lb_Baroverzicht.DataSource = bestellingslijst;
+           //lb_Baroverzicht.Items.Add(bestellingslijst);
 
-           bestellingslijst = bestellingDAO.haalBestellingOp(); // haal de bestelling op 
 
-            
+
+           for (int i = 0; i < bestellingslijst.Count; i++ )
+               lb_Baroverzicht.DisplayMember = bestellingslijst[i].ToString();
+           
 
         }
 
@@ -76,7 +79,7 @@ namespace WindowsFormsApplication1
 
         private void btn_BestellingGereed_Click(object sender, EventArgs e)
         {
-            lb_Baroverzicht.Text = bestellingslijst.ToString();
+            
         }
     }
 }

@@ -74,11 +74,14 @@
             // 
             // lb_Baroverzicht
             // 
+            this.lb_Baroverzicht.DataSource = this.lb_Baroverzicht.CustomTabOffsets;
             this.lb_Baroverzicht.FormattingEnabled = true;
+            this.lb_Baroverzicht.HorizontalScrollbar = true;
             this.lb_Baroverzicht.Location = new System.Drawing.Point(12, 141);
+            this.lb_Baroverzicht.MultiColumn = true;
             this.lb_Baroverzicht.Name = "lb_Baroverzicht";
             this.lb_Baroverzicht.Size = new System.Drawing.Size(755, 225);
-            this.lb_Baroverzicht.TabIndex = 6;
+            this.lb_Baroverzicht.TabIndex = 7;
             this.lb_Baroverzicht.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
             // BarOverzicht

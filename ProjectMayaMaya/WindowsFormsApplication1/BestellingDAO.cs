@@ -17,7 +17,7 @@ namespace WindowsFormsApplication1
         }
         
         
-        public List<Bestelling> haalBestellingOp()
+        public  List<Bestelling> haalBestellingOp()
         {
 
             string connString = ConfigurationManager.ConnectionStrings["BestellingConnectionStringSQL"].ConnectionString;
@@ -39,13 +39,14 @@ namespace WindowsFormsApplication1
                 string tijd = (string)reader["tijd"];
                 int voorraad = (int) reader["voorraad"];
                 int kaart_id = (int) reader["kaart_id"];
-                int betaald = (int) reader["betaald"];
+                bool betaald = (bool)reader.GetBoolean(6);
                 Bestelling opgehaaldeBestelling = new Bestelling(bestelling_id, tafel_id, datum, tijd, voorraad, kaart_id, betaald);
                 bestellingen.Add(opgehaaldeBestelling);
             
             }
-            connectie.Close();
             return bestellingen;
+            connectie.Close();
+           
            
            
         }

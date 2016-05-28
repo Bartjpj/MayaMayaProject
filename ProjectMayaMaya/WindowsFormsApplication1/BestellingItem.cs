@@ -5,21 +5,10 @@ using System.Text;
 
 namespace WindowsFormsApplication1
 {
-    public class BestellingItem
+    public abstract class BestellingItem
     {
-        //private int bestelling_id;
         private int aantal;
-
-        public Bestelling Bestelling
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
-        }
-        //private int MenuItem_id;
+        private int BestellingId;
+        private int ItemId;
     }
 }
