@@ -38,12 +38,12 @@ namespace WindowsFormsApplication1
         }
 
 
-      
+
 
         public void doeEenBestelling(int bestelling_id, int tafel_id, int datum, int tijd, int voorraad, int kaart_id, int betaald){
-          
+
         }
-      
+
 
     }
 }

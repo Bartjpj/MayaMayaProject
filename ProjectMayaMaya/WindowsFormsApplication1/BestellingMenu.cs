@@ -12,6 +12,8 @@ namespace WindowsFormsApplication1
 {
     public partial class BestellingMenu : Form
     {
+        int tafelgetal = 0;
+
         protected override void OnLoad(EventArgs e) // is de verwijzing, niets veranderen AUB
         {
             base.OnLoad(e);
@@ -62,5 +64,38 @@ namespace WindowsFormsApplication1
             openLunchKaart.Show(this);
             this.Hide();
         }
+
+        private void txtbox_fooi_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_drankmenu_Click(object sender, EventArgs e)
+        {
+            DrankenKaart opendrankenkaart = new DrankenKaart();
+            opendrankenkaart.Show(this);
+            this.Hide();
+        }
+
+        public void tafelgetalWijzigen(int tafelGetal)
+        {
+            tafelgetal = tafelGetal;
+        }
+
+        //public void btn_stuurbestelling_Click(object sender, EventArgs e)
+        //{
+        //    int tafelnr = tafelgetal;
+        //    if (tafelnr == 1)
+        //    {
+        //        TafelOverzicht.tm_tafel1.Start();
+        //        TafelOverzicht.btn_Tafel1.BackColor = Color.Red;
+        //    }
+
+        //}
     }
 }

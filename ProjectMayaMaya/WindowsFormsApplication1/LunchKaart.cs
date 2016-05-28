@@ -33,5 +33,17 @@ namespace WindowsFormsApplication1
 
         }
 
+        private void btn_LUNCHnaarKIESKAART_Click(object sender, EventArgs e)
+        {
+            BestellingMenu openBestellingKaarten = new BestellingMenu();
+            openBestellingKaarten.Show(this);
+            this.Hide();
+        }
+
+        private void btn_LUNCHnaarDRANKEN_Click(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }

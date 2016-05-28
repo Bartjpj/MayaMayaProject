@@ -9,7 +9,9 @@ namespace WindowsFormsApplication1
 {
     public class PersoneelsLidDAO
     {
-        public void haalPersoneelslid_IDTabelOp()
+        
+
+        public bool haalPersoneelslid_IDTabelOp(int inlogcode)
         {
             string connString = ConfigurationManager
             .ConnectionStrings["BestellingConnectionStringSQL"]
@@ -17,9 +19,11 @@ namespace WindowsFormsApplication1
             SqlConnection conn = new SqlConnection(connString);
             conn.Open();
 
-            SqlCommand command = new SqlCommand("SELECT * FROM Personeelslid", conn);
+            SqlCommand command = new SqlCommand("SELECT * FROM Personeelslid WHERE code = '" + inlogcode + "'", conn);
             SqlDataReader reader = command.ExecuteReader();
+            int rowsAffected = command.ExecuteNonQuery();
 
+            List<Klantenlijst> personeelIDtable = new List<Klantenlijst>();
 
             while (reader.Read())
             {
@@ -29,13 +33,26 @@ namespace WindowsFormsApplication1
                 int code = (int)reader["code"];
 
                 Klantenlijst klantX = new Klantenlijst(personeel_id, naam, functie, code);
-                klantX.klantenlijstList.Add(klantX);
+                personeelIDtable.Add(klantX);
             }
-            
+
+            bool juisteCode = false;
+
+            if (rowsAffected == 1)
+            {
+                juisteCode = true;
+            }
+
             conn.Close();
+            return juisteCode;
         }
 
 
+
+        private void GetAllPersoneelsID(PersoneelsLidDAO klantenlijstList)
+        {
+           // personeelsTabel = klantenlijstList.haalPersoneelslid_IDTabelOp();
+        }
 
 
     }
