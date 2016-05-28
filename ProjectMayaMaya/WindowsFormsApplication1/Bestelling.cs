@@ -18,17 +18,19 @@ namespace WindowsFormsApplication1
        // }
        
         private int tafel_id { get; set; }
-        public DateTime datumtijd { get; set; }
+        public string datum { get; set; }
+        public string tijd{get; set;}
         public int voorraad { get; set; }
         public int kaart_id { get; set; }
-        public bool betaald { get; set; }
+        public int betaald { get; set; }
        
 
-        public Bestelling(int bestelling_id, int tafelId, DateTime besteldatum, int voorraad, int kaartid, bool betaald)
+        public Bestelling(int bestelling_id, int tafelId, string datum, string tijd, int voorraad, int kaartid, int betaald)
         {
             this.bestelling_id = bestelling_id;
             this.tafel_id = tafel_id;
-            this.datumtijd = datumtijd;
+            this.datum = datum;
+            this.tijd = tijd;
             this.voorraad = voorraad;
             this.kaart_id = kaart_id;
             this.betaald = betaald;
@@ -36,30 +38,12 @@ namespace WindowsFormsApplication1
         }
 
 
-       private void GetAll()
+      
 
-        public Tafel Tafel
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
+        public void doeEenBestelling(int bestelling_id, int tafel_id, int datum, int tijd, int voorraad, int kaart_id, int betaald){
+          
         }
-
-        public PersoneelLid PersoneelLid
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
-        }
-
+      
 
     }
 }

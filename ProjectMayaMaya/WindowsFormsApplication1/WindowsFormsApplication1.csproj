@@ -46,6 +46,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BestellingItemsDAO.cs" />
+    <Compile Include="BetaalStatusEnum.cs" />
     <Compile Include="DrankenKaart.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -28,25 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.gbox_BarBestelling = new System.Windows.Forms.GroupBox();
             this.lbl_OpenstaandeBestellingenKeuken = new System.Windows.Forms.Label();
             this.Bestelling_id = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.btn_BARnaarHM = new System.Windows.Forms.Button();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.gbox_bestelling3 = new System.Windows.Forms.GroupBox();
             this.btn_BestellingGereed = new System.Windows.Forms.Button();
+            this.lb_Baroverzicht = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
-            // 
-            // gbox_BarBestelling
-            // 
-            this.gbox_BarBestelling.Location = new System.Drawing.Point(12, 115);
-            this.gbox_BarBestelling.Name = "gbox_BarBestelling";
-            this.gbox_BarBestelling.Size = new System.Drawing.Size(757, 82);
-            this.gbox_BarBestelling.TabIndex = 0;
-            this.gbox_BarBestelling.TabStop = false;
-            this.gbox_BarBestelling.Text = "Bestelling X";
-            this.gbox_BarBestelling.Enter += new System.EventHandler(this.gbox_BarBestelling_Enter);
             // 
             // lbl_OpenstaandeBestellingenKeuken
             // 
@@ -72,25 +60,6 @@
             this.btn_BARnaarHM.UseVisualStyleBackColor = true;
             this.btn_BARnaarHM.Click += new System.EventHandler(this.btn_BARnaarHM_Click);
             // 
-            // groupBox1
-            // 
-            this.groupBox1.Location = new System.Drawing.Point(12, 203);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(757, 82);
-            this.groupBox1.TabIndex = 3;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Bestelling X";
-            // 
-            // gbox_bestelling3
-            // 
-            this.gbox_bestelling3.Location = new System.Drawing.Point(12, 291);
-            this.gbox_bestelling3.Name = "gbox_bestelling3";
-            this.gbox_bestelling3.Size = new System.Drawing.Size(757, 82);
-            this.gbox_bestelling3.TabIndex = 4;
-            this.gbox_bestelling3.TabStop = false;
-            this.gbox_bestelling3.Text = "Bestelling X";
-            this.gbox_bestelling3.Enter += new System.EventHandler(this.gbox_bestelling3_Enter);
-            // 
             // btn_BestellingGereed
             // 
             this.btn_BestellingGereed.BackColor = System.Drawing.Color.LimeGreen;
@@ -101,18 +70,26 @@
             this.btn_BestellingGereed.TabIndex = 5;
             this.btn_BestellingGereed.Text = "Gereed";
             this.btn_BestellingGereed.UseVisualStyleBackColor = false;
+            this.btn_BestellingGereed.Click += new System.EventHandler(this.btn_BestellingGereed_Click);
+            // 
+            // lb_Baroverzicht
+            // 
+            this.lb_Baroverzicht.FormattingEnabled = true;
+            this.lb_Baroverzicht.Location = new System.Drawing.Point(12, 141);
+            this.lb_Baroverzicht.Name = "lb_Baroverzicht";
+            this.lb_Baroverzicht.Size = new System.Drawing.Size(755, 225);
+            this.lb_Baroverzicht.TabIndex = 6;
+            this.lb_Baroverzicht.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
             // BarOverzicht
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(790, 463);
+            this.Controls.Add(this.lb_Baroverzicht);
             this.Controls.Add(this.btn_BestellingGereed);
-            this.Controls.Add(this.gbox_bestelling3);
-            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btn_BARnaarHM);
             this.Controls.Add(this.lbl_OpenstaandeBestellingenKeuken);
-            this.Controls.Add(this.gbox_BarBestelling);
             this.Name = "BarOverzicht";
             this.Text = "BarOverzicht";
             this.Load += new System.EventHandler(this.BarOverzicht_Load);
@@ -123,13 +100,11 @@
 
         #endregion
 
-        private System.Windows.Forms.GroupBox gbox_BarBestelling;
         private System.Windows.Forms.Label lbl_OpenstaandeBestellingenKeuken;
         private System.Windows.Forms.ColumnHeader Bestelling_id;
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.Button btn_BARnaarHM;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.GroupBox gbox_bestelling3;
         private System.Windows.Forms.Button btn_BestellingGereed;
+        private System.Windows.Forms.ListBox lb_Baroverzicht;
     }
 }

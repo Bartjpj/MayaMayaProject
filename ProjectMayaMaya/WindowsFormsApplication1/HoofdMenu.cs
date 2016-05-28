@@ -16,7 +16,7 @@ namespace WindowsFormsApplication1
         {
             InitializeComponent();
             DatabaseConnectie database = new DatabaseConnectie();
-            Bestelling bestelling1 = new Bestelling(1, 2, DateTime.Today, 300, 2, true);
+            //Bestelling bestelling1 = new Bestelling(1, 2, 1, 22, 300, 2, 1, 2);
         
 
         }

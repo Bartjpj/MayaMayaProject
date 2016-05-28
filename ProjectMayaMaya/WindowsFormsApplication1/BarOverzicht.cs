@@ -14,6 +14,8 @@ namespace WindowsFormsApplication1
 {
     public partial class BarOverzicht : Form
     {
+        BestellingDAO bestellingDAO;
+
         protected override void OnLoad(EventArgs e) // is de verwijzing, niets veranderen AUB
         {
             base.OnLoad(e);
@@ -22,7 +24,18 @@ namespace WindowsFormsApplication1
         }
         public BarOverzicht()
         {
+
+        }
+        public BarOverzicht(BestellingDAO bestellingDAO) // geef een bestellingDAO als constructor mee.
+        {
             InitializeComponent();
+
+            this.bestellingDAO = bestellingDAO; // zet bestellingDAO
+
+            List<Bestelling> bestellingslijst = bestellingDAO.haalBestellingOp(); // haal de bestelling op 
+
+            lb_Baroverzicht.Text = bestellingslijst.ToString();
+
         }
 
         private void btn_BARnaarHM_Click(object sender, EventArgs e)
@@ -48,6 +61,21 @@ namespace WindowsFormsApplication1
         private void gbox_bestelling3_Enter(object sender, EventArgs e)
         {
 
+        }
+
+        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_BestellingGereed_Click(object sender, EventArgs e)
+        {
+           
         }
     }
 }
