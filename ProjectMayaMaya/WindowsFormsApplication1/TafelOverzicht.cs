@@ -36,6 +36,8 @@ namespace WindowsFormsApplication1
         //-----------------TAFELS--------------------------------:
         int tafelgetal;
         BestellingMenu bestellingmenuActiveren = new BestellingMenu();
+
+
         //1
         public void btn_Tafel1_Click(object sender, EventArgs e)
         {
@@ -67,7 +69,7 @@ namespace WindowsFormsApplication1
             if (rbtn_BestellingOpnemen.Checked)
             {
                 BestellingMenu BestellingMenuOpenen = new BestellingMenu();
-                BestellingMenuOpenen.Show(this); 
+                BestellingMenuOpenen.Show(this);
                 this.Hide();
             }
             //else if (rbtn_BestellingAfrekenen.Checked)
@@ -106,7 +108,7 @@ namespace WindowsFormsApplication1
                 foutmelding.ShowDialog(this);
             }
         }
-        
+
         //4
         public void btn_Tafel4_Click(object sender, EventArgs e)
         {
@@ -129,7 +131,7 @@ namespace WindowsFormsApplication1
                 foutmelding.ShowDialog(this);
             }
         }
-        
+
         //5
         public void btn_Tafel5_Click(object sender, EventArgs e)
         {
@@ -152,7 +154,7 @@ namespace WindowsFormsApplication1
                 foutmelding.ShowDialog(this);
             }
         }
-       
+
         //6
         public void btn_Tafel6_Click(object sender, EventArgs e)
         {
@@ -267,7 +269,7 @@ namespace WindowsFormsApplication1
                 foutmelding.ShowDialog(this);
             }
         }
-        
+
         //---------------TIMERS-------------------------:
         //zetten van int voor de timer
         int hour, min, sec, ms = 0;
