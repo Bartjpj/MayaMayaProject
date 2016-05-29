@@ -35,14 +35,14 @@ namespace WindowsFormsApplication1
 
         //-----------------TAFELS--------------------------------:
         int tafelgetal;
-        BestellingMenu bestellingmenuActiveren = new BestellingMenu();
+       // BestellingMenu bestellingmenuActiveren = new BestellingMenu();
 
 
         //1
         public void btn_Tafel1_Click(object sender, EventArgs e)
         {
             tafelgetal = 1;
-            bestellingmenuActiveren.tafelgetalWijzigen(tafelgetal);
+            //bestellingmenuActiveren.tafelgetalWijzigen(tafelgetal);
             if (rbtn_BestellingOpnemen.Checked)
             {
                 BestellingMenu BestellingMenuOpenen = new BestellingMenu();
