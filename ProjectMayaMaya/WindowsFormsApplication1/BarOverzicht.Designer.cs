@@ -34,6 +34,12 @@
             this.btn_BARnaarHM = new System.Windows.Forms.Button();
             this.btn_BestellingGereed = new System.Windows.Forms.Button();
             this.lb_Baroverzicht = new System.Windows.Forms.ListBox();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // lbl_OpenstaandeBestellingenKeuken
@@ -84,11 +90,48 @@
             this.lb_Baroverzicht.TabIndex = 7;
             this.lb_Baroverzicht.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2,
+            this.Column3,
+            this.Column4});
+            this.dataGridView1.GridColor = System.Drawing.SystemColors.ActiveCaption;
+            this.dataGridView1.Location = new System.Drawing.Point(12, 141);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(755, 225);
+            this.dataGridView1.TabIndex = 8;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Bestelling_id";
+            this.Column1.Name = "Column1";
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Tafel_id";
+            this.Column2.Name = "Column2";
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Aantal";
+            this.Column3.Name = "Column3";
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Item";
+            this.Column4.Name = "Column4";
+            // 
             // BarOverzicht
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(790, 463);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.lb_Baroverzicht);
             this.Controls.Add(this.btn_BestellingGereed);
             this.Controls.Add(this.btn_BARnaarHM);
@@ -96,6 +139,7 @@
             this.Name = "BarOverzicht";
             this.Text = "BarOverzicht";
             this.Load += new System.EventHandler(this.BarOverzicht_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -109,5 +153,10 @@
         private System.Windows.Forms.Button btn_BARnaarHM;
         private System.Windows.Forms.Button btn_BestellingGereed;
         private System.Windows.Forms.ListBox lb_Baroverzicht;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
     }
 }

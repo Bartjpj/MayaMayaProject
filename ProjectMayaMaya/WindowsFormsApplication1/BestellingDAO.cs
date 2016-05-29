@@ -17,7 +17,7 @@ namespace WindowsFormsApplication1
         }
         
         
-        public  List<Bestelling> haalBestellingOp()
+        public  List<Bestelling> getAllBestellingen() // deze methode haalt de gegevens op voor het baroverzicht/keukenoverzicht
         {
 
             string connString = ConfigurationManager.ConnectionStrings["BestellingConnectionStringSQL"].ConnectionString;
@@ -26,8 +26,8 @@ namespace WindowsFormsApplication1
             connectie.Open();
 
             
-            SqlCommand command = new SqlCommand("SELECT * FROM Bestelling", connectie);
-
+            SqlCommand command = new SqlCommand("SELECT bestelling_id, tafel_id, ItemId, aantal  FROM Bestelling, BestellingItems, MenuItem, Menucategorie WHERE (bestelling_id = BestellingId AND ItemId = menu_id) AND (Menuitem.categorie_id = Menucategorie.categorie_id);", connectie);
+            // deze query zorgt ervoor dat via het koppeltabel een menu-item geselecteerd kan worden.
             SqlDataReader reader = command.ExecuteReader();
             List<Bestelling> bestellingen = new List<Bestelling>();
 
@@ -35,12 +35,15 @@ namespace WindowsFormsApplication1
             {
                 int bestelling_id = (int)reader["bestelling_id"];
                 int tafel_id = (int) reader["tafel_id"];
-                string datum = (string) reader["datum"];
-                string tijd = (string)reader["tijd"];
-                int voorraad = (int) reader["voorraad"];
-                int kaart_id = (int) reader["kaart_id"];
-                bool betaald = (bool)reader.GetBoolean(6);
-                Bestelling opgehaaldeBestelling = new Bestelling(bestelling_id, tafel_id, datum, tijd, voorraad, kaart_id, betaald);
+                //string datum = (string) reader["datum"];
+                //string tijd = (string)reader["tijd"];
+                int ItemdId = (int)reader["ItemId"];
+                int aantal = (int)reader["aantal"];
+
+
+
+                //bool betaald = (bool)reader.GetBoolean(6);
+                Bestelling opgehaaldeBestelling = new Bestelling(bestelling_id, tafel_id, aantal, ItemdId);
                 bestellingen.Add(opgehaaldeBestelling);
             
             }

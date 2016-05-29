@@ -30,14 +30,14 @@ namespace WindowsFormsApplication1
 
            this.bestellingDAO = bestellingDAO; // zet bestellingdao
           
-           bestellingslijst = bestellingDAO.haalBestellingOp(); // haal de bestelling op
-           lb_Baroverzicht.DataSource = bestellingslijst;
+           bestellingslijst = bestellingDAO.getAllBestellingen(); // haal de bestelling op
+           //lb_Baroverzicht.DataSource = bestellingslijst;
            //lb_Baroverzicht.Items.Add(bestellingslijst);
 
+           dataGridView1.DataSource = bestellingslijst;
 
-
-           for (int i = 0; i < bestellingslijst.Count; i++ )
-               lb_Baroverzicht.DisplayMember = bestellingslijst[i].ToString();
+        //   for (int i = 0; i < bestellingslijst.Count; i++ )
+        //       lb_Baroverzicht.DisplayMember = bestellingslijst[i].ToString();
            
 
         }
@@ -80,6 +80,11 @@ namespace WindowsFormsApplication1
         private void btn_BestellingGereed_Click(object sender, EventArgs e)
         {
             
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
