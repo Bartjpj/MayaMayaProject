@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApplication1
 {
-    public partial class BestellingMenu : TafelOverzicht;
+    public partial class BestellingMenu : TafelOverzicht
     {
         int tafelgetal = 0;
 
@@ -96,20 +96,20 @@ namespace WindowsFormsApplication1
             int hour, min, sec, ms = 0;
             int tafelnr = tafelgetal;
 
-            if (tafelnr == 1)
-            {
-                TafelOverzicht.tm_tafel1.Start();
-                TafelOverzicht.btn_Tafel1.BackColor = Color.Red;
-                    Timer t1;
-                    t1 = new Timer();
-                    t1.Start();
+            //if (tafelnr == 1)
+            //{
+            //    TafelOverzicht.tm_tafel1.Start();
+            //    TafelOverzicht.btn_Tafel1.BackColor = Color.Red;
+            //        Timer t1;
+            //        t1 = new Timer();
+            //        t1.Start();
 
-                    if (t1.Tick() += 60 = true)
-                    {
-                        min++;
-                        t1.Stop();
-                        t1.Start();
-                    }
+            //        if (t1.Tick() += 60 = true)
+            //        {
+            //            min++;
+            //            t1.Stop();
+            //            t1.Start();
+            //        }
                 //s1.Start();
 
                 //for (int i = 0; i < 1000; i++)
@@ -122,4 +122,3 @@ namespace WindowsFormsApplication1
 
         }
     }
-}

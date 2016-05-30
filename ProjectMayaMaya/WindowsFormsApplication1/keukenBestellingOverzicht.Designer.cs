@@ -28,22 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.gbox_BestellingKeukenX = new System.Windows.Forms.GroupBox();
             this.btn_KeukenNaarHoofdmenu = new System.Windows.Forms.Button();
             this.lbl_OpenstaandeBestellingenKeuken = new System.Windows.Forms.Label();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.btn_gereedKeuken = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // gbox_BestellingKeukenX
-            // 
-            this.gbox_BestellingKeukenX.Location = new System.Drawing.Point(13, 106);
-            this.gbox_BestellingKeukenX.Margin = new System.Windows.Forms.Padding(2);
-            this.gbox_BestellingKeukenX.Name = "gbox_BestellingKeukenX";
-            this.gbox_BestellingKeukenX.Padding = new System.Windows.Forms.Padding(2);
-            this.gbox_BestellingKeukenX.Size = new System.Drawing.Size(738, 79);
-            this.gbox_BestellingKeukenX.TabIndex = 0;
-            this.gbox_BestellingKeukenX.TabStop = false;
-            this.gbox_BestellingKeukenX.Text = "Bestelling X";
-            this.gbox_BestellingKeukenX.Enter += new System.EventHandler(this.groep_BestellingKeukenX_Enter);
             // 
             // btn_KeukenNaarHoofdmenu
             // 
@@ -60,23 +50,43 @@
             // 
             this.lbl_OpenstaandeBestellingenKeuken.AutoSize = true;
             this.lbl_OpenstaandeBestellingenKeuken.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_OpenstaandeBestellingenKeuken.Location = new System.Drawing.Point(263, 80);
+            this.lbl_OpenstaandeBestellingenKeuken.Location = new System.Drawing.Point(253, 49);
             this.lbl_OpenstaandeBestellingenKeuken.Name = "lbl_OpenstaandeBestellingenKeuken";
             this.lbl_OpenstaandeBestellingenKeuken.Size = new System.Drawing.Size(242, 24);
             this.lbl_OpenstaandeBestellingenKeuken.TabIndex = 2;
             this.lbl_OpenstaandeBestellingenKeuken.Text = "Openstaande Bestellingen: ";
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(11, 98);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(737, 235);
+            this.dataGridView1.TabIndex = 3;
+            // 
+            // btn_gereedKeuken
+            // 
+            this.btn_gereedKeuken.BackColor = System.Drawing.SystemColors.Highlight;
+            this.btn_gereedKeuken.Location = new System.Drawing.Point(605, 339);
+            this.btn_gereedKeuken.Name = "btn_gereedKeuken";
+            this.btn_gereedKeuken.Size = new System.Drawing.Size(133, 57);
+            this.btn_gereedKeuken.TabIndex = 4;
+            this.btn_gereedKeuken.Text = "Gereed";
+            this.btn_gereedKeuken.UseVisualStyleBackColor = false;
             // 
             // keukenBestellingOverzicht
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(760, 408);
+            this.Controls.Add(this.btn_gereedKeuken);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.lbl_OpenstaandeBestellingenKeuken);
             this.Controls.Add(this.btn_KeukenNaarHoofdmenu);
-            this.Controls.Add(this.gbox_BestellingKeukenX);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "keukenBestellingOverzicht";
             this.Text = "keukenBestellingOverzicht";
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -84,8 +94,9 @@
 
         #endregion
 
-        private System.Windows.Forms.GroupBox gbox_BestellingKeukenX;
         private System.Windows.Forms.Button btn_KeukenNaarHoofdmenu;
         private System.Windows.Forms.Label lbl_OpenstaandeBestellingenKeuken;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button btn_gereedKeuken;
     }
 }

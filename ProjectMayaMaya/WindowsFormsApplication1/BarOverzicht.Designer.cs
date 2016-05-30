@@ -83,10 +83,10 @@
             this.lb_Baroverzicht.DataSource = this.lb_Baroverzicht.CustomTabOffsets;
             this.lb_Baroverzicht.FormattingEnabled = true;
             this.lb_Baroverzicht.HorizontalScrollbar = true;
-            this.lb_Baroverzicht.Location = new System.Drawing.Point(12, 141);
+            this.lb_Baroverzicht.Location = new System.Drawing.Point(12, 64);
             this.lb_Baroverzicht.MultiColumn = true;
             this.lb_Baroverzicht.Name = "lb_Baroverzicht";
-            this.lb_Baroverzicht.Size = new System.Drawing.Size(755, 225);
+            this.lb_Baroverzicht.Size = new System.Drawing.Size(755, 160);
             this.lb_Baroverzicht.TabIndex = 7;
             this.lb_Baroverzicht.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
@@ -100,9 +100,9 @@
             this.Column3,
             this.Column4});
             this.dataGridView1.GridColor = System.Drawing.SystemColors.ActiveCaption;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 141);
+            this.dataGridView1.Location = new System.Drawing.Point(12, 230);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(755, 225);
+            this.dataGridView1.Size = new System.Drawing.Size(755, 157);
             this.dataGridView1.TabIndex = 8;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 

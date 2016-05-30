@@ -31,10 +31,12 @@ namespace WindowsFormsApplication1
            this.bestellingDAO = bestellingDAO; // zet bestellingdao
           
            bestellingslijst = bestellingDAO.getAllBestellingen(); // haal de bestelling op
-           //lb_Baroverzicht.DataSource = bestellingslijst;
-           //lb_Baroverzicht.Items.Add(bestellingslijst);
 
-           dataGridView1.DataSource = bestellingslijst;
+           //lb_Baroverzicht.Items.Add(bestellingslijst);
+           //lb_Baroverzicht.DataSource = bestellingslijst.ToString();
+
+
+           dataGridView1.DataSource = bestellingslijst; // zet de opgehaalde bestelling in de datagridview
 
         //   for (int i = 0; i < bestellingslijst.Count; i++ )
         //       lb_Baroverzicht.DisplayMember = bestellingslijst[i].ToString();
