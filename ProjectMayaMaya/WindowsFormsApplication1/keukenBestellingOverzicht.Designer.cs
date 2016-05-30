@@ -62,8 +62,8 @@
             // 
             // btn_gereedKeuken
             // 
-            this.btn_gereedKeuken.BackColor = System.Drawing.SystemColors.Highlight;
-            this.btn_gereedKeuken.Location = new System.Drawing.Point(615, 433);
+            this.btn_gereedKeuken.BackColor = System.Drawing.Color.Chartreuse;
+            this.btn_gereedKeuken.Location = new System.Drawing.Point(602, 337);
             this.btn_gereedKeuken.Name = "btn_gereedKeuken";
             this.btn_gereedKeuken.Size = new System.Drawing.Size(146, 44);
             this.btn_gereedKeuken.TabIndex = 4;
@@ -108,7 +108,7 @@
             // btn_keukenOverzicht
             // 
             this.btn_keukenOverzicht.BackColor = System.Drawing.Color.DodgerBlue;
-            this.btn_keukenOverzicht.Location = new System.Drawing.Point(66, 339);
+            this.btn_keukenOverzicht.Location = new System.Drawing.Point(73, 337);
             this.btn_keukenOverzicht.Name = "btn_keukenOverzicht";
             this.btn_keukenOverzicht.Size = new System.Drawing.Size(136, 44);
             this.btn_keukenOverzicht.TabIndex = 6;
@@ -119,7 +119,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(760, 408);
+            this.ClientSize = new System.Drawing.Size(848, 393);
             this.Controls.Add(this.btn_keukenOverzicht);
             this.Controls.Add(this.bestellingOverzichtKeuken);
             this.Controls.Add(this.btn_gereedKeuken);

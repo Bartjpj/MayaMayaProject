@@ -45,8 +45,9 @@ namespace WindowsFormsApplication1
 
         private void btn_HMnaarKEUKEN_Click(object sender, EventArgs e)
         {
-            keukenBestellingOverzicht openKeukenoverzicht = new keukenBestellingOverzicht();
-            openKeukenoverzicht.Show(this);
+            keukenBestellingOverzichtDAO openKeukenoverzicht = new keukenBestellingOverzichtDAO();
+            keukenBestellingOverzicht keukenWindowOpenen = new keukenBestellingOverzicht(openKeukenoverzicht);
+            keukenWindowOpenen.Show(this);
             this.Hide();
         }
     }
