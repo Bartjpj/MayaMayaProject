@@ -46,6 +46,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BestellingMenuConstructor.cs" />
+    <Compile Include="BestellingMenuDAO.cs" />
     <Compile Include="DinerKaart.cs">
       <SubType>Form</SubType>
     </Compile>
