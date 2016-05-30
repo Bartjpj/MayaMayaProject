@@ -8,9 +8,9 @@ using System.Threading.Tasks;
 
 namespace WindowsFormsApplication1
 {
-    class keukenBestellingOverzichtDAO
+  public  class keukenBestellingOverzichtDAO
     {
-        public void haalKeukenBestelling_TabelOp() // deze methode haalt de gegevens op voor het BestellingMenu overzicht
+        public List<keukenBestellingOverzichtClass> haalKeukenBestelling_TabelOp() // deze methode haalt de gegevens op voor het BestellingMenu overzicht
         {
             string connString = ConfigurationManager
             .ConnectionStrings["BestellingConnectionStringSQL"]
@@ -30,13 +30,14 @@ namespace WindowsFormsApplication1
                 int tafel_id = (int)reader["tafel_id"];
                 int Aantal = (int)reader["Aantal"];
                 string Menuitem = (string)reader["naam"];
-                //Onderzoeken wrm dit niet werkt
+             
 
                 keukenBestellingOverzichtClass KeukenBestellingDAO = new keukenBestellingOverzichtClass(bestelling_id, tafel_id, Aantal, Menuitem);
                 KeukenBestellingTable.Add(KeukenBestellingDAO);
             }
 
             conn.Close();
+            return KeukenBestellingTable;
         }
     }
 }
