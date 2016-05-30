@@ -14,8 +14,8 @@ namespace WindowsFormsApplication1
 {
     public partial class BarOverzicht : Form
     {
-        BestellingMenuDAO bestellingDAO;
-        List<BestellingMenuClass> bestellingslijst = new List<BestellingMenuClass>();
+        BarOverzichtDAO BarOverzichtDAO;
+        List<BarOverzichtClass> bestellingslijst = new List<BarOverzichtClass>();
        
         protected override void OnLoad(EventArgs e) // is de verwijzing, niets veranderen AUB
         {
@@ -24,19 +24,19 @@ namespace WindowsFormsApplication1
             this.Size = Owner.Size;
         }
      
-        public BarOverzicht(BestellingMenuDAO bestellingDAO) // geef een bestellingDAO als constructor mee.
+        public BarOverzicht(BarOverzichtDAO BarOverzichtDAO) // geef een bestellingDAO als constructor mee.
         {
            InitializeComponent();
 
-           this.bestellingDAO = bestellingDAO; // zet bestellingdao
-          
-           bestellingslijst = bestellingDAO.getAllBestellingen(); // haal de bestelling op
+           this.BarOverzichtDAO = BarOverzichtDAO; // zet bestellingdao
+
+           bestellingslijst = BarOverzichtDAO.haalBarOverzicht_TabelOp(); // haal de bestelling op
 
            //lb_Baroverzicht.Items.Add(bestellingslijst);
            //lb_Baroverzicht.DataSource = bestellingslijst.ToString();
 
 
-           dataGridView1.DataSource = bestellingslijst; // zet de opgehaalde bestelling in de datagridview
+           //dataGridView1.DataSource = bestellingslijst; // zet de opgehaalde bestelling in de datagridview
 
         //   for (int i = 0; i < bestellingslijst.Count; i++ )
         //       lb_Baroverzicht.DisplayMember = bestellingslijst[i].ToString();
@@ -87,6 +87,25 @@ namespace WindowsFormsApplication1
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void listView1_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_refresh_Click(object sender, EventArgs e)
+        {
+            foreach (BarOverzichtClass barOverzicht in BarOverzichtDAO.haalBarOverzicht_TabelOp())
+            {
+
+                ListViewItem lijstItem = new ListViewItem(barOverzicht.bestelling_id.ToString());
+                lijstItem.SubItems.Add(barOverzicht.tafel_id.ToString());
+                lijstItem.SubItems.Add(barOverzicht.aantal.ToString());
+                lijstItem.SubItems.Add(barOverzicht.naam.ToString());
+                listView1.Items.Add(lijstItem);
+
+            }
         }
     }
 }

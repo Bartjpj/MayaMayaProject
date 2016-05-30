@@ -29,8 +29,8 @@ namespace WindowsFormsApplication1
 
         private void btn_HMnaarBar_Click(object sender, EventArgs e)
         {
-            BestellingMenuDAO bestellingDAO = new BestellingMenuDAO();
-            BarOverzicht barWindowOpenen = new BarOverzicht(bestellingDAO);
+            BarOverzichtDAO BarOverzichtDAO = new BarOverzichtDAO();
+            BarOverzicht barWindowOpenen = new BarOverzicht(BarOverzichtDAO);
             barWindowOpenen.Show(this); // verwijst naar winform in grote van parent window (zie OnLoad in te openen form)
             this.Hide();
         }
