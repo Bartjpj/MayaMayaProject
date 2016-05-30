@@ -15,6 +15,7 @@ namespace WindowsFormsApplication1
     {
         DinerKaartDAO DinerKaartDAO;
         List<DinerKaartClass> DinerKaartLijst = new List<DinerKaartClass>();
+        
 
 
         protected override void OnLoad(EventArgs e) // is de verwijzing, niets veranderen AUB
@@ -34,19 +35,24 @@ namespace WindowsFormsApplication1
 
             DinerKaartLijst = DinerKaartDAO.haalDinerKaart_TabelOp(); // haal de bestelling op
 
-
-
-            foreach (DinerKaartClass dinerOverzicht in DinerKaartDAO.haalDinerKaart_TabelOp())
+            foreach (DinerKaartClass dinerOverzicht in DinerKaartDAO.haalDinerKaart_TabelOp()) //Alle informatie die in de list staat wordt in de listview geschreven
             {
+
+                listview_diner.Sorting = SortOrder.Ascending; //Sorteer alle rijen op alfabetische volgorde
                 ListViewItem lijstItem = new ListViewItem(dinerOverzicht.naam.ToString());
                 lijstItem.SubItems.Add(dinerOverzicht.prijs.ToString());
                 lijstItem.SubItems.Add(dinerOverzicht.voorraad.ToString());
                 listview_diner.Items.Add(lijstItem);
 
+
             }
         }
 
-
+        private void btn_DinerGerechtToevoegen_Click(object sender, EventArgs e)
+        {
+            ListViewItem DinerGerechtToevoegen = listview_diner.SelectedItems[0];
+            listbox_added_items.Items.Add(DinerGerechtToevoegen);
+        }
 
         private void btn_LUNCHnaarDRANKEN_Click(object sender, EventArgs e)
         {
@@ -61,41 +67,6 @@ namespace WindowsFormsApplication1
             openBestellingMenu.Show(this);
             this.Hide();
         }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
         private void btn_stuurbestelling_Click(object sender, EventArgs e, TafelOverzicht tm_tafel1, TafelOverzicht btn_Tafel1, TafelOverzicht tafelgetal)
         {
@@ -123,5 +94,8 @@ namespace WindowsFormsApplication1
 
             //}
         }
+
+
+
     }
 }
