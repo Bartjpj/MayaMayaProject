@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Diagnostics;
 using System.Windows.Forms;
 
 namespace WindowsFormsApplication1
@@ -35,14 +36,14 @@ namespace WindowsFormsApplication1
 
         //-----------------TAFELS--------------------------------:
         int tafelgetal;
-        BestellingMenu bestellingmenuActiveren = new BestellingMenu();
+       // BestellingMenu bestellingmenuActiveren = new BestellingMenu();
 
 
         //1
         public void btn_Tafel1_Click(object sender, EventArgs e)
         {
             tafelgetal = 1;
-            bestellingmenuActiveren.tafelgetalWijzigen(tafelgetal);
+            //bestellingmenuActiveren.tafelgetalWijzigen(tafelgetal);
             if (rbtn_BestellingOpnemen.Checked)
             {
                 BestellingMenu BestellingMenuOpenen = new BestellingMenu();
@@ -277,31 +278,31 @@ namespace WindowsFormsApplication1
         //1
         public void tm_tafel1_Tick(object sender, EventArgs e)
         {
-            lbl_tijdtafel1.Text = min + ": Min";
-            ms++;
-            if (ms > 10)
-            {
-                sec++;
-                ms = 0;
-            }
-            else
-                ms++;
+            //lbl_tijdtafel1.Text = min + ": Min";
+            //ms++;
+            //if (ms > 10)
+            //{
+            //    sec++;
+            //    ms = 0;
+            //}
+            //else
+            //    ms++;
 
-            if (sec > 60)
-            {
-                min++;
-                sec = 0;
-            }
+            //if (sec > 60)
+            //{
+            //    min++;
+            //    sec = 0;
+            //}
 
-            if (min >= 30)
-            {
-                btn_Tafel1.BackColor = Color.Maroon;
-            }
-            if (min > 60)
-            {
-                hour++;
-                min = 0;
-            }
+            //if (min >= 30)
+            //{
+            //    btn_Tafel1.BackColor = Color.Maroon;
+            //}
+            //if (min > 60)
+            //{
+            //    hour++;
+            //    min = 0;
+            //}
         }
 
         public void lbl_tijdtafel1_Click(object sender, EventArgs e)
