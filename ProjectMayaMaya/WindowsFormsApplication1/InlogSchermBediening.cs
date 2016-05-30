@@ -77,7 +77,7 @@ namespace WindowsFormsApplication1
         private void btn_InloggenSkippen_Click(object sender, EventArgs e)
         {
             TafelOverzicht inloggen = new TafelOverzicht();
-            inloggen.Show();
+            inloggen.Show(this);
             this.Hide();
         }
 

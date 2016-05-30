@@ -51,10 +51,7 @@ namespace WindowsFormsApplication1
         private void btn_BestellingMENUnaarTAFELOVERZICHT_Click(object sender, EventArgs e)
         {
             TafelOverzicht TerugNaarTafelOverzicht = new TafelOverzicht();
-            TerugNaarTafelOverzicht.Show();
-            TerugNaarTafelOverzicht.Left = this.Left; // geeft de grote aan van deze form voor het te openen form
-            TerugNaarTafelOverzicht.Top = this.Top;
-            TerugNaarTafelOverzicht.Size = this.Size;
+            TerugNaarTafelOverzicht.Show(this);
             this.Hide();
         }
 

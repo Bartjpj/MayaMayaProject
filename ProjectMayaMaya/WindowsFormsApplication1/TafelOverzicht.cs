@@ -13,6 +13,13 @@ namespace WindowsFormsApplication1
 {
     public partial class TafelOverzicht : Form
     {
+        protected override void OnLoad(EventArgs e) // is de verwijzing voor de grootte van de form, niets veranderen AUB
+        {
+            base.OnLoad(e);
+            this.Location = Owner.Location;
+            this.Size = Owner.Size;
+        }
+        
         public TafelOverzicht()
         {
             InitializeComponent();
@@ -43,232 +50,81 @@ namespace WindowsFormsApplication1
         public void btn_Tafel1_Click(object sender, EventArgs e)
         {
             tafelgetal = 1;
-            //bestellingmenuActiveren.tafelgetalWijzigen(tafelgetal);
-            if (rbtn_BestellingOpnemen.Checked)
-            {
-                BestellingMenu BestellingMenuOpenen = new BestellingMenu();
-                BestellingMenuOpenen.Show(this); // verwijst naar winform in grote van parent window (zie OnLoad in te openen form)
-                this.Hide();
-            }
-            //else if (rbtn_BestellingAfrekenen.Checked)
-            //{
-            //    inlogFoutAlert foutmelding = new inlogFoutAlert();
-            //    foutmelding.StartPosition = FormStartPosition.CenterParent;
-            //    foutmelding.ShowDialog(this); //error omdat er nu nog geen rekening scherm is.
-            //}
-            else
-            {
-                inlogFoutAlert foutmelding = new inlogFoutAlert();
-                foutmelding.StartPosition = FormStartPosition.CenterParent;
-                foutmelding.ShowDialog(this);
-            }
+            KiesOpname openKiesopname = new KiesOpname();
+            openKiesopname.Show(this);
+            this.Hide();
 
         }
         //2
         public void btn_Tafel2_Click(object sender, EventArgs e)
         {
-            if (rbtn_BestellingOpnemen.Checked)
-            {
-                BestellingMenu BestellingMenuOpenen = new BestellingMenu();
-                BestellingMenuOpenen.Show(this);
-                this.Hide();
-            }
-            //else if (rbtn_BestellingAfrekenen.Checked)
-            //{
-            //    inlogFoutAlert foutmelding = new inlogFoutAlert();
-            //    foutmelding.StartPosition = FormStartPosition.CenterParent;
-            //    foutmelding.ShowDialog(this); //error omdat er nu nog geen rekening scherm is.
-            //}
-            else
-            {
-                inlogFoutAlert foutmelding = new inlogFoutAlert();
-                foutmelding.StartPosition = FormStartPosition.CenterParent;
-                foutmelding.ShowDialog(this);
-            }
+            KiesOpname openKiesopname = new KiesOpname();
+            openKiesopname.Show(this);
+            this.Hide();
         }
 
         //3
         public void btn_Tafel3_Click(object sender, EventArgs e)
         {
-            if (rbtn_BestellingOpnemen.Checked)
-            {
-                BestellingMenu BestellingMenuOpenen = new BestellingMenu();
-                BestellingMenuOpenen.Show(this);
-                this.Hide();
-            }
-            //else if (rbtn_BestellingAfrekenen.Checked)
-            //{
-            //    inlogFoutAlert foutmelding = new inlogFoutAlert();
-            //    foutmelding.StartPosition = FormStartPosition.CenterParent;
-            //    foutmelding.ShowDialog(this); //error omdat er nu nog geen rekening scherm is.
-            //}
-            else
-            {
-                inlogFoutAlert foutmelding = new inlogFoutAlert();
-                foutmelding.StartPosition = FormStartPosition.CenterParent;
-                foutmelding.ShowDialog(this);
-            }
+            KiesOpname openKiesopname = new KiesOpname();
+            openKiesopname.Show(this);
+            this.Hide();
         }
 
         //4
         public void btn_Tafel4_Click(object sender, EventArgs e)
         {
-            if (rbtn_BestellingOpnemen.Checked)
-            {
-                BestellingMenu BestellingMenuOpenen = new BestellingMenu();
-                BestellingMenuOpenen.Show(this);
-                this.Hide();
-            }
-            //else if (rbtn_BestellingAfrekenen.Checked)
-            //{
-            //    inlogFoutAlert foutmelding = new inlogFoutAlert();
-            //    foutmelding.StartPosition = FormStartPosition.CenterParent;
-            //    foutmelding.ShowDialog(this); //error omdat er nu nog geen rekening scherm is.
-            //}
-            else
-            {
-                inlogFoutAlert foutmelding = new inlogFoutAlert();
-                foutmelding.StartPosition = FormStartPosition.CenterParent;
-                foutmelding.ShowDialog(this);
-            }
+            KiesOpname openKiesopname = new KiesOpname();
+            openKiesopname.Show(this);
+            this.Hide();
         }
 
         //5
         public void btn_Tafel5_Click(object sender, EventArgs e)
         {
-            if (rbtn_BestellingOpnemen.Checked)
-            {
-                BestellingMenu BestellingMenuOpenen = new BestellingMenu();
-                BestellingMenuOpenen.Show(this);
-                this.Hide();
-            }
-            //else if (rbtn_BestellingAfrekenen.Checked)
-            //{
-            //    inlogFoutAlert foutmelding = new inlogFoutAlert();
-            //    foutmelding.StartPosition = FormStartPosition.CenterParent;
-            //    foutmelding.ShowDialog(this); //error omdat er nu nog geen rekening scherm is.
-            //}
-            else
-            {
-                inlogFoutAlert foutmelding = new inlogFoutAlert();
-                foutmelding.StartPosition = FormStartPosition.CenterParent;
-                foutmelding.ShowDialog(this);
-            }
+            KiesOpname openKiesopname = new KiesOpname();
+            openKiesopname.Show(this);
+            this.Hide();
         }
 
         //6
         public void btn_Tafel6_Click(object sender, EventArgs e)
         {
-            if (rbtn_BestellingOpnemen.Checked)
-            {
-                BestellingMenu BestellingMenuOpenen = new BestellingMenu();
-                BestellingMenuOpenen.Show(this);
-                this.Hide();
-            }
-            //else if (rbtn_BestellingAfrekenen.Checked)
-            //{
-            //    inlogFoutAlert foutmelding = new inlogFoutAlert();
-            //    foutmelding.StartPosition = FormStartPosition.CenterParent;
-            //    foutmelding.ShowDialog(this); //error omdat er nu nog geen rekening scherm is.
-            //}
-            else
-            {
-                inlogFoutAlert foutmelding = new inlogFoutAlert();
-                foutmelding.StartPosition = FormStartPosition.CenterParent;
-                foutmelding.ShowDialog(this);
-            }
+            KiesOpname openKiesopname = new KiesOpname();
+            openKiesopname.Show(this);
+            this.Hide();
         }
 
         //7
         public void btn_Tafel7_Click(object sender, EventArgs e)
         {
-            if (rbtn_BestellingOpnemen.Checked)
-            {
-                BestellingMenu BestellingMenuOpenen = new BestellingMenu();
-                BestellingMenuOpenen.Show(this);
-                this.Hide();
-            }
-            //else if (rbtn_BestellingAfrekenen.Checked)
-            //{
-            //    inlogFoutAlert foutmelding = new inlogFoutAlert();
-            //    foutmelding.StartPosition = FormStartPosition.CenterParent;
-            //    foutmelding.ShowDialog(this); //error omdat er nu nog geen rekening scherm is.
-            //}
-            else
-            {
-                inlogFoutAlert foutmelding = new inlogFoutAlert();
-                foutmelding.StartPosition = FormStartPosition.CenterParent;
-                foutmelding.ShowDialog(this);
-            }
+            KiesOpname openKiesopname = new KiesOpname();
+            openKiesopname.Show(this);
+            this.Hide();
         }
 
         //8
         public void btn_Tafel8_Click(object sender, EventArgs e)
         {
-            if (rbtn_BestellingOpnemen.Checked)
-            {
-                BestellingMenu BestellingMenuOpenen = new BestellingMenu();
-                BestellingMenuOpenen.Show(this);
-                this.Hide();
-            }
-            //else if (rbtn_BestellingAfrekenen.Checked)
-            //{
-            //    inlogFoutAlert foutmelding = new inlogFoutAlert();
-            //    foutmelding.StartPosition = FormStartPosition.CenterParent;
-            //    foutmelding.ShowDialog(this); //error omdat er nu nog geen rekening scherm is.
-            //}
-            else
-            {
-                inlogFoutAlert foutmelding = new inlogFoutAlert();
-                foutmelding.StartPosition = FormStartPosition.CenterParent;
-                foutmelding.ShowDialog(this);
-            }
+            KiesOpname openKiesopname = new KiesOpname();
+            openKiesopname.Show(this);
+            this.Hide();
         }
 
         //9
         public void btn_Tafel9_Click(object sender, EventArgs e)
         {
-            if (rbtn_BestellingOpnemen.Checked)
-            {
-                BestellingMenu BestellingMenuOpenen = new BestellingMenu();
-                BestellingMenuOpenen.Show(this);
-                this.Hide();
-            }
-            //else if (rbtn_BestellingAfrekenen.Checked)
-            //{
-            //    inlogFoutAlert foutmelding = new inlogFoutAlert();
-            //    foutmelding.StartPosition = FormStartPosition.CenterParent;
-            //    foutmelding.ShowDialog(this); //error omdat er nu nog geen rekening scherm is.
-            //}
-            else
-            {
-                inlogFoutAlert foutmelding = new inlogFoutAlert();
-                foutmelding.StartPosition = FormStartPosition.CenterParent;
-                foutmelding.ShowDialog(this);
-            }
+            KiesOpname openKiesopname = new KiesOpname();
+            openKiesopname.Show(this);
+            this.Hide();
         }
 
         //10
         public void btn_Tafel10_Click(object sender, EventArgs e)
         {
-            if (rbtn_BestellingOpnemen.Checked)
-            {
-                BestellingMenu BestellingMenuOpenen = new BestellingMenu();
-                BestellingMenuOpenen.Show(this);
-                this.Hide();
-            }
-            //else if (rbtn_BestellingAfrekenen.Checked)
-            //{
-            //    inlogFoutAlert foutmelding = new inlogFoutAlert();
-            //    foutmelding.StartPosition = FormStartPosition.CenterParent;
-            //    foutmelding.ShowDialog(this); //error omdat er nu nog geen rekening scherm is.
-            //}
-            else
-            {
-                inlogFoutAlert foutmelding = new inlogFoutAlert();
-                foutmelding.StartPosition = FormStartPosition.CenterParent;
-                foutmelding.ShowDialog(this);
-            }
+            KiesOpname openKiesopname = new KiesOpname();
+            openKiesopname.Show(this);
+            this.Hide();
         }
 
         //---------------TIMERS-------------------------:
