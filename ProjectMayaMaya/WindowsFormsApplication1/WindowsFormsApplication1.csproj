@@ -66,6 +66,12 @@
     <Compile Include="DrankenKaart.Designer.cs">
       <DependentUpon>DrankenKaart.cs</DependentUpon>
     </Compile>
+    <Compile Include="KiesOpname.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KiesOpname.Designer.cs">
+      <DependentUpon>KiesOpname.cs</DependentUpon>
+    </Compile>
     <Compile Include="Klantenlijst.cs" />
     <Compile Include="BarOverzicht.cs">
       <SubType>Form</SubType>
@@ -160,6 +166,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="HoofdMenu.resx">
       <DependentUpon>HoofdMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KiesOpname.resx">
+      <DependentUpon>KiesOpname.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LunchKaart.resx">
       <DependentUpon>LunchKaart.cs</DependentUpon>
