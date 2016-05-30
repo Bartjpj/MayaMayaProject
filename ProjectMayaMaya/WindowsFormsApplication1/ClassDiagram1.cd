@@ -3,14 +3,14 @@
   <Class Name="WindowsFormsApplication1.BestellingMenu" Collapsed="true">
     <Position X="0.75" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAIAAAACQAAABCAACAAAACEAMAAAAAAAAACAAEAAA=</HashCode>
+      <HashCode>QQAAYAAAQKQARhBAAAqQEAMCEAAACIABVGACSFAEAAQ=</HashCode>
       <FileName>BestellingMenu.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="WindowsFormsApplication1.Rekening">
     <Position X="3.75" Y="1" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AABAABAAAAgAAAAAABAAAAAAEgAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AABAABAAACgAAAAAABAAAAAAEgAAAAAAAAAACAAAAAA=</HashCode>
       <FileName>Rekening.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -20,14 +20,14 @@
   <Class Name="WindowsFormsApplication1.PersoneelLid">
     <Position X="7.75" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAEAQCAAAACAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAABAAAAAAAAAAEAQCAAAACAAAAAAAAAA=</HashCode>
       <FileName>PersoneelLid.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="WindowsFormsApplication1.Kelner">
     <Position X="10" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAgAYAAAAAAAAAAAAAAAAAAAAAAAAACAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAgAYAAAAAAAAAAAAAAAgAAAAAAAAACAAAA=</HashCode>
       <FileName>Kelner.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -46,32 +46,25 @@
     </TypeIdentifier>
   </Class>
   <Class Name="WindowsFormsApplication1.Tafel">
-    <Position X="4.25" Y="0.5" Width="1.5" />
+    <Position X="1.25" Y="1.5" Width="1.75" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAACAAAAAAAAAAIAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Tafel.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="WindowsFormsApplication1.Bestelling">
-    <Position X="5.25" Y="2.75" Width="1.5" />
+    <Position X="6" Y="2.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAACAQAABAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAA=</HashCode>
+      <HashCode>AEAACAAAAAAAAAAAAAAAAgAAAAAAAIAAAAIAAAAAAAA=</HashCode>
       <FileName>Bestelling.cs</FileName>
     </TypeIdentifier>
-    <ShowAsAssociation>
-      <Property Name="Tafel" />
-      <Property Name="PersoneelLid" />
-    </ShowAsAssociation>
   </Class>
   <Class Name="WindowsFormsApplication1.BestellingItem">
     <Position X="2.75" Y="4" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAIAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAgIAAAAAAAAAAAAAAAAIAAAAAAAA=</HashCode>
       <FileName>BestellingItem.cs</FileName>
     </TypeIdentifier>
-    <ShowAsAssociation>
-      <Property Name="Bestelling" />
-    </ShowAsAssociation>
   </Class>
   <Class Name="WindowsFormsApplication1.MenuItem">
     <Position X="1" Y="5.25" Width="1.5" />
@@ -86,7 +79,7 @@
   <Class Name="WindowsFormsApplication1.BestellingDAO" Collapsed="true">
     <Position X="10" Y="4.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAEAAAAAA=</HashCode>
       <FileName>BestellingDAO.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -100,19 +93,19 @@
   <Class Name="WindowsFormsApplication1.PersoneelsLidDAO" Collapsed="true">
     <Position X="10" Y="6" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAE=</HashCode>
       <FileName>PersoneelsLidDAO.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Enum Name="WindowsFormsApplication1.MenuKaart" Collapsed="true">
-    <Position X="4.75" Y="5.25" Width="1.5" />
+    <Position X="4.5" Y="6" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAJAAAAA=</HashCode>
       <FileName>MenuKaart.cs</FileName>
     </TypeIdentifier>
   </Enum>
   <Enum Name="WindowsFormsApplication1.MenuCategorie" Collapsed="true">
-    <Position X="2.75" Y="5.25" Width="1.5" />
+    <Position X="2.75" Y="6" Width="1.5" />
     <TypeIdentifier>
       <HashCode>IACIAAAAAIGAAAAAIAAgACAAAAAgACAAAAAIAAAAAAA=</HashCode>
       <FileName>MenuCategorie.cs</FileName>

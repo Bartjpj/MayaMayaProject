@@ -7,17 +7,17 @@ using System.Data.SqlClient;
 
 namespace WindowsFormsApplication1
 {
-    public class BestellingDAO
+    public class BestellingMenuDAO
     {
       
 
-        public BestellingDAO(){
+        public BestellingMenuDAO(){
  
 
         }
         
         
-        public  List<Bestelling> getAllBestellingen() // deze methode haalt de gegevens op voor het baroverzicht/keukenoverzicht
+        public  List<BestellingMenuClass> getAllBestellingen() // deze methode haalt de gegevens op voor het baroverzicht/keukenoverzicht
         {
 
             string connString = ConfigurationManager.ConnectionStrings["BestellingConnectionStringSQL"].ConnectionString;
@@ -29,7 +29,7 @@ namespace WindowsFormsApplication1
             SqlCommand command = new SqlCommand("SELECT bestelling_id, tafel_id, ItemId, aantal  FROM Bestelling, BestellingItems, MenuItem, Menucategorie WHERE (bestelling_id = BestellingId AND ItemId = menu_id) AND (Menuitem.categorie_id = Menucategorie.categorie_id);", connectie);
             // deze query zorgt ervoor dat via het koppeltabel een menu-item geselecteerd kan worden.
             SqlDataReader reader = command.ExecuteReader();
-            List<Bestelling> bestellingen = new List<Bestelling>();
+            List<BestellingMenuClass> bestellingen = new List<BestellingMenuClass>();
 
             while (reader.Read())
             {
@@ -43,7 +43,7 @@ namespace WindowsFormsApplication1
 
 
                 //bool betaald = (bool)reader.GetBoolean(6);
-                Bestelling opgehaaldeBestelling = new Bestelling(bestelling_id, tafel_id, aantal, ItemdId);
+                BestellingMenuClass opgehaaldeBestelling = new BestellingMenuClass(bestelling_id, tafel_id, aantal, ItemdId);
                 bestellingen.Add(opgehaaldeBestelling);
             
             }
@@ -54,7 +54,7 @@ namespace WindowsFormsApplication1
            
         }
 
-        public void voegBestellingToe(Bestelling bestellingen)
+        public void voegBestellingToe(BestellingMenuClass bestellingen)
         {
              
     

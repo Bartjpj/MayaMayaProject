@@ -5,10 +5,17 @@ using System.Text;
 
 namespace WindowsFormsApplication1
 {
-    public class Tafel
+    public class TafelOverzichtConstructor
     {
         // properties van Tafel
         public int TafelId { get; set; }
         public bool Bezet { get; set; }
+
+        public TafelOverzichtConstructor(int TafelId, bool Bezet)
+        {
+            this.TafelId = TafelId;
+            this.Bezet = Bezet;
+        }
+        
     }
 }

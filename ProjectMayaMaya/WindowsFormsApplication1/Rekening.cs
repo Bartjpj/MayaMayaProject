@@ -12,7 +12,7 @@ namespace WindowsFormsApplication1
         public double totaaPrijs; //veld om totaalprijs in te stoppen
         public int hoeveelheidMenuitem;
 
-        public Bestelling Bestelling
+        public BestellingMenuClass Bestelling
         {
             get
             {

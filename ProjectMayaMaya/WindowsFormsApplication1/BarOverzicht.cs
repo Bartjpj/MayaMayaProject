@@ -14,8 +14,8 @@ namespace WindowsFormsApplication1
 {
     public partial class BarOverzicht : Form
     {
-        BestellingDAO bestellingDAO;
-        List<Bestelling> bestellingslijst = new List<Bestelling>();
+        BestellingMenuDAO bestellingDAO;
+        List<BestellingMenuClass> bestellingslijst = new List<BestellingMenuClass>();
        
         protected override void OnLoad(EventArgs e) // is de verwijzing, niets veranderen AUB
         {
@@ -24,7 +24,7 @@ namespace WindowsFormsApplication1
             this.Size = Owner.Size;
         }
      
-        public BarOverzicht(BestellingDAO bestellingDAO) // geef een bestellingDAO als constructor mee.
+        public BarOverzicht(BestellingMenuDAO bestellingDAO) // geef een bestellingDAO als constructor mee.
         {
            InitializeComponent();
 
