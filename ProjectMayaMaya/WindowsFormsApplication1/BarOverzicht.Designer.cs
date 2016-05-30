@@ -95,18 +95,22 @@
             // 
             // BestellingID
             // 
+            this.BestellingID.Text = "Bestelling_id";
             this.BestellingID.Width = 140;
             // 
             // Tafel_id
             // 
+            this.Tafel_id.Text = "Tafel_id";
             this.Tafel_id.Width = 105;
             // 
             // Aantal
             // 
+            this.Aantal.Text = "Aantal";
             this.Aantal.Width = 163;
             // 
             // Item
             // 
+            this.Item.Text = "Item";
             this.Item.Width = 151;
             // 
             // btn_refresh
