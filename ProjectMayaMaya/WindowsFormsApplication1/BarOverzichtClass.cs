@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WindowsFormsApplication1
 {
-    class BarOverzichtClass
+    public class BarOverzichtClass
     {
         public int bestelling_id { get; set; }
         public int tafel_id { get; set; }

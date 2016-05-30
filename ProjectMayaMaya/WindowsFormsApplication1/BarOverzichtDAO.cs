@@ -8,9 +8,9 @@ using System.Configuration;
 
 namespace WindowsFormsApplication1
 {
-    class BarOverzichtDAO
+    public class BarOverzichtDAO
     {
-        public void haalBarOverzicht_TabelOp() // deze methode haalt de gegevens op voor het BestellingMenu overzicht
+        public List<BarOverzichtClass> haalBarOverzicht_TabelOp() // deze methode haalt de gegevens op voor het BestellingMenu overzicht
         {
             string connString = ConfigurationManager
             .ConnectionStrings["BestellingConnectionStringSQL"]
@@ -21,7 +21,7 @@ namespace WindowsFormsApplication1
             SqlCommand command = new SqlCommand("SELECT bestelling_id, tafel_id, Aantal, Menuitem.naam  FROM Bestelling, BestellingItems, Menuitem, Menucategorie, Menukaart WHERE bestelling_id = BestellingId AND ItemId = menu_id AND Menuitem.categorie_id = Menucategorie.categorie_id AND Menukaart.kaart_id = Menucategorie.kaart_id AND Menukaart.kaart_id = 3", conn);
             // deze query zorgt ervoor dat we alle data hebben die we bij BestellingMenu nodig hebben 
             SqlDataReader reader = command.ExecuteReader();
-            int rowsAffected = command.ExecuteNonQuery();
+         
 
             List<BarOverzichtClass> BarOverzichtTable = new List<BarOverzichtClass>();
 
@@ -30,14 +30,15 @@ namespace WindowsFormsApplication1
                 int bestelling_id = (int)reader["bestelling_id"];
                 int tafel_id = (int)reader["tafel_id"];
                 int Aantal = (int)reader["Aantal"];
-                string Menuitem = (string)reader["Menuitem.naam"];
+                string Menuitem = (string)reader["naam"];
                 //Onderzoeken wrm dit niet werkt
 
                 BarOverzichtClass BarOverzichtDAO = new BarOverzichtClass(bestelling_id, tafel_id, Aantal, Menuitem);
                 BarOverzichtTable.Add(BarOverzichtDAO);
             }
-
             conn.Close();
+            return BarOverzichtTable;
+          
         }
     }
 }
