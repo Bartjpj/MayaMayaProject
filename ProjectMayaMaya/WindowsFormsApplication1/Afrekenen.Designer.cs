@@ -57,7 +57,7 @@
             // 
             this.lbl_klaargemeld.AutoSize = true;
             this.lbl_klaargemeld.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_klaargemeld.Location = new System.Drawing.Point(12, 90);
+            this.lbl_klaargemeld.Location = new System.Drawing.Point(7, 59);
             this.lbl_klaargemeld.Name = "lbl_klaargemeld";
             this.lbl_klaargemeld.Size = new System.Drawing.Size(144, 25);
             this.lbl_klaargemeld.TabIndex = 0;
@@ -67,7 +67,7 @@
             // 
             this.lbl_rekening.AutoSize = true;
             this.lbl_rekening.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_rekening.Location = new System.Drawing.Point(290, 90);
+            this.lbl_rekening.Location = new System.Drawing.Point(317, 59);
             this.lbl_rekening.Name = "lbl_rekening";
             this.lbl_rekening.Size = new System.Drawing.Size(109, 25);
             this.lbl_rekening.TabIndex = 1;
@@ -76,15 +76,15 @@
             // lstbox_eindrekening
             // 
             this.lstbox_eindrekening.FormattingEnabled = true;
-            this.lstbox_eindrekening.Location = new System.Drawing.Point(253, 137);
+            this.lstbox_eindrekening.Location = new System.Drawing.Point(322, 87);
             this.lstbox_eindrekening.Name = "lstbox_eindrekening";
-            this.lstbox_eindrekening.Size = new System.Drawing.Size(357, 251);
+            this.lstbox_eindrekening.Size = new System.Drawing.Size(441, 251);
             this.lstbox_eindrekening.TabIndex = 2;
             // 
             // lbl_klaargemeldetafel
             // 
             this.lbl_klaargemeldetafel.AutoSize = true;
-            this.lbl_klaargemeldetafel.Location = new System.Drawing.Point(53, 137);
+            this.lbl_klaargemeldetafel.Location = new System.Drawing.Point(91, 84);
             this.lbl_klaargemeldetafel.Name = "lbl_klaargemeldetafel";
             this.lbl_klaargemeldetafel.Size = new System.Drawing.Size(60, 13);
             this.lbl_klaargemeldetafel.TabIndex = 3;
@@ -93,7 +93,7 @@
             // lbl_opmerkingen
             // 
             this.lbl_opmerkingen.AutoSize = true;
-            this.lbl_opmerkingen.Location = new System.Drawing.Point(251, 414);
+            this.lbl_opmerkingen.Location = new System.Drawing.Point(364, 345);
             this.lbl_opmerkingen.Name = "lbl_opmerkingen";
             this.lbl_opmerkingen.Size = new System.Drawing.Size(73, 13);
             this.lbl_opmerkingen.TabIndex = 4;
@@ -102,7 +102,7 @@
             // lbl_subtotaal
             // 
             this.lbl_subtotaal.AutoSize = true;
-            this.lbl_subtotaal.Location = new System.Drawing.Point(251, 445);
+            this.lbl_subtotaal.Location = new System.Drawing.Point(364, 375);
             this.lbl_subtotaal.Name = "lbl_subtotaal";
             this.lbl_subtotaal.Size = new System.Drawing.Size(55, 13);
             this.lbl_subtotaal.TabIndex = 5;
@@ -111,7 +111,7 @@
             // lbl_fooilabel
             // 
             this.lbl_fooilabel.AutoSize = true;
-            this.lbl_fooilabel.Location = new System.Drawing.Point(251, 464);
+            this.lbl_fooilabel.Location = new System.Drawing.Point(364, 395);
             this.lbl_fooilabel.Name = "lbl_fooilabel";
             this.lbl_fooilabel.Size = new System.Drawing.Size(27, 13);
             this.lbl_fooilabel.TabIndex = 6;
@@ -120,7 +120,7 @@
             // lbl_incbtw
             // 
             this.lbl_incbtw.AutoSize = true;
-            this.lbl_incbtw.Location = new System.Drawing.Point(292, 495);
+            this.lbl_incbtw.Location = new System.Drawing.Point(364, 422);
             this.lbl_incbtw.Name = "lbl_incbtw";
             this.lbl_incbtw.Size = new System.Drawing.Size(56, 13);
             this.lbl_incbtw.TabIndex = 7;
@@ -129,7 +129,7 @@
             // lbl_btwhoog
             // 
             this.lbl_btwhoog.AutoSize = true;
-            this.lbl_btwhoog.Location = new System.Drawing.Point(251, 514);
+            this.lbl_btwhoog.Location = new System.Drawing.Point(364, 445);
             this.lbl_btwhoog.Name = "lbl_btwhoog";
             this.lbl_btwhoog.Size = new System.Drawing.Size(64, 13);
             this.lbl_btwhoog.TabIndex = 8;
@@ -138,7 +138,7 @@
             // lbl_btwlaag
             // 
             this.lbl_btwlaag.AutoSize = true;
-            this.lbl_btwlaag.Location = new System.Drawing.Point(251, 545);
+            this.lbl_btwlaag.Location = new System.Drawing.Point(364, 472);
             this.lbl_btwlaag.Name = "lbl_btwlaag";
             this.lbl_btwlaag.Size = new System.Drawing.Size(62, 13);
             this.lbl_btwlaag.TabIndex = 9;
@@ -147,7 +147,7 @@
             // lbl_subtotaalgetal
             // 
             this.lbl_subtotaalgetal.AutoSize = true;
-            this.lbl_subtotaalgetal.Location = new System.Drawing.Point(505, 445);
+            this.lbl_subtotaalgetal.Location = new System.Drawing.Point(654, 375);
             this.lbl_subtotaalgetal.Name = "lbl_subtotaalgetal";
             this.lbl_subtotaalgetal.Size = new System.Drawing.Size(25, 13);
             this.lbl_subtotaalgetal.TabIndex = 10;
@@ -156,7 +156,7 @@
             // lbl_fooigetal
             // 
             this.lbl_fooigetal.AutoSize = true;
-            this.lbl_fooigetal.Location = new System.Drawing.Point(505, 464);
+            this.lbl_fooigetal.Location = new System.Drawing.Point(654, 391);
             this.lbl_fooigetal.Name = "lbl_fooigetal";
             this.lbl_fooigetal.Size = new System.Drawing.Size(25, 13);
             this.lbl_fooigetal.TabIndex = 11;
@@ -165,7 +165,7 @@
             // lbl_incbtwgetal
             // 
             this.lbl_incbtwgetal.AutoSize = true;
-            this.lbl_incbtwgetal.Location = new System.Drawing.Point(505, 495);
+            this.lbl_incbtwgetal.Location = new System.Drawing.Point(654, 422);
             this.lbl_incbtwgetal.Name = "lbl_incbtwgetal";
             this.lbl_incbtwgetal.Size = new System.Drawing.Size(25, 13);
             this.lbl_incbtwgetal.TabIndex = 12;
@@ -174,7 +174,7 @@
             // lbl_btwhooggetal
             // 
             this.lbl_btwhooggetal.AutoSize = true;
-            this.lbl_btwhooggetal.Location = new System.Drawing.Point(505, 514);
+            this.lbl_btwhooggetal.Location = new System.Drawing.Point(654, 441);
             this.lbl_btwhooggetal.Name = "lbl_btwhooggetal";
             this.lbl_btwhooggetal.Size = new System.Drawing.Size(25, 13);
             this.lbl_btwhooggetal.TabIndex = 13;
@@ -183,7 +183,7 @@
             // lbl_btwlaaggetal
             // 
             this.lbl_btwlaaggetal.AutoSize = true;
-            this.lbl_btwlaaggetal.Location = new System.Drawing.Point(505, 545);
+            this.lbl_btwlaaggetal.Location = new System.Drawing.Point(654, 472);
             this.lbl_btwlaaggetal.Name = "lbl_btwlaaggetal";
             this.lbl_btwlaaggetal.Size = new System.Drawing.Size(25, 13);
             this.lbl_btwlaaggetal.TabIndex = 14;
@@ -194,7 +194,7 @@
             this.btn_plus.BackColor = System.Drawing.Color.LimeGreen;
             this.btn_plus.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_plus.ForeColor = System.Drawing.Color.White;
-            this.btn_plus.Location = new System.Drawing.Point(552, 414);
+            this.btn_plus.Location = new System.Drawing.Point(705, 344);
             this.btn_plus.Name = "btn_plus";
             this.btn_plus.Size = new System.Drawing.Size(58, 44);
             this.btn_plus.TabIndex = 15;
@@ -206,7 +206,7 @@
             this.btn_min.BackColor = System.Drawing.Color.Red;
             this.btn_min.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_min.ForeColor = System.Drawing.Color.Transparent;
-            this.btn_min.Location = new System.Drawing.Point(552, 464);
+            this.btn_min.Location = new System.Drawing.Point(705, 391);
             this.btn_min.Name = "btn_min";
             this.btn_min.Size = new System.Drawing.Size(58, 44);
             this.btn_min.TabIndex = 16;
@@ -218,7 +218,7 @@
             this.btn_cbutton.BackColor = System.Drawing.Color.Maroon;
             this.btn_cbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_cbutton.ForeColor = System.Drawing.Color.White;
-            this.btn_cbutton.Location = new System.Drawing.Point(553, 514);
+            this.btn_cbutton.Location = new System.Drawing.Point(705, 441);
             this.btn_cbutton.Name = "btn_cbutton";
             this.btn_cbutton.Size = new System.Drawing.Size(58, 44);
             this.btn_cbutton.TabIndex = 17;
@@ -229,9 +229,9 @@
             // 
             this.btn_pinbetalen.BackColor = System.Drawing.Color.Maroon;
             this.btn_pinbetalen.ForeColor = System.Drawing.Color.White;
-            this.btn_pinbetalen.Location = new System.Drawing.Point(7, 414);
+            this.btn_pinbetalen.Location = new System.Drawing.Point(7, 345);
             this.btn_pinbetalen.Name = "btn_pinbetalen";
-            this.btn_pinbetalen.Size = new System.Drawing.Size(238, 43);
+            this.btn_pinbetalen.Size = new System.Drawing.Size(309, 43);
             this.btn_pinbetalen.TabIndex = 18;
             this.btn_pinbetalen.Text = "Pin";
             this.btn_pinbetalen.UseVisualStyleBackColor = false;
@@ -240,9 +240,9 @@
             // 
             this.btn_creditcardbetalen.BackColor = System.Drawing.Color.Maroon;
             this.btn_creditcardbetalen.ForeColor = System.Drawing.Color.White;
-            this.btn_creditcardbetalen.Location = new System.Drawing.Point(7, 468);
+            this.btn_creditcardbetalen.Location = new System.Drawing.Point(7, 395);
             this.btn_creditcardbetalen.Name = "btn_creditcardbetalen";
-            this.btn_creditcardbetalen.Size = new System.Drawing.Size(238, 43);
+            this.btn_creditcardbetalen.Size = new System.Drawing.Size(309, 43);
             this.btn_creditcardbetalen.TabIndex = 19;
             this.btn_creditcardbetalen.Text = "Creditcard (VISA/AMEX)";
             this.btn_creditcardbetalen.UseVisualStyleBackColor = false;
@@ -251,9 +251,9 @@
             // 
             this.btn_contantbetalen.BackColor = System.Drawing.Color.Maroon;
             this.btn_contantbetalen.ForeColor = System.Drawing.Color.White;
-            this.btn_contantbetalen.Location = new System.Drawing.Point(7, 518);
+            this.btn_contantbetalen.Location = new System.Drawing.Point(7, 445);
             this.btn_contantbetalen.Name = "btn_contantbetalen";
-            this.btn_contantbetalen.Size = new System.Drawing.Size(238, 43);
+            this.btn_contantbetalen.Size = new System.Drawing.Size(309, 43);
             this.btn_contantbetalen.TabIndex = 20;
             this.btn_contantbetalen.Text = "Contant";
             this.btn_contantbetalen.UseVisualStyleBackColor = false;
@@ -272,9 +272,9 @@
             // 
             this.btn_printrekening.BackColor = System.Drawing.Color.LightSkyBlue;
             this.btn_printrekening.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btn_printrekening.Location = new System.Drawing.Point(7, 345);
+            this.btn_printrekening.Location = new System.Drawing.Point(7, 278);
             this.btn_printrekening.Name = "btn_printrekening";
-            this.btn_printrekening.Size = new System.Drawing.Size(238, 43);
+            this.btn_printrekening.Size = new System.Drawing.Size(309, 43);
             this.btn_printrekening.TabIndex = 22;
             this.btn_printrekening.Text = "Print Rekening";
             this.btn_printrekening.UseVisualStyleBackColor = false;
@@ -283,7 +283,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(663, 585);
+            this.ClientSize = new System.Drawing.Size(775, 502);
             this.Controls.Add(this.btn_printrekening);
             this.Controls.Add(this.BTN_AFREKENENnaarTAFELOVERZICHT);
             this.Controls.Add(this.btn_contantbetalen);

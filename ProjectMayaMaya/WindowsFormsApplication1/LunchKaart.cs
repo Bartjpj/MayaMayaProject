@@ -42,7 +42,9 @@ namespace WindowsFormsApplication1
 
         private void btn_LUNCHnaarDRANKEN_Click(object sender, EventArgs e)
         {
-
+            DrankenKaart openDrankenkaart = new DrankenKaart();
+            openDrankenkaart.Show(this);
+            this.Hide();
         }
 
     }

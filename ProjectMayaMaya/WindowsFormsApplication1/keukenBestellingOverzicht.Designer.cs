@@ -62,8 +62,8 @@
             // 
             // btn_gereedKeuken
             // 
-            this.btn_gereedKeuken.BackColor = System.Drawing.Color.Chartreuse;
-            this.btn_gereedKeuken.Location = new System.Drawing.Point(592, 339);
+            this.btn_gereedKeuken.BackColor = System.Drawing.SystemColors.Highlight;
+            this.btn_gereedKeuken.Location = new System.Drawing.Point(615, 433);
             this.btn_gereedKeuken.Name = "btn_gereedKeuken";
             this.btn_gereedKeuken.Size = new System.Drawing.Size(146, 44);
             this.btn_gereedKeuken.TabIndex = 4;

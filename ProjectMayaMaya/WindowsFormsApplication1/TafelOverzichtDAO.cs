@@ -11,7 +11,7 @@ namespace WindowsFormsApplication1
     class TafelOverzichtDAO
     {
 
-        public void haalTafelOverzicht_TabelOp() // deze methode haalt de gegevens op voor het BestellingMenu overzicht
+        public List<TafelOverzichtClass> haalTafelOverzicht_TabelOp() // deze methode haalt de gegevens op voor het BestellingMenu overzicht
         {
             string connString = ConfigurationManager
             .ConnectionStrings["BestellingConnectionStringSQL"]
@@ -36,6 +36,7 @@ namespace WindowsFormsApplication1
             }
 
             conn.Close();
+            return TafelOverzichtTable;
         }
 
 

@@ -122,6 +122,13 @@ namespace WindowsFormsApplication1
         {
             //tm_tafel1.Stop();
         }
+
+        private void btn_dinerkaart_Click(object sender, EventArgs e)
+        {
+            DinerKaart openDinerkaart = new DinerKaart();
+            openDinerkaart.Show(this);
+            this.Hide();
+        }
     }
 
 }

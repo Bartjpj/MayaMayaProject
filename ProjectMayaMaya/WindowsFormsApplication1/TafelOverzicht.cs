@@ -19,7 +19,9 @@ namespace WindowsFormsApplication1
             this.Location = Owner.Location;
             this.Size = Owner.Size;
         }
-        
+        TafelOverzichtDAO TafelOverzichtDAO;
+        List<TafelOverzichtClass> tafellijst = new List<TafelOverzichtClass>();
+       
         public TafelOverzicht()
         {
             InitializeComponent();
@@ -39,7 +41,18 @@ namespace WindowsFormsApplication1
         {
 
         }
+        public void button1_Click(object sender, EventArgs e)
+        {
+            foreach (TafelOverzichtClass TafelOverzicht in TafelOverzichtDAO.haalTafelOverzicht_TabelOp())
+            {
 
+                ListViewItem lijstitem = new ListViewItem(TafelOverzicht.TafelId.ToString());
+                lijstitem.SubItems.Add(TafelOverzicht.TafelId.ToString());
+                lijstitem.SubItems.Add(TafelOverzicht.Bezet.ToString());
+                lstbox_tafeloverzicht.Items.Add(lijstitem);
+
+            }
+        }
 
         //-----------------TAFELS--------------------------------:
         int tafelgetal;
@@ -164,6 +177,8 @@ namespace WindowsFormsApplication1
         public void lbl_tijdtafel1_Click(object sender, EventArgs e)
         {
         }
+
+
 
     }
 }
