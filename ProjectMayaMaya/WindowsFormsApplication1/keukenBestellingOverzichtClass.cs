@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WindowsFormsApplication1
 {
-    class keukenBestellingOverzichtClass
+    public class keukenBestellingOverzichtClass
     {
         //Variabelen worden gedefinieerd
         public int bestelling_id { get; set; }

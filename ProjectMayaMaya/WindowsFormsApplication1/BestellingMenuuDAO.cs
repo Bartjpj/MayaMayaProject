@@ -47,8 +47,9 @@ namespace WindowsFormsApplication1
                 bestellingen.Add(opgehaaldeBestelling);
             
             }
-            return bestellingen;
+            
             connectie.Close();
+            return bestellingen;
            
            
            
