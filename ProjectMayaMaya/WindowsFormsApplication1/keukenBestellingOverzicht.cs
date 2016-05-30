@@ -42,5 +42,10 @@ namespace WindowsFormsApplication1
         {
             // bestellingoverzicht moet hier komen en die moet zichtbaar zijn voor alle personeelsleden. En gereedgemeld kunnen worden door bijv. chefkok of barman.
         }
+
+        private void btn_gereedKeuken_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
