@@ -87,39 +87,43 @@ namespace WindowsFormsApplication1
         {
             tafelgetal = tafelGetal;
         }
-        
-        
+
+
         Stopwatch s1 = new Stopwatch();
 
-        public void btn_stuurbestelling_Click(object sender, EventArgs e)
+        //Ben de timer aan het testen of ik hem hier kan enabelen en dan de tijd doorgeven op het tafeloverzicht form.
+        public void btn_stuurbestelling_Click(object sender, EventArgs e, TafelOverzicht tm_tafel1, TafelOverzicht btn_Tafel1)
         {
-            //int hour, min, sec, ms = 0;
+            
+            //int min, sec, ms = 0;
             //int tafelnr = tafelgetal;
 
             //if (tafelnr == 1)
             //{
-            //    TafelOverzicht.tm_tafel1.Start();
-            //    TafelOverzicht.btn_Tafel1.BackColor = Color.Red;
-            //    Timer t1;
-            //    t1 = new Timer();
-            //    t1.Start();
-
-            //    if (t1.Tick() += 60 = true)
+            //    tm_tafel1.Enabled = true;
+            //    tm_tafel1.Start();
+            //    if (ms >= 10)
+            //    {
+            //        sec++;
+            //        ms = 0;
+            //    }
+            //    if (sec >= 60)
             //    {
             //        min++;
-            //        t1.Stop();
-            //        t1.Start();
+            //        sec = 0;
             //    }
-            //    //s1.Start();
+            //    if (min >= 30)
+            //    {
+            //        btn_Tafel1.BackColor = Color.Maroon;
+            //    }
 
-            //    //for (int i = 0; i < 1000; i++)
-            //    //{
-            //    //    System.Threading.Thread.Sleep(10);
-            //    //}
-            //    //s1.Stop();
-            //    //lbl_tijdtafel1.Text = "{:mm}"; s1.Elapsed();
-                //}
+            //}
 
+        }
+        //even een testje, doet atm geen kwaad
+        private void btn_KlaarBestelling_Click(object sender, EventArgs e, TafelOverzicht tm_tafel1)
+        {
+            //tm_tafel1.Stop();
         }
     }
 
