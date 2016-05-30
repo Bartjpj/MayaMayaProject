@@ -68,6 +68,8 @@
     <Compile Include="DrankenKaart.Designer.cs">
       <DependentUpon>DrankenKaart.cs</DependentUpon>
     </Compile>
+    <Compile Include="DrankenKaartClass.cs" />
+    <Compile Include="DrankenKaartDAO.cs" />
     <Compile Include="keukenBestellingOverzichtClass.cs" />
     <Compile Include="KeukenBestellingOverzichtDAO.cs" />
     <Compile Include="KiesOpname.cs">
@@ -125,6 +127,8 @@
     <Compile Include="LunchKaart.Designer.cs">
       <DependentUpon>LunchKaart.cs</DependentUpon>
     </Compile>
+    <Compile Include="LunchKaartClass.cs" />
+    <Compile Include="LunchKaartDAO.cs" />
     <Compile Include="MenuCategorie.cs" />
     <Compile Include="MenuItemDAO.cs" />
     <Compile Include="MenuKaart.cs" />
