@@ -34,6 +34,9 @@
             this.listbox_added_items = new System.Windows.Forms.ListBox();
             this.listview_diner = new System.Windows.Forms.ListView();
             this.btn_stuurbestelling = new System.Windows.Forms.Button();
+            this.Naam = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Prijs = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Voorraad = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // label1
@@ -81,11 +84,16 @@
             // 
             // listview_diner
             // 
+            this.listview_diner.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.Naam,
+            this.Prijs,
+            this.Voorraad});
             this.listview_diner.Location = new System.Drawing.Point(12, 159);
             this.listview_diner.Name = "listview_diner";
             this.listview_diner.Size = new System.Drawing.Size(378, 238);
             this.listview_diner.TabIndex = 81;
             this.listview_diner.UseCompatibleStateImageBehavior = false;
+            this.listview_diner.View = System.Windows.Forms.View.Details;
             // 
             // btn_stuurbestelling
             // 
@@ -96,6 +104,20 @@
             this.btn_stuurbestelling.TabIndex = 82;
             this.btn_stuurbestelling.Text = "Stuur Bestelling";
             this.btn_stuurbestelling.UseVisualStyleBackColor = false;
+            // 
+            // Naam
+            // 
+            this.Naam.Text = "Gerecht";
+            this.Naam.Width = 200;
+            // 
+            // Prijs
+            // 
+            this.Prijs.Text = "Prijs";
+            // 
+            // Voorraad
+            // 
+            this.Voorraad.Text = "Op voorraad:";
+            this.Voorraad.Width = 100;
             // 
             // DinerKaart
             // 
@@ -123,5 +145,8 @@
         private System.Windows.Forms.ListBox listbox_added_items;
         private System.Windows.Forms.ListView listview_diner;
         private System.Windows.Forms.Button btn_stuurbestelling;
+        private System.Windows.Forms.ColumnHeader Naam;
+        private System.Windows.Forms.ColumnHeader Prijs;
+        private System.Windows.Forms.ColumnHeader Voorraad;
     }
 }

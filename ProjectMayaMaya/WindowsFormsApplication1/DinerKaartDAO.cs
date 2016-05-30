@@ -26,14 +26,14 @@ namespace WindowsFormsApplication1
 
             while (reader.Read())
             {
-                int kaart_id = (int)reader["kaart_id"];
+                int menu_id = (int)reader["menu_id"];
                 int categorie_id = (int)reader["categorie_id"];
                 string naam = (string)reader["naam"];
-                int prijs = (int)reader["prijs"];
+                double prijs = (double)reader["prijs"];
                 int voorraad = (int)reader["voorraad"];
                 //Onderzoeken wrm dit niet werkt
 
-                DinerKaartClass DinerKaartDAO = new DinerKaartClass(kaart_id, categorie_id, naam, prijs, voorraad);
+                DinerKaartClass DinerKaartDAO = new DinerKaartClass(menu_id, categorie_id, naam, prijs, voorraad);
                 DinerKaartTable.Add(DinerKaartDAO);
             }
 

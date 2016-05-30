@@ -38,9 +38,7 @@ namespace WindowsFormsApplication1
 
             foreach (DinerKaartClass dinerOverzicht in DinerKaartDAO.haalDinerKaart_TabelOp())
             {
-                ListViewItem lijstItem = new ListViewItem(dinerOverzicht.kaart_id.ToString());
-                lijstItem.SubItems.Add(dinerOverzicht.categorie_id.ToString());
-                lijstItem.SubItems.Add(dinerOverzicht.naam.ToString());
+                ListViewItem lijstItem = new ListViewItem(dinerOverzicht.naam.ToString());
                 lijstItem.SubItems.Add(dinerOverzicht.prijs.ToString());
                 lijstItem.SubItems.Add(dinerOverzicht.voorraad.ToString());
                 listview_diner.Items.Add(lijstItem);
