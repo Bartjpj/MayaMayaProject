@@ -96,7 +96,6 @@
             this.btn_stuurbestelling.TabIndex = 82;
             this.btn_stuurbestelling.Text = "Stuur Bestelling";
             this.btn_stuurbestelling.UseVisualStyleBackColor = false;
-            this.btn_stuurbestelling.Click += new System.EventHandler(this.btn_stuurbestelling_Click);
             // 
             // DinerKaart
             // 

@@ -8,9 +8,9 @@ using System.Threading.Tasks;
 
 namespace WindowsFormsApplication1
 {
-    class DinerKaartDAO
+   public class DinerKaartDAO
     {
-        public void haalDinerKaart_TabelOp() // deze methode haalt de gegevens op voor het BestellingMenu overzicht
+        public List<DinerKaartClass> haalDinerKaart_TabelOp() // deze methode haalt de gegevens op voor het BestellingMenu overzicht
         {
             string connString = ConfigurationManager
             .ConnectionStrings["BestellingConnectionStringSQL"]
@@ -38,6 +38,7 @@ namespace WindowsFormsApplication1
             }
 
             conn.Close();
+            return DinerKaartTable;
         }
 
 

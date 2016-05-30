@@ -6,13 +6,16 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Timers.Timer;
+//using System.Timers.Timer;
 using System.Windows.Forms;
 
 namespace WindowsFormsApplication1
 {
     public partial class DinerKaart : Form
     {
+        DinerKaartDAO DinerKaartDAO;
+        List<DinerKaartClass> DinerKaartLijst = new List<DinerKaartClass>();
+
 
         protected override void OnLoad(EventArgs e) // is de verwijzing, niets veranderen AUB
         {
@@ -20,11 +23,32 @@ namespace WindowsFormsApplication1
             this.Location = Owner.Location;
             this.Size = Owner.Size;
         }
-        
-        public DinerKaart()
+
+ 
+
+        public DinerKaart(DinerKaartDAO DinerKaartDAO)
         {
             InitializeComponent();
+
+            this.DinerKaartDAO = DinerKaartDAO; // zet bestellingdao
+
+            DinerKaartLijst = DinerKaartDAO.haalDinerKaart_TabelOp(); // haal de bestelling op
+
+
+
+            foreach (DinerKaartClass dinerOverzicht in DinerKaartDAO.haalDinerKaart_TabelOp())
+            {
+                ListViewItem lijstItem = new ListViewItem(dinerOverzicht.kaart_id.ToString());
+                lijstItem.SubItems.Add(dinerOverzicht.categorie_id.ToString());
+                lijstItem.SubItems.Add(dinerOverzicht.naam.ToString());
+                lijstItem.SubItems.Add(dinerOverzicht.prijs.ToString());
+                lijstItem.SubItems.Add(dinerOverzicht.voorraad.ToString());
+                listview_diner.Items.Add(lijstItem);
+
+            }
         }
+
+
 
         private void btn_LUNCHnaarDRANKEN_Click(object sender, EventArgs e)
         {
@@ -39,6 +63,41 @@ namespace WindowsFormsApplication1
             openBestellingMenu.Show(this);
             this.Hide();
         }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         private void btn_stuurbestelling_Click(object sender, EventArgs e, TafelOverzicht tm_tafel1, TafelOverzicht btn_Tafel1, TafelOverzicht tafelgetal)
         {
