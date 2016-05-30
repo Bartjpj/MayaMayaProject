@@ -7,7 +7,7 @@ using System.Data.SqlClient;
 
 namespace WindowsFormsApplication1
 {
-    public class Bestelling
+    public class BestellingMenuClass
     {
         
 
@@ -34,7 +34,7 @@ namespace WindowsFormsApplication1
 
         //}
 
-        public Bestelling(int bestelling_id, int tafel_id, int aantal, int ItemId)
+        public BestellingMenuClass(int bestelling_id, int tafel_id, int aantal, int ItemId)
         {
             this.bestelling_id = bestelling_id;
             this.tafel_id = tafel_id;

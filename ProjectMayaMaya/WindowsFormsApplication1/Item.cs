@@ -10,16 +10,7 @@ namespace WindowsFormsApplication1
         private int MenuItem_id;
         private int prijs;
 
-        public BestellingItem BestellingItem
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
-        }
+
 
         private void kanBereidWorden()
         {
