@@ -30,9 +30,12 @@
         {
             this.btn_KeukenNaarHoofdmenu = new System.Windows.Forms.Button();
             this.lbl_OpenstaandeBestellingenKeuken = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btn_gereedKeuken = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.listView1 = new System.Windows.Forms.ListView();
+            this.Bestelling_id = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Tafel_id = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Aantal = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Item = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // btn_KeukenNaarHoofdmenu
@@ -56,37 +59,63 @@
             this.lbl_OpenstaandeBestellingenKeuken.TabIndex = 2;
             this.lbl_OpenstaandeBestellingenKeuken.Text = "Openstaande Bestellingen: ";
             // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(11, 98);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(737, 235);
-            this.dataGridView1.TabIndex = 3;
-            // 
             // btn_gereedKeuken
             // 
             this.btn_gereedKeuken.BackColor = System.Drawing.SystemColors.Highlight;
             this.btn_gereedKeuken.Location = new System.Drawing.Point(615, 433);
             this.btn_gereedKeuken.Name = "btn_gereedKeuken";
-            this.btn_gereedKeuken.Size = new System.Drawing.Size(133, 57);
+            this.btn_gereedKeuken.Size = new System.Drawing.Size(146, 44);
             this.btn_gereedKeuken.TabIndex = 4;
             this.btn_gereedKeuken.Text = "Gereed";
             this.btn_gereedKeuken.UseVisualStyleBackColor = false;
+            this.btn_gereedKeuken.Click += new System.EventHandler(this.btn_gereedKeuken_Click);
+            // 
+            // listView1
+            // 
+            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.Bestelling_id,
+            this.Tafel_id,
+            this.Aantal,
+            this.Item});
+            this.listView1.Location = new System.Drawing.Point(11, 94);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(737, 201);
+            this.listView1.TabIndex = 5;
+            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listView1.View = System.Windows.Forms.View.Details;
+            // 
+            // Bestelling_id
+            // 
+            this.Bestelling_id.Text = "BestellingID";
+            this.Bestelling_id.Width = 149;
+            // 
+            // Tafel_id
+            // 
+            this.Tafel_id.Text = "Tafel_id";
+            this.Tafel_id.Width = 163;
+            // 
+            // Aantal
+            // 
+            this.Aantal.Text = "Aantal";
+            this.Aantal.Width = 116;
+            // 
+            // Item
+            // 
+            this.Item.Text = "Item";
+            this.Item.Width = 176;
             // 
             // keukenBestellingOverzicht
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(775, 502);
+            this.ClientSize = new System.Drawing.Size(760, 408);
+            this.Controls.Add(this.listView1);
             this.Controls.Add(this.btn_gereedKeuken);
-            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.lbl_OpenstaandeBestellingenKeuken);
             this.Controls.Add(this.btn_KeukenNaarHoofdmenu);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "keukenBestellingOverzicht";
             this.Text = "keukenBestellingOverzicht";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -96,7 +125,11 @@
 
         private System.Windows.Forms.Button btn_KeukenNaarHoofdmenu;
         private System.Windows.Forms.Label lbl_OpenstaandeBestellingenKeuken;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button btn_gereedKeuken;
+        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ColumnHeader Bestelling_id;
+        private System.Windows.Forms.ColumnHeader Tafel_id;
+        private System.Windows.Forms.ColumnHeader Aantal;
+        private System.Windows.Forms.ColumnHeader Item;
     }
 }
