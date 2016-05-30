@@ -108,7 +108,7 @@
             // Naam
             // 
             this.Naam.Text = "Gerecht";
-            this.Naam.Width = 200;
+            this.Naam.Width = 240;
             // 
             // Prijs
             // 
