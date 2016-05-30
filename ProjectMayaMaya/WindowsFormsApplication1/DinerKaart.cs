@@ -15,6 +15,7 @@ namespace WindowsFormsApplication1
     {
         DinerKaartDAO DinerKaartDAO;
         List<DinerKaartClass> DinerKaartLijst = new List<DinerKaartClass>();
+        List<int> TotalebestellingLijst = new List<int>();
         
 
 
@@ -31,27 +32,29 @@ namespace WindowsFormsApplication1
         {
             InitializeComponent();
 
-            this.DinerKaartDAO = DinerKaartDAO; // zet bestellingdao
+            this.DinerKaartDAO = DinerKaartDAO; // zet bestellingdao openbaar
 
-            DinerKaartLijst = DinerKaartDAO.haalDinerKaart_TabelOp(); // haal de bestelling op
 
             foreach (DinerKaartClass dinerOverzicht in DinerKaartDAO.haalDinerKaart_TabelOp()) //Alle informatie die in de list staat wordt in de listview geschreven
             {
 
-                listview_diner.Sorting = SortOrder.Ascending; //Sorteer alle rijen op alfabetische volgorde
                 ListViewItem lijstItem = new ListViewItem(dinerOverzicht.naam.ToString());
                 lijstItem.SubItems.Add(dinerOverzicht.prijs.ToString());
                 lijstItem.SubItems.Add(dinerOverzicht.voorraad.ToString());
                 listview_diner.Items.Add(lijstItem);
-
-
             }
         }
 
         private void btn_DinerGerechtToevoegen_Click(object sender, EventArgs e)
         {
-            ListViewItem DinerGerechtToevoegen = listview_diner.SelectedItems[0];
-            listbox_added_items.Items.Add(DinerGerechtToevoegen);
+            
+            
+            //Voeg aan listbox het geselecteerde item toe
+            for (int intCount = 0; intCount < listview_diner.SelectedItems.Count; intCount++)
+            {
+                listbox_added_items.Items.Add(listview_diner.SelectedItems[intCount].Text);
+               
+            }
         }
 
         private void btn_LUNCHnaarDRANKEN_Click(object sender, EventArgs e)

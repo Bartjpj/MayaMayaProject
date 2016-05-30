@@ -92,9 +92,11 @@
             this.Prijs,
             this.Voorraad});
             this.listview_diner.FullRowSelect = true;
+            this.listview_diner.GridLines = true;
             this.listview_diner.Location = new System.Drawing.Point(12, 159);
             this.listview_diner.Name = "listview_diner";
             this.listview_diner.Size = new System.Drawing.Size(378, 238);
+            this.listview_diner.Sorting = System.Windows.Forms.SortOrder.Ascending;
             this.listview_diner.TabIndex = 81;
             this.listview_diner.UseCompatibleStateImageBehavior = false;
             this.listview_diner.View = System.Windows.Forms.View.Details;
