@@ -22,9 +22,8 @@ namespace WindowsFormsApplication1
             SqlCommand command = new SqlCommand("SELECT *  FROM Tafel ", conn);
             // deze query zorgt ervoor dat we alle data hebben die we bij BestellingMenu nodig hebben 
             SqlDataReader reader = command.ExecuteReader();
-            int rowsAffected = command.ExecuteNonQuery();
 
-            List<TafelOverzichtConstructor> TafelOverzichtTable = new List<TafelOverzichtConstructor>();
+            List<TafelOverzichtClass> TafelOverzichtTable = new List<TafelOverzichtClass>();
 
             while (reader.Read())
             {
@@ -32,11 +31,13 @@ namespace WindowsFormsApplication1
                 bool Bezet = (bool)reader["Bezet"];
                 //Onderzoeken wrm dit niet werkt
 
-                TafelOverzichtConstructor TafelOverzichtDAO = new TafelOverzichtConstructor(TafelId, Bezet);
+                TafelOverzichtClass TafelOverzichtDAO = new TafelOverzichtClass(TafelId, Bezet);
                 TafelOverzichtTable.Add(TafelOverzichtDAO);
             }
 
             conn.Close();
         }
+
+
     }
 }
