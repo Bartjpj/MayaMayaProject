@@ -137,6 +137,17 @@
             this.btn_DinerGerechtToevoegen.UseVisualStyleBackColor = true;
             this.btn_DinerGerechtToevoegen.Click += new System.EventHandler(this.btn_DinerGerechtToevoegen_Click);
             // 
+            // btn_stuurbestelling
+            // 
+            this.btn_stuurbestelling.BackColor = System.Drawing.Color.LightGreen;
+            this.btn_stuurbestelling.Location = new System.Drawing.Point(670, 449);
+            this.btn_stuurbestelling.Name = "btn_stuurbestelling";
+            this.btn_stuurbestelling.Size = new System.Drawing.Size(93, 41);
+            this.btn_stuurbestelling.TabIndex = 82;
+            this.btn_stuurbestelling.Text = "Stuur Bestelling";
+            this.btn_stuurbestelling.UseVisualStyleBackColor = false;
+            this.btn_stuurbestelling.Click += new System.EventHandler(this.btn_stuurbestelling_Click);
+            // 
             // DinerKaart
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);

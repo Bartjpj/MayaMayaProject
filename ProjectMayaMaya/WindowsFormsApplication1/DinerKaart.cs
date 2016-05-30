@@ -71,15 +71,21 @@ namespace WindowsFormsApplication1
             this.Hide();
         }
 
-        private void btn_stuurbestelling_Click(object sender, EventArgs e, TafelOverzicht tm_tafel1, TafelOverzicht btn_Tafel1, TafelOverzicht tafelgetal)
-        {
-            //int min, sec, ms = 0;
             
-            //if (tafelgetal >= 1)
+        private void btn_stuurbestelling_Click(object sender, EventArgs e, TafelOverzicht btn_Tafel1, int tafelgetal, TafelOverzicht lbl_tijdtafel1, keukenBestellingOverzicht btn_gereedkeuken_Click)
+        {
+            //int min = 0;
+            //int sec = 0; 
+            //int ms = 0;
+            //int tafelnr = tafelgetal;
+            //if (tafelgetal == 1)
             //{
             //    Timer t1 = new Timer();
-            //    tm_tafel1.Enabled = true;
-            //    tm_tafel1.Start();
+            //    t1.Enabled = true;
+            //    t1.Start();
+            //    bool bestelling_gereed = false;
+
+            //    while(btn_gereedkeuken.PerformClick() == false)
             //    if (ms >= 10)
             //    {
             //        sec++;
@@ -89,6 +95,8 @@ namespace WindowsFormsApplication1
             //    {
             //        min++;
             //        sec = 0;
+            //        lbl_tijdtafel1.Text = min.ToString();
+                    
             //    }
             //    if (min >= 30)
             //    {
@@ -98,7 +106,9 @@ namespace WindowsFormsApplication1
             //}
         }
 
-
+        private void btn_stuurbestelling_Click(object sender, EventArgs e)
+        {
 
     }
+}
 }
