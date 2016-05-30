@@ -81,7 +81,13 @@ namespace WindowsFormsApplication1
 
         private void btn_BestellingGereed_Click(object sender, EventArgs e)
         {
-            
+            for (int i = listView1.Items.Count - 1; i >= 0; i--)
+            {
+                if (listView1.Items[i].Selected)
+                {
+                    listView1.Items[i].Remove();
+                }
+            }
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -98,7 +104,11 @@ namespace WindowsFormsApplication1
         {
             foreach (BarOverzichtClass barOverzicht in BarOverzichtDAO.haalBarOverzicht_TabelOp())
             {
-
+                for (int i = listView1.Items.Count - 1; i >= 0; i--)
+                {
+                    //ListViewItem get = new ListViewItem
+                    listView1.Items[i].Remove();
+                }
                 ListViewItem lijstItem = new ListViewItem(barOverzicht.bestelling_id.ToString());
                 lijstItem.SubItems.Add(barOverzicht.tafel_id.ToString());
                 lijstItem.SubItems.Add(barOverzicht.aantal.ToString());

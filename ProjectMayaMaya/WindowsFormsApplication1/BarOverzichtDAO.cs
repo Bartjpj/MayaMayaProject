@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
 using System.Configuration;
+using System.Collections;
 
 namespace WindowsFormsApplication1
 {
@@ -40,5 +41,14 @@ namespace WindowsFormsApplication1
             return BarOverzichtTable;
           
         }
+
+        //public virtual void Enqueue(List<BarOverzichtClass> q)
+        //{
+        //    q = haalBarOverzicht_TabelOp();
+
+        //    Queue <BarOverzichtClass> lijsFifo = new Queue<BarOverzichtClass>();
+
+        //    lijsFifo.Enqueue(q);
+        //}
     }
 }

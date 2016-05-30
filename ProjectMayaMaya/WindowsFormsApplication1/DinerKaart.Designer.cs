@@ -33,10 +33,10 @@
             this.btn_DINERnaarBESTELLING = new System.Windows.Forms.Button();
             this.listbox_added_items = new System.Windows.Forms.ListBox();
             this.listview_diner = new System.Windows.Forms.ListView();
-            this.btn_stuurbestelling = new System.Windows.Forms.Button();
             this.Naam = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Prijs = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Voorraad = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.btn_stuurbestelling = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -95,16 +95,6 @@
             this.listview_diner.UseCompatibleStateImageBehavior = false;
             this.listview_diner.View = System.Windows.Forms.View.Details;
             // 
-            // btn_stuurbestelling
-            // 
-            this.btn_stuurbestelling.BackColor = System.Drawing.Color.LightGreen;
-            this.btn_stuurbestelling.Location = new System.Drawing.Point(670, 449);
-            this.btn_stuurbestelling.Name = "btn_stuurbestelling";
-            this.btn_stuurbestelling.Size = new System.Drawing.Size(93, 41);
-            this.btn_stuurbestelling.TabIndex = 82;
-            this.btn_stuurbestelling.Text = "Stuur Bestelling";
-            this.btn_stuurbestelling.UseVisualStyleBackColor = false;
-            // 
             // Naam
             // 
             this.Naam.Text = "Gerecht";
@@ -118,6 +108,16 @@
             // 
             this.Voorraad.Text = "Op voorraad:";
             this.Voorraad.Width = 100;
+            // 
+            // btn_stuurbestelling
+            // 
+            this.btn_stuurbestelling.BackColor = System.Drawing.Color.LightGreen;
+            this.btn_stuurbestelling.Location = new System.Drawing.Point(670, 449);
+            this.btn_stuurbestelling.Name = "btn_stuurbestelling";
+            this.btn_stuurbestelling.Size = new System.Drawing.Size(93, 41);
+            this.btn_stuurbestelling.TabIndex = 82;
+            this.btn_stuurbestelling.Text = "Stuur Bestelling";
+            this.btn_stuurbestelling.UseVisualStyleBackColor = false;
             // 
             // DinerKaart
             // 
