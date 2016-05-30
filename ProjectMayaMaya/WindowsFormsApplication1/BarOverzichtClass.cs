@@ -22,5 +22,10 @@ namespace WindowsFormsApplication1
             this.aantal = aantal;
             this.naam = naam;
         }
+
+        public void bestellingGereed()
+        {
+
+        }
     }
 }
