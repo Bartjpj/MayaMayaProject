@@ -17,6 +17,9 @@ namespace WindowsFormsApplication1
             this.TafelId = TafelId;
             this.Bezet = Bezet;
         }
+
+
+
         
     }
 }

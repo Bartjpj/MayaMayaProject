@@ -68,6 +68,8 @@
     <Compile Include="DrankenKaart.Designer.cs">
       <DependentUpon>DrankenKaart.cs</DependentUpon>
     </Compile>
+    <Compile Include="keukenBestellingOverzichtClass.cs" />
+    <Compile Include="keukenBestellingOverzichtDAO.cs" />
     <Compile Include="Klantenlijst.cs" />
     <Compile Include="BarOverzicht.cs">
       <SubType>Form</SubType>

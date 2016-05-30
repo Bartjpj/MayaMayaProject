@@ -22,7 +22,6 @@ namespace WindowsFormsApplication1
             SqlCommand command = new SqlCommand("SELECT *  FROM Tafel ", conn);
             // deze query zorgt ervoor dat we alle data hebben die we bij BestellingMenu nodig hebben 
             SqlDataReader reader = command.ExecuteReader();
-            int rowsAffected = command.ExecuteNonQuery();
 
             List<TafelOverzichtClass> TafelOverzichtTable = new List<TafelOverzichtClass>();
 
@@ -38,5 +37,7 @@ namespace WindowsFormsApplication1
 
             conn.Close();
         }
+
+
     }
 }
