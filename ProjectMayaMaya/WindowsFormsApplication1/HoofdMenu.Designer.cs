@@ -99,8 +99,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(794, 569);
-
+            this.ClientSize = new System.Drawing.Size(1354, 1045);
             this.Controls.Add(this.btn_ExitWindows);
             this.Controls.Add(this.lbl_HMtekst);
             this.Controls.Add(this.btn_HMnaarBar);
