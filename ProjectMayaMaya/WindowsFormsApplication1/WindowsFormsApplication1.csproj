@@ -60,6 +60,8 @@
     <Compile Include="DinerKaart.Designer.cs">
       <DependentUpon>DinerKaart.cs</DependentUpon>
     </Compile>
+    <Compile Include="DinerKaartClass.cs" />
+    <Compile Include="DinerKaartDAO.cs" />
     <Compile Include="DrankenKaart.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -127,7 +129,7 @@
     <Compile Include="Rekening.cs" />
     <Compile Include="rekeningEnum.cs" />
     <Compile Include="TafelOverzichtDAO.cs" />
-    <Compile Include="TafelOverzichtConstructor.cs" />
+    <Compile Include="TafelOverzichtClass.cs" />
     <Compile Include="TafelOverzicht.cs">
       <SubType>Form</SubType>
     </Compile>

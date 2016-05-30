@@ -5,13 +5,14 @@ using System.Text;
 
 namespace WindowsFormsApplication1
 {
-    public class TafelOverzichtConstructor
+    public class TafelOverzichtClass
     {
-        // properties van Tafel
+        //Variabelen worden gedefinieerd
         public int TafelId { get; set; }
         public bool Bezet { get; set; }
 
-        public TafelOverzichtConstructor(int TafelId, bool Bezet)
+        //De constructor wordt aangemaakt
+        public TafelOverzichtClass(int TafelId, bool Bezet)
         {
             this.TafelId = TafelId;
             this.Bezet = Bezet;
