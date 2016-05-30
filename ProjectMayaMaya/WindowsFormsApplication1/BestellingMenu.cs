@@ -63,64 +63,11 @@ namespace WindowsFormsApplication1
             this.Hide();
         }
 
-        private void txtbox_fooi_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btn_drankmenu_Click(object sender, EventArgs e)
         {
             DrankenKaart opendrankenkaart = new DrankenKaart();
             opendrankenkaart.Show(this);
             this.Hide();
-        }
-
-        public void tafelgetalWijzigen(int tafelGetal)
-        {
-            tafelgetal = tafelGetal;
-        }
-        
-        
-        Stopwatch s1 = new Stopwatch();
-
-        //Ben de timer aan het testen of ik hem hier kan enabelen en dan de tijd doorgeven op het tafeloverzicht form.
-        public void btn_stuurbestelling_Click(object sender, EventArgs e, TafelOverzicht tm_tafel1, TafelOverzicht btn_Tafel1)
-        {
-
-            //int min, sec, ms = 0;
-            //int tafelnr = tafelgetal;
-
-            //if (tafelnr == 1)
-            //{
-            //    tm_tafel1.Enabled = true;
-            //    tm_tafel1.Start();
-            //    if (ms >= 10)
-            //    {
-            //        sec++;
-            //        ms = 0;
-            //    }
-            //    if (sec >= 60)
-            //    {
-            //        min++;
-            //        sec = 0;
-            //    }
-            //    if (min >= 30)
-            //    {
-            //        btn_Tafel1.BackColor = Color.Maroon;
-            //    }
-
-                //}
-
-            }
-        //even een testje, doet atm geen kwaad
-        private void btn_KlaarBestelling_Click(object sender, EventArgs e, TafelOverzicht tm_tafel1)
-        {
-            //tm_tafel1.Stop();
         }
 
         private void btn_dinerkaart_Click(object sender, EventArgs e)

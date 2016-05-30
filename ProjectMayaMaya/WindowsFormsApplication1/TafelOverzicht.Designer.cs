@@ -295,7 +295,7 @@
             // 
             this.lbl_Kiestafel.AutoSize = true;
             this.lbl_Kiestafel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Kiestafel.Location = new System.Drawing.Point(267, 61);
+            this.lbl_Kiestafel.Location = new System.Drawing.Point(261, 44);
             this.lbl_Kiestafel.Name = "lbl_Kiestafel";
             this.lbl_Kiestafel.Size = new System.Drawing.Size(135, 24);
             this.lbl_Kiestafel.TabIndex = 23;
@@ -306,12 +306,12 @@
             this.lstbox_tafeloverzicht.FormattingEnabled = true;
             this.lstbox_tafeloverzicht.Location = new System.Drawing.Point(569, 155);
             this.lstbox_tafeloverzicht.Name = "lstbox_tafeloverzicht";
-            this.lstbox_tafeloverzicht.Size = new System.Drawing.Size(131, 108);
+            this.lstbox_tafeloverzicht.Size = new System.Drawing.Size(138, 108);
             this.lstbox_tafeloverzicht.TabIndex = 24;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(529, 37);
+            this.button1.Location = new System.Drawing.Point(569, 118);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(52, 31);
             this.button1.TabIndex = 25;
