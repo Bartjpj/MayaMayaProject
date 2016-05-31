@@ -40,8 +40,6 @@
             this.btn_Tafel9 = new System.Windows.Forms.Button();
             this.btn_Tafel10 = new System.Windows.Forms.Button();
             this.btn_TAFELnaarHM = new System.Windows.Forms.Button();
-            this.rbtn_BestellingOpnemen = new System.Windows.Forms.RadioButton();
-            this.rbtn_BestellingAfrekenen = new System.Windows.Forms.RadioButton();
             this.tm_tafel1 = new System.Windows.Forms.Timer(this.components);
             this.lbl_tijdtafel1 = new System.Windows.Forms.Label();
             this.lbl_tijdtafel3 = new System.Windows.Forms.Label();
@@ -55,6 +53,7 @@
             this.lbl_tijdtafel10 = new System.Windows.Forms.Label();
             this.lbl_Kiestafel = new System.Windows.Forms.Label();
             this.lstbox_tafeloverzicht = new System.Windows.Forms.ListBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btn_Tafel1
@@ -193,29 +192,6 @@
             this.btn_TAFELnaarHM.UseVisualStyleBackColor = true;
             this.btn_TAFELnaarHM.Click += new System.EventHandler(this.btn_TAFELnaarHM_Click);
             // 
-            // rbtn_BestellingOpnemen
-            // 
-            this.rbtn_BestellingOpnemen.AutoSize = true;
-            this.rbtn_BestellingOpnemen.Location = new System.Drawing.Point(606, 78);
-            this.rbtn_BestellingOpnemen.Name = "rbtn_BestellingOpnemen";
-            this.rbtn_BestellingOpnemen.Size = new System.Drawing.Size(119, 17);
-            this.rbtn_BestellingOpnemen.TabIndex = 11;
-            this.rbtn_BestellingOpnemen.TabStop = true;
-            this.rbtn_BestellingOpnemen.Text = "Bestelling Opnemen";
-            this.rbtn_BestellingOpnemen.UseVisualStyleBackColor = true;
-            this.rbtn_BestellingOpnemen.CheckedChanged += new System.EventHandler(this.rbtn_BestellingOpnemen_CheckedChanged);
-            // 
-            // rbtn_BestellingAfrekenen
-            // 
-            this.rbtn_BestellingAfrekenen.AutoSize = true;
-            this.rbtn_BestellingAfrekenen.Location = new System.Drawing.Point(606, 101);
-            this.rbtn_BestellingAfrekenen.Name = "rbtn_BestellingAfrekenen";
-            this.rbtn_BestellingAfrekenen.Size = new System.Drawing.Size(122, 17);
-            this.rbtn_BestellingAfrekenen.TabIndex = 12;
-            this.rbtn_BestellingAfrekenen.TabStop = true;
-            this.rbtn_BestellingAfrekenen.Text = "Bestelling Afrekenen";
-            this.rbtn_BestellingAfrekenen.UseVisualStyleBackColor = true;
-            // 
             // tm_tafel1
             // 
             this.tm_tafel1.Tick += new System.EventHandler(this.tm_tafel1_Tick);
@@ -319,7 +295,7 @@
             // 
             this.lbl_Kiestafel.AutoSize = true;
             this.lbl_Kiestafel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Kiestafel.Location = new System.Drawing.Point(267, 61);
+            this.lbl_Kiestafel.Location = new System.Drawing.Point(261, 44);
             this.lbl_Kiestafel.Name = "lbl_Kiestafel";
             this.lbl_Kiestafel.Size = new System.Drawing.Size(135, 24);
             this.lbl_Kiestafel.TabIndex = 23;
@@ -330,14 +306,25 @@
             this.lstbox_tafeloverzicht.FormattingEnabled = true;
             this.lstbox_tafeloverzicht.Location = new System.Drawing.Point(569, 155);
             this.lstbox_tafeloverzicht.Name = "lstbox_tafeloverzicht";
-            this.lstbox_tafeloverzicht.Size = new System.Drawing.Size(131, 108);
+            this.lstbox_tafeloverzicht.Size = new System.Drawing.Size(138, 108);
             this.lstbox_tafeloverzicht.TabIndex = 24;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(569, 118);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(52, 31);
+            this.button1.TabIndex = 25;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // TafelOverzicht
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(775, 502);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.lstbox_tafeloverzicht);
             this.Controls.Add(this.lbl_Kiestafel);
             this.Controls.Add(this.lbl_tijdtafel10);
@@ -350,8 +337,6 @@
             this.Controls.Add(this.lnl_tijdtafel2);
             this.Controls.Add(this.lbl_tijdtafel3);
             this.Controls.Add(this.lbl_tijdtafel1);
-            this.Controls.Add(this.rbtn_BestellingAfrekenen);
-            this.Controls.Add(this.rbtn_BestellingOpnemen);
             this.Controls.Add(this.btn_TAFELnaarHM);
             this.Controls.Add(this.btn_Tafel10);
             this.Controls.Add(this.btn_Tafel9);
@@ -364,7 +349,7 @@
             this.Controls.Add(this.btn_Tafel2);
             this.Controls.Add(this.btn_Tafel1);
             this.Name = "TafelOverzicht";
-            this.Text = "Tafels";
+            this.Text = "Tafel Overzicht ";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -383,8 +368,6 @@
         private System.Windows.Forms.Button btn_Tafel9;
         private System.Windows.Forms.Button btn_Tafel10;
         private System.Windows.Forms.Button btn_TAFELnaarHM;
-        private System.Windows.Forms.RadioButton rbtn_BestellingOpnemen;
-        private System.Windows.Forms.RadioButton rbtn_BestellingAfrekenen;
         private System.Windows.Forms.Timer tm_tafel1;
         private System.Windows.Forms.Label lbl_tijdtafel1;
         private System.Windows.Forms.Label lbl_tijdtafel3;
@@ -398,5 +381,6 @@
         private System.Windows.Forms.Label lbl_tijdtafel10;
         private System.Windows.Forms.Label lbl_Kiestafel;
         private System.Windows.Forms.ListBox lstbox_tafeloverzicht;
+        private System.Windows.Forms.Button button1;
     }
 }

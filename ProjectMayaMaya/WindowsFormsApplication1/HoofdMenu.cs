@@ -20,17 +20,12 @@ namespace WindowsFormsApplication1
         
 
         }
-        private void btn_HMnaarKeuken_Click(object sender, EventArgs e)
-        {
-            keukenBestellingOverzicht keukenWindowOpenen = new keukenBestellingOverzicht(); // instantie van class keukenBestelling overzicht
-            keukenWindowOpenen.Show(this);  // Opent het form keukenWindowOpenen, het object van KeukenBestellingOverzicht. 
-            this.Hide(); // window/form die open stond verbergen
-        }
+
 
         private void btn_HMnaarBar_Click(object sender, EventArgs e)
         {
-            BestellingDAO bestellingDAO = new BestellingDAO();
-            BarOverzicht barWindowOpenen = new BarOverzicht(bestellingDAO);
+            BarOverzichtDAO BarOverzichtDAO = new BarOverzichtDAO();
+            BarOverzicht barWindowOpenen = new BarOverzicht(BarOverzichtDAO);
             barWindowOpenen.Show(this); // verwijst naar winform in grote van parent window (zie OnLoad in te openen form)
             this.Hide();
         }
@@ -46,6 +41,14 @@ namespace WindowsFormsApplication1
         private void btn_ExitWindows_Click(object sender, EventArgs e)
         {
         this.Close();
+        }
+
+        private void btn_HMnaarKEUKEN_Click(object sender, EventArgs e)
+        {
+            keukenBestellingOverzichtDAO openKeukenoverzicht = new keukenBestellingOverzichtDAO();
+            keukenBestellingOverzicht keukenWindowOpenen = new keukenBestellingOverzicht(openKeukenoverzicht);
+            keukenWindowOpenen.Show(this);
+            this.Hide();
         }
     }
 }

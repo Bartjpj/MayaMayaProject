@@ -14,8 +14,8 @@ namespace WindowsFormsApplication1
 {
     public partial class BarOverzicht : Form
     {
-        BestellingDAO bestellingDAO;
-        List<Bestelling> bestellingslijst = new List<Bestelling>();
+        BarOverzichtDAO BarOverzichtDAO;
+        List<BarOverzichtClass> bestellingslijst = new List<BarOverzichtClass>();
        
         protected override void OnLoad(EventArgs e) // is de verwijzing, niets veranderen AUB
         {
@@ -24,17 +24,19 @@ namespace WindowsFormsApplication1
             this.Size = Owner.Size;
         }
      
-        public BarOverzicht(BestellingDAO bestellingDAO) // geef een bestellingDAO als constructor mee.
+        public BarOverzicht(BarOverzichtDAO BarOverzichtDAO) // geef een bestellingDAO als constructor mee.
         {
            InitializeComponent();
 
-           this.bestellingDAO = bestellingDAO; // zet bestellingdao
-          
-           bestellingslijst = bestellingDAO.getAllBestellingen(); // haal de bestelling op
-           //lb_Baroverzicht.DataSource = bestellingslijst;
-           //lb_Baroverzicht.Items.Add(bestellingslijst);
+           this.BarOverzichtDAO = BarOverzichtDAO; // zet bestellingdao
 
-           dataGridView1.DataSource = bestellingslijst;
+           bestellingslijst = BarOverzichtDAO.haalBarOverzicht_TabelOp(); // haal de bestelling op
+
+           //lb_Baroverzicht.Items.Add(bestellingslijst);
+           //lb_Baroverzicht.DataSource = bestellingslijst.ToString();
+
+
+           //dataGridView1.DataSource = bestellingslijst; // zet de opgehaalde bestelling in de datagridview
 
         //   for (int i = 0; i < bestellingslijst.Count; i++ )
         //       lb_Baroverzicht.DisplayMember = bestellingslijst[i].ToString();
@@ -79,12 +81,41 @@ namespace WindowsFormsApplication1
 
         private void btn_BestellingGereed_Click(object sender, EventArgs e)
         {
-            
+            for (int i = listView1.Items.Count - 1; i >= 0; i--)
+            {
+                if (listView1.Items[i].Selected)
+                {
+                    listView1.Items[i].Remove();
+                }
+            }
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void listView1_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_refresh_Click(object sender, EventArgs e)
+        {
+            foreach (BarOverzichtClass barOverzicht in BarOverzichtDAO.haalBarOverzicht_TabelOp())
+            {
+                for (int i = listView1.Items.Count - 1; i >= 0; i--)
+                {
+                    //ListViewItem get = new ListViewItem
+                    listView1.Items[i].Remove();
+                }
+                ListViewItem lijstItem = new ListViewItem(barOverzicht.bestelling_id.ToString());
+                lijstItem.SubItems.Add(barOverzicht.tafel_id.ToString());
+                lijstItem.SubItems.Add(barOverzicht.aantal.ToString());
+                lijstItem.SubItems.Add(barOverzicht.naam.ToString());
+                listView1.Items.Add(lijstItem);
+
+            }
         }
     }
 }

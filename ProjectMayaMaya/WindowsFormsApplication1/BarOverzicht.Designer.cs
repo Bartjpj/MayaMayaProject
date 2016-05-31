@@ -33,20 +33,19 @@
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.btn_BARnaarHM = new System.Windows.Forms.Button();
             this.btn_BestellingGereed = new System.Windows.Forms.Button();
-            this.lb_Baroverzicht = new System.Windows.Forms.ListBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.listView1 = new System.Windows.Forms.ListView();
+            this.BestellingID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Tafel_id = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Aantal = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Item = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.btn_refresh = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lbl_OpenstaandeBestellingenKeuken
             // 
             this.lbl_OpenstaandeBestellingenKeuken.AutoSize = true;
             this.lbl_OpenstaandeBestellingenKeuken.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_OpenstaandeBestellingenKeuken.Location = new System.Drawing.Point(263, 88);
+            this.lbl_OpenstaandeBestellingenKeuken.Location = new System.Drawing.Point(260, 67);
             this.lbl_OpenstaandeBestellingenKeuken.Name = "lbl_OpenstaandeBestellingenKeuken";
             this.lbl_OpenstaandeBestellingenKeuken.Size = new System.Drawing.Size(237, 24);
             this.lbl_OpenstaandeBestellingenKeuken.TabIndex = 1;
@@ -78,68 +77,66 @@
             this.btn_BestellingGereed.UseVisualStyleBackColor = false;
             this.btn_BestellingGereed.Click += new System.EventHandler(this.btn_BestellingGereed_Click);
             // 
-            // lb_Baroverzicht
+            // listView1
             // 
-            this.lb_Baroverzicht.DataSource = this.lb_Baroverzicht.CustomTabOffsets;
-            this.lb_Baroverzicht.FormattingEnabled = true;
-            this.lb_Baroverzicht.HorizontalScrollbar = true;
-            this.lb_Baroverzicht.Location = new System.Drawing.Point(12, 141);
-            this.lb_Baroverzicht.MultiColumn = true;
-            this.lb_Baroverzicht.Name = "lb_Baroverzicht";
-            this.lb_Baroverzicht.Size = new System.Drawing.Size(755, 225);
-            this.lb_Baroverzicht.TabIndex = 7;
-            this.lb_Baroverzicht.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
+            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.BestellingID,
+            this.Tafel_id,
+            this.Aantal,
+            this.Item});
+            this.listView1.FullRowSelect = true;
+            this.listView1.Location = new System.Drawing.Point(12, 113);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(755, 254);
+            this.listView1.TabIndex = 9;
+            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listView1.View = System.Windows.Forms.View.Details;
+            this.listView1.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged_1);
             // 
-            // dataGridView1
+            // BestellingID
             // 
-            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
-            this.Column3,
-            this.Column4});
-            this.dataGridView1.GridColor = System.Drawing.SystemColors.ActiveCaption;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 141);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(755, 225);
-            this.dataGridView1.TabIndex = 8;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.BestellingID.Text = "Bestelling_id";
+            this.BestellingID.Width = 140;
             // 
-            // Column1
+            // Tafel_id
             // 
-            this.Column1.HeaderText = "Bestelling_id";
-            this.Column1.Name = "Column1";
+            this.Tafel_id.Text = "Tafel_id";
+            this.Tafel_id.Width = 105;
             // 
-            // Column2
+            // Aantal
             // 
-            this.Column2.HeaderText = "Tafel_id";
-            this.Column2.Name = "Column2";
+            this.Aantal.Text = "Aantal";
+            this.Aantal.Width = 163;
             // 
-            // Column3
+            // Item
             // 
-            this.Column3.HeaderText = "Aantal";
-            this.Column3.Name = "Column3";
+            this.Item.Text = "Item";
+            this.Item.Width = 151;
             // 
-            // Column4
+            // btn_refresh
             // 
-            this.Column4.HeaderText = "Item";
-            this.Column4.Name = "Column4";
+            this.btn_refresh.BackColor = System.Drawing.SystemColors.Highlight;
+            this.btn_refresh.Location = new System.Drawing.Point(73, 405);
+            this.btn_refresh.Name = "btn_refresh";
+            this.btn_refresh.Size = new System.Drawing.Size(156, 46);
+            this.btn_refresh.TabIndex = 10;
+            this.btn_refresh.Text = "Refresh";
+            this.btn_refresh.UseVisualStyleBackColor = false;
+            this.btn_refresh.Click += new System.EventHandler(this.btn_refresh_Click);
             // 
             // BarOverzicht
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(790, 463);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.lb_Baroverzicht);
+            this.Controls.Add(this.btn_refresh);
+            this.Controls.Add(this.listView1);
             this.Controls.Add(this.btn_BestellingGereed);
             this.Controls.Add(this.btn_BARnaarHM);
             this.Controls.Add(this.lbl_OpenstaandeBestellingenKeuken);
             this.Name = "BarOverzicht";
             this.Text = "BarOverzicht";
             this.Load += new System.EventHandler(this.BarOverzicht_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -152,11 +149,11 @@
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.Button btn_BARnaarHM;
         private System.Windows.Forms.Button btn_BestellingGereed;
-        private System.Windows.Forms.ListBox lb_Baroverzicht;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ColumnHeader BestellingID;
+        private System.Windows.Forms.ColumnHeader Tafel_id;
+        private System.Windows.Forms.ColumnHeader Aantal;
+        private System.Windows.Forms.ColumnHeader Item;
+        private System.Windows.Forms.Button btn_refresh;
     }
 }
