@@ -16,7 +16,7 @@ namespace WindowsFormsApplication1
         DinerKaartDAO DinerKaartDAO;
         List<DinerKaartClass> DinerKaartLijst = new List<DinerKaartClass>();
         List<int> TotalebestellingLijst = new List<int>();
-        
+
 
 
         protected override void OnLoad(EventArgs e) // is de verwijzing, niets veranderen AUB
@@ -26,7 +26,7 @@ namespace WindowsFormsApplication1
             this.Size = Owner.Size;
         }
 
- 
+
 
         public DinerKaart(DinerKaartDAO DinerKaartDAO)
         {
@@ -47,13 +47,13 @@ namespace WindowsFormsApplication1
 
         private void btn_DinerGerechtToevoegen_Click(object sender, EventArgs e)
         {
-            
-            
+
+
             //Voeg aan listbox het geselecteerde item toe
             for (int intCount = 0; intCount < listview_diner.SelectedItems.Count; intCount++)
             {
                 listbox_added_items.Items.Add(listview_diner.SelectedItems[intCount].Text);
-               
+
             }
         }
 
@@ -71,44 +71,49 @@ namespace WindowsFormsApplication1
             this.Hide();
         }
 
-            
-        private void btn_stuurbestelling_Click(object sender, EventArgs e, TafelOverzicht btn_Tafel1, int tafelgetal, TafelOverzicht lbl_tijdtafel1, keukenBestellingOverzicht btn_gereedkeuken_Click)
-        {
-            //int min = 0;
-            //int sec = 0; 
-            //int ms = 0;
-            //int tafelnr = tafelgetal;
-            //if (tafelgetal == 1)
-            //{
-            //    Timer t1 = new Timer();
-            //    t1.Enabled = true;
-            //    t1.Start();
-            //    bool bestelling_gereed = false;
 
-            //    while(btn_gereedkeuken.PerformClick() == false)
-            //    if (ms >= 10)
-            //    {
-            //        sec++;
-            //        ms = 0;
-            //    }
-            //    if (sec >= 60)
-            //    {
-            //        min++;
-            //        sec = 0;
-            //        lbl_tijdtafel1.Text = min.ToString();
-                    
-            //    }
-            //    if (min >= 30)
-            //    {
-            //        btn_Tafel1.BackColor = Color.Maroon;
-            //    }
 
-            //}
-        }
 
         private void btn_stuurbestelling_Click(object sender, EventArgs e)
         {
 
+        }
+        // DIT IS DE TIMER, MOET NOG 1 DING FIXEN MET DE BUTTON
+        private void btn_stuurbestelling_Click(object sender, EventArgs e, TafelOverzicht btn_Tafel1, int tafelgetal, TafelOverzicht lbl_tijdtafel1, bool bestelling_gereed)
+        {
+            int min = 0;
+            int sec = 0;
+            int ms = 0;
+            int tafelnr = tafelgetal;
+
+            //if (tafelgetal == 1)
+            //{
+                Timer t1 = new Timer();
+                t1.Enabled = true;
+                t1.Start();
+
+                while (bestelling_gereed == false)
+                {
+                    if (ms >= 10)
+                    {
+                        sec++;
+                        ms = 0;
+                    }
+                    if (sec >= 1)
+                    {
+                        min++;
+                        sec = 0;
+                        lbl_tijdtafel1.Text = min.ToString();
+
+                    }
+                    if (min >= 5)
+                    {
+                        btn_Tafel1.BackColor = Color.Maroon;
+                    }
+                //}
+
+
+            }
+        }
     }
-}
 }
