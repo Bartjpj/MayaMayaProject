@@ -141,7 +141,6 @@
             this.btn_KlaarBestelling.TabIndex = 11;
             this.btn_KlaarBestelling.Text = "Klaar";
             this.btn_KlaarBestelling.UseVisualStyleBackColor = true;
-            this.btn_KlaarBestelling.Click += new System.EventHandler(this.btn_KlaarBestelling_Click);
             // 
             // btn_stuurbestelling
             // 
