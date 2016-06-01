@@ -29,7 +29,7 @@ namespace WindowsFormsApplication1
 
             bestellinglijstKeuken = keukenBestellingOverzichtDAO.haalKeukenBestelling_TabelOp();
 
-            bool bestelling_gereed = false;
+            //bool bestelling_gereed = false;
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -54,7 +54,6 @@ namespace WindowsFormsApplication1
 
         private void btn_gereedKeuken_Click(object sender, EventArgs e)
         {
-            bool bestelling_gereed = true;
             foreach (keukenBestellingOverzichtClass KeukenOverzicht in keukenBestellingOverzichtDAO.haalKeukenBestelling_TabelOp())
             {
 
@@ -65,7 +64,7 @@ namespace WindowsFormsApplication1
                 bestellingOverzichtKeuken.Items.Add(lijstItem);
 
             }
-            
         }
+
     }
 }
