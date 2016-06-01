@@ -48,17 +48,13 @@ namespace WindowsFormsApplication1
 
         private void btn_DinerGerechtToevoegen_Click(object sender, EventArgs e)
         {
+            ListViewItem lijstItem = new ListViewItem();
+
             //Voeg aan listbox het geselecteerde item toe
             for (int intCount = 0; intCount < listview_diner.SelectedItems.Count; intCount++)
             {
+                listview_huidige_bestelling.Items[0].SubItems[0].Text = listview_diner.SelectedItems[intCount].ToString();
 
-
-                if (listview_diner.Items[intCount].Text == (string)listbox_added_items.Items[intCount])
-                {
-                listbox_added_items.Items.Add(listview_diner.SelectedItems[intCount].Text + "2x");
-                } else {
-                listbox_added_items.Items.Add(listview_diner.SelectedItems[intCount].Text);
-                }
 
                 foreach (DinerKaartClass dinerOverzicht in DinerKaartDAO.haalDinerKaart_TabelOp())
                 {
