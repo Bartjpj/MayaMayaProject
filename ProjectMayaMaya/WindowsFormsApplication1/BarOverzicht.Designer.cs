@@ -39,13 +39,14 @@
             this.Aantal = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Item = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.btn_refresh = new System.Windows.Forms.Button();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.SuspendLayout();
             // 
             // lbl_OpenstaandeBestellingenKeuken
             // 
             this.lbl_OpenstaandeBestellingenKeuken.AutoSize = true;
             this.lbl_OpenstaandeBestellingenKeuken.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_OpenstaandeBestellingenKeuken.Location = new System.Drawing.Point(260, 67);
+            this.lbl_OpenstaandeBestellingenKeuken.Location = new System.Drawing.Point(226, 50);
             this.lbl_OpenstaandeBestellingenKeuken.Name = "lbl_OpenstaandeBestellingenKeuken";
             this.lbl_OpenstaandeBestellingenKeuken.Size = new System.Drawing.Size(237, 24);
             this.lbl_OpenstaandeBestellingenKeuken.TabIndex = 1;
@@ -86,7 +87,7 @@
             this.Item});
             this.listView1.FullRowSelect = true;
             this.listView1.GridLines = true;
-            this.listView1.Location = new System.Drawing.Point(12, 113);
+            this.listView1.Location = new System.Drawing.Point(12, 156);
             this.listView1.Name = "listView1";
             this.listView1.Size = new System.Drawing.Size(755, 204);
             this.listView1.TabIndex = 9;
@@ -125,11 +126,20 @@
             this.btn_refresh.UseVisualStyleBackColor = false;
             this.btn_refresh.Click += new System.EventHandler(this.btn_refresh_Click);
             // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(503, 12);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(275, 138);
+            this.flowLayoutPanel1.TabIndex = 11;
+            this.flowLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel1_Paint);
+            // 
             // BarOverzicht
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(790, 463);
+            this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.btn_refresh);
             this.Controls.Add(this.listView1);
             this.Controls.Add(this.btn_BestellingGereed);
@@ -156,5 +166,6 @@
         private System.Windows.Forms.ColumnHeader Aantal;
         private System.Windows.Forms.ColumnHeader Item;
         private System.Windows.Forms.Button btn_refresh;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
     }
 }

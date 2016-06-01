@@ -38,16 +38,13 @@
             this.Voorraad = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.btn_stuurbestelling = new System.Windows.Forms.Button();
             this.btn_DinerGerechtToevoegen = new System.Windows.Forms.Button();
-            this.btn_verwijderGerecht = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(355, 25);
+            this.label1.Location = new System.Drawing.Point(356, 68);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(63, 25);
             this.label1.TabIndex = 56;
@@ -58,7 +55,7 @@
             this.btn_LUNCHnaarDRANKEN.BackColor = System.Drawing.Color.Maroon;
             this.btn_LUNCHnaarDRANKEN.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_LUNCHnaarDRANKEN.ForeColor = System.Drawing.Color.White;
-            this.btn_LUNCHnaarDRANKEN.Location = new System.Drawing.Point(9, 56);
+            this.btn_LUNCHnaarDRANKEN.Location = new System.Drawing.Point(9, 96);
             this.btn_LUNCHnaarDRANKEN.Name = "btn_LUNCHnaarDRANKEN";
             this.btn_LUNCHnaarDRANKEN.Size = new System.Drawing.Size(754, 52);
             this.btn_LUNCHnaarDRANKEN.TabIndex = 55;
@@ -81,6 +78,8 @@
             // listbox_added_items
             // 
             this.listbox_added_items.FormattingEnabled = true;
+            this.listbox_added_items.Items.AddRange(new object[] {
+            "Totale bestelling:"});
             this.listbox_added_items.Location = new System.Drawing.Point(396, 159);
             this.listbox_added_items.Name = "listbox_added_items";
             this.listbox_added_items.Size = new System.Drawing.Size(367, 238);
@@ -102,20 +101,26 @@
             this.listview_diner.UseCompatibleStateImageBehavior = false;
             this.listview_diner.View = System.Windows.Forms.View.Details;
             // 
+            // btn_stuurbestelling
+            // 
+            this.btn_stuurbestelling.BackColor = System.Drawing.Color.LightGreen;
+            this.btn_stuurbestelling.Location = new System.Drawing.Point(670, 449);
+            this.btn_stuurbestelling.Name = "btn_stuurbestelling";
+            this.btn_stuurbestelling.Size = new System.Drawing.Size(93, 41);
+            this.btn_stuurbestelling.TabIndex = 82;
+            this.btn_stuurbestelling.Text = "Stuur Bestelling";
+            this.btn_stuurbestelling.UseVisualStyleBackColor = false;
+            // 
             // Naam
             // 
-            this.Naam.Text = "Naam";
-            this.Naam.Width = 284;
-            // 
-            // Prijs
-            // 
-            this.Prijs.Text = "Prijs";
-            this.Prijs.Width = 33;
-            // 
-            // Voorraad
-            // 
-            this.Voorraad.Text = "Voorraad";
-            this.Voorraad.Width = 55;
+            this.btn_DinerGerechtToevoegen.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_DinerGerechtToevoegen.Location = new System.Drawing.Point(71, 412);
+            this.btn_DinerGerechtToevoegen.Name = "btn_DinerGerechtToevoegen";
+            this.btn_DinerGerechtToevoegen.Size = new System.Drawing.Size(243, 50);
+            this.btn_DinerGerechtToevoegen.TabIndex = 83;
+            this.btn_DinerGerechtToevoegen.Text = "Voeg gerecht toe aan bestelling";
+            this.btn_DinerGerechtToevoegen.UseVisualStyleBackColor = true;
+            this.btn_DinerGerechtToevoegen.Click += new System.EventHandler(this.btn_DinerGerechtToevoegen_Click);
             // 
             // btn_stuurbestelling
             // 
@@ -128,56 +133,21 @@
             this.btn_stuurbestelling.UseVisualStyleBackColor = false;
             this.btn_stuurbestelling.Click += new System.EventHandler(this.btn_stuurbestelling_Click);
             // 
-            // btn_DinerGerechtToevoegen
+            // btn_stuurbestelling
             // 
-            this.btn_DinerGerechtToevoegen.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_DinerGerechtToevoegen.Location = new System.Drawing.Point(12, 414);
-            this.btn_DinerGerechtToevoegen.Name = "btn_DinerGerechtToevoegen";
-            this.btn_DinerGerechtToevoegen.Size = new System.Drawing.Size(177, 50);
-            this.btn_DinerGerechtToevoegen.TabIndex = 83;
-            this.btn_DinerGerechtToevoegen.Text = "Voeg gerecht toe aan bestelling";
-            this.btn_DinerGerechtToevoegen.UseVisualStyleBackColor = true;
-            this.btn_DinerGerechtToevoegen.Click += new System.EventHandler(this.btn_DinerGerechtToevoegen_Click);
-            // 
-            // btn_verwijderGerecht
-            // 
-            this.btn_verwijderGerecht.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_verwijderGerecht.Location = new System.Drawing.Point(396, 414);
-            this.btn_verwijderGerecht.Name = "btn_verwijderGerecht";
-            this.btn_verwijderGerecht.Size = new System.Drawing.Size(177, 50);
-            this.btn_verwijderGerecht.TabIndex = 84;
-            this.btn_verwijderGerecht.Text = "Verwijder gerecht van bestelling";
-            this.btn_verwijderGerecht.UseVisualStyleBackColor = true;
-            this.btn_verwijderGerecht.Click += new System.EventHandler(this.btn_verwijderGerecht_Click);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(110, 136);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(170, 20);
-            this.label2.TabIndex = 85;
-            this.label2.Text = "Dinerkaart Gerechten";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(507, 136);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(142, 20);
-            this.label3.TabIndex = 86;
-            this.label3.Text = "Huidige bestelling";
+            this.btn_stuurbestelling.BackColor = System.Drawing.Color.LightGreen;
+            this.btn_stuurbestelling.Location = new System.Drawing.Point(670, 449);
+            this.btn_stuurbestelling.Name = "btn_stuurbestelling";
+            this.btn_stuurbestelling.Size = new System.Drawing.Size(93, 41);
+            this.btn_stuurbestelling.TabIndex = 82;
+            this.btn_stuurbestelling.Text = "Stuur Bestelling";
+            this.btn_stuurbestelling.UseVisualStyleBackColor = false;
             // 
             // DinerKaart
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(775, 502);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.btn_verwijderGerecht);
             this.Controls.Add(this.btn_DinerGerechtToevoegen);
             this.Controls.Add(this.listview_diner);
             this.Controls.Add(this.listbox_added_items);
@@ -204,8 +174,5 @@
         private System.Windows.Forms.ColumnHeader Prijs;
         private System.Windows.Forms.ColumnHeader Voorraad;
         private System.Windows.Forms.Button btn_DinerGerechtToevoegen;
-        private System.Windows.Forms.Button btn_verwijderGerecht;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
     }
 }

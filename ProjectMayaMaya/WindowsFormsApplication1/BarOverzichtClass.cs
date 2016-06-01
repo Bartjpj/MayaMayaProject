@@ -13,14 +13,17 @@ namespace WindowsFormsApplication1
         public int tafel_id { get; set; }
         public int aantal { get; set; }
         public string naam { get; set; }
+        public bool statusBestelling { get; set; }
+        public DateTime datum_tijd { get; set; }
 
         //De constructor wordt aangemaakt
-        public BarOverzichtClass(int bestelling_id, int tafel_id, int aantal, string naam)
+        public BarOverzichtClass(int bestelling_id, int tafel_id, int aantal, string naam, DateTime datum_tijd)
         {
             this.bestelling_id = bestelling_id;
             this.tafel_id = tafel_id;
             this.aantal = aantal;
             this.naam = naam;
+            this.datum_tijd = datum_tijd;
         }
         public BarOverzichtClass() // default constructor om objecten aan te maken zonder argumenten mee te geven, zodat ik methode bestellingGereed kan gebruiken
         {
@@ -28,8 +31,8 @@ namespace WindowsFormsApplication1
         }
         public bool bestellingGereed(bool isGereed)
         {
-            bool isGereedGemeld = isGereed;
-            return isGereedGemeld;
+           // bool isGereedGemeld = isGereed;
+            return isGereed;
 
         }
     }
