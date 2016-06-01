@@ -49,20 +49,19 @@ namespace WindowsFormsApplication1
                 ListViewItem lijstitem = new ListViewItem(TafelOverzicht.TafelId.ToString());
                 lijstitem.SubItems.Add(TafelOverzicht.TafelId.ToString());
                 lijstitem.SubItems.Add(TafelOverzicht.Bezet.ToString());
-                lstbox_tafeloverzicht.Items.Add(lijstitem);
+                listView_tafeloverzicht.Items.Add(lijstitem);
 
             }
         }
 
         //-----------------TAFELS--------------------------------:
-        int tafelgetal;
        // BestellingMenu bestellingmenuActiveren = new BestellingMenu();
 
 
         //1
         public void btn_Tafel1_Click(object sender, EventArgs e)
         {
-            tafelgetal = 1;
+            int tafelgetal = 1;
             KiesOpname openKiesopname = new KiesOpname();
             openKiesopname.Show(this);
             this.Hide();

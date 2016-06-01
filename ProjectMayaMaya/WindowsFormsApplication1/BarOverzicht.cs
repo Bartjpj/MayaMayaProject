@@ -81,13 +81,26 @@ namespace WindowsFormsApplication1
 
         private void btn_BestellingGereed_Click(object sender, EventArgs e)
         {
-            for (int i = listView1.Items.Count - 1; i >= 0; i--)
+            BarOverzichtClass isGereedmelding = new BarOverzichtClass();
+            var item = listView1.SelectedItems[0];
+            bool isGereed = true;
+            foreach (BarOverzichtClass barOverzicht in BarOverzichtDAO.haalBarOverzicht_TabelOp())
             {
-                if (listView1.Items[i].Selected)
+
+                for (int i = listView1.Items.Count - 1; i >= 0; i--)
                 {
-                    listView1.Items[i].Remove();
+
+                    if (listView1.Items[i].Selected)
+                    {
+                        item = listView1.SelectedItems[i];
+                        
+                        listView1.Items[i].Remove();
+
+                    }
                 }
+              
             }
+            isGereedmelding.bestellingGereed(isGereed);
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)

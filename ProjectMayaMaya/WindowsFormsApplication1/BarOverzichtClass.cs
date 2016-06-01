@@ -22,9 +22,14 @@ namespace WindowsFormsApplication1
             this.aantal = aantal;
             this.naam = naam;
         }
-
-        public void bestellingGereed()
+        public BarOverzichtClass() // default constructor om objecten aan te maken zonder argumenten mee te geven, zodat ik methode bestellingGereed kan gebruiken
         {
+
+        }
+        public bool bestellingGereed(bool isGereed)
+        {
+            bool isGereedGemeld = isGereed;
+            return isGereedGemeld;
 
         }
     }
