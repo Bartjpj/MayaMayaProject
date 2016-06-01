@@ -70,7 +70,7 @@ namespace WindowsFormsApplication1
         {
             KiesOpname openKiesopname = new KiesOpname();
             openKiesopname.Show(this);
-            this.Visible = false;
+            
         }
 
         //3
@@ -78,7 +78,7 @@ namespace WindowsFormsApplication1
         {
             KiesOpname openKiesopname = new KiesOpname();
             openKiesopname.Show(this);
-            this.Visible = false;
+            
         }
 
         //4
@@ -86,7 +86,7 @@ namespace WindowsFormsApplication1
         {
             KiesOpname openKiesopname = new KiesOpname();
             openKiesopname.Show(this);
-            this.Visible = false;
+            
         }
 
         //5
@@ -94,7 +94,7 @@ namespace WindowsFormsApplication1
         {
             KiesOpname openKiesopname = new KiesOpname();
             openKiesopname.Show(this);
-            this.Visible = false;
+            
         }
 
         //6
@@ -102,7 +102,7 @@ namespace WindowsFormsApplication1
         {
             KiesOpname openKiesopname = new KiesOpname();
             openKiesopname.Show(this);
-            this.Visible = false;
+            
         }
 
         //7
@@ -110,7 +110,7 @@ namespace WindowsFormsApplication1
         {
             KiesOpname openKiesopname = new KiesOpname();
             openKiesopname.Show(this);
-            this.Visible = false;
+            
         }
 
         //8
@@ -118,7 +118,7 @@ namespace WindowsFormsApplication1
         {
             KiesOpname openKiesopname = new KiesOpname();
             openKiesopname.Show(this);
-            this.Visible = false;
+           
         }
 
         //9
@@ -126,7 +126,7 @@ namespace WindowsFormsApplication1
         {
             KiesOpname openKiesopname = new KiesOpname();
             openKiesopname.Show(this);
-            this.Visible = false;
+            
         }
 
         //10
@@ -134,7 +134,7 @@ namespace WindowsFormsApplication1
         {
             KiesOpname openKiesopname = new KiesOpname();
             openKiesopname.Show(this);
-            this.Visible = false;
+            
         }
 
         //---------------TIMERS-------------------------:
