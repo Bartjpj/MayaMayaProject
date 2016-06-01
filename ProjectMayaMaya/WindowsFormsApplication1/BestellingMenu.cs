@@ -6,12 +6,15 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Diagnostics;
 using System.Windows.Forms;
 
 namespace WindowsFormsApplication1
 {
     public partial class BestellingMenu : Form
     {
+        int tafelgetal = 0;
+
         protected override void OnLoad(EventArgs e) // is de verwijzing, niets veranderen AUB
         {
             base.OnLoad(e);
@@ -44,27 +47,36 @@ namespace WindowsFormsApplication1
 
         }
 
-        private void cbox_selecteerkaart_Click(object sender, EventArgs e)
-        {
-            //clear de dropdown box
-            cbox_selecteerkaart.Items.Remove("Dranken");
-            cbox_selecteerkaart.Items.Remove("Lunch");
-            cbox_selecteerkaart.Items.Remove("Diner");
-            
-            //vul de dropdown box
-            cbox_selecteerkaart.Items.Add("Dranken");
-            cbox_selecteerkaart.Items.Add("Lunch");
-            cbox_selecteerkaart.Items.Add("Diner");
-        }
 
         private void btn_BestellingMENUnaarTAFELOVERZICHT_Click(object sender, EventArgs e)
         {
             TafelOverzicht TerugNaarTafelOverzicht = new TafelOverzicht();
-            TerugNaarTafelOverzicht.Show();
-            TerugNaarTafelOverzicht.Left = this.Left; // geeft de grote aan van deze form voor het te openen form
-            TerugNaarTafelOverzicht.Top = this.Top;
-            TerugNaarTafelOverzicht.Size = this.Size;
+            TerugNaarTafelOverzicht.Show(this);
+            this.Hide();
+        }
+
+
+        private void btn_Lunchkaart_Click(object sender, EventArgs e)
+        {
+            LunchKaart openLunchKaart = new LunchKaart();
+            openLunchKaart.Show(this);
+            this.Hide();
+        }
+
+        private void btn_drankmenu_Click(object sender, EventArgs e)
+        {
+            DrankenKaart opendrankenkaart = new DrankenKaart();
+            opendrankenkaart.Show(this);
+            this.Hide();
+        }
+
+        private void btn_dinerkaart_Click(object sender, EventArgs e)
+        {
+            DinerKaartDAO dinerkaart = new DinerKaartDAO();
+            DinerKaart openDinerkaart = new DinerKaart(dinerkaart);
+            openDinerkaart.Show(this);
             this.Hide();
         }
     }
+
 }

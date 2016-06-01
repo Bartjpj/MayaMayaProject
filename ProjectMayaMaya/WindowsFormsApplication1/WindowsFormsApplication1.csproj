@@ -33,6 +33,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Messaging" />
     <Reference Include="System.Xml.Linq" />
@@ -45,19 +46,54 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Authenticatie.cs" />
+    <Compile Include="Afrekenen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Afrekenen.Designer.cs">
+      <DependentUpon>Afrekenen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BarOverzichtClass.cs" />
+    <Compile Include="BarOverzichtDAO.cs" />
+    <Compile Include="DinerKaart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DinerKaart.Designer.cs">
+      <DependentUpon>DinerKaart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DinerKaartClass.cs" />
+    <Compile Include="DinerKaartDAO.cs" />
+    <Compile Include="DrankenKaart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DrankenKaart.Designer.cs">
+      <DependentUpon>DrankenKaart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DrankenKaartClass.cs" />
+    <Compile Include="DrankenKaartDAO.cs" />
+    <Compile Include="keukenBestellingOverzichtClass.cs" />
+    <Compile Include="KeukenBestellingOverzichtDAO.cs" />
+    <Compile Include="KiesOpname.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KiesOpname.Designer.cs">
+      <DependentUpon>KiesOpname.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Klantenlijst.cs" />
     <Compile Include="BarOverzicht.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="BarOverzicht.Designer.cs">
       <DependentUpon>BarOverzicht.cs</DependentUpon>
     </Compile>
+    <Compile Include="BestellingMenuClass.cs" />
+    <Compile Include="BestellingMenuuDAO.cs" />
     <Compile Include="BestellingMenu.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="BestellingMenu.Designer.cs">
       <DependentUpon>BestellingMenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="1DatabaseConnectie.cs" />
     <Compile Include="inlogFoutAlert.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -70,11 +106,13 @@
     <Compile Include="InlogSchermBediening.Designer.cs">
       <DependentUpon>InlogSchermBediening.cs</DependentUpon>
     </Compile>
-    <Compile Include="keukenOverzicht.cs">
+    <Compile Include="Item.cs" />
+    <Compile Include="Kelner.cs" />
+    <Compile Include="keukenBestellingOverzicht.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="keukenOverzicht.Designer.cs">
-      <DependentUpon>keukenOverzicht.cs</DependentUpon>
+    <Compile Include="keukenBestellingOverzicht.Designer.cs">
+      <DependentUpon>keukenBestellingOverzicht.cs</DependentUpon>
     </Compile>
     <Compile Include="HoofdMenu.cs">
       <SubType>Form</SubType>
@@ -82,19 +120,48 @@
     <Compile Include="HoofdMenu.Designer.cs">
       <DependentUpon>HoofdMenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="KeukenPersoneelsLid.cs" />
+    <Compile Include="LunchKaart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LunchKaart.Designer.cs">
+      <DependentUpon>LunchKaart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LunchKaartClass.cs" />
+    <Compile Include="LunchKaartDAO.cs" />
+    <Compile Include="MenuCategorie.cs" />
+    <Compile Include="MenuItemDAO.cs" />
+    <Compile Include="MenuKaart.cs" />
+    <Compile Include="PersoneelLid.cs" />
+    <Compile Include="PersoneelsLid.cs" />
+    <Compile Include="PersoneelsLidDAO.cs" />
+    <Compile Include="PersoneelslidID.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Rekening.cs" />
+    <Compile Include="rekeningEnum.cs" />
+    <Compile Include="TafelOverzichtDAO.cs" />
+    <Compile Include="TafelOverzichtClass.cs" />
     <Compile Include="TafelOverzicht.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="TafelOverzicht.Designer.cs">
       <DependentUpon>TafelOverzicht.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Afrekenen.resx">
+      <DependentUpon>Afrekenen.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BarOverzicht.resx">
       <DependentUpon>BarOverzicht.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BestellingMenu.resx">
       <DependentUpon>BestellingMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DinerKaart.resx">
+      <DependentUpon>DinerKaart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DrankenKaart.resx">
+      <DependentUpon>DrankenKaart.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="inlogFoutAlert.resx">
       <DependentUpon>inlogFoutAlert.cs</DependentUpon>
@@ -102,11 +169,17 @@
     <EmbeddedResource Include="InlogSchermBediening.resx">
       <DependentUpon>InlogSchermBediening.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="keukenOverzicht.resx">
-      <DependentUpon>keukenOverzicht.cs</DependentUpon>
+    <EmbeddedResource Include="keukenBestellingOverzicht.resx">
+      <DependentUpon>keukenBestellingOverzicht.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="HoofdMenu.resx">
       <DependentUpon>HoofdMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KiesOpname.resx">
+      <DependentUpon>KiesOpname.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LunchKaart.resx">
+      <DependentUpon>LunchKaart.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -121,6 +194,7 @@
     <EmbeddedResource Include="TafelOverzicht.resx">
       <DependentUpon>TafelOverzicht.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="ClassDiagram1.cd" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

@@ -1,0 +1,51 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace WindowsFormsApplication1
+{
+    public partial class LunchKaart : Form
+    {
+        protected override void OnLoad(EventArgs e) // is de verwijzing, niets veranderen AUB
+        {
+            base.OnLoad(e);
+            this.Location = Owner.Location;
+            this.Size = Owner.Size;
+        }
+        public LunchKaart()
+        {
+            InitializeComponent();
+        }
+
+        private void btn_addg_id1_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void btn_addg_id4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_LUNCHnaarKIESKAART_Click(object sender, EventArgs e)
+        {
+            BestellingMenu openBestellingKaarten = new BestellingMenu();
+            openBestellingKaarten.Show(this);
+            this.Hide();
+        }
+
+        private void btn_LUNCHnaarDRANKEN_Click(object sender, EventArgs e)
+        {
+            DrankenKaart openDrankenkaart = new DrankenKaart();
+            openDrankenkaart.Show(this);
+            this.Hide();
+        }
+
+    }
+}

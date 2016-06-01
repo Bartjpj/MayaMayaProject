@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
+using System.Configuration;
 
 namespace WindowsFormsApplication1
 {
@@ -23,10 +25,6 @@ namespace WindowsFormsApplication1
             InitializeComponent();
         }
 
-        private void lbl_wachtwoord_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void btn_INLOGGENnaarHM_Click(object sender, EventArgs e)
         {
@@ -44,11 +42,24 @@ namespace WindowsFormsApplication1
                 return inlogCode; //geef inlogcode terug aan inlogbutton. Vanuit de button wordt de authenticatie geregeld.
         }
 
+        private void txt_PersoneelsID_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar); // zorgt ervoor dat bij een keypress er geen letters worden getolereerd.
+        }
+
         private void btn_inloggen_Click(object sender, EventArgs e)
         {
+            PersoneelsLidDAO personeelDatabaseActies = new PersoneelsLidDAO(); // maakt nieuwe instantie van personeelslidDAO aan.
             int inlogCode = txt_PersoneelsID_TextChanged(sender, e); //grijp de inlogcode van de inlogcode tekstbox
-            Authenticatie authenticatie = new Authenticatie(); // run authenticatie die gaat kijken of het ingevoerde nummer in de database voorkomt
-            bool juisteCode = authenticatie.bedieningAuthenticatie(inlogCode); // juistecode neemt boolwaarde van authenticatie aan (false is verkeerd, true is goed)
+            bool juisteCode = personeelDatabaseActies.haalPersoneelslid_IDTabelOp(inlogCode); // juistecode neemt boolwaarde van authenticatie aan (false is verkeerd, true is goed)
+
+
+
+
+            //PersoneelsLidDAO personeelsTabel = new PersoneelsLidDAO(); //maak een instantie van constructor zodat we daar de lijst vandaan kunnen halen.
+            //lbl_personeelsleden.Text = 
+            //lbl_personeelsleden.Text = personeelsTabel.ToString();
+
             if (juisteCode) // ga naar tafeloverzicht als het true is, geef een alert als het false.
             {
                 TafelOverzicht inloggen = new TafelOverzicht();
@@ -63,9 +74,13 @@ namespace WindowsFormsApplication1
             }
         }
 
-        private void txt_PersoneelsID_KeyPress(object sender, KeyPressEventArgs e)
+        private void btn_InloggenSkippen_Click(object sender, EventArgs e)
         {
-            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar); // zorgt ervoor dat bij een keypress er geen letters worden getolereerd.
+            TafelOverzicht inloggen = new TafelOverzicht();
+            inloggen.Show(this);
+            this.Hide();
         }
+
+
     }
 }
