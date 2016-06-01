@@ -17,7 +17,7 @@ namespace WindowsFormsApplication1
         List<DinerKaartClass> DinerKaartLijst = new List<DinerKaartClass>();
         List<int> TotalebestellingLijst = new List<int>();
         int i = 0;
-        
+
 
 
 
@@ -28,7 +28,7 @@ namespace WindowsFormsApplication1
             this.Size = Owner.Size;
         }
 
- 
+
 
         public DinerKaart(DinerKaartDAO DinerKaartDAO)
         {
@@ -48,44 +48,45 @@ namespace WindowsFormsApplication1
 
         private void btn_DinerGerechtToevoegen_Click(object sender, EventArgs e)
         {
-            ListViewItem lijstItem = new ListViewItem();
 
-            //Voeg aan listbox het geselecteerde item toe
-            for (int intCount = 0; intCount < listview_diner.SelectedItems.Count; intCount++)
-            {
-                listview_huidige_bestelling.Items[0].SubItems[0].Text = listview_diner.SelectedItems[intCount].ToString();
-
-
-                foreach (DinerKaartClass dinerOverzicht in DinerKaartDAO.haalDinerKaart_TabelOp())
+                foreach (ListViewItem kaartItem in listview_diner.SelectedItems)
                 {
-
-                    if (listview_diner.SelectedItems[intCount].Text == dinerOverzicht.naam.ToString())
+                    // voeg een item toe aan de bestelling, wanneer dit item er al in zit moet er 1 bij aantal worden opgeteld.
+                    //Wanneer het item er niet in zit wordt deze nieuw aangemaakt en met 1 toegevoegd.
+//                    ListViewItem aangepastitem = (ListViewItem)Item.Clone(); //clone item die geselecteerd is
+                    int MeerdereKerenBesteld = 1;
+                    if (listview_huidige_bestelling.FindItemWithText(kaartItem.Text).Text == listview_diner.SelectedItems.ToString()) 
                     {
-                        TotalebestellingLijst.Add(dinerOverzicht.menu_id); //slaat alle MENU_ID's op in een lijst, deze kan de bar makkelijk snappen.
+
+
+
+                    } else {
+                    ListViewItem bestelItem = new ListViewItem(kaartItem.Text); 
+                    bestelItem.SubItems.Add(MeerdereKerenBesteld.ToString());
+                    listview_huidige_bestelling.Items.Add(bestelItem);  //Voegt het geselecteerde item toe aan de list van totalebestelling
                     }
                     
-               
-            }
-        }
+                }
+            
         }
 
         private void btn_verwijderGerecht_Click(object sender, EventArgs e)
         {
-        //    for (int i = listbox_added_items.selectedindices.count - 1; i >= 0; i--)
-        //    {
-        //        listbox_added_items.items.removeat(listbox_added_items.selectedindices[i]);
+            //    for (int i = listbox_added_items.selectedindices.count - 1; i >= 0; i--)
+            //    {
+            //        listbox_added_items.items.removeat(listbox_added_items.selectedindices[i]);
 
-        //            foreach (dinerkaartclass dineroverzicht in dinerkaartdao.haaldinerkaart_tabelop())
-        //            {
-        //                if (listbox_added_items.tostring() == dineroverzicht.naam.tostring())
-        //                 {
-        //                         totalebestellinglijst.remove(dineroverzicht.menu_id); //slaat alle menu_id's op in een lijst, deze kan de bar makkelijk snappen.
+            //            foreach (dinerkaartclass dineroverzicht in dinerkaartdao.haaldinerkaart_tabelop())
+            //            {
+            //                if (listbox_added_items.tostring() == dineroverzicht.naam.tostring())
+            //                 {
+            //                         totalebestellinglijst.remove(dineroverzicht.menu_id); //slaat alle menu_id's op in een lijst, deze kan de bar makkelijk snappen.
 
-        //                 }
+            //                 }
 
-        //            }
+            //            }
 
-        //    }
+            //    }
 
         }
 
@@ -103,7 +104,7 @@ namespace WindowsFormsApplication1
             this.Hide();
         }
 
-            
+
 
 
         private void btn_stuurbestelling_Click(object sender, EventArgs e)
@@ -120,32 +121,32 @@ namespace WindowsFormsApplication1
 
             //if (tafelgetal == 1)
             //{
-                Timer t1 = new Timer();
-                t1.Enabled = true;
-                t1.Start();
+            Timer t1 = new Timer();
+            t1.Enabled = true;
+            t1.Start();
 
-                while (bestelling_gereed == false)
+            while (bestelling_gereed == false)
+            {
+                if (ms >= 10)
                 {
-                    if (ms >= 10)
-                    {
-                        sec++;
-                        ms = 0;
-                    }
-                    if (sec >= 1)
-                    {
-                        min++;
-                        sec = 0;
-                        lbl_tijdtafel1.Text = min.ToString();
+                    sec++;
+                    ms = 0;
+                }
+                if (sec >= 1)
+                {
+                    min++;
+                    sec = 0;
+                    lbl_tijdtafel1.Text = min.ToString();
 
-                    }
-                    if (min >= 5)
-                    {
-                        btn_Tafel1.BackColor = Color.Maroon;
-                    }
-            //}
+                }
+                if (min >= 5)
+                {
+                    btn_Tafel1.BackColor = Color.Maroon;
+                }
+                //}
 
 
+            }
+        }
     }
-}
-}
 }

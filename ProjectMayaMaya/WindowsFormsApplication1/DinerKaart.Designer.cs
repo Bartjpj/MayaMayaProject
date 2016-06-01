@@ -62,7 +62,7 @@
             this.btn_LUNCHnaarDRANKEN.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_LUNCHnaarDRANKEN.ForeColor = System.Drawing.Color.White;
             this.btn_LUNCHnaarDRANKEN.Location = new System.Drawing.Point(12, 69);
-            this.btn_LUNCHnaarDRANKEN.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_LUNCHnaarDRANKEN.Margin = new System.Windows.Forms.Padding(4);
             this.btn_LUNCHnaarDRANKEN.Name = "btn_LUNCHnaarDRANKEN";
             this.btn_LUNCHnaarDRANKEN.Size = new System.Drawing.Size(1005, 64);
             this.btn_LUNCHnaarDRANKEN.TabIndex = 55;
@@ -75,7 +75,7 @@
             this.btn_DINERnaarBESTELLING.BackColor = System.Drawing.Color.Maroon;
             this.btn_DINERnaarBESTELLING.ForeColor = System.Drawing.Color.White;
             this.btn_DINERnaarBESTELLING.Location = new System.Drawing.Point(12, 15);
-            this.btn_DINERnaarBESTELLING.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_DINERnaarBESTELLING.Margin = new System.Windows.Forms.Padding(4);
             this.btn_DINERnaarBESTELLING.Name = "btn_DINERnaarBESTELLING";
             this.btn_DINERnaarBESTELLING.Size = new System.Drawing.Size(132, 47);
             this.btn_DINERnaarBESTELLING.TabIndex = 78;
@@ -92,7 +92,7 @@
             this.listview_diner.FullRowSelect = true;
             this.listview_diner.GridLines = true;
             this.listview_diner.Location = new System.Drawing.Point(16, 196);
-            this.listview_diner.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.listview_diner.Margin = new System.Windows.Forms.Padding(4);
             this.listview_diner.Name = "listview_diner";
             this.listview_diner.Size = new System.Drawing.Size(503, 292);
             this.listview_diner.Sorting = System.Windows.Forms.SortOrder.Ascending;
@@ -119,7 +119,7 @@
             // 
             this.btn_stuurbestelling.BackColor = System.Drawing.Color.LightGreen;
             this.btn_stuurbestelling.Location = new System.Drawing.Point(893, 553);
-            this.btn_stuurbestelling.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_stuurbestelling.Margin = new System.Windows.Forms.Padding(4);
             this.btn_stuurbestelling.Name = "btn_stuurbestelling";
             this.btn_stuurbestelling.Size = new System.Drawing.Size(124, 50);
             this.btn_stuurbestelling.TabIndex = 82;
@@ -131,7 +131,7 @@
             // 
             this.btn_DinerGerechtToevoegen.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_DinerGerechtToevoegen.Location = new System.Drawing.Point(16, 510);
-            this.btn_DinerGerechtToevoegen.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_DinerGerechtToevoegen.Margin = new System.Windows.Forms.Padding(4);
             this.btn_DinerGerechtToevoegen.Name = "btn_DinerGerechtToevoegen";
             this.btn_DinerGerechtToevoegen.Size = new System.Drawing.Size(236, 62);
             this.btn_DinerGerechtToevoegen.TabIndex = 83;
@@ -143,7 +143,7 @@
             // 
             this.btn_verwijderGerecht.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_verwijderGerecht.Location = new System.Drawing.Point(528, 510);
-            this.btn_verwijderGerecht.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_verwijderGerecht.Margin = new System.Windows.Forms.Padding(4);
             this.btn_verwijderGerecht.Name = "btn_verwijderGerecht";
             this.btn_verwijderGerecht.Size = new System.Drawing.Size(236, 62);
             this.btn_verwijderGerecht.TabIndex = 84;
@@ -213,7 +213,7 @@
             this.Controls.Add(this.btn_DINERnaarBESTELLING);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btn_LUNCHnaarDRANKEN);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "DinerKaart";
             this.Text = "DinerKaart";
             this.ResumeLayout(false);
