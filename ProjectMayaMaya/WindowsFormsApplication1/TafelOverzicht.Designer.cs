@@ -54,6 +54,7 @@
             this.lbl_Kiestafel = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.listView_tafeloverzicht = new System.Windows.Forms.ListView();
+            this.lbl_test = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btn_Tafel1
@@ -194,6 +195,8 @@
             // 
             // tm_tafel1
             // 
+            this.tm_tafel1.Enabled = true;
+            this.tm_tafel1.Interval = 1000;
             this.tm_tafel1.Tick += new System.EventHandler(this.tm_tafel1_Tick);
             // 
             // lbl_tijdtafel1
@@ -201,11 +204,10 @@
             this.lbl_tijdtafel1.AutoSize = true;
             this.lbl_tijdtafel1.BackColor = System.Drawing.Color.LightSkyBlue;
             this.lbl_tijdtafel1.ForeColor = System.Drawing.Color.Black;
-            this.lbl_tijdtafel1.Location = new System.Drawing.Point(187, 127);
+            this.lbl_tijdtafel1.Location = new System.Drawing.Point(288, 136);
             this.lbl_tijdtafel1.Name = "lbl_tijdtafel1";
-            this.lbl_tijdtafel1.Size = new System.Drawing.Size(76, 13);
+            this.lbl_tijdtafel1.Size = new System.Drawing.Size(0, 13);
             this.lbl_tijdtafel1.TabIndex = 13;
-            this.lbl_tijdtafel1.Text = "BezettingsTijd:";
             this.lbl_tijdtafel1.Click += new System.EventHandler(this.lbl_tijdtafel1_Click);
             // 
             // lbl_tijdtafel3
@@ -319,11 +321,20 @@
             this.listView_tafeloverzicht.TabIndex = 26;
             this.listView_tafeloverzicht.UseCompatibleStateImageBehavior = false;
             // 
+            // lbl_test
+            // 
+            this.lbl_test.AutoSize = true;
+            this.lbl_test.Location = new System.Drawing.Point(291, 102);
+            this.lbl_test.Name = "lbl_test";
+            this.lbl_test.Size = new System.Drawing.Size(0, 13);
+            this.lbl_test.TabIndex = 27;
+            // 
             // TafelOverzicht
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(775, 502);
+            this.Controls.Add(this.lbl_test);
             this.Controls.Add(this.listView_tafeloverzicht);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.lbl_Kiestafel);
@@ -382,5 +393,6 @@
         private System.Windows.Forms.Label lbl_Kiestafel;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ListView listView_tafeloverzicht;
+        private System.Windows.Forms.Label lbl_test;
     }
 }

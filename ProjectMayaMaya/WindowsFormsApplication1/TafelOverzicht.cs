@@ -5,8 +5,8 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Timers;
 using System.Threading.Tasks;
-using System.Diagnostics;
 using System.Windows.Forms;
 
 namespace WindowsFormsApplication1
@@ -21,7 +21,7 @@ namespace WindowsFormsApplication1
         }
         TafelOverzichtDAO TafelOverzichtDAO;
         List<TafelOverzichtClass> tafellijst = new List<TafelOverzichtClass>();
-       
+
         public TafelOverzicht()
         {
             InitializeComponent();
@@ -34,7 +34,7 @@ namespace WindowsFormsApplication1
             TerugNaarHoofdmenu.Left = this.Left;
             TerugNaarHoofdmenu.Top = this.Top;
             TerugNaarHoofdmenu.Size = this.Size;
-            this.Hide();
+            this.Visible = false;
         }
 
         private void rbtn_BestellingOpnemen_CheckedChanged(object sender, EventArgs e)
@@ -53,18 +53,16 @@ namespace WindowsFormsApplication1
 
             }
         }
-
         //-----------------TAFELS--------------------------------:
-       // BestellingMenu bestellingmenuActiveren = new BestellingMenu();
+        // BestellingMenu bestellingmenuActiveren = new BestellingMenu();
 
 
         //1
         public void btn_Tafel1_Click(object sender, EventArgs e)
         {
-            int tafelgetal = 1;
+            tm_tafel1.Start();
             KiesOpname openKiesopname = new KiesOpname();
             openKiesopname.Show(this);
-            this.Hide();
 
         }
         //2
@@ -72,7 +70,7 @@ namespace WindowsFormsApplication1
         {
             KiesOpname openKiesopname = new KiesOpname();
             openKiesopname.Show(this);
-            this.Hide();
+            this.Visible = false;
         }
 
         //3
@@ -80,7 +78,7 @@ namespace WindowsFormsApplication1
         {
             KiesOpname openKiesopname = new KiesOpname();
             openKiesopname.Show(this);
-            this.Hide();
+            this.Visible = false;
         }
 
         //4
@@ -88,7 +86,7 @@ namespace WindowsFormsApplication1
         {
             KiesOpname openKiesopname = new KiesOpname();
             openKiesopname.Show(this);
-            this.Hide();
+            this.Visible = false;
         }
 
         //5
@@ -96,7 +94,7 @@ namespace WindowsFormsApplication1
         {
             KiesOpname openKiesopname = new KiesOpname();
             openKiesopname.Show(this);
-            this.Hide();
+            this.Visible = false;
         }
 
         //6
@@ -104,7 +102,7 @@ namespace WindowsFormsApplication1
         {
             KiesOpname openKiesopname = new KiesOpname();
             openKiesopname.Show(this);
-            this.Hide();
+            this.Visible = false;
         }
 
         //7
@@ -112,7 +110,7 @@ namespace WindowsFormsApplication1
         {
             KiesOpname openKiesopname = new KiesOpname();
             openKiesopname.Show(this);
-            this.Hide();
+            this.Visible = false;
         }
 
         //8
@@ -120,7 +118,7 @@ namespace WindowsFormsApplication1
         {
             KiesOpname openKiesopname = new KiesOpname();
             openKiesopname.Show(this);
-            this.Hide();
+            this.Visible = false;
         }
 
         //9
@@ -128,7 +126,7 @@ namespace WindowsFormsApplication1
         {
             KiesOpname openKiesopname = new KiesOpname();
             openKiesopname.Show(this);
-            this.Hide();
+            this.Visible = false;
         }
 
         //10
@@ -136,41 +134,21 @@ namespace WindowsFormsApplication1
         {
             KiesOpname openKiesopname = new KiesOpname();
             openKiesopname.Show(this);
-            this.Hide();
+            this.Visible = false;
         }
 
         //---------------TIMERS-------------------------:
         //zetten van int voor de timer
-        int hour, min, sec, ms = 0;
-
+        int i = 0;
+        int min;
         //1
         public void tm_tafel1_Tick(object sender, EventArgs e)
         {
-            //lbl_tijdtafel1.Text = min + ": Min";
-            //ms++;
-            //if (ms > 10)
-            //{
-            //    sec++;
-            //    ms = 0;
-            //}
-            //else
-            //    ms++;
+            i++;
 
-            //if (sec > 60)
-            //{
-            //    min++;
-            //    sec = 0;
-            //}
+            min++;
+            lbl_test.Text = min.ToString() + ": Min";
 
-            //if (min >= 30)
-            //{
-            //    btn_Tafel1.BackColor = Color.Maroon;
-            //}
-            //if (min > 60)
-            //{
-            //    hour++;
-            //    min = 0;
-            //}
         }
 
         public void lbl_tijdtafel1_Click(object sender, EventArgs e)

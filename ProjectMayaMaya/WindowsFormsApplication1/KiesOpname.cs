@@ -41,7 +41,7 @@ namespace WindowsFormsApplication1
         private void btn_KIESOPNnaarTAFELOVERZICHT_Click(object sender, EventArgs e)
         {
             TafelOverzicht openTafeloverzicht = new TafelOverzicht();
-            openTafeloverzicht.Show(this);
+            openTafeloverzicht.ShowDialog(this);
             this.Hide();
         }
     }
