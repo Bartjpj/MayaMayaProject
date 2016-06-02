@@ -53,9 +53,18 @@ namespace WindowsFormsApplication1
             int inlogCode = txt_PersoneelsID_TextChanged(sender, e); //grijp de inlogcode van de inlogcode tekstbox
             List<InlogSchermClass> inlogGegevens = personeelDatabaseActies.haalPersoneelslid_IDTabelOp(); // juistecode neemt boolwaarde van authenticatie aan (false is verkeerd, true is goed)
             bool juisteCode = false;
-            foreach (InlogSchermClass item in inlogGegevens) {
-                
+            foreach (InlogSchermClass item in inlogGegevens)
+            {
+                if (rowItem.code == inlogCode)
+                {
+
+                }
+                if ()
+                {
+                    
+                }
             }
+            
 
 
 
