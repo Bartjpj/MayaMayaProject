@@ -16,7 +16,7 @@ namespace WindowsFormsApplication1
     {
         BarOverzichtDAO BarOverzichtDAO;
         List<BarOverzichtClass> bestellingslijst = new List<BarOverzichtClass>();
-        // ...
+        public int tafelNr;
        
         protected override void OnLoad(EventArgs e) // is de verwijzing, niets veranderen AUB
         {
@@ -56,10 +56,10 @@ namespace WindowsFormsApplication1
 
         private void button_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("button clicked! => " + ((Button)sender).Name);
+            MessageBox.Show("Bestellinglijst wordt geopend voor " + ((Button)sender).Name);
 
             Button btn = (Button)sender;
-            int tafelNr = Int32.Parse(btn.Text.Substring(5).Trim());
+            tafelNr = Int32.Parse(btn.Text.Substring(5).Trim());
 
             // ... moet de parameter tafelNr meegeven aan de Dao zodat een query gemaakt kan worden om deze specifieke tafel op te halen
             listView1.Items.Clear();
@@ -155,7 +155,7 @@ namespace WindowsFormsApplication1
                 }
               
             }
-            //isGereedmelding.statusGereed = true;
+            isGereedmelding.bestellingGereed(tafelNr);
         }
 
        
@@ -195,7 +195,7 @@ namespace WindowsFormsApplication1
             {
                 Button b = new Button();
                 b.Tag = i;
-                b.Name = "btnTafel" + i.ToString();
+                b.Name = "Tafel " + i.ToString();
                 b.Text = "Tafel " + i.ToString();
                 b.AutoSize = false;
                 b.Click += new EventHandler(button_Click);

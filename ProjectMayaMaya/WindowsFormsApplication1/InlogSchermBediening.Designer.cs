@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(InlogSchermBediening));
             this.lbl_personeelid = new System.Windows.Forms.Label();
             this.txt_PersoneelsID = new System.Windows.Forms.TextBox();
             this.btn_inloggen = new System.Windows.Forms.Button();

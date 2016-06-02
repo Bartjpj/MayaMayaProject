@@ -29,10 +29,13 @@ namespace WindowsFormsApplication1
         {
 
         }
-        public bool bestellingGereed(bool isGereed)
+        public void bestellingGereed(int Tafelnr) // je geeft een tafelnr mee die gereed is en vervolgens wordt de statusbestelling op true gezet op het moment dat er op gereed wordt geclickt
+
         {
-           // bool isGereedGemeld = isGereed;
-            return isGereed;
+            
+            this.statusBestelling = true;
+
+         
 
         }
     }
