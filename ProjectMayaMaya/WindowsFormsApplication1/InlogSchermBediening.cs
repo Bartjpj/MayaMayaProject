@@ -17,7 +17,7 @@ namespace WindowsFormsApplication1
         protected override void OnLoad(EventArgs e) // is de verwijzing, niets veranderen AUB
         {
             base.OnLoad(e);
-            this.Location = Owner.Location;
+            this.Location = Owner.Location;//vragen aan ivo
             this.Size = Owner.Size;
         }
         public InlogSchermBediening()
@@ -53,13 +53,18 @@ namespace WindowsFormsApplication1
             int inlogCode = txt_PersoneelsID_TextChanged(sender, e); //grijp de inlogcode van de inlogcode tekstbox
             List<InlogSchermClass> inlogGegevens = personeelDatabaseActies.haalPersoneelslid_IDTabelOp(); // juistecode neemt boolwaarde van authenticatie aan (false is verkeerd, true is goed)
             bool juisteCode = false;
-            foreach (InlogSchermClass item in inlogGegevens)
-            {
-                if (rowItem.code == inlogCode)
-                {
+            string naamGebruiker = "";
+            string functieGebruiker = "";
 
+            foreach (InlogSchermClass gebruiker in inlogGegevens)
+            {
+                if (gebruiker.code == inlogCode)
+                {
+                    juisteCode = true;
+                    naamGebruiker = gebruiker.naam;
+                    functieGebruiker = gebruiker.functie;
                 }
-                if ()
+                else
                 {
                     
                 }
