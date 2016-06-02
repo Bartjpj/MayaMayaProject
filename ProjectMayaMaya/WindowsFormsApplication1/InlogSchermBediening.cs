@@ -51,8 +51,11 @@ namespace WindowsFormsApplication1
         {
             PersoneelsLidDAO personeelDatabaseActies = new PersoneelsLidDAO(); // maakt nieuwe instantie van personeelslidDAO aan.
             int inlogCode = txt_PersoneelsID_TextChanged(sender, e); //grijp de inlogcode van de inlogcode tekstbox
-            bool juisteCode = personeelDatabaseActies.haalPersoneelslid_IDTabelOp(inlogCode); // juistecode neemt boolwaarde van authenticatie aan (false is verkeerd, true is goed)
-
+            List<InlogSchermClass> inlogGegevens = personeelDatabaseActies.haalPersoneelslid_IDTabelOp(); // juistecode neemt boolwaarde van authenticatie aan (false is verkeerd, true is goed)
+            bool juisteCode = false;
+            foreach (InlogSchermClass item in inlogGegevens) {
+                
+            }
 
 
 

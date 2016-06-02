@@ -29,7 +29,7 @@ namespace WindowsFormsApplication1
                 int kaart_id = (int)reader["kaart_id"];
                 int categorie_id = (int)reader["categorie_id"];
                 string naam = (string)reader["naam"];
-                int prijs = (int)reader["prijs"];
+                double prijs = (double)reader["prijs"];
                 int voorraad = (int)reader["voorraad"];
                 //Onderzoeken wrm dit niet werkt
 

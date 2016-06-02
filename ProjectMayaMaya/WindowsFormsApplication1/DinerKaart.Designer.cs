@@ -36,7 +36,7 @@
             this.Prijs = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Voorraad = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.btn_stuurbestelling = new System.Windows.Forms.Button();
-            this.btn_verwijderGerecht = new System.Windows.Forms.Button();
+            this.btn_verwijderBestelling = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.listview_huidige_bestelling = new System.Windows.Forms.ListView();
@@ -122,16 +122,16 @@
             this.btn_stuurbestelling.Text = "Stuur Bestelling";
             this.btn_stuurbestelling.UseVisualStyleBackColor = false;
             // 
-            // btn_verwijderGerecht
+            // btn_verwijderBestelling
             // 
-            this.btn_verwijderGerecht.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_verwijderGerecht.Location = new System.Drawing.Point(396, 414);
-            this.btn_verwijderGerecht.Name = "btn_verwijderGerecht";
-            this.btn_verwijderGerecht.Size = new System.Drawing.Size(177, 50);
-            this.btn_verwijderGerecht.TabIndex = 84;
-            this.btn_verwijderGerecht.Text = "Verwijder gerecht van bestelling";
-            this.btn_verwijderGerecht.UseVisualStyleBackColor = true;
-            this.btn_verwijderGerecht.Click += new System.EventHandler(this.btn_verwijderGerecht_Click);
+            this.btn_verwijderBestelling.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_verwijderBestelling.Location = new System.Drawing.Point(406, 403);
+            this.btn_verwijderBestelling.Name = "btn_verwijderBestelling";
+            this.btn_verwijderBestelling.Size = new System.Drawing.Size(177, 50);
+            this.btn_verwijderBestelling.TabIndex = 84;
+            this.btn_verwijderBestelling.Text = "Verwijder hele bestelling";
+            this.btn_verwijderBestelling.UseVisualStyleBackColor = true;
+            this.btn_verwijderBestelling.Click += new System.EventHandler(this.btn_verwijderGerecht_Click);
             // 
             // label2
             // 
@@ -167,11 +167,12 @@
             this.listview_huidige_bestelling.TabIndex = 87;
             this.listview_huidige_bestelling.UseCompatibleStateImageBehavior = false;
             this.listview_huidige_bestelling.View = System.Windows.Forms.View.Details;
+            this.listview_huidige_bestelling.SelectedIndexChanged += new System.EventHandler(this.listview_huidige_bestelling_SelectedIndexChanged);
             // 
             // bestelling
             // 
             this.bestelling.Text = "Bestelling";
-            this.bestelling.Width = 435;
+            this.bestelling.Width = 300;
             // 
             // aantal
             // 
@@ -179,9 +180,10 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(461, 23);
+            this.button1.Location = new System.Drawing.Point(481, 11);
+            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(150, 37);
+            this.button1.Size = new System.Drawing.Size(112, 30);
             this.button1.TabIndex = 88;
             this.button1.Text = "test";
             this.button1.UseVisualStyleBackColor = true;
@@ -196,7 +198,7 @@
             this.Controls.Add(this.listview_huidige_bestelling);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.btn_verwijderGerecht);
+            this.Controls.Add(this.btn_verwijderBestelling);
             this.Controls.Add(this.listview_diner);
             this.Controls.Add(this.btn_stuurbestelling);
             this.Controls.Add(this.btn_DINERnaarBESTELLING);
@@ -219,7 +221,7 @@
         private System.Windows.Forms.ColumnHeader Naam;
         private System.Windows.Forms.ColumnHeader Prijs;
         private System.Windows.Forms.ColumnHeader Voorraad;
-        private System.Windows.Forms.Button btn_verwijderGerecht;
+        private System.Windows.Forms.Button btn_verwijderBestelling;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ListView listview_huidige_bestelling;

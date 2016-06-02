@@ -60,8 +60,8 @@
     <Compile Include="DinerKaart.Designer.cs">
       <DependentUpon>DinerKaart.cs</DependentUpon>
     </Compile>
-    <Compile Include="DinerKaartClass.cs" />
-    <Compile Include="DinerKaartDAO.cs" />
+    <Compile Include="MenuItemsClass.cs" />
+    <Compile Include="MenuItemsDAO.cs" />
     <Compile Include="DrankenKaart.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -78,7 +78,7 @@
     <Compile Include="KiesOpname.Designer.cs">
       <DependentUpon>KiesOpname.cs</DependentUpon>
     </Compile>
-    <Compile Include="Klantenlijst.cs" />
+    <Compile Include="InlogSchermClass.cs" />
     <Compile Include="BarOverzicht.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -106,7 +106,6 @@
     <Compile Include="InlogSchermBediening.Designer.cs">
       <DependentUpon>InlogSchermBediening.cs</DependentUpon>
     </Compile>
-    <Compile Include="Item.cs" />
     <Compile Include="Kelner.cs" />
     <Compile Include="keukenBestellingOverzicht.cs">
       <SubType>Form</SubType>
