@@ -8,9 +8,9 @@ using System.Threading.Tasks;
 
 namespace WindowsFormsApplication1
 {
-   public class DinerKaartDAO
+   public class MenuItemsDAO
     {
-        public List<DinerKaartClass> haalDinerKaart_TabelOp() // deze methode haalt de gegevens op voor het BestellingMenu overzicht
+        private List<MenuItemsClass> haalMenuItemsOp(int groterDan, int kleinerDan) // deze methode haalt de gegevens op voor het BestellingMenu overzicht
         {
             string connString = ConfigurationManager
             .ConnectionStrings["BestellingConnectionStringSQL"]
@@ -18,11 +18,10 @@ namespace WindowsFormsApplication1
             SqlConnection conn = new SqlConnection(connString);
             conn.Open();
 
-            SqlCommand command = new SqlCommand("SELECT * FROM Menuitem WHERE categorie_id > 3 AND categorie_id < 8", conn);
-            // deze query zorgt ervoor dat we alle data hebben die we bij BestellingMenu nodig hebben 
+            SqlCommand command = new SqlCommand("SELECT * FROM Menuitem WHERE categorie_id >= " + groterDan + " AND categorie_id <= " + kleinerDan, conn); // deze query zorgt ervoor dat we alle data hebben die we bij BestellingMenu nodig hebben 
             SqlDataReader reader = command.ExecuteReader();
 
-            List<DinerKaartClass> DinerKaartTable = new List<DinerKaartClass>();
+            List<MenuItemsClass> DinerKaartTable = new List<MenuItemsClass>();
 
             while (reader.Read())
             {
@@ -31,15 +30,30 @@ namespace WindowsFormsApplication1
                 string naam = (string)reader["naam"];
                 double prijs = (double)reader["prijs"];
                 int voorraad = (int)reader["voorraad"];
-                //Onderzoeken wrm dit niet werkt
 
-                DinerKaartClass DinerKaartDAO = new DinerKaartClass(menu_id, categorie_id, naam, prijs, voorraad);
+                MenuItemsClass DinerKaartDAO = new MenuItemsClass(menu_id, categorie_id, naam, prijs, voorraad);
                 DinerKaartTable.Add(DinerKaartDAO);
             }
 
             conn.Close();
             return DinerKaartTable;
         }
+
+       public List<MenuItemsClass> haalDinerKaartOp(int groterDan, int kleinerDan)
+       {
+           List<MenuItemsClass> DinerKaart = haalMenuItemsOp(groterDan, kleinerDan);
+           return DinerKaart;
+       }
+
+        //public List<MenuItemsClass> haalLunchKaartOp()
+       //{
+
+       //}
+
+        //public List<MenuItemsClass> haalDrankenKaartOp()
+       //{
+
+       //}
 
 
     }

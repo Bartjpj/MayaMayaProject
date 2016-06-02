@@ -14,9 +14,9 @@ namespace WindowsFormsApplication1
 {
     public partial class DinerKaart : Form
     {
-        DinerKaartDAO DinerKaartDAO;
-        List<DinerKaartClass> DinerKaartLijst = new List<DinerKaartClass>();
-        DinerKaartClass dinerKaartClass = new DinerKaartClass(0,0,"",0,0);
+        MenuItemsDAO MenuItemsDAO;
+        List<MenuItemsClass> DinerKaartLijst = new List<MenuItemsClass>();
+        MenuItemsClass dinerKaartClass = new MenuItemsClass(0,0,"",0,0);
         List<int> TotalebestellingLijst = new List<int>();
         int i = 0;
         
@@ -32,18 +32,20 @@ namespace WindowsFormsApplication1
 
  
 
-        public DinerKaart(DinerKaartDAO DinerKaartDAO)
+        public DinerKaart(MenuItemsDAO DinerKaartDAO)
         {
             InitializeComponent();
 
-            this.DinerKaartDAO = DinerKaartDAO; // zet bestellingdao openbaar
+            this.MenuItemsDAO = DinerKaartDAO; // zet bestellingdao openbaar
+            
 
-            foreach (DinerKaartClass dinerOverzicht in DinerKaartDAO.haalDinerKaart_TabelOp()) //Alle informatie die in de list staat wordt in de listview geschreven
+            foreach (MenuItemsClass dinerItem in DinerKaartDAO.haalDinerKaartOp(4,7)) //Alle informatie die in de list staat wordt in de listview geschreven
             {
 
-                ListViewItem lijstItem = new ListViewItem(dinerOverzicht.naam.ToString());
-                lijstItem.SubItems.Add(dinerOverzicht.prijs.ToString());
-                lijstItem.SubItems.Add(dinerOverzicht.voorraad.ToString());
+                ListViewItem lijstItem = new ListViewItem(dinerItem.naam.ToString());
+                lijstItem.SubItems.Add(dinerItem.prijs.ToString());
+                lijstItem.SubItems.Add(dinerItem.voorraad.ToString());
+                lijstItem.Tag = dinerItem;
                 listview_diner.Items.Add(lijstItem);
             }
         }
@@ -58,7 +60,7 @@ namespace WindowsFormsApplication1
             foreach (ListViewItem BestellingItem in SelectieBestellingItems)
             {
                 
-                DinerKaartClass GeselecteerdeItem = (DinerKaartClass)BestellingItem.Tag;
+                MenuItemsClass GeselecteerdeItem = (MenuItemsClass)BestellingItem.Tag;
 
                 if (GeselecteerdeItem.voorraad < 1) //error
                 {
