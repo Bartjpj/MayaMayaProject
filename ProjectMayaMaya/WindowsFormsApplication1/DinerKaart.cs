@@ -53,7 +53,39 @@ namespace WindowsFormsApplication1
         //listview_diner_SelectedIndexChanged
         private void listview_diner_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
+            ListView.SelectedListViewItemCollection SelectieBestellingItems = this.listview_diner.SelectedItems;
+
+            foreach (ListViewItem BestellingItem in SelectieBestellingItems)
+            {
+
+                MenuItemsClass GeselecteerdeItem = (MenuItemsClass)BestellingItem.Tag;
+
+                if (GeselecteerdeItem.voorraad < 1) //error
+                {
+                    NietOpVoorraadAlert itemNietOpVoorraad = new NietOpVoorraadAlert();
+                    itemNietOpVoorraad.Show(this);
+                    return;
+                }
+                GeselecteerdeItem.voorraad--;
+                int aantalBesteldeItems = int.Parse(BestellingItem.SubItems[2].Text);
+                aantalBesteldeItems--;
+                BestellingItem.SubItems[2].Text = aantalBesteldeItems.ToString();
+
+                ListViewItem locatie = listview_huidige_bestelling.FindItemWithText(GeselecteerdeItem.naam);
+
+                if (locatie != null)
+                {
+                    locatie.SubItems[1].Text = (int.Parse(locatie.SubItems[1].Text) + 1).ToString();
+                    ListViewItem selecteerbareRegel = listview_diner.FindItemWithText(GeselecteerdeItem.naam);
+                }
+                else
+                {
+                    ListViewItem bestelItem = new ListViewItem(GeselecteerdeItem.naam);
+                    bestelItem.SubItems.Add("1");
+                    listview_huidige_bestelling.Items.Add(bestelItem);
+
+                }
+            }
         }
 
 
