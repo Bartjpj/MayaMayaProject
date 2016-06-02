@@ -132,6 +132,12 @@
     <Compile Include="MenuCategorie.cs" />
     <Compile Include="MenuItemDAO.cs" />
     <Compile Include="MenuKaart.cs" />
+    <Compile Include="NietOpVoorraadAlert.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NietOpVoorraadAlert.Designer.cs">
+      <DependentUpon>NietOpVoorraadAlert.cs</DependentUpon>
+    </Compile>
     <Compile Include="PersoneelLid.cs" />
     <Compile Include="PersoneelsLid.cs" />
     <Compile Include="PersoneelsLidDAO.cs" />
@@ -180,6 +186,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="LunchKaart.resx">
       <DependentUpon>LunchKaart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NietOpVoorraadAlert.resx">
+      <DependentUpon>NietOpVoorraadAlert.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
