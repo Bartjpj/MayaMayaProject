@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Diagnostics;
 using System.Threading.Tasks;
 //using System.Timers.Timer;
 using System.Windows.Forms;
@@ -13,9 +14,10 @@ namespace WindowsFormsApplication1
 {
     public partial class DinerKaart : Form
     {
-        DinerKaartDAO DinerKaartDAO;
-        List<DinerKaartClass> DinerKaartLijst = new List<DinerKaartClass>();
-        List<int> TotalebestellingLijst = new List<int>();
+        MenuItemsDAO MenuItemsDAO;
+        List<MenuItemsClass> DinerKaartLijst = new List<MenuItemsClass>();
+        MenuItemsClass dinerKaartClass = new MenuItemsClass(0,0,"",0,0);
+        
         int i = 0;
         
 
@@ -30,63 +32,39 @@ namespace WindowsFormsApplication1
 
  
 
-        public DinerKaart(DinerKaartDAO DinerKaartDAO)
+        public DinerKaart(MenuItemsDAO DinerKaartDAO)
         {
             InitializeComponent();
 
-            this.DinerKaartDAO = DinerKaartDAO; // zet bestellingdao openbaar
+            this.MenuItemsDAO = DinerKaartDAO; // zet bestellingdao openbaar
+            
 
-            foreach (DinerKaartClass dinerOverzicht in DinerKaartDAO.haalDinerKaart_TabelOp()) //Alle informatie die in de list staat wordt in de listview geschreven
+            foreach (MenuItemsClass dinerItem in DinerKaartDAO.haalDinerKaartOp(4,7)) //Alle informatie die in de list staat wordt in de listview geschreven
             {
 
-                ListViewItem lijstItem = new ListViewItem(dinerOverzicht.naam.ToString());
-                lijstItem.SubItems.Add(dinerOverzicht.prijs.ToString());
-                lijstItem.SubItems.Add(dinerOverzicht.voorraad.ToString());
+                ListViewItem lijstItem = new ListViewItem(dinerItem.naam.ToString());
+                lijstItem.SubItems.Add(dinerItem.prijs.ToString());
+                lijstItem.SubItems.Add(dinerItem.voorraad.ToString());
+                lijstItem.Tag = dinerItem;
                 listview_diner.Items.Add(lijstItem);
             }
         }
 
-        private void btn_DinerGerechtToevoegen_Click(object sender, EventArgs e)
+        //listview_diner_SelectedIndexChanged
+        private void listview_diner_SelectedIndexChanged(object sender, EventArgs e)
         {
-            ListViewItem lijstItem = new ListViewItem();
-
-            //Voeg aan listbox het geselecteerde item toe
-            for (int intCount = 0; intCount < listview_diner.SelectedItems.Count; intCount++)
-            {
-                listview_huidige_bestelling.Items[0].SubItems[0].Text = listview_diner.SelectedItems[intCount].ToString();
-
-
-                foreach (DinerKaartClass dinerOverzicht in DinerKaartDAO.haalDinerKaart_TabelOp())
-                {
-
-                    if (listview_diner.SelectedItems[intCount].Text == dinerOverzicht.naam.ToString())
-                    {
-                        TotalebestellingLijst.Add(dinerOverzicht.menu_id); //slaat alle MENU_ID's op in een lijst, deze kan de bar makkelijk snappen.
-                    }
-                    
-               
-            }
+            
         }
+
+
+        private void listview_huidige_bestelling_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
         }
 
         private void btn_verwijderGerecht_Click(object sender, EventArgs e)
         {
-        //    for (int i = listbox_added_items.selectedindices.count - 1; i >= 0; i--)
-        //    {
-        //        listbox_added_items.items.removeat(listbox_added_items.selectedindices[i]);
-
-        //            foreach (dinerkaartclass dineroverzicht in dinerkaartdao.haaldinerkaart_tabelop())
-        //            {
-        //                if (listbox_added_items.tostring() == dineroverzicht.naam.tostring())
-        //                 {
-        //                         totalebestellinglijst.remove(dineroverzicht.menu_id); //slaat alle menu_id's op in een lijst, deze kan de bar makkelijk snappen.
-
-        //                 }
-
-        //            }
-
-        //    }
-
+            //listview_huidige_bestelling.Items.Clear();
         }
 
         private void btn_LUNCHnaarDRANKEN_Click(object sender, EventArgs e)
@@ -113,39 +91,41 @@ namespace WindowsFormsApplication1
         // DIT IS DE TIMER, MOET NOG 1 DING FIXEN MET DE BUTTON
         private void btn_stuurbestelling_Click(object sender, EventArgs e, TafelOverzicht btn_Tafel1, int tafelgetal, TafelOverzicht lbl_tijdtafel1, bool bestelling_gereed)
         {
-            int min = 0;
-            int sec = 0;
-            int ms = 0;
-            int tafelnr = tafelgetal;
+            //int min = 0;
+            //int sec = 0;
+            //int ms = 0;
+            //int tafelnr = tafelgetal;
 
             //if (tafelgetal == 1)
             //{
-                Timer t1 = new Timer();
-                t1.Enabled = true;
-                t1.Start();
+            //    Timer t1 = new Timer();
+            //    t1.Enabled = true;
+            //    t1.Start();
 
-                while (bestelling_gereed == false)
-                {
-                    if (ms >= 10)
-                    {
-                        sec++;
-                        ms = 0;
-                    }
-                    if (sec >= 1)
-                    {
-                        min++;
-                        sec = 0;
-                        lbl_tijdtafel1.Text = min.ToString();
+            //    while (bestelling_gereed == false)
+            //    {
+            //        if (ms >= 10)
+            //        {
+            //            sec++;
+            //            ms = 0;
+            //        }
+            //        if (sec >= 1)
+            //        {
+            //            min++;
+            //            sec = 0;
+            //            lbl_tijdtafel1.Text = min.ToString();
 
-                    }
-                    if (min >= 5)
-                    {
-                        btn_Tafel1.BackColor = Color.Maroon;
-                    }
+            //        }
+            //        if (min >= 5)
+            //        {
+            //            btn_Tafel1.BackColor = Color.Maroon;
+            //        }
+            //    }
             //}
 
 
     }
 }
 }
-}
+
+

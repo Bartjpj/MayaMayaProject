@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WindowsFormsApplication1
 {
-    public class Klantenlijst
+    public class InlogSchermClass
     {
         //Alle delen van de database kolommen worden hier aangemaakt.
         public int personeel_id;
@@ -14,7 +14,7 @@ namespace WindowsFormsApplication1
         public string functie;
         public int code;
 
-        public Klantenlijst(int personeel_id, string naam, string functie, int code)
+        public InlogSchermClass(int personeel_id, string naam, string functie, int code)
         {
             this.personeel_id = personeel_id;
             this.naam = naam;

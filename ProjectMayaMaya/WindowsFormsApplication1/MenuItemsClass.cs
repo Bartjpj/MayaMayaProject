@@ -7,19 +7,19 @@ using System.Threading.Tasks;
 namespace WindowsFormsApplication1
 {
     
-    public class DinerKaartClass
+    public class MenuItemsClass
     {
 
 
         //Variabelen worden gedefinieerd
-        public int menu_id { get; set; }
-        public int categorie_id { get; set; }
-        public string naam { get; set; }
-        public double prijs { get; set; }
-        public int voorraad { get; set; }
-
+        public int menu_id;
+        public int categorie_id;
+        public string naam;
+        public double prijs;
+        public int voorraad;
+        
         //De constructor wordt aangemaakt
-        public DinerKaartClass(int menu_id, int categorie_id, string naam, double prijs, int voorraad)
+        public MenuItemsClass(int menu_id, int categorie_id, string naam, double prijs, int voorraad)
         {
             this.menu_id = menu_id;
             this.categorie_id = categorie_id;
