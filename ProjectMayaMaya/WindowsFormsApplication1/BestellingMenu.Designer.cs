@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.lbl_selecteerkaart = new System.Windows.Forms.Label();
-            this.btn_BestellingMENUnaarTAFELOVERZICHT = new System.Windows.Forms.Button();
+            this.btn_BestellingMENUnaarKIESMENU = new System.Windows.Forms.Button();
             this.btn_Lunchkaart = new System.Windows.Forms.Button();
             this.btn_dinerkaart = new System.Windows.Forms.Button();
             this.btn_drankmenu = new System.Windows.Forms.Button();
@@ -45,17 +45,17 @@
             this.lbl_selecteerkaart.TabIndex = 1;
             this.lbl_selecteerkaart.Text = "Kies een Menu ";
             // 
-            // btn_BestellingMENUnaarTAFELOVERZICHT
+            // btn_BestellingMENUnaarKIESMENU
             // 
-            this.btn_BestellingMENUnaarTAFELOVERZICHT.BackColor = System.Drawing.Color.Transparent;
-            this.btn_BestellingMENUnaarTAFELOVERZICHT.ForeColor = System.Drawing.Color.Black;
-            this.btn_BestellingMENUnaarTAFELOVERZICHT.Location = new System.Drawing.Point(12, 12);
-            this.btn_BestellingMENUnaarTAFELOVERZICHT.Name = "btn_BestellingMENUnaarTAFELOVERZICHT";
-            this.btn_BestellingMENUnaarTAFELOVERZICHT.Size = new System.Drawing.Size(134, 40);
-            this.btn_BestellingMENUnaarTAFELOVERZICHT.TabIndex = 3;
-            this.btn_BestellingMENUnaarTAFELOVERZICHT.Text = "Terug naar TafelOverzicht";
-            this.btn_BestellingMENUnaarTAFELOVERZICHT.UseVisualStyleBackColor = false;
-            this.btn_BestellingMENUnaarTAFELOVERZICHT.Click += new System.EventHandler(this.btn_BestellingMENUnaarTAFELOVERZICHT_Click);
+            this.btn_BestellingMENUnaarKIESMENU.BackColor = System.Drawing.Color.Maroon;
+            this.btn_BestellingMENUnaarKIESMENU.ForeColor = System.Drawing.Color.White;
+            this.btn_BestellingMENUnaarKIESMENU.Location = new System.Drawing.Point(12, 12);
+            this.btn_BestellingMENUnaarKIESMENU.Name = "btn_BestellingMENUnaarKIESMENU";
+            this.btn_BestellingMENUnaarKIESMENU.Size = new System.Drawing.Size(111, 49);
+            this.btn_BestellingMENUnaarKIESMENU.TabIndex = 3;
+            this.btn_BestellingMENUnaarKIESMENU.Text = "Terug naar Kies Opname";
+            this.btn_BestellingMENUnaarKIESMENU.UseVisualStyleBackColor = false;
+            this.btn_BestellingMENUnaarKIESMENU.Click += new System.EventHandler(this.btn_BestellingMENUnaarTAFELOVERZICHT_Click);
             // 
             // btn_Lunchkaart
             // 
@@ -101,7 +101,7 @@
             this.Controls.Add(this.btn_drankmenu);
             this.Controls.Add(this.btn_dinerkaart);
             this.Controls.Add(this.btn_Lunchkaart);
-            this.Controls.Add(this.btn_BestellingMENUnaarTAFELOVERZICHT);
+            this.Controls.Add(this.btn_BestellingMENUnaarKIESMENU);
             this.Controls.Add(this.lbl_selecteerkaart);
             this.Name = "BestellingMenu";
             this.Text = "BestellingMenu";
@@ -115,7 +115,7 @@
         #endregion
 
         private System.Windows.Forms.Label lbl_selecteerkaart;
-        private System.Windows.Forms.Button btn_BestellingMENUnaarTAFELOVERZICHT;
+        private System.Windows.Forms.Button btn_BestellingMENUnaarKIESMENU;
         private System.Windows.Forms.Button btn_Lunchkaart;
         private System.Windows.Forms.Button btn_dinerkaart;
         private System.Windows.Forms.Button btn_drankmenu;

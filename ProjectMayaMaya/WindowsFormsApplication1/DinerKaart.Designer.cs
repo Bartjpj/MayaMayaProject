@@ -48,7 +48,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(355, 25);
+            this.label1.Location = new System.Drawing.Point(355, 36);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(63, 25);
             this.label1.TabIndex = 56;
@@ -59,7 +59,7 @@
             this.btn_LUNCHnaarDRANKEN.BackColor = System.Drawing.Color.Maroon;
             this.btn_LUNCHnaarDRANKEN.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_LUNCHnaarDRANKEN.ForeColor = System.Drawing.Color.White;
-            this.btn_LUNCHnaarDRANKEN.Location = new System.Drawing.Point(9, 56);
+            this.btn_LUNCHnaarDRANKEN.Location = new System.Drawing.Point(9, 81);
             this.btn_LUNCHnaarDRANKEN.Name = "btn_LUNCHnaarDRANKEN";
             this.btn_LUNCHnaarDRANKEN.Size = new System.Drawing.Size(754, 52);
             this.btn_LUNCHnaarDRANKEN.TabIndex = 55;
@@ -73,7 +73,7 @@
             this.btn_DINERnaarBESTELLING.ForeColor = System.Drawing.Color.White;
             this.btn_DINERnaarBESTELLING.Location = new System.Drawing.Point(9, 12);
             this.btn_DINERnaarBESTELLING.Name = "btn_DINERnaarBESTELLING";
-            this.btn_DINERnaarBESTELLING.Size = new System.Drawing.Size(99, 38);
+            this.btn_DINERnaarBESTELLING.Size = new System.Drawing.Size(111, 49);
             this.btn_DINERnaarBESTELLING.TabIndex = 78;
             this.btn_DINERnaarBESTELLING.Text = "Terug naar Bestelling Menu";
             this.btn_DINERnaarBESTELLING.UseVisualStyleBackColor = false;

@@ -50,9 +50,10 @@ namespace WindowsFormsApplication1
 
         private void btn_BestellingMENUnaarTAFELOVERZICHT_Click(object sender, EventArgs e)
         {
-            TafelOverzicht TerugNaarTafelOverzicht = new TafelOverzicht();
-            TerugNaarTafelOverzicht.Show(this);
+            KiesOpname openKiesOpname = new KiesOpname();
+            openKiesOpname.Show(this);
             this.Hide();
+
         }
 
 
