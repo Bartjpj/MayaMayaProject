@@ -42,6 +42,7 @@
             this.listview_huidige_bestelling = new System.Windows.Forms.ListView();
             this.bestelling = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.aantal = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -120,7 +121,6 @@
             this.btn_stuurbestelling.TabIndex = 82;
             this.btn_stuurbestelling.Text = "Stuur Bestelling";
             this.btn_stuurbestelling.UseVisualStyleBackColor = false;
-            this.btn_stuurbestelling.Click += new System.EventHandler(this.btn_stuurbestelling_Click);
             // 
             // btn_verwijderGerecht
             // 
@@ -177,11 +177,22 @@
             // 
             this.aantal.Text = "Aantal";
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(461, 23);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(150, 37);
+            this.button1.TabIndex = 88;
+            this.button1.Text = "test";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // DinerKaart
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(775, 502);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.listview_huidige_bestelling);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -214,5 +225,6 @@
         private System.Windows.Forms.ListView listview_huidige_bestelling;
         private System.Windows.Forms.ColumnHeader bestelling;
         private System.Windows.Forms.ColumnHeader aantal;
+        private System.Windows.Forms.Button button1;
     }
 }

@@ -34,7 +34,6 @@ namespace WindowsFormsApplication1
             TerugNaarHoofdmenu.Left = this.Left;
             TerugNaarHoofdmenu.Top = this.Top;
             TerugNaarHoofdmenu.Size = this.Size;
-            this.Visible = false;
         }
 
         private void rbtn_BestellingOpnemen_CheckedChanged(object sender, EventArgs e)
@@ -60,17 +59,21 @@ namespace WindowsFormsApplication1
         //1
         public void btn_Tafel1_Click(object sender, EventArgs e)
         {
-            tm_tafel1.Start();
+            //tm_tafel1.Start();
             KiesOpname openKiesopname = new KiesOpname();
             openKiesopname.Show(this);
 
+            if (tm_tafel1.Enabled == true)
+            {
+                tm_tafel1.Start();
+            }
         }
         //2
         public void btn_Tafel2_Click(object sender, EventArgs e)
         {
             KiesOpname openKiesopname = new KiesOpname();
             openKiesopname.Show(this);
-            
+
         }
 
         //3
@@ -78,7 +81,7 @@ namespace WindowsFormsApplication1
         {
             KiesOpname openKiesopname = new KiesOpname();
             openKiesopname.Show(this);
-            
+
         }
 
         //4
@@ -86,7 +89,7 @@ namespace WindowsFormsApplication1
         {
             KiesOpname openKiesopname = new KiesOpname();
             openKiesopname.Show(this);
-            
+
         }
 
         //5
@@ -94,7 +97,7 @@ namespace WindowsFormsApplication1
         {
             KiesOpname openKiesopname = new KiesOpname();
             openKiesopname.Show(this);
-            
+
         }
 
         //6
@@ -102,7 +105,7 @@ namespace WindowsFormsApplication1
         {
             KiesOpname openKiesopname = new KiesOpname();
             openKiesopname.Show(this);
-            
+
         }
 
         //7
@@ -110,7 +113,7 @@ namespace WindowsFormsApplication1
         {
             KiesOpname openKiesopname = new KiesOpname();
             openKiesopname.Show(this);
-            
+
         }
 
         //8
@@ -118,7 +121,7 @@ namespace WindowsFormsApplication1
         {
             KiesOpname openKiesopname = new KiesOpname();
             openKiesopname.Show(this);
-           
+
         }
 
         //9
@@ -126,7 +129,7 @@ namespace WindowsFormsApplication1
         {
             KiesOpname openKiesopname = new KiesOpname();
             openKiesopname.Show(this);
-            
+
         }
 
         //10
@@ -134,20 +137,26 @@ namespace WindowsFormsApplication1
         {
             KiesOpname openKiesopname = new KiesOpname();
             openKiesopname.Show(this);
-            
-        }
 
+        }
         //---------------TIMERS-------------------------:
         //zetten van int voor de timer
         int i = 0;
         int min;
         //1
+        
         public void tm_tafel1_Tick(object sender, EventArgs e)
         {
             i++;
 
             min++;
             lbl_test.Text = min.ToString() + ": Min";
+
+            if (min >= 10)
+            {
+                btn_Tafel1.BackColor = Color.IndianRed;
+                btn_Tafel1.ForeColor = Color.White;
+            }
 
         }
 

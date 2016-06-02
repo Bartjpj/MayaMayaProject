@@ -197,7 +197,6 @@
             // 
             // tm_tafel1
             // 
-            this.tm_tafel1.Enabled = true;
             this.tm_tafel1.Interval = 1000;
             this.tm_tafel1.Tick += new System.EventHandler(this.tm_tafel1_Tick);
             // 
@@ -381,7 +380,6 @@
         private System.Windows.Forms.Button btn_Tafel9;
         private System.Windows.Forms.Button btn_Tafel10;
         private System.Windows.Forms.Button btn_TAFELnaarHM;
-        private System.Windows.Forms.Timer tm_tafel1;
         private System.Windows.Forms.Label lbl_tijdtafel1;
         private System.Windows.Forms.Label lbl_tijdtafel3;
         private System.Windows.Forms.Label lnl_tijdtafel2;
@@ -396,5 +394,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ListView listView_tafeloverzicht;
         private System.Windows.Forms.Label lbl_test;
+        public System.Windows.Forms.Timer tm_tafel1;
     }
 }
