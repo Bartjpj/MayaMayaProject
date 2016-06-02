@@ -15,9 +15,9 @@ namespace WindowsFormsApplication1
     {
         protected override void OnLoad(EventArgs e) // is de verwijzing voor de grootte van de form, niets veranderen AUB
         {
-            base.OnLoad(e);
-            this.Location = Owner.Location;
-            this.Size = Owner.Size;
+            //base.OnLoad(e);
+            //this.Location = Owner.Location;
+            //this.Size = Owner.Size;
         }
         TafelOverzichtDAO TafelOverzichtDAO;
         List<TafelOverzichtClass> tafellijst = new List<TafelOverzichtClass>();
