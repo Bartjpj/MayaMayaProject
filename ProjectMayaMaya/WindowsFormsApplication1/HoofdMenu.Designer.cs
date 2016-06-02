@@ -75,9 +75,9 @@
             // 
             this.btn_ExitWindows.BackColor = System.Drawing.Color.Maroon;
             this.btn_ExitWindows.ForeColor = System.Drawing.Color.White;
-            this.btn_ExitWindows.Location = new System.Drawing.Point(674, 443);
+            this.btn_ExitWindows.Location = new System.Drawing.Point(652, 441);
             this.btn_ExitWindows.Name = "btn_ExitWindows";
-            this.btn_ExitWindows.Size = new System.Drawing.Size(89, 47);
+            this.btn_ExitWindows.Size = new System.Drawing.Size(111, 49);
             this.btn_ExitWindows.TabIndex = 6;
             this.btn_ExitWindows.Text = "X";
             this.btn_ExitWindows.UseVisualStyleBackColor = false;

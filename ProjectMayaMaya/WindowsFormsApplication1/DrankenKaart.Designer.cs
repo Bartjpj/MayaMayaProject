@@ -344,12 +344,14 @@
             // 
             // btn_DRANKENnaarBESTELMENU
             // 
+            this.btn_DRANKENnaarBESTELMENU.BackColor = System.Drawing.Color.Maroon;
+            this.btn_DRANKENnaarBESTELMENU.ForeColor = System.Drawing.Color.White;
             this.btn_DRANKENnaarBESTELMENU.Location = new System.Drawing.Point(9, 12);
             this.btn_DRANKENnaarBESTELMENU.Name = "btn_DRANKENnaarBESTELMENU";
-            this.btn_DRANKENnaarBESTELMENU.Size = new System.Drawing.Size(92, 37);
+            this.btn_DRANKENnaarBESTELMENU.Size = new System.Drawing.Size(111, 49);
             this.btn_DRANKENnaarBESTELMENU.TabIndex = 48;
             this.btn_DRANKENnaarBESTELMENU.Text = "Terug naar Bestelmenu";
-            this.btn_DRANKENnaarBESTELMENU.UseVisualStyleBackColor = true;
+            this.btn_DRANKENnaarBESTELMENU.UseVisualStyleBackColor = false;
             this.btn_DRANKENnaarBESTELMENU.Click += new System.EventHandler(this.btn_DRANKENnaarBESTELMENU_Click);
             // 
             // DrankenKaart

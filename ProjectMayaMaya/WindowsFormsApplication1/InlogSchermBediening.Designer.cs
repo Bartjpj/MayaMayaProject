@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(InlogSchermBediening));
             this.lbl_personeelid = new System.Windows.Forms.Label();
             this.txt_PersoneelsID = new System.Windows.Forms.TextBox();
             this.btn_inloggen = new System.Windows.Forms.Button();
@@ -42,7 +41,7 @@
             // 
             this.lbl_personeelid.AutoSize = true;
             this.lbl_personeelid.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_personeelid.Location = new System.Drawing.Point(184, 176);
+            this.lbl_personeelid.Location = new System.Drawing.Point(184, 177);
             this.lbl_personeelid.Name = "lbl_personeelid";
             this.lbl_personeelid.Size = new System.Drawing.Size(132, 24);
             this.lbl_personeelid.TabIndex = 1;
@@ -58,12 +57,14 @@
             // 
             // btn_inloggen
             // 
+            this.btn_inloggen.BackColor = System.Drawing.Color.LimeGreen;
+            this.btn_inloggen.ForeColor = System.Drawing.Color.White;
             this.btn_inloggen.Location = new System.Drawing.Point(322, 207);
             this.btn_inloggen.Name = "btn_inloggen";
             this.btn_inloggen.Size = new System.Drawing.Size(65, 35);
             this.btn_inloggen.TabIndex = 5;
             this.btn_inloggen.Text = "Inloggen";
-            this.btn_inloggen.UseVisualStyleBackColor = true;
+            this.btn_inloggen.UseVisualStyleBackColor = false;
             this.btn_inloggen.Click += new System.EventHandler(this.btn_inloggen_Click);
             // 
             // lbl_Bedieninglogininfo
@@ -78,22 +79,26 @@
             // 
             // btn_INLOGGENnaarHM
             // 
+            this.btn_INLOGGENnaarHM.BackColor = System.Drawing.Color.Maroon;
+            this.btn_INLOGGENnaarHM.ForeColor = System.Drawing.Color.White;
             this.btn_INLOGGENnaarHM.Location = new System.Drawing.Point(12, 22);
             this.btn_INLOGGENnaarHM.Name = "btn_INLOGGENnaarHM";
-            this.btn_INLOGGENnaarHM.Size = new System.Drawing.Size(82, 39);
+            this.btn_INLOGGENnaarHM.Size = new System.Drawing.Size(111, 49);
             this.btn_INLOGGENnaarHM.TabIndex = 7;
             this.btn_INLOGGENnaarHM.Text = "Terug naar Hoofdmenu";
-            this.btn_INLOGGENnaarHM.UseVisualStyleBackColor = true;
+            this.btn_INLOGGENnaarHM.UseVisualStyleBackColor = false;
             this.btn_INLOGGENnaarHM.Click += new System.EventHandler(this.btn_INLOGGENnaarHM_Click);
             // 
             // btn_InloggenSkippen
             // 
+            this.btn_InloggenSkippen.BackColor = System.Drawing.Color.Maroon;
+            this.btn_InloggenSkippen.ForeColor = System.Drawing.Color.White;
             this.btn_InloggenSkippen.Location = new System.Drawing.Point(455, 208);
             this.btn_InloggenSkippen.Name = "btn_InloggenSkippen";
             this.btn_InloggenSkippen.Size = new System.Drawing.Size(91, 34);
             this.btn_InloggenSkippen.TabIndex = 8;
             this.btn_InloggenSkippen.Text = "Skip inloggen";
-            this.btn_InloggenSkippen.UseVisualStyleBackColor = true;
+            this.btn_InloggenSkippen.UseVisualStyleBackColor = false;
             this.btn_InloggenSkippen.Click += new System.EventHandler(this.btn_InloggenSkippen_Click);
             // 
             // lbl_personeelsleden
@@ -116,6 +121,7 @@
             this.Controls.Add(this.btn_inloggen);
             this.Controls.Add(this.txt_PersoneelsID);
             this.Controls.Add(this.lbl_personeelid);
+            this.ForeColor = System.Drawing.Color.Black;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "InlogSchermBediening";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;

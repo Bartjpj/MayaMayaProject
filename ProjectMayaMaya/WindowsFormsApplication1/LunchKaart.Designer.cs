@@ -183,12 +183,14 @@
             // 
             // btn_LUNCHnaarKIESKAART
             // 
+            this.btn_LUNCHnaarKIESKAART.BackColor = System.Drawing.Color.Maroon;
+            this.btn_LUNCHnaarKIESKAART.ForeColor = System.Drawing.Color.White;
             this.btn_LUNCHnaarKIESKAART.Location = new System.Drawing.Point(12, 12);
             this.btn_LUNCHnaarKIESKAART.Name = "btn_LUNCHnaarKIESKAART";
-            this.btn_LUNCHnaarKIESKAART.Size = new System.Drawing.Size(96, 38);
+            this.btn_LUNCHnaarKIESKAART.Size = new System.Drawing.Size(111, 49);
             this.btn_LUNCHnaarKIESKAART.TabIndex = 17;
             this.btn_LUNCHnaarKIESKAART.Text = "Terug naar Kaarten Menu";
-            this.btn_LUNCHnaarKIESKAART.UseVisualStyleBackColor = true;
+            this.btn_LUNCHnaarKIESKAART.UseVisualStyleBackColor = false;
             this.btn_LUNCHnaarKIESKAART.Click += new System.EventHandler(this.btn_LUNCHnaarKIESKAART_Click);
             // 
             // LunchKaart
