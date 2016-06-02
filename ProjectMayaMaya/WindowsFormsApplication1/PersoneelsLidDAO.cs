@@ -10,7 +10,6 @@ namespace WindowsFormsApplication1
     public class PersoneelsLidDAO
     {
         
-
         public bool haalPersoneelslid_IDTabelOp(int inlogcode)
         {
             string connString = ConfigurationManager
