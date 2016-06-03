@@ -22,6 +22,7 @@ namespace WindowsFormsApplication1
         //public string tijd { get; set; }
         public int ItemdId {get; set;}
         public int aantal { get; set; }
+        
         //public int voorraad { get; set; }
         //public int kaart_id { get; set; }
         //public bool betaald { get; set; }
