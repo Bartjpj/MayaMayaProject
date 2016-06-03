@@ -123,11 +123,12 @@ namespace WindowsFormsApplication1
         private void button1_Click(object sender, EventArgs e)
         {
             starttimer = true;
+           // StartenTimer
         }
         public void StartenTimer(bool starttimer, TafelOverzicht tm_Tafel1)
         {
             if (starttimer == true)
-            {
+        {
                 tm_Tafel1.Enabled = true;
             }
         }
