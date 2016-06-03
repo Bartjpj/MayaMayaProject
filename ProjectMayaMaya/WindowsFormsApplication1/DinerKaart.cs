@@ -123,7 +123,7 @@ namespace WindowsFormsApplication1
             //MyTimer.Interval = (10 * 1000);
             //MyTimer.Tick += new EventHandler(MyTimer_Tick);
             //MyTimer.Start();
-
+        
         }
 
 
