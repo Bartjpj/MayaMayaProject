@@ -101,8 +101,16 @@ namespace WindowsFormsApplication1
               
             }
             isGereedmelding.bestellingGereed(isGereed);
-        }
 
+        }
+        
+        public void StartenTimer(bool isGereed, TafelOverzicht tm_Tafel1)
+        {
+            if (isGereed == true)
+            {
+                tm_Tafel1.Enabled = false;
+            }
+        }
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
