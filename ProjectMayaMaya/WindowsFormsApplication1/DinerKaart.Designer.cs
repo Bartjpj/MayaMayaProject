@@ -108,21 +108,6 @@
             this.listview_diner.View = System.Windows.Forms.View.Details;
             this.listview_diner.SelectedIndexChanged += new System.EventHandler(this.listview_diner_SelectedIndexChanged);
             // 
-            // Naam
-            // 
-            this.Naam.Text = "Naam";
-            this.Naam.Width = 284;
-            // 
-            // Prijs
-            // 
-            this.Prijs.Text = "Prijs";
-            this.Prijs.Width = 33;
-            // 
-            // Voorraad
-            // 
-            this.Voorraad.Text = "Voorraad";
-            this.Voorraad.Width = 55;
-            // 
             // btn_stuurbestelling
             // 
             this.btn_stuurbestelling.BackColor = System.Drawing.Color.LightGreen;
@@ -157,7 +142,7 @@
             this.label2.TabIndex = 85;
             this.label2.Text = "Dinerkaart Gerechten";
             // 
-            // label3
+            // btn_stuurbestelling
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

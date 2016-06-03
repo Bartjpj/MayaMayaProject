@@ -75,6 +75,9 @@ namespace WindowsFormsApplication1
             connectie.Close();
            
         }
+
+       
+
         }
     }
 

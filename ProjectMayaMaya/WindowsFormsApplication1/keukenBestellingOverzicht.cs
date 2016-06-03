@@ -14,7 +14,7 @@ namespace WindowsFormsApplication1
     {
         keukenBestellingOverzichtDAO keukenBestellingOverzichtDAO;
         List<keukenBestellingOverzichtClass> bestellinglijstKeuken = new List<keukenBestellingOverzichtClass>();
-
+        public int tafelNr;
         protected override void OnLoad(EventArgs e)
         {
             base.OnLoad(e);
@@ -30,6 +30,18 @@ namespace WindowsFormsApplication1
             bestellinglijstKeuken = keukenBestellingOverzichtDAO.haalKeukenBestelling_TabelOp();
 
             //bool bestelling_gereed = false;
+        }
+
+        private void button_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Bestellinglijst wordt geopend voor " + ((Button)sender).Name);
+
+            Button btn = (Button)sender;
+            tafelNr = Int32.Parse(btn.Text.Substring(5).Trim());
+
+            // ... moet de parameter tafelNr meegeven aan de Dao zodat een query gemaakt kan worden om deze specifieke tafel op te halen
+            bestellingOverzichtKeukenView.Items.Clear();
+
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -61,7 +73,7 @@ namespace WindowsFormsApplication1
                 lijstItem.SubItems.Add(KeukenOverzicht.tafel_id.ToString());
                 lijstItem.SubItems.Add(KeukenOverzicht.aantal.ToString());
                 lijstItem.SubItems.Add(KeukenOverzicht.naam.ToString());
-                bestellingOverzichtKeuken.Items.Add(lijstItem);
+                bestellingOverzichtKeukenView.Items.Add(lijstItem);
 
             }
         }

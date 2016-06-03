@@ -31,7 +31,7 @@
             this.btn_KeukenNaarHoofdmenu = new System.Windows.Forms.Button();
             this.lbl_OpenstaandeBestellingenKeuken = new System.Windows.Forms.Label();
             this.btn_gereedKeuken = new System.Windows.Forms.Button();
-            this.bestellingOverzichtKeuken = new System.Windows.Forms.ListView();
+            this.bestellingOverzichtKeukenView = new System.Windows.Forms.ListView();
             this.Bestelling_id = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Tafel_id = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Aantal = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -74,19 +74,19 @@
             this.btn_gereedKeuken.UseVisualStyleBackColor = false;
             this.btn_gereedKeuken.Click += new System.EventHandler(this.btn_gereedKeuken_Click);
             // 
-            // bestellingOverzichtKeuken
+            // bestellingOverzichtKeukenView
             // 
-            this.bestellingOverzichtKeuken.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.bestellingOverzichtKeukenView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.Bestelling_id,
             this.Tafel_id,
             this.Aantal,
             this.Item});
-            this.bestellingOverzichtKeuken.Location = new System.Drawing.Point(11, 94);
-            this.bestellingOverzichtKeuken.Name = "bestellingOverzichtKeuken";
-            this.bestellingOverzichtKeuken.Size = new System.Drawing.Size(737, 201);
-            this.bestellingOverzichtKeuken.TabIndex = 5;
-            this.bestellingOverzichtKeuken.UseCompatibleStateImageBehavior = false;
-            this.bestellingOverzichtKeuken.View = System.Windows.Forms.View.Details;
+            this.bestellingOverzichtKeukenView.Location = new System.Drawing.Point(11, 94);
+            this.bestellingOverzichtKeukenView.Name = "bestellingOverzichtKeukenView";
+            this.bestellingOverzichtKeukenView.Size = new System.Drawing.Size(737, 201);
+            this.bestellingOverzichtKeukenView.TabIndex = 5;
+            this.bestellingOverzichtKeukenView.UseCompatibleStateImageBehavior = false;
+            this.bestellingOverzichtKeukenView.View = System.Windows.Forms.View.Details;
             // 
             // Bestelling_id
             // 
@@ -124,7 +124,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(848, 393);
             this.Controls.Add(this.btn_keukenOverzicht);
-            this.Controls.Add(this.bestellingOverzichtKeuken);
+            this.Controls.Add(this.bestellingOverzichtKeukenView);
             this.Controls.Add(this.btn_gereedKeuken);
             this.Controls.Add(this.lbl_OpenstaandeBestellingenKeuken);
             this.Controls.Add(this.btn_KeukenNaarHoofdmenu);
@@ -141,7 +141,7 @@
         private System.Windows.Forms.Button btn_KeukenNaarHoofdmenu;
         private System.Windows.Forms.Label lbl_OpenstaandeBestellingenKeuken;
         private System.Windows.Forms.Button btn_gereedKeuken;
-        private System.Windows.Forms.ListView bestellingOverzichtKeuken;
+        private System.Windows.Forms.ListView bestellingOverzichtKeukenView;
         private System.Windows.Forms.ColumnHeader Bestelling_id;
         private System.Windows.Forms.ColumnHeader Tafel_id;
         private System.Windows.Forms.ColumnHeader Aantal;

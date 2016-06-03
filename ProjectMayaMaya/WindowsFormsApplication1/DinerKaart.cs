@@ -17,13 +17,11 @@ namespace WindowsFormsApplication1
     {
         MenuItemsDAO MenuItemsDAO;
         List<MenuItemsClass> DinerKaartLijst = new List<MenuItemsClass>();
-        MenuItemsClass dinerKaartClass = new MenuItemsClass(0,0,"",0,0);
+        MenuItemsClass dinerKaartClass = new MenuItemsClass(0, 0, "", 0, 0);
         
-        int i = 0;
         bool starttimer = false;
+        TafelOverzicht tm_tafel1;
         
-
-
         protected override void OnLoad(EventArgs e) // is de verwijzing, niets veranderen AUB
         {
             base.OnLoad(e);
@@ -40,7 +38,7 @@ namespace WindowsFormsApplication1
             this.MenuItemsDAO = DinerKaartDAO; // zet bestellingdao openbaar
 
 
-            foreach (MenuItemsClass dinerItem in DinerKaartDAO.haalDinerKaartOp(4,7)) //Alle informatie die in de list staat wordt in de listview geschreven
+            foreach (MenuItemsClass dinerItem in DinerKaartDAO.haalDinerKaartOp(4, 7)) //Alle informatie die in de list staat wordt in de listview geschreven
             {
 
                 ListViewItem lijstItem = new ListViewItem(dinerItem.naam.ToString());
@@ -120,16 +118,17 @@ namespace WindowsFormsApplication1
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        public void button1_Click(object sender, EventArgs e)
         {
             starttimer = true;
             //StartenTimer
         }
-        public void StartenTimer(bool starttimer, TafelOverzicht tm_Tafel1)
+        
+        public void StartenTimer(bool starttimer)
         {
             if (starttimer == true)
         {
-                tm_Tafel1.Enabled = true;
+                //tm_tafel1.Enabled = true;
             }
         }
 

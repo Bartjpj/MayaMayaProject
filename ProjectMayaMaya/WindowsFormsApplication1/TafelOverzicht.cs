@@ -15,9 +15,9 @@ namespace WindowsFormsApplication1
     {
         protected override void OnLoad(EventArgs e) // is de verwijzing voor de grootte van de form, niets veranderen AUB
         {
-            base.OnLoad(e);
-            this.Location = Owner.Location;
-            this.Size = Owner.Size;
+            //base.OnLoad(e);
+            //this.Location = Owner.Location;
+            //this.Size = Owner.Size;
         }
         TafelOverzichtDAO TafelOverzichtDAO;
         List<TafelOverzichtClass> tafellijst = new List<TafelOverzichtClass>();
@@ -63,10 +63,7 @@ namespace WindowsFormsApplication1
             KiesOpname openKiesopname = new KiesOpname();
             openKiesopname.Show(this);
 
-            if (tm_tafel1.Enabled == true)
-            {
-                tm_tafel1.Start();
-            }
+
         }
         //2
         public void btn_Tafel2_Click(object sender, EventArgs e)
@@ -141,6 +138,7 @@ namespace WindowsFormsApplication1
         }
         //---------------TIMERS-------------------------:
         //zetten van int voor de timer
+
         int i = 0;
         int min;
         //1
