@@ -5,10 +5,9 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
-using System.Timers;
 using System.Diagnostics;
 using System.Threading.Tasks;
-//using System.Timers.Timer;
+using System.Timers;
 using System.Windows.Forms;
 
 namespace WindowsFormsApplication1
@@ -120,16 +119,11 @@ namespace WindowsFormsApplication1
 
         public void button1_Click(object sender, EventArgs e)
         {
-            starttimer = true;
-            StartenTimer(starttimer);
-        }
-        
-        public void StartenTimer(bool starttimer)
-        {
-            if (starttimer == true)
-            {
-                //tm_tafel1.Enabled = true;
-            }
+            //Timer MyTimer = new Timer();
+            //MyTimer.Interval = (10 * 1000);
+            //MyTimer.Tick += new EventHandler(MyTimer_Tick);
+            //MyTimer.Start();
+
         }
 
 
