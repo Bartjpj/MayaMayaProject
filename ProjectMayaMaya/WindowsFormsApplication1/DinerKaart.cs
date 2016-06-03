@@ -123,7 +123,7 @@ namespace WindowsFormsApplication1
         private void button1_Click(object sender, EventArgs e)
         {
             starttimer = true;
-            StartenTimer
+            //StartenTimer
         }
         public void StartenTimer(bool starttimer, TafelOverzicht tm_Tafel1)
         {
