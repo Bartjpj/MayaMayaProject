@@ -17,12 +17,10 @@ namespace WindowsFormsApplication1
     {
         MenuItemsDAO MenuItemsDAO;
         List<MenuItemsClass> DinerKaartLijst = new List<MenuItemsClass>();
-        MenuItemsClass dinerKaartClass = new MenuItemsClass(0,0,"",0,0);
-        
-        int i = 0;
-        bool starttimer = false;
-        
+        MenuItemsClass dinerKaartClass = new MenuItemsClass(0, 0, "", 0, 0);
 
+        bool starttimer = false;
+        TafelOverzicht tm_tafel1;
 
         protected override void OnLoad(EventArgs e) // is de verwijzing, niets veranderen AUB
         {
@@ -31,7 +29,7 @@ namespace WindowsFormsApplication1
             this.Size = Owner.Size;
         }
 
- 
+
 
         public DinerKaart(MenuItemsDAO DinerKaartDAO)
         {
@@ -40,7 +38,7 @@ namespace WindowsFormsApplication1
             this.MenuItemsDAO = DinerKaartDAO; // zet bestellingdao openbaar
 
 
-            foreach (MenuItemsClass dinerItem in DinerKaartDAO.haalDinerKaartOp(4,7)) //Alle informatie die in de list staat wordt in de listview geschreven
+            foreach (MenuItemsClass dinerItem in DinerKaartDAO.haalDinerKaartOp(4, 7)) //Alle informatie die in de list staat wordt in de listview geschreven
             {
 
                 ListViewItem lijstItem = new ListViewItem(dinerItem.naam.ToString());
@@ -58,7 +56,7 @@ namespace WindowsFormsApplication1
 
             foreach (ListViewItem BestellingItem in SelectieBestellingItems)
             {
-                
+
                 MenuItemsClass GeselecteerdeItem = (MenuItemsClass)BestellingItem.Tag;
 
                 if (GeselecteerdeItem.voorraad < 1) //error
@@ -81,13 +79,13 @@ namespace WindowsFormsApplication1
                 }
                 else
                 {
-                    ListViewItem bestelItem = new ListViewItem(GeselecteerdeItem.naam); 
+                    ListViewItem bestelItem = new ListViewItem(GeselecteerdeItem.naam);
                     bestelItem.SubItems.Add("1");
                     listview_huidige_bestelling.Items.Add(bestelItem);
-                    
+
                 }
             }
-            }
+        }
 
 
         private void listview_huidige_bestelling_SelectedIndexChanged(object sender, EventArgs e)
@@ -116,20 +114,21 @@ namespace WindowsFormsApplication1
 
         private void btn_stuurbestelling_Click(object sender, EventArgs e)
         {
-            
+
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        public void button1_Click(object sender, EventArgs e)
         {
             starttimer = true;
-           // StartenTimer
+            StartenTimer(starttimer);
         }
-        public void StartenTimer(bool starttimer, TafelOverzicht tm_Tafel1)
+        
+        public void StartenTimer(bool starttimer)
         {
             if (starttimer == true)
-        {
-                tm_Tafel1.Enabled = true;
+            {
+                //tm_tafel1.Enabled = true;
             }
         }
 
