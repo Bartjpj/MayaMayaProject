@@ -147,7 +147,7 @@
             this.Controls.Add(this.lbl_OpenstaandeBestellingenKeuken);
             this.Name = "BarOverzicht";
             this.Text = "BarOverzicht";
-            this.Load += new System.EventHandler(this.BarOverzicht_Load);
+      //      this.Load += new System.EventHandler(this.BarOverzicht_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

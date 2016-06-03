@@ -33,14 +33,19 @@ namespace WindowsFormsApplication1
 
            bestellingslijst = BarOverzichtDAO.haalBarOverzicht_TabelOp(); // haal de bestelling op
 
-            // ...
-         
+            // bepaal aan welke tafels er een bestelling loopt
+            // ...  
+            List<int> tafelNummers = new List<int>();
 
-            Button btn2 = new Button();
-            btn2.Name = "btn2";
-            btn2.Text = "Tafel 2";
-            btn2.Click += new EventHandler(button_Click);
-           this.flowLayoutPanel1.Controls.Add(btn2);
+
+
+           DisplayBestellingen();
+
+           // Button btn2 = new Button();
+           // btn2.Name = "btn2";
+           // btn2.Text = "Tafel 2";
+           // btn2.Click += new EventHandler(button_Click);
+           //this.flowLayoutPanel1.Controls.Add(btn2);
 
            //lb_Baroverzicht.Items.Add(bestellingslijst);
            //lb_Baroverzicht.DataSource = bestellingslijst.ToString();
@@ -99,11 +104,12 @@ namespace WindowsFormsApplication1
             this.Hide();
         }
 
-    
 
-        private void BarOverzicht_Load(object sender, EventArgs e)
+
+        private void DisplayBestellingen()
         {
-            foreach (BarOverzichtClass barOverzicht in BarOverzichtDAO.haalBarOverzicht_TabelOp())
+            listView1.Items.Clear();
+            foreach (BarOverzichtClass barOverzicht in this.bestellingslijst)
             {
                 //for (int i = listView1.Items.Count - 1; i >= 0; i--)
                 //{
@@ -116,8 +122,6 @@ namespace WindowsFormsApplication1
                 lijstItem.SubItems.Add(barOverzicht.naam.ToString());
                 lijstItem.SubItems.Add(barOverzicht.datum_tijd.ToString());
                 listView1.Items.Add(lijstItem);
-
-
             }
             createTafels();
         }
@@ -139,7 +143,7 @@ namespace WindowsFormsApplication1
             BarOverzichtClass isGereedmelding = new BarOverzichtClass();
             ////var item = listView1.SelectedItems[0];
             //bool isGereed = true;
-            foreach (BarOverzichtClass barOverzicht in BarOverzichtDAO.haalBarOverzicht_TabelOp())
+    //        foreach (BarOverzichtClass barOverzicht in BarOverzichtDAO.haalBarOverzicht_TabelOp())
             {
 
                 for (int i = listView1.Items.Count - 1; i >= 0; i--)
@@ -153,9 +157,16 @@ namespace WindowsFormsApplication1
 
                     }
                 }
-              
+                BarOverzichtDAO.updateTafelsGereed(tafelNr);
             }
-            isGereedmelding.bestellingGereed(tafelNr);
+
+            
+            // ...
+           // isGereedmelding.bestellingGereed(tafelNr);
+
+            // refresh het hele scherm
+            bestellingslijst = BarOverzichtDAO.haalBarOverzicht_TabelOp(); // haal de bestelling op
+            DisplayBestellingen();
         }
 
        
@@ -167,6 +178,8 @@ namespace WindowsFormsApplication1
 
         private void btn_refresh_Click(object sender, EventArgs e)
         {
+            listView1.Items.Clear();
+
             foreach (BarOverzichtClass barOverzicht in BarOverzichtDAO.haalBarOverzicht_TabelOp())
             {
                 //for (int i = listView1.Items.Count - 1; i >= 0; i--)
@@ -182,21 +195,25 @@ namespace WindowsFormsApplication1
               
 
             }
+       
         }
 
         private void listBox1_SelectedIndexChanged_1(object sender, EventArgs e)
         {
 
         }
+ 
         private void createTafels()
         {
+            List<int> tafelNummers = BarOverzichtDAO.haalTafelNrOp();
+            
             flowLayoutPanel1.Controls.Clear();
-            for (int i = 1; i <= 10; i++)
+            foreach (int tafelNummer in tafelNummers) 
             {
                 Button b = new Button();
-                b.Tag = i;
-                b.Name = "Tafel " + i.ToString();
-                b.Text = "Tafel " + i.ToString();
+                b.Tag = tafelNummer;
+                b.Name = "Tafel " + tafelNummer.ToString();
+                b.Text = "Tafel " + tafelNummer.ToString();
                 b.AutoSize = false;
                 b.Click += new EventHandler(button_Click);
                 flowLayoutPanel1.Controls.Add(b);

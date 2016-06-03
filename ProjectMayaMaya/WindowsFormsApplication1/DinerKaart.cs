@@ -16,6 +16,7 @@ namespace WindowsFormsApplication1
     {
         DinerKaartDAO DinerKaartDAO;
         List<DinerKaartClass> DinerKaartLijst = new List<DinerKaartClass>();
+        DinerKaartClass dinerKaartClass = new DinerKaartClass(0,0,"",0,0);
         List<int> TotalebestellingLijst = new List<int>();
         int i = 0;
         
@@ -47,27 +48,81 @@ namespace WindowsFormsApplication1
             }
         }
 
-        private void btn_DinerGerechtToevoegen_Click(object sender, EventArgs e)
+        //listview_diner_SelectedIndexChanged
+        private void listview_diner_SelectedIndexChanged(object sender, EventArgs e)
         {
 
-                foreach (ListViewItem kaartItem in listview_diner.SelectedItems)
+            
+            ListView.SelectedListViewItemCollection SelectieBestellingItems = this.listview_diner.SelectedItems;
+
+            foreach (ListViewItem BestellingItem in SelectieBestellingItems)
             {
-                    // voeg een item toe aan de bestelling, wanneer dit item er al in zit moet er 1 bij aantal worden opgeteld.
-                    //Wanneer het item er niet in zit wordt deze nieuw aangemaakt en met 1 toegevoegd.
-//                    ListViewItem aangepastitem = (ListViewItem)Item.Clone(); //clone item die geselecteerd is
-                    int MeerdereKerenBesteld = 1;
-                    if (listview_huidige_bestelling.FindItemWithText(kaartItem.Text).Text == listview_diner.SelectedItems.ToString()) 
-                    {
+                
+                DinerKaartClass GeselecteerdeItem = (DinerKaartClass)BestellingItem.Tag;
 
+                if (GeselecteerdeItem.voorraad < 1) //error
+                {
+                    NietOpVoorraadAlert itemNietOpVoorraad = new NietOpVoorraadAlert();
+                    itemNietOpVoorraad.Show(this);
+                    return;
+                }
+                GeselecteerdeItem.voorraad--;
+                int aantalBesteldeItems = int.Parse(BestellingItem.SubItems[2].Text);
+                aantalBesteldeItems--;
+                BestellingItem.SubItems[2].Text = string.Format("{0:00}", aantalBesteldeItems);
 
+                ListViewItem locatie = listview_huidige_bestelling.FindItemWithText(GeselecteerdeItem.naam);
 
-                    } else {
-                    ListViewItem bestelItem = new ListViewItem(kaartItem.Text); 
-                    bestelItem.SubItems.Add(MeerdereKerenBesteld.ToString());
-                    listview_huidige_bestelling.Items.Add(bestelItem);  //Voegt het geselecteerde item toe aan de list van totalebestelling
-                    }
+                if (locatie != null)
+                {
+                    locatie.SubItems[1].Text = (int.Parse(locatie.SubItems[1].Text) + 1).ToString();
+                    ListViewItem selecteerbareRegel = listview_diner.FindItemWithText(GeselecteerdeItem.naam);
+                }
+                else
+                {
+                    ListViewItem bestelItem = new ListViewItem(GeselecteerdeItem.naam); 
+                    bestelItem.SubItems.Add("1");
+                    listview_huidige_bestelling.Items.Add(bestelItem);
                     
+                }
+
             }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//                foreach (listviewitem kaartitem in listview_diner.selecteditems)
+//            {
+//                    // voeg een item toe aan de bestelling, wanneer dit item er al in zit moet er 1 bij aantal worden opgeteld.
+//                    //wanneer het item er niet in zit wordt deze nieuw aangemaakt en met 1 toegevoegd.
+////                    listviewitem aangepastitem = (listviewitem)item.clone(); //clone item die geselecteerd is
+//                    int meerderekerenbesteld = 1;
+//                    if (listview_huidige_bestelling.finditemwithtext(kaartitem.text).text == listview_diner.selecteditems.tostring()) 
+//                    {
+//                        listviewitem updateaantal = listview_diner.selecteditems[0];
+//                        updateaantal.subitems[0].text = meerderekerenbesteld++.tostring();
+
+
+//                    } else {
+//                    listviewitem bestelitem = new listviewitem(kaartitem.text); 
+//                    bestelitem.subitems.add(meerderekerenbesteld.tostring());
+//                    listview_huidige_bestelling.items.add(bestelitem);  //voegt het geselecteerde item toe aan de list van totalebestelling
+//                    }
+                    
+//            }
             
         }
 

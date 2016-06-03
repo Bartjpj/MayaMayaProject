@@ -12,11 +12,11 @@ namespace WindowsFormsApplication1
 
 
         //Variabelen worden gedefinieerd
-        public int menu_id { get; set; }
-        public int categorie_id { get; set; }
-        public string naam { get; set; }
-        public double prijs { get; set; }
-        public int voorraad { get; set; }
+        public int menu_id;
+        public int categorie_id;
+        public string naam;
+        public double prijs;
+        public int voorraad;
 
         //De constructor wordt aangemaakt
         public DinerKaartClass(int menu_id, int categorie_id, string naam, double prijs, int voorraad)

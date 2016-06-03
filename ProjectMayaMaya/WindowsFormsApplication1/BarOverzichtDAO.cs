@@ -19,7 +19,7 @@ namespace WindowsFormsApplication1
             SqlConnection conn = new SqlConnection(connString);
             conn.Open();
 
-            SqlCommand command = new SqlCommand("SELECT bestelling_id, tafel_id, Aantal, Bestelling.datum_tijd, Menuitem.naam FROM Bestelling, BestellingItems, Menuitem, Menucategorie, Menukaart WHERE  bestelling_id = BestellingId AND ItemId = menu_id AND Menuitem.categorie_id = Menucategorie.categorie_id AND Menukaart.kaart_id = Menucategorie.kaart_id AND Menukaart.kaart_id = 3", conn);
+            SqlCommand command = new SqlCommand("SELECT bestelling_id, tafel_id, Aantal, Bestelling.datum_tijd, Menuitem.naam FROM Bestelling, BestellingItems, Menuitem, Menucategorie, Menukaart WHERE  bestelling_id = BestellingId AND ItemId = menu_id AND Menuitem.categorie_id = Menucategorie.categorie_id AND Menukaart.kaart_id = Menucategorie.kaart_id AND Menukaart.kaart_id = 3 AND is_gereed = 0;", conn);
             // deze query zorgt ervoor dat we alle data hebben die we bij BestellingMenu nodig hebben 
             SqlDataReader reader = command.ExecuteReader();
          
@@ -69,6 +69,43 @@ namespace WindowsFormsApplication1
             }
             conn.Close();
             return BarOverzichtTable;
+            
+        }
+        public void updateTafelsGereed(int tafelNr)
+        {
+            string connString = ConfigurationManager
+            .ConnectionStrings["BestellingConnectionStringSQL"]
+            .ConnectionString;
+            SqlConnection conn = new SqlConnection(connString);
+            conn.Open();
+
+            SqlCommand command = new SqlCommand("UPDATE Bestelling SET is_gereed=1 WHERE is_gereed = 0 AND tafel_id =" + tafelNr , conn);
+            command.ExecuteNonQuery();
+
+            conn.Close();
+        }
+        public List<int> haalTafelNrOp()
+        {
+            string connString = ConfigurationManager
+                .ConnectionStrings["BestellingConnectionStringSQL"]
+                .ConnectionString;
+            SqlConnection conn = new SqlConnection(connString);
+            conn.Open();
+
+            SqlCommand command = new SqlCommand("SELECT tafel_id FROM Bestelling, BestellingItems, Menuitem, Menucategorie, Menukaart WHERE  bestelling_id = BestellingId AND ItemId = menu_id AND Menuitem.categorie_id = Menucategorie.categorie_id AND Menukaart.kaart_id = Menucategorie.kaart_id AND Menukaart.kaart_id = 3 AND is_gereed = 0;", conn);
+            // deze query zorgt ervoor dat we alle data hebben die we bij BestellingMenu nodig hebben 
+            SqlDataReader reader = command.ExecuteReader();
+            List<int> TafelNummers = new List<int>();
+
+            while (reader.Read())
+            {
+              
+                int tafel_id = (int)reader["tafel_id"];
+
+                TafelNummers.Add(tafel_id);
+            }
+            conn.Close();
+            return TafelNummers;
 
         }
         //public virtual void Enqueue(List<BarOverzichtClass> q)
