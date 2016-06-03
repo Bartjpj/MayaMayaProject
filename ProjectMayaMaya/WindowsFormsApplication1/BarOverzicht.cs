@@ -104,7 +104,7 @@ namespace WindowsFormsApplication1
             this.Hide();
         }
 
-
+            
 
         private void DisplayBestellingen()
         {
@@ -136,7 +136,7 @@ namespace WindowsFormsApplication1
 
         }
 
- 
+            
 
         private void btn_BestellingGereed_Click(object sender, EventArgs e)
         {
@@ -158,8 +158,8 @@ namespace WindowsFormsApplication1
                     }
                 }
                 BarOverzichtDAO.updateTafelsGereed(tafelNr);
-            }
-
+                }
+              
             
             // ...
            // isGereedmelding.bestellingGereed(tafelNr);
@@ -169,7 +169,7 @@ namespace WindowsFormsApplication1
             DisplayBestellingen();
         }
 
-       
+
 
         private void listView1_SelectedIndexChanged_1(object sender, EventArgs e)
         {
@@ -192,7 +192,7 @@ namespace WindowsFormsApplication1
                 lijstItem.SubItems.Add(barOverzicht.aantal.ToString());
                 lijstItem.SubItems.Add(barOverzicht.naam.ToString());
                 listView1.Items.Add(lijstItem);
-              
+
 
             }
        
@@ -218,7 +218,7 @@ namespace WindowsFormsApplication1
                 b.Click += new EventHandler(button_Click);
                 flowLayoutPanel1.Controls.Add(b);
             }
-        }
+            }
         private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
         {
            

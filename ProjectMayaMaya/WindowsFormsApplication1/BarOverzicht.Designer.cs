@@ -58,12 +58,14 @@
             // 
             // btn_BARnaarHM
             // 
+            this.btn_BARnaarHM.BackColor = System.Drawing.Color.Maroon;
+            this.btn_BARnaarHM.ForeColor = System.Drawing.Color.White;
             this.btn_BARnaarHM.Location = new System.Drawing.Point(12, 12);
             this.btn_BARnaarHM.Name = "btn_BARnaarHM";
-            this.btn_BARnaarHM.Size = new System.Drawing.Size(128, 46);
+            this.btn_BARnaarHM.Size = new System.Drawing.Size(111, 49);
             this.btn_BARnaarHM.TabIndex = 2;
             this.btn_BARnaarHM.Text = "Terug naar Hoofdmenu";
-            this.btn_BARnaarHM.UseVisualStyleBackColor = true;
+            this.btn_BARnaarHM.UseVisualStyleBackColor = false;
             this.btn_BARnaarHM.Click += new System.EventHandler(this.btn_BARnaarHM_Click);
             // 
             // btn_BestellingGereed

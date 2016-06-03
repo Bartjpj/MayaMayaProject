@@ -16,15 +16,14 @@ namespace WindowsFormsApplication1
     {
         protected override void OnLoad(EventArgs e) // is de verwijzing, niets veranderen AUB
         {
-            base.OnLoad(e);
-            this.Location = Owner.Location;
-            this.Size = Owner.Size;
+            //base.OnLoad(e);
+            //this.Location = Owner.Location;       //vragen aan ivo
+            //this.Size = Owner.Size;
         }
         public InlogSchermBediening()
         {
             InitializeComponent();
         }
-
 
         private void btn_INLOGGENnaarHM_Click(object sender, EventArgs e)
         {
@@ -51,8 +50,22 @@ namespace WindowsFormsApplication1
         {
             PersoneelsLidDAO personeelDatabaseActies = new PersoneelsLidDAO(); // maakt nieuwe instantie van personeelslidDAO aan.
             int inlogCode = txt_PersoneelsID_TextChanged(sender, e); //grijp de inlogcode van de inlogcode tekstbox
-            bool juisteCode = personeelDatabaseActies.haalPersoneelslid_IDTabelOp(inlogCode); // juistecode neemt boolwaarde van authenticatie aan (false is verkeerd, true is goed)
+            List<InlogSchermClass> inlogGegevens = personeelDatabaseActies.haalPersoneelslid_IDTabelOp(); // juistecode neemt boolwaarde van authenticatie aan (false is verkeerd, true is goed)
+            
+            bool juisteCode = false;
+            string naamGebruiker = "";
+            string functieGebruiker = "";
 
+            foreach (InlogSchermClass gebruiker in inlogGegevens)
+            {
+                if (gebruiker.code == inlogCode)
+                {
+                    juisteCode = true;
+                    naamGebruiker = gebruiker.naam;
+                    functieGebruiker = gebruiker.functie;
+                }
+            }
+            
 
 
 
@@ -60,10 +73,22 @@ namespace WindowsFormsApplication1
             //lbl_personeelsleden.Text = 
             //lbl_personeelsleden.Text = personeelsTabel.ToString();
 
-            if (juisteCode) // ga naar tafeloverzicht als het true is, geef een alert als het false.
+            if (juisteCode && functieGebruiker == "Bediening") // ga naar tafeloverzicht als het true is, geef een alert als het false.
             {
-                TafelOverzicht inloggen = new TafelOverzicht();
-                inloggen.Show();
+                TafelOverzicht tafelForm = new TafelOverzicht();
+                tafelForm.Show();
+                this.Hide();
+            }
+            else if (juisteCode && functieGebruiker == "Bar")
+            {
+                BarOverzicht barForm = new BarOverzicht(new BarOverzichtDAO());
+                barForm.Show();
+                this.Hide();
+            }
+            else if (juisteCode && functieGebruiker == "Keuken")
+            {
+                keukenBestellingOverzicht keukenForm = new keukenBestellingOverzicht(new keukenBestellingOverzichtDAO());
+                keukenForm.Show();
                 this.Hide();
             }
             else

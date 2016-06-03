@@ -41,13 +41,15 @@
             // 
             // btn_KeukenNaarHoofdmenu
             // 
+            this.btn_KeukenNaarHoofdmenu.BackColor = System.Drawing.Color.Maroon;
+            this.btn_KeukenNaarHoofdmenu.ForeColor = System.Drawing.Color.White;
             this.btn_KeukenNaarHoofdmenu.Location = new System.Drawing.Point(11, 11);
             this.btn_KeukenNaarHoofdmenu.Margin = new System.Windows.Forms.Padding(2);
             this.btn_KeukenNaarHoofdmenu.Name = "btn_KeukenNaarHoofdmenu";
-            this.btn_KeukenNaarHoofdmenu.Size = new System.Drawing.Size(125, 49);
+            this.btn_KeukenNaarHoofdmenu.Size = new System.Drawing.Size(111, 49);
             this.btn_KeukenNaarHoofdmenu.TabIndex = 1;
             this.btn_KeukenNaarHoofdmenu.Text = "Terug naar hoofdmenu";
-            this.btn_KeukenNaarHoofdmenu.UseVisualStyleBackColor = true;
+            this.btn_KeukenNaarHoofdmenu.UseVisualStyleBackColor = false;
             this.btn_KeukenNaarHoofdmenu.Click += new System.EventHandler(this.btn_KeukenNaarHoofdmenu_Click);
             // 
             // lbl_OpenstaandeBestellingenKeuken
@@ -62,7 +64,8 @@
             // 
             // btn_gereedKeuken
             // 
-            this.btn_gereedKeuken.BackColor = System.Drawing.Color.Chartreuse;
+            this.btn_gereedKeuken.BackColor = System.Drawing.Color.LimeGreen;
+            this.btn_gereedKeuken.ForeColor = System.Drawing.Color.Black;
             this.btn_gereedKeuken.Location = new System.Drawing.Point(602, 337);
             this.btn_gereedKeuken.Name = "btn_gereedKeuken";
             this.btn_gereedKeuken.Size = new System.Drawing.Size(146, 44);

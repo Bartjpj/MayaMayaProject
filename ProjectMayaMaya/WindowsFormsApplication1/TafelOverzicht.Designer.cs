@@ -185,17 +185,18 @@
             // 
             // btn_TAFELnaarHM
             // 
+            this.btn_TAFELnaarHM.BackColor = System.Drawing.Color.Maroon;
+            this.btn_TAFELnaarHM.ForeColor = System.Drawing.Color.White;
             this.btn_TAFELnaarHM.Location = new System.Drawing.Point(12, 12);
             this.btn_TAFELnaarHM.Name = "btn_TAFELnaarHM";
-            this.btn_TAFELnaarHM.Size = new System.Drawing.Size(157, 29);
+            this.btn_TAFELnaarHM.Size = new System.Drawing.Size(111, 49);
             this.btn_TAFELnaarHM.TabIndex = 10;
             this.btn_TAFELnaarHM.Text = "Terug naar Hoofdmenu";
-            this.btn_TAFELnaarHM.UseVisualStyleBackColor = true;
+            this.btn_TAFELnaarHM.UseVisualStyleBackColor = false;
             this.btn_TAFELnaarHM.Click += new System.EventHandler(this.btn_TAFELnaarHM_Click);
             // 
             // tm_tafel1
             // 
-            this.tm_tafel1.Enabled = true;
             this.tm_tafel1.Interval = 1000;
             this.tm_tafel1.Tick += new System.EventHandler(this.tm_tafel1_Tick);
             // 
@@ -214,7 +215,7 @@
             // 
             this.lbl_tijdtafel3.AutoSize = true;
             this.lbl_tijdtafel3.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_tijdtafel3.Location = new System.Drawing.Point(187, 211);
+            this.lbl_tijdtafel3.Location = new System.Drawing.Point(284, 211);
             this.lbl_tijdtafel3.Name = "lbl_tijdtafel3";
             this.lbl_tijdtafel3.Size = new System.Drawing.Size(76, 13);
             this.lbl_tijdtafel3.TabIndex = 14;
@@ -223,8 +224,8 @@
             // lnl_tijdtafel2
             // 
             this.lnl_tijdtafel2.AutoSize = true;
-            this.lnl_tijdtafel2.BackColor = System.Drawing.Color.LightSkyBlue;
-            this.lnl_tijdtafel2.Location = new System.Drawing.Point(401, 127);
+            this.lnl_tijdtafel2.BackColor = System.Drawing.Color.Transparent;
+            this.lnl_tijdtafel2.Location = new System.Drawing.Point(497, 136);
             this.lnl_tijdtafel2.Name = "lnl_tijdtafel2";
             this.lnl_tijdtafel2.Size = new System.Drawing.Size(76, 13);
             this.lnl_tijdtafel2.TabIndex = 15;
@@ -233,7 +234,7 @@
             // lbl_tijdtafel4
             // 
             this.lbl_tijdtafel4.AutoSize = true;
-            this.lbl_tijdtafel4.Location = new System.Drawing.Point(401, 211);
+            this.lbl_tijdtafel4.Location = new System.Drawing.Point(497, 211);
             this.lbl_tijdtafel4.Name = "lbl_tijdtafel4";
             this.lbl_tijdtafel4.Size = new System.Drawing.Size(76, 13);
             this.lbl_tijdtafel4.TabIndex = 16;
@@ -242,7 +243,7 @@
             // lbl_tijdtafel5
             // 
             this.lbl_tijdtafel5.AutoSize = true;
-            this.lbl_tijdtafel5.Location = new System.Drawing.Point(187, 286);
+            this.lbl_tijdtafel5.Location = new System.Drawing.Point(284, 286);
             this.lbl_tijdtafel5.Name = "lbl_tijdtafel5";
             this.lbl_tijdtafel5.Size = new System.Drawing.Size(76, 13);
             this.lbl_tijdtafel5.TabIndex = 17;
@@ -251,7 +252,7 @@
             // lbl_tijdtafel6
             // 
             this.lbl_tijdtafel6.AutoSize = true;
-            this.lbl_tijdtafel6.Location = new System.Drawing.Point(401, 286);
+            this.lbl_tijdtafel6.Location = new System.Drawing.Point(497, 286);
             this.lbl_tijdtafel6.Name = "lbl_tijdtafel6";
             this.lbl_tijdtafel6.Size = new System.Drawing.Size(76, 13);
             this.lbl_tijdtafel6.TabIndex = 18;
@@ -260,7 +261,7 @@
             // lbl_tijdtafel7
             // 
             this.lbl_tijdtafel7.AutoSize = true;
-            this.lbl_tijdtafel7.Location = new System.Drawing.Point(187, 360);
+            this.lbl_tijdtafel7.Location = new System.Drawing.Point(284, 360);
             this.lbl_tijdtafel7.Name = "lbl_tijdtafel7";
             this.lbl_tijdtafel7.Size = new System.Drawing.Size(76, 13);
             this.lbl_tijdtafel7.TabIndex = 19;
@@ -269,7 +270,7 @@
             // lbl_tijdtafel8
             // 
             this.lbl_tijdtafel8.AutoSize = true;
-            this.lbl_tijdtafel8.Location = new System.Drawing.Point(401, 360);
+            this.lbl_tijdtafel8.Location = new System.Drawing.Point(497, 360);
             this.lbl_tijdtafel8.Name = "lbl_tijdtafel8";
             this.lbl_tijdtafel8.Size = new System.Drawing.Size(76, 13);
             this.lbl_tijdtafel8.TabIndex = 20;
@@ -278,7 +279,7 @@
             // lbl_tijdtafel9
             // 
             this.lbl_tijdtafel9.AutoSize = true;
-            this.lbl_tijdtafel9.Location = new System.Drawing.Point(187, 440);
+            this.lbl_tijdtafel9.Location = new System.Drawing.Point(284, 440);
             this.lbl_tijdtafel9.Name = "lbl_tijdtafel9";
             this.lbl_tijdtafel9.Size = new System.Drawing.Size(76, 13);
             this.lbl_tijdtafel9.TabIndex = 21;
@@ -287,7 +288,7 @@
             // lbl_tijdtafel10
             // 
             this.lbl_tijdtafel10.AutoSize = true;
-            this.lbl_tijdtafel10.Location = new System.Drawing.Point(401, 440);
+            this.lbl_tijdtafel10.Location = new System.Drawing.Point(497, 440);
             this.lbl_tijdtafel10.Name = "lbl_tijdtafel10";
             this.lbl_tijdtafel10.Size = new System.Drawing.Size(76, 13);
             this.lbl_tijdtafel10.TabIndex = 22;
@@ -305,7 +306,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(569, 118);
+            this.button1.Location = new System.Drawing.Point(12, 193);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(52, 31);
             this.button1.TabIndex = 25;
@@ -315,16 +316,16 @@
             // 
             // listView_tafeloverzicht
             // 
-            this.listView_tafeloverzicht.Location = new System.Drawing.Point(500, 175);
+            this.listView_tafeloverzicht.Location = new System.Drawing.Point(12, 240);
             this.listView_tafeloverzicht.Name = "listView_tafeloverzicht";
-            this.listView_tafeloverzicht.Size = new System.Drawing.Size(243, 178);
+            this.listView_tafeloverzicht.Size = new System.Drawing.Size(68, 178);
             this.listView_tafeloverzicht.TabIndex = 26;
             this.listView_tafeloverzicht.UseCompatibleStateImageBehavior = false;
             // 
             // lbl_test
             // 
             this.lbl_test.AutoSize = true;
-            this.lbl_test.Location = new System.Drawing.Point(291, 102);
+            this.lbl_test.Location = new System.Drawing.Point(294, 136);
             this.lbl_test.Name = "lbl_test";
             this.lbl_test.Size = new System.Drawing.Size(0, 13);
             this.lbl_test.TabIndex = 27;
@@ -379,7 +380,6 @@
         private System.Windows.Forms.Button btn_Tafel9;
         private System.Windows.Forms.Button btn_Tafel10;
         private System.Windows.Forms.Button btn_TAFELnaarHM;
-        private System.Windows.Forms.Timer tm_tafel1;
         private System.Windows.Forms.Label lbl_tijdtafel1;
         private System.Windows.Forms.Label lbl_tijdtafel3;
         private System.Windows.Forms.Label lnl_tijdtafel2;
@@ -394,5 +394,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ListView listView_tafeloverzicht;
         private System.Windows.Forms.Label lbl_test;
+        public System.Windows.Forms.Timer tm_tafel1;
     }
 }

@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Timers;
 using System.Diagnostics;
 using System.Threading.Tasks;
 //using System.Timers.Timer;
@@ -14,13 +15,13 @@ namespace WindowsFormsApplication1
 {
     public partial class DinerKaart : Form
     {
-        DinerKaartDAO DinerKaartDAO;
-        List<DinerKaartClass> DinerKaartLijst = new List<DinerKaartClass>();
-        DinerKaartClass dinerKaartClass = new DinerKaartClass(0,0,"",0,0);
-        List<int> TotalebestellingLijst = new List<int>();
-        int i = 0;
+        MenuItemsDAO MenuItemsDAO;
+        List<MenuItemsClass> DinerKaartLijst = new List<MenuItemsClass>();
+        MenuItemsClass dinerKaartClass = new MenuItemsClass(0,0,"",0,0);
         
-
+        int i = 0;
+        bool starttimer = false;
+        
 
 
         protected override void OnLoad(EventArgs e) // is de verwijzing, niets veranderen AUB
@@ -32,18 +33,20 @@ namespace WindowsFormsApplication1
 
  
 
-        public DinerKaart(DinerKaartDAO DinerKaartDAO)
+        public DinerKaart(MenuItemsDAO DinerKaartDAO)
         {
             InitializeComponent();
 
-            this.DinerKaartDAO = DinerKaartDAO; // zet bestellingdao openbaar
+            this.MenuItemsDAO = DinerKaartDAO; // zet bestellingdao openbaar
 
-            foreach (DinerKaartClass dinerOverzicht in DinerKaartDAO.haalDinerKaart_TabelOp()) //Alle informatie die in de list staat wordt in de listview geschreven
+
+            foreach (MenuItemsClass dinerItem in DinerKaartDAO.haalDinerKaartOp(4,7)) //Alle informatie die in de list staat wordt in de listview geschreven
             {
 
-                ListViewItem lijstItem = new ListViewItem(dinerOverzicht.naam.ToString());
-                lijstItem.SubItems.Add(dinerOverzicht.prijs.ToString());
-                lijstItem.SubItems.Add(dinerOverzicht.voorraad.ToString());
+                ListViewItem lijstItem = new ListViewItem(dinerItem.naam.ToString());
+                lijstItem.SubItems.Add(dinerItem.prijs.ToString());
+                lijstItem.SubItems.Add(dinerItem.voorraad.ToString());
+                lijstItem.Tag = dinerItem;
                 listview_diner.Items.Add(lijstItem);
             }
         }
@@ -51,14 +54,12 @@ namespace WindowsFormsApplication1
         //listview_diner_SelectedIndexChanged
         private void listview_diner_SelectedIndexChanged(object sender, EventArgs e)
         {
-
-            
             ListView.SelectedListViewItemCollection SelectieBestellingItems = this.listview_diner.SelectedItems;
 
             foreach (ListViewItem BestellingItem in SelectieBestellingItems)
             {
                 
-                DinerKaartClass GeselecteerdeItem = (DinerKaartClass)BestellingItem.Tag;
+                MenuItemsClass GeselecteerdeItem = (MenuItemsClass)BestellingItem.Tag;
 
                 if (GeselecteerdeItem.voorraad < 1) //error
                 {
@@ -69,7 +70,7 @@ namespace WindowsFormsApplication1
                 GeselecteerdeItem.voorraad--;
                 int aantalBesteldeItems = int.Parse(BestellingItem.SubItems[2].Text);
                 aantalBesteldeItems--;
-                BestellingItem.SubItems[2].Text = string.Format("{0:00}", aantalBesteldeItems);
+                BestellingItem.SubItems[2].Text = aantalBesteldeItems.ToString();
 
                 ListViewItem locatie = listview_huidige_bestelling.FindItemWithText(GeselecteerdeItem.naam);
 
@@ -85,65 +86,18 @@ namespace WindowsFormsApplication1
                     listview_huidige_bestelling.Items.Add(bestelItem);
                     
                 }
-
+            }
             }
 
 
+        private void listview_huidige_bestelling_SelectedIndexChanged(object sender, EventArgs e)
+        {
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//                foreach (listviewitem kaartitem in listview_diner.selecteditems)
-//            {
-//                    // voeg een item toe aan de bestelling, wanneer dit item er al in zit moet er 1 bij aantal worden opgeteld.
-//                    //wanneer het item er niet in zit wordt deze nieuw aangemaakt en met 1 toegevoegd.
-////                    listviewitem aangepastitem = (listviewitem)item.clone(); //clone item die geselecteerd is
-//                    int meerderekerenbesteld = 1;
-//                    if (listview_huidige_bestelling.finditemwithtext(kaartitem.text).text == listview_diner.selecteditems.tostring()) 
-//                    {
-//                        listviewitem updateaantal = listview_diner.selecteditems[0];
-//                        updateaantal.subitems[0].text = meerderekerenbesteld++.tostring();
-
-
-//                    } else {
-//                    listviewitem bestelitem = new listviewitem(kaartitem.text); 
-//                    bestelitem.subitems.add(meerderekerenbesteld.tostring());
-//                    listview_huidige_bestelling.items.add(bestelitem);  //voegt het geselecteerde item toe aan de list van totalebestelling
-//                    }
-                    
-//            }
-            
         }
 
         private void btn_verwijderGerecht_Click(object sender, EventArgs e)
         {
-        //    for (int i = listbox_added_items.selectedindices.count - 1; i >= 0; i--)
-        //    {
-        //        listbox_added_items.items.removeat(listbox_added_items.selectedindices[i]);
-
-        //            foreach (dinerkaartclass dineroverzicht in dinerkaartdao.haaldinerkaart_tabelop())
-        //            {
-        //                if (listbox_added_items.tostring() == dineroverzicht.naam.tostring())
-        //                 {
-        //                         totalebestellinglijst.remove(dineroverzicht.menu_id); //slaat alle menu_id's op in een lijst, deze kan de bar makkelijk snappen.
-
-        //                 }
-
-        //            }
-
-        //    }
-
+            //listview_huidige_bestelling.Items.Clear();
         }
 
         private void btn_LUNCHnaarDRANKEN_Click(object sender, EventArgs e)
@@ -160,51 +114,30 @@ namespace WindowsFormsApplication1
             this.Hide();
         }
 
-            
-
-
         private void btn_stuurbestelling_Click(object sender, EventArgs e)
         {
+            
 
         }
-        // DIT IS DE TIMER, MOET NOG 1 DING FIXEN MET DE BUTTON
-        private void btn_stuurbestelling_Click(object sender, EventArgs e, TafelOverzicht btn_Tafel1, int tafelgetal, TafelOverzicht lbl_tijdtafel1, bool bestelling_gereed)
+
+        private void button1_Click(object sender, EventArgs e)
         {
-            //int min = 0;
-            //int sec = 0;
-            //int ms = 0;
-            //int tafelnr = tafelgetal;
+            starttimer = true;
+           // StartenTimer
+        }
+        public void StartenTimer(bool starttimer, TafelOverzicht tm_Tafel1)
+        {
+            if (starttimer == true)
+        {
+                tm_Tafel1.Enabled = true;
+            }
+        }
 
-            //if (tafelgetal == 1)
-            //{
-            //    Timer t1 = new Timer();
-            //    t1.Enabled = true;
-            //    t1.Start();
 
-            //    while (bestelling_gereed == false)
-            //    {
-            //        if (ms >= 10)
-            //        {
-            //            sec++;
-            //            ms = 0;
-            //        }
-            //        if (sec >= 1)
-            //        {
-            //            min++;
-            //            sec = 0;
-            //            lbl_tijdtafel1.Text = min.ToString();
-
-            //        }
-            //        if (min >= 5)
-            //        {
-            //            btn_Tafel1.BackColor = Color.Maroon;
-            //        }
-            //    }
-            //}
-
+        // DIT IS DE TIMER, MOET NOG 1 DING FIXEN MET DE BUTTON
 
     }
-}
+
 }
 
 

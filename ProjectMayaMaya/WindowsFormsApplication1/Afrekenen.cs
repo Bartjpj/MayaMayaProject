@@ -25,8 +25,8 @@ namespace WindowsFormsApplication1
 
         private void BTN_AFREKENENnaarTAFELOVERZICHT_Click(object sender, EventArgs e)
         {
-            TafelOverzicht openTafelOverzicht = new TafelOverzicht();
-            openTafelOverzicht.Show(this);
+            KiesOpname openKiesOpname = new KiesOpname();
+            openKiesOpname.Show(this);
             this.Hide();
         }
     }

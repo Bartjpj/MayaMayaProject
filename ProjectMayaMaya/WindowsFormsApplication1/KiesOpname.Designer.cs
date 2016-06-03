@@ -67,7 +67,7 @@
             this.btn_KIESOPNnaarTAFELOVERZICHT.ForeColor = System.Drawing.Color.White;
             this.btn_KIESOPNnaarTAFELOVERZICHT.Location = new System.Drawing.Point(12, 12);
             this.btn_KIESOPNnaarTAFELOVERZICHT.Name = "btn_KIESOPNnaarTAFELOVERZICHT";
-            this.btn_KIESOPNnaarTAFELOVERZICHT.Size = new System.Drawing.Size(93, 49);
+            this.btn_KIESOPNnaarTAFELOVERZICHT.Size = new System.Drawing.Size(111, 49);
             this.btn_KIESOPNnaarTAFELOVERZICHT.TabIndex = 2;
             this.btn_KIESOPNnaarTAFELOVERZICHT.Text = "Terug naar Tafeloverzicht";
             this.btn_KIESOPNnaarTAFELOVERZICHT.UseVisualStyleBackColor = false;

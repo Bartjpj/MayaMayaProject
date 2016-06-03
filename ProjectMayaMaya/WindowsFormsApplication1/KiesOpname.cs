@@ -46,6 +46,7 @@ namespace WindowsFormsApplication1
             //this.Show();
             this.DialogResult = DialogResult.OK;
             this.Hide();
+
         }
     }
 }

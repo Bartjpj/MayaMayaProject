@@ -57,7 +57,7 @@
             // 
             this.lbl_klaargemeld.AutoSize = true;
             this.lbl_klaargemeld.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_klaargemeld.Location = new System.Drawing.Point(7, 59);
+            this.lbl_klaargemeld.Location = new System.Drawing.Point(7, 62);
             this.lbl_klaargemeld.Name = "lbl_klaargemeld";
             this.lbl_klaargemeld.Size = new System.Drawing.Size(144, 25);
             this.lbl_klaargemeld.TabIndex = 0;
@@ -84,7 +84,7 @@
             // lbl_klaargemeldetafel
             // 
             this.lbl_klaargemeldetafel.AutoSize = true;
-            this.lbl_klaargemeldetafel.Location = new System.Drawing.Point(91, 84);
+            this.lbl_klaargemeldetafel.Location = new System.Drawing.Point(91, 87);
             this.lbl_klaargemeldetafel.Name = "lbl_klaargemeldetafel";
             this.lbl_klaargemeldetafel.Size = new System.Drawing.Size(60, 13);
             this.lbl_klaargemeldetafel.TabIndex = 3;
@@ -260,12 +260,14 @@
             // 
             // BTN_AFREKENENnaarTAFELOVERZICHT
             // 
-            this.BTN_AFREKENENnaarTAFELOVERZICHT.Location = new System.Drawing.Point(12, 18);
+            this.BTN_AFREKENENnaarTAFELOVERZICHT.BackColor = System.Drawing.Color.Maroon;
+            this.BTN_AFREKENENnaarTAFELOVERZICHT.ForeColor = System.Drawing.Color.White;
+            this.BTN_AFREKENENnaarTAFELOVERZICHT.Location = new System.Drawing.Point(12, 12);
             this.BTN_AFREKENENnaarTAFELOVERZICHT.Name = "BTN_AFREKENENnaarTAFELOVERZICHT";
-            this.BTN_AFREKENENnaarTAFELOVERZICHT.Size = new System.Drawing.Size(101, 36);
+            this.BTN_AFREKENENnaarTAFELOVERZICHT.Size = new System.Drawing.Size(111, 49);
             this.BTN_AFREKENENnaarTAFELOVERZICHT.TabIndex = 21;
             this.BTN_AFREKENENnaarTAFELOVERZICHT.Text = "Terug naar Tafeloverzicht";
-            this.BTN_AFREKENENnaarTAFELOVERZICHT.UseVisualStyleBackColor = true;
+            this.BTN_AFREKENENnaarTAFELOVERZICHT.UseVisualStyleBackColor = false;
             this.BTN_AFREKENENnaarTAFELOVERZICHT.Click += new System.EventHandler(this.BTN_AFREKENENnaarTAFELOVERZICHT_Click);
             // 
             // btn_printrekening
