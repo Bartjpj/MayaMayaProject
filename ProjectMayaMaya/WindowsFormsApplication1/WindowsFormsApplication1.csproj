@@ -54,11 +54,11 @@
     </Compile>
     <Compile Include="BarOverzichtClass.cs" />
     <Compile Include="BarOverzichtDAO.cs" />
-    <Compile Include="DinerKaart.cs">
+    <Compile Include="BestellingOpnemen.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DinerKaart.Designer.cs">
-      <DependentUpon>DinerKaart.cs</DependentUpon>
+    <Compile Include="BestellingOpnemen.Designer.cs">
+      <DependentUpon>BestellingOpnemen.cs</DependentUpon>
     </Compile>
     <Compile Include="MenuItemsClass.cs" />
     <Compile Include="MenuItemsDAO.cs" />
@@ -162,8 +162,8 @@
     <EmbeddedResource Include="BestellingMenu.resx">
       <DependentUpon>BestellingMenu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DinerKaart.resx">
-      <DependentUpon>DinerKaart.cs</DependentUpon>
+    <EmbeddedResource Include="BestellingOpnemen.resx">
+      <DependentUpon>BestellingOpnemen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DrankenKaart.resx">
       <DependentUpon>DrankenKaart.cs</DependentUpon>

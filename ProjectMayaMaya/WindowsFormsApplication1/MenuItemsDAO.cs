@@ -39,21 +39,11 @@ namespace WindowsFormsApplication1
             return DinerKaartTable;
         }
 
-       public List<MenuItemsClass> haalDinerKaartOp(int groterDan, int kleinerDan)
+       public List<MenuItemsClass> haalDeelKaartOp(int groterDan, int kleinerDan)
        {
-           List<MenuItemsClass> DinerKaart = haalMenuItemsOp(groterDan, kleinerDan);
-           return DinerKaart;
+           List<MenuItemsClass> deelKaart = haalMenuItemsOp(groterDan, kleinerDan);
+           return deelKaart;
        }
-
-        //public List<MenuItemsClass> haalLunchKaartOp()
-       //{
-
-       //}
-
-        //public List<MenuItemsClass> haalDrankenKaartOp()
-       //{
-
-       //}
 
 
     }

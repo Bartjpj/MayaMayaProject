@@ -12,7 +12,7 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApplication1
 {
-    public partial class DinerKaart : Form
+    public partial class BestellingOpnemen : Form
     {
         MenuItemsDAO MenuItemsDAO;
         List<MenuItemsClass> DinerKaartLijst = new List<MenuItemsClass>();
@@ -30,14 +30,16 @@ namespace WindowsFormsApplication1
 
 
 
-        public DinerKaart(MenuItemsDAO DinerKaartDAO)
+        public BestellingOpnemen(MenuItemsDAO DinerKaartDAO)
         {
             InitializeComponent();
 
             this.MenuItemsDAO = DinerKaartDAO; // zet bestellingdao openbaar
 
 
-            foreach (MenuItemsClass dinerItem in DinerKaartDAO.haalDinerKaartOp(4, 7)) //Alle informatie die in de list staat wordt in de listview geschreven
+            
+
+            foreach (MenuItemsClass dinerItem in DinerKaartDAO.haalDeelKaartOp(4, 7)) //Alle informatie die in de list staat wordt in de listview geschreven
             {
 
                 ListViewItem lijstItem = new ListViewItem(dinerItem.naam.ToString());
@@ -65,15 +67,13 @@ namespace WindowsFormsApplication1
                     return;
                 }
                 GeselecteerdeItem.voorraad--;
-                int aantalBesteldeItems = int.Parse(BestellingItem.SubItems[2].Text);
-                aantalBesteldeItems--;
-                BestellingItem.SubItems[2].Text = aantalBesteldeItems.ToString();
+                BestellingItem.SubItems[2].Text = (int.Parse(BestellingItem.SubItems[2].Text) - 1).ToString();
 
-                ListViewItem locatie = listview_huidige_bestelling.FindItemWithText(GeselecteerdeItem.naam);
+                ListViewItem isItemAlEensBesteld = listview_huidige_bestelling.FindItemWithText(GeselecteerdeItem.naam);
 
-                if (locatie != null)
+                if (isItemAlEensBesteld != null)
                 {
-                    locatie.SubItems[1].Text = (int.Parse(locatie.SubItems[1].Text) + 1).ToString();
+                    isItemAlEensBesteld.SubItems[1].Text = (int.Parse(isItemAlEensBesteld.SubItems[1].Text) + 1).ToString();
                     ListViewItem selecteerbareRegel = listview_diner.FindItemWithText(GeselecteerdeItem.naam);
                 }
                 else
@@ -81,7 +81,6 @@ namespace WindowsFormsApplication1
                     ListViewItem bestelItem = new ListViewItem(GeselecteerdeItem.naam);
                     bestelItem.SubItems.Add("1");
                     listview_huidige_bestelling.Items.Add(bestelItem);
-
                 }
             }
         }
@@ -89,6 +88,9 @@ namespace WindowsFormsApplication1
 
         private void listview_huidige_bestelling_SelectedIndexChanged(object sender, EventArgs e)
         {
+
+
+
 
         }
 
