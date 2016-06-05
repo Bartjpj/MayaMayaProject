@@ -18,14 +18,14 @@ namespace WindowsFormsApplication1
         List<MenuItemsClass> DinerKaartLijst = new List<MenuItemsClass>();
         MenuItemsClass dinerKaartClass = new MenuItemsClass(0, 0, "", 0, 0);
 
-        bool starttimer = false;
-        TafelOverzicht tm_tafel1;
+
 
         protected override void OnLoad(EventArgs e) // is de verwijzing, niets veranderen AUB
         {
             base.OnLoad(e);
             this.Location = Owner.Location;
             this.Size = Owner.Size;
+
         }
 
 
@@ -119,18 +119,18 @@ namespace WindowsFormsApplication1
 
         }
 
-        public void button1_Click(object sender, EventArgs e)
-        {
-            //Timer MyTimer = new Timer();
-            //MyTimer.Interval = (10 * 1000);
-            //MyTimer.Tick += new EventHandler(MyTimer_Tick);
-            //MyTimer.Start();
+        bool start = false;
         
+        public void startenTimer()
+        {
+            start = true;
         }
 
-
-        // DIT IS DE TIMER, MOET NOG 1 DING FIXEN MET DE BUTTON
-
+        public void button1_Click(object sender, EventArgs e)
+        {
+            startenTimer();
+        }
+ 
     }
 
 }
