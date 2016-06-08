@@ -57,24 +57,23 @@ namespace WindowsFormsApplication1
         //-----------------TAFELS--------------------------------:
         // BestellingMenu bestellingmenuActiveren = new BestellingMenu();
 
-
+        int tafelgetal;
         //1
         public void btn_Tafel1_Click(object sender, EventArgs e)
         {
-            //tm_tafel1.Start();
             maakTimer1();
-
+            tafelgetal = 1;
         }
         public void maakTimer1()
         {
             KiesOpname openKiesopname = new KiesOpname();
             openKiesopname.Show(this);
             
-            //maak een timer aan.
-            System.Windows.Forms.Timer t1 = new System.Windows.Forms.Timer();
-            t1.Interval = 1000;
-            t1.Tick += new EventHandler(t1_Tick);
-            //t1.Start();
+            ////maak een timer aan.
+            //System.Windows.Forms.Timer t1 = new System.Windows.Forms.Timer();
+            //t1.Interval = 1000;
+            //t1.Tick += new EventHandler(t1_Tick);
+            ////t1.Start();
         }
 
         public void startTimerEcht(bool start, System.Windows.Forms.Timer t1)
@@ -84,20 +83,7 @@ namespace WindowsFormsApplication1
                 t1.Start();
             }
         }
-        public void t1_Tick(object sender, EventArgs e)
-        {
-            i++;
-            btn_Tafel1.BackColor = Color.LightSkyBlue;
-            min++;
-            lbl_test.Text = min.ToString() + ": Min";
 
-            if (min >= 10)
-            {
-                btn_Tafel1.BackColor = Color.IndianRed;
-                btn_Tafel1.ForeColor = Color.White;
-            }
-
-        }
         //2
         public void btn_Tafel2_Click(object sender, EventArgs e)
         {
@@ -173,16 +159,14 @@ namespace WindowsFormsApplication1
         //zetten van int voor de timer
 
 
-        int i = 0;
-        int min;
-        //1
-
-
         public void lbl_tijdtafel1_Click(object sender, EventArgs e)
         {
         }
 
+        public void Tafel1kleur(bool bezett1, bool tafelkleurt1)
+        {
 
+        }
 
     }
 }

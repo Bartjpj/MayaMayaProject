@@ -174,7 +174,38 @@ namespace WindowsFormsApplication1
 
         public void button1_Click(object sender, EventArgs e)
         {
-            startenTimer();
+            
+        }
+
+        public void StartDeTimers(int tafelgetal)
+        {
+            while(tafelgetal == 1)
+            {
+                System.Windows.Forms.Timer t1 = new System.Windows.Forms.Timer();
+                t1.Interval = 1000;
+                t1.Tick += new EventHandler(t1_Tick);
+            }
+        }
+        int mint1;
+        bool bezett1 = false;
+        bool tafelkleurt1 = false;
+        public void t1_Tick(object sender, EventArgs e)
+        {
+            bezett1 = true;
+            mint1++;
+            string tekst = mint1.ToString() + ": Min";
+
+            if (mint1 >= 10)
+            {
+                //btn_Tafel1.BackColor = Color.IndianRed;
+                //btn_Tafel1.ForeColor = Color.White;
+                tafelkleurt1 = true;
+            }
+
+        }
+        private void btn_stuurbestelling_Click_1(object sender, EventArgs e)
+        {
+
         }
  
     }
