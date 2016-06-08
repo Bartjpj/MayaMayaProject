@@ -73,8 +73,8 @@ namespace WindowsFormsApplication1
 
         private void btn_dinerkaart_Click(object sender, EventArgs e)
         {
-            MenuItemsDAO dinerkaart = new MenuItemsDAO();
-            DinerKaart openDinerkaart = new DinerKaart(dinerkaart);
+            BestellingOpnemenDAO dinerkaart = new BestellingOpnemenDAO();
+            BestellingOpnemen openDinerkaart = new BestellingOpnemen(dinerkaart);
             openDinerkaart.Show(this);
             this.Hide();
         }

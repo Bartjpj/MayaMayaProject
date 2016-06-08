@@ -22,6 +22,8 @@ namespace WindowsFormsApplication1
         TafelOverzichtDAO TafelOverzichtDAO;
         List<TafelOverzichtClass> tafellijst = new List<TafelOverzichtClass>();
 
+        BestellingOpnemen start;
+
         public TafelOverzicht()
         {
             InitializeComponent();
@@ -60,6 +62,11 @@ namespace WindowsFormsApplication1
         public void btn_Tafel1_Click(object sender, EventArgs e)
         {
             //tm_tafel1.Start();
+            maakTimer1();
+
+        }
+        public void maakTimer1()
+        {
             KiesOpname openKiesopname = new KiesOpname();
             openKiesopname.Show(this);
             
@@ -67,9 +74,16 @@ namespace WindowsFormsApplication1
             System.Windows.Forms.Timer t1 = new System.Windows.Forms.Timer();
             t1.Interval = 1000;
             t1.Tick += new EventHandler(t1_Tick);
-            t1.Start();
+            //t1.Start();
         }
 
+        public void startTimerEcht(bool start, System.Windows.Forms.Timer t1)
+        {
+            if (start == true)
+            {
+                t1.Start();
+            }
+        }
         public void t1_Tick(object sender, EventArgs e)
         {
             i++;
