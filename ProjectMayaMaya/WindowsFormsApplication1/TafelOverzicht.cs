@@ -22,7 +22,7 @@ namespace WindowsFormsApplication1
         TafelOverzichtDAO TafelOverzichtDAO;
         List<TafelOverzichtClass> tafellijst = new List<TafelOverzichtClass>();
 
-        DinerKaart start;
+        BestellingOpnemen start;
 
         public TafelOverzicht()
         {

@@ -8,9 +8,11 @@ using System.Threading.Tasks;
 
 namespace WindowsFormsApplication1
 {
-   public class MenuItemsDAO
+   public class BestellingOpnemenDAO
     {
-        private List<MenuItemsClass> haalMenuItemsOp(int groterDan, int kleinerDan) // deze methode haalt de gegevens op voor het BestellingMenu overzicht
+
+
+        public List<MenuItemsClass> haalMenuItemsOp(int categorie) // deze methode haalt de gegevens op voor het BestellingMenu overzicht
         {
             string connString = ConfigurationManager
             .ConnectionStrings["BestellingConnectionStringSQL"]
@@ -18,7 +20,7 @@ namespace WindowsFormsApplication1
             SqlConnection conn = new SqlConnection(connString);
             conn.Open();
 
-            SqlCommand command = new SqlCommand("SELECT * FROM Menuitem WHERE categorie_id >= " + groterDan + " AND categorie_id <= " + kleinerDan, conn); // deze query zorgt ervoor dat we alle data hebben die we bij BestellingMenu nodig hebben 
+            SqlCommand command = new SqlCommand("SELECT * FROM Menuitem WHERE categorie_id = " + categorie, conn); // deze query zorgt ervoor dat we alle data hebben die we bij BestellingMenu nodig hebben 
             SqlDataReader reader = command.ExecuteReader();
 
             List<MenuItemsClass> DinerKaartTable = new List<MenuItemsClass>();
@@ -39,11 +41,62 @@ namespace WindowsFormsApplication1
             return DinerKaartTable;
         }
 
-       public List<MenuItemsClass> haalDeelKaartOp(int groterDan, int kleinerDan)
-       {
-           List<MenuItemsClass> deelKaart = haalMenuItemsOp(groterDan, kleinerDan);
-           return deelKaart;
-       }
+        public List<MenukaartClass> haalKaartenOp() // deze methode haalt de gegevens op voor het BestellingMenu overzicht
+        {
+            string connString = ConfigurationManager
+            .ConnectionStrings["BestellingConnectionStringSQL"]
+            .ConnectionString;
+            SqlConnection conn = new SqlConnection(connString);
+            conn.Open();
+
+            SqlCommand command = new SqlCommand("SELECT * FROM Menukaart", conn); // deze query zorgt ervoor dat we alle data hebben die we bij BestellingMenu nodig hebben 
+            SqlDataReader reader = command.ExecuteReader();
+
+            List<MenukaartClass> KaartenTable = new List<MenukaartClass>();
+
+            while (reader.Read())
+            {
+                int kaart_id = (int)reader["kaart_id"];
+                string naam = (string)reader["naam"];
+
+                MenukaartClass KaartenDAO = new MenukaartClass(kaart_id, naam);
+                KaartenTable.Add(KaartenDAO);
+            }
+
+            conn.Close();
+            return KaartenTable;
+        }
+
+
+        public List<MenucategorieClass> haalCategorieOp(int kaart) // deze methode haalt de gegevens op voor het BestellingMenu overzicht
+        {
+            string connString = ConfigurationManager
+            .ConnectionStrings["BestellingConnectionStringSQL"]
+            .ConnectionString;
+            SqlConnection conn = new SqlConnection(connString);
+            conn.Open();
+
+            SqlCommand command = new SqlCommand("SELECT categorie_id, kaart_id, naam FROM Menucategorie WHERE kaart_id = " + kaart, conn); // deze query zorgt ervoor dat we alle data hebben die we bij BestellingMenu nodig hebben 
+            SqlDataReader reader = command.ExecuteReader();
+
+            List<MenucategorieClass> CategorieTable = new List<MenucategorieClass>();
+
+            while (reader.Read())
+            {
+                int categorie_id = (int)reader["categorie_id"];
+                int kaart_id = (int)reader["kaart_id"];
+                string naam = (string)reader["naam"];
+
+                MenucategorieClass CategorieDAO = new MenucategorieClass(categorie_id, kaart_id, naam);
+                CategorieTable.Add(CategorieDAO);
+            }
+
+            conn.Close();
+            return CategorieTable;
+        }
+
+
+
 
 
     }

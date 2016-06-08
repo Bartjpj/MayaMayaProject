@@ -14,9 +14,8 @@ namespace WindowsFormsApplication1
 {
     public partial class BestellingOpnemen : Form
     {
-        MenuItemsDAO MenuItemsDAO;
+        BestellingOpnemenDAO MenuItemsDAO;
         List<MenuItemsClass> DinerKaartLijst = new List<MenuItemsClass>();
-        MenuItemsClass dinerKaartClass = new MenuItemsClass(0, 0, "", 0, 0);
 
 
 
@@ -25,32 +24,79 @@ namespace WindowsFormsApplication1
             base.OnLoad(e);
             this.Location = Owner.Location;
             this.Size = Owner.Size;
-
         }
 
 
 
-        public BestellingOpnemen(MenuItemsDAO DinerKaartDAO)
+        public BestellingOpnemen(BestellingOpnemenDAO DinerKaartDAO)
         {
             InitializeComponent();
 
             this.MenuItemsDAO = DinerKaartDAO; // zet bestellingdao openbaar
 
+            List<MenukaartClass> kaarten = this.MenuItemsDAO.haalKaartenOp();
 
-            
-
-            foreach (MenuItemsClass dinerItem in DinerKaartDAO.haalDeelKaartOp(4, 7)) //Alle informatie die in de list staat wordt in de listview geschreven
+            foreach (MenukaartClass kaart in kaarten) // maak kaartbuttons aan en zet deze neer in de flowlayout
             {
-
-                ListViewItem lijstItem = new ListViewItem(dinerItem.naam.ToString());
-                lijstItem.SubItems.Add(dinerItem.prijs.ToString());
-                lijstItem.SubItems.Add(dinerItem.voorraad.ToString());
-                lijstItem.Tag = dinerItem;
-                listview_diner.Items.Add(lijstItem);
+                Button btn = new Button();
+                btn.Text = kaart.naam;
+                btn.Tag = kaart;
+                btn.Size = new Size(221, 49);
+                btn.Click += new System.EventHandler(this.btn_kaartCategorie_Click);
+                flow_MenuKaart.Controls.Add(btn);
             }
         }
 
-        //listview_diner_SelectedIndexChanged
+        private void btn_kaartCategorie_Click(object sender, EventArgs e) // zet alle categoriebuttons neer, wanneer er op geklikt wordt worden de menuitems weergegeven
+        {
+            Button b = (Button)sender;
+            MenukaartClass kaart = (MenukaartClass)b.Tag;
+
+            flow_menuCategorie.Controls.Clear();
+            List<MenucategorieClass> categorieen = MenuItemsDAO.haalCategorieOp(kaart.kaart_id);
+
+            foreach (MenucategorieClass categorie in categorieen)
+            {
+                Button btn = new Button();
+                btn.Text = categorie.naam;
+                btn.Tag = categorie;
+                btn.Size = new Size(150, 49);
+                btn.Click += new System.EventHandler(this.btn_categorie_Click);
+                flow_menuCategorie.Controls.Add(btn);
+            }
+
+        }
+
+        private void btn_categorie_Click(object sender, EventArgs e) // geeft alle menuitems van de menucategorie weer. Hierbij wordt ook gelet op het al bestelde aantal items.
+        {
+            Button b = (Button)sender;
+            MenucategorieClass categorie = (MenucategorieClass)b.Tag;
+
+            listview_diner.Items.Clear();
+
+            List<MenuItemsClass> items = MenuItemsDAO.haalMenuItemsOp(categorie.categorie_id);
+
+            foreach (MenuItemsClass item in items)
+            {
+                
+                ListViewItem isGerechtAlBesteld = listview_huidige_bestelling.FindItemWithText(item.naam);
+                if (isGerechtAlBesteld != null) //wanneer er al een gerecht is besteld wordt het aantal van de hoeveelheid besteldeitems van de voorraad die nog over is gehaald
+                {
+                    BesteldeItemClass besteldeItem = (BesteldeItemClass)isGerechtAlBesteld.Tag;
+                    int besteldAantal = besteldeItem.aantal;
+                    item.voorraad = item.voorraad - besteldAantal;
+                }
+
+                ListViewItem lijstItem = new ListViewItem(item.naam.ToString());
+                lijstItem.SubItems.Add(item.prijs.ToString());
+                lijstItem.SubItems.Add(item.voorraad.ToString());
+                lijstItem.Tag = item;
+                listview_diner.Items.Add(lijstItem);
+
+            }
+        }
+
+
         private void listview_diner_SelectedIndexChanged(object sender, EventArgs e)
         {
             ListView.SelectedListViewItemCollection SelectieBestellingItems = this.listview_diner.SelectedItems;
@@ -60,7 +106,7 @@ namespace WindowsFormsApplication1
 
                 MenuItemsClass GeselecteerdeItem = (MenuItemsClass)BestellingItem.Tag;
 
-                if (GeselecteerdeItem.voorraad < 1) //error
+                if (GeselecteerdeItem.voorraad < 1)
                 {
                     NietOpVoorraadAlert itemNietOpVoorraad = new NietOpVoorraadAlert();
                     itemNietOpVoorraad.Show(this);
