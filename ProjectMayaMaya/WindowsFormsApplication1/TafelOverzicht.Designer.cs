@@ -223,11 +223,10 @@
             // 
             this.lbl_tijdtafel3.AutoSize = true;
             this.lbl_tijdtafel3.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_tijdtafel3.Location = new System.Drawing.Point(284, 211);
+            this.lbl_tijdtafel3.Location = new System.Drawing.Point(284, 215);
             this.lbl_tijdtafel3.Name = "lbl_tijdtafel3";
-            this.lbl_tijdtafel3.Size = new System.Drawing.Size(76, 13);
+            this.lbl_tijdtafel3.Size = new System.Drawing.Size(0, 13);
             this.lbl_tijdtafel3.TabIndex = 14;
-            this.lbl_tijdtafel3.Text = "BezettingsTijd:";
             // 
             // lnl_tijdtafel2
             // 
@@ -235,72 +234,64 @@
             this.lnl_tijdtafel2.BackColor = System.Drawing.Color.Transparent;
             this.lnl_tijdtafel2.Location = new System.Drawing.Point(497, 136);
             this.lnl_tijdtafel2.Name = "lnl_tijdtafel2";
-            this.lnl_tijdtafel2.Size = new System.Drawing.Size(76, 13);
+            this.lnl_tijdtafel2.Size = new System.Drawing.Size(0, 13);
             this.lnl_tijdtafel2.TabIndex = 15;
-            this.lnl_tijdtafel2.Text = "BezettingsTijd:";
             // 
             // lbl_tijdtafel4
             // 
             this.lbl_tijdtafel4.AutoSize = true;
             this.lbl_tijdtafel4.Location = new System.Drawing.Point(497, 215);
             this.lbl_tijdtafel4.Name = "lbl_tijdtafel4";
-            this.lbl_tijdtafel4.Size = new System.Drawing.Size(76, 13);
+            this.lbl_tijdtafel4.Size = new System.Drawing.Size(0, 13);
             this.lbl_tijdtafel4.TabIndex = 16;
-            this.lbl_tijdtafel4.Text = "BezettingsTijd:";
             // 
             // lbl_tijdtafel5
             // 
             this.lbl_tijdtafel5.AutoSize = true;
             this.lbl_tijdtafel5.Location = new System.Drawing.Point(284, 286);
             this.lbl_tijdtafel5.Name = "lbl_tijdtafel5";
-            this.lbl_tijdtafel5.Size = new System.Drawing.Size(76, 13);
+            this.lbl_tijdtafel5.Size = new System.Drawing.Size(0, 13);
             this.lbl_tijdtafel5.TabIndex = 17;
-            this.lbl_tijdtafel5.Text = "BezettingsTijd:";
             // 
             // lbl_tijdtafel6
             // 
             this.lbl_tijdtafel6.AutoSize = true;
             this.lbl_tijdtafel6.Location = new System.Drawing.Point(497, 286);
             this.lbl_tijdtafel6.Name = "lbl_tijdtafel6";
-            this.lbl_tijdtafel6.Size = new System.Drawing.Size(76, 13);
+            this.lbl_tijdtafel6.Size = new System.Drawing.Size(0, 13);
             this.lbl_tijdtafel6.TabIndex = 18;
-            this.lbl_tijdtafel6.Text = "BezettingsTijd:";
             // 
             // lbl_tijdtafel7
             // 
             this.lbl_tijdtafel7.AutoSize = true;
             this.lbl_tijdtafel7.Location = new System.Drawing.Point(284, 360);
             this.lbl_tijdtafel7.Name = "lbl_tijdtafel7";
-            this.lbl_tijdtafel7.Size = new System.Drawing.Size(76, 13);
+            this.lbl_tijdtafel7.Size = new System.Drawing.Size(0, 13);
             this.lbl_tijdtafel7.TabIndex = 19;
-            this.lbl_tijdtafel7.Text = "BezettingsTijd:";
             // 
             // lbl_tijdtafel8
             // 
             this.lbl_tijdtafel8.AutoSize = true;
             this.lbl_tijdtafel8.Location = new System.Drawing.Point(497, 360);
             this.lbl_tijdtafel8.Name = "lbl_tijdtafel8";
-            this.lbl_tijdtafel8.Size = new System.Drawing.Size(76, 13);
+            this.lbl_tijdtafel8.Size = new System.Drawing.Size(0, 13);
             this.lbl_tijdtafel8.TabIndex = 20;
-            this.lbl_tijdtafel8.Text = "BezettingsTijd:";
             // 
             // lbl_tijdtafel9
             // 
             this.lbl_tijdtafel9.AutoSize = true;
             this.lbl_tijdtafel9.Location = new System.Drawing.Point(284, 440);
             this.lbl_tijdtafel9.Name = "lbl_tijdtafel9";
-            this.lbl_tijdtafel9.Size = new System.Drawing.Size(76, 13);
+            this.lbl_tijdtafel9.Size = new System.Drawing.Size(0, 13);
             this.lbl_tijdtafel9.TabIndex = 21;
-            this.lbl_tijdtafel9.Text = "BezettingsTijd:";
             // 
             // lbl_tijdtafel10
             // 
             this.lbl_tijdtafel10.AutoSize = true;
             this.lbl_tijdtafel10.Location = new System.Drawing.Point(497, 440);
             this.lbl_tijdtafel10.Name = "lbl_tijdtafel10";
-            this.lbl_tijdtafel10.Size = new System.Drawing.Size(76, 13);
+            this.lbl_tijdtafel10.Size = new System.Drawing.Size(0, 13);
             this.lbl_tijdtafel10.TabIndex = 22;
-            this.lbl_tijdtafel10.Text = "BezettingsTijd:";
             // 
             // lbl_Kiestafel
             // 
@@ -323,7 +314,7 @@
             // lbl_tijd
             // 
             this.lbl_tijd.AutoSize = true;
-            this.lbl_tijd.Location = new System.Drawing.Point(292, 121);
+            this.lbl_tijd.Location = new System.Drawing.Point(284, 123);
             this.lbl_tijd.Name = "lbl_tijd";
             this.lbl_tijd.Size = new System.Drawing.Size(27, 13);
             this.lbl_tijd.TabIndex = 28;
@@ -341,7 +332,7 @@
             // lbl_tijd3
             // 
             this.lbl_tijd3.AutoSize = true;
-            this.lbl_tijd3.Location = new System.Drawing.Point(292, 198);
+            this.lbl_tijd3.Location = new System.Drawing.Point(284, 202);
             this.lbl_tijd3.Name = "lbl_tijd3";
             this.lbl_tijd3.Size = new System.Drawing.Size(27, 13);
             this.lbl_tijd3.TabIndex = 30;
@@ -359,7 +350,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(294, 273);
+            this.label1.Location = new System.Drawing.Point(284, 273);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(27, 13);
             this.label1.TabIndex = 32;
@@ -377,7 +368,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(294, 347);
+            this.label3.Location = new System.Drawing.Point(284, 347);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(27, 13);
             this.label3.TabIndex = 34;
@@ -395,7 +386,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(294, 427);
+            this.label5.Location = new System.Drawing.Point(284, 427);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(27, 13);
             this.label5.TabIndex = 36;

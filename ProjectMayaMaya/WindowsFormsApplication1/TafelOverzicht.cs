@@ -197,74 +197,83 @@ namespace WindowsFormsApplication1
         {
 
         }
-        
+
         //---------------TIMERS EN MAKEN VAN METHODES-------------------------:
         int min;
-        private void maakTimer1() // maken timer 1
+        BestellingOpnemen bestellingOpnemen;
+        delegate void SetTextCallback(string text);
+        public void maakTimer1() // maken timer 1
         {
-            System.Windows.Forms.Timer t1 = new System.Windows.Forms.Timer();
+            //System.Windows.Forms.Timer t1 = new System.Windows.Forms.Timer();
+
+            System.Timers.Timer t1 = new System.Timers.Timer();
             t1.Interval = 1000;                             //1000 (ms) is 1 seconde, als je min wilt, zet dan op 10000 ms
-            t1.Tick += new EventHandler(t1_Tick);
+            t1.Elapsed += new ElapsedEventHandler(t1_Tick);
             t1.Enabled = true;
         }
-        
-        private void t1_Tick(object sender, EventArgs e)
+
+        public void t1_Tick(object sender, EventArgs e)
         {
 
             btn_Tafel1.BackColor = Color.LightSkyBlue;
 
-            min++;
-            lbl_test1.Text = min + " Min";       //zetten tijd van de timer, dit is MINUTEN maar interval is gezet op SECONDEN
-
+            min++;                  //zetten tijd van de timer, dit is MINUTEN maar interval is gezet op SECONDEN
+            this.SetText1(min + " Min");
             if (min >= 10)                          //zetten kleuren van de button als hij 10 min bezig is.
             {
                 btn_Tafel1.BackColor = Color.IndianRed;
                 btn_Tafel1.ForeColor = Color.White;
-            }
 
+            }
         }
+
+
 
         //2
-        private void maakTimer2() // maken timer 
+        private void maakTimer2() // maken timer 1
         {
-            System.Windows.Forms.Timer t2 = new System.Windows.Forms.Timer();
-            t2.Interval = 1000;                             //1000 (ms) is 1 seconde, als je min wilt, zet dan op 10000 ms
-            t2.Tick += new EventHandler(timer2_Tick);
+            //System.Windows.Forms.Timer t1 = new System.Windows.Forms.Timer();
+
+            System.Timers.Timer t2 = new System.Timers.Timer();
+            t2.Interval = 2000;                             //1000 (ms) is 1 seconde, als je min wilt, zet dan op 10000 ms
+            t2.Elapsed += new ElapsedEventHandler(t2_Tick);
             t2.Enabled = true;
-
         }
-        private void timer2_Tick(object sender, EventArgs e)
+
+        private void t2_Tick(object sender, EventArgs e)
         {
 
-            btn_Tafel2.BackColor = Color.LightSkyBlue;
+            btn_Tafel1.BackColor = Color.LightSkyBlue;
 
-            min++;
-            lnl_tijdtafel2.Text = min + " Min";       //zetten tijd van de timer, dit is MINUTEN maar interval is gezet op SECONDEN
-
+            min++;                  //zetten tijd van de timer, dit is MINUTEN maar interval is gezet op SECONDEN
+            this.SetText2(min + " Min");
             if (min >= 10)                          //zetten kleuren van de button als hij 10 min bezig is.
             {
                 btn_Tafel2.BackColor = Color.IndianRed;
                 btn_Tafel2.ForeColor = Color.White;
-            }
 
+            }
         }
 
         //3
         public void maakTimer3() // maken timer 
         {
-            System.Windows.Forms.Timer t3 = new System.Windows.Forms.Timer();
-            t3.Interval = 1000;                             //1000 (ms) is 1 seconde, als je min wilt, zet dan op 10000 ms
-            t3.Tick += new EventHandler(timer3_Tick);
-            t3.Enabled = true;
+            //System.Windows.Forms.Timer t3 = new System.Windows.Forms.Timer();
+            //t3.Interval = 1000;                             //1000 (ms) is 1 seconde, als je minuten wilt, zet dan op 10000 ms
+            //t3.Tick += new EventHandler(timer3_Tick);
+            //t3.Enabled = true;
+            System.Threading.Timer t3;
+            t3 = new System.Threading.Timer(new TimerCallback(DoSomething3), null, 300, 1300);
+            t3.Change(0, 1000); //enable
 
         }
-        private void timer3_Tick(object sender, EventArgs e)
+        private void DoSomething3(object obj)
         {
-
+            //it executes every second            
             btn_Tafel3.BackColor = Color.LightSkyBlue;
 
             min++;
-            lbl_tijdtafel3.Text = min + " Min";       //zetten tijd van de timer, dit is MINUTEN maar interval is gezet op SECONDEN
+            this.SetText3(min + " Min");    //zetten tijd van de timer, dit is MINUTEN maar interval is gezet op SECONDEN
 
             if (min >= 10)                          //zetten kleuren van de button als hij 10 min bezig is.
             {
@@ -274,22 +283,30 @@ namespace WindowsFormsApplication1
 
         }
 
+        private void timer3_Tick(object sender, EventArgs e)
+        {
+
+
+        }
+
         //4
         public void maakTimer4() // maken timer 
         {
-            System.Windows.Forms.Timer t4 = new System.Windows.Forms.Timer();
-            t4.Interval = 1000;                             //1000 (ms) is 1 seconde, als je min wilt, zet dan op 10000 ms
-            t4.Tick += new EventHandler(timer4_Tick);
-            t4.Enabled = true;
-
+            //System.Windows.Forms.Timer t4 = new System.Windows.Forms.Timer();
+            //t4.Interval = 1000;                             //1000 (ms) is 1 seconde, als je min wilt, zet dan op 10000 ms
+            //t4.Tick += new EventHandler(timer4_Tick);
+            //t4.Enabled = true;
+            System.Threading.Timer t4;
+            t4 = new System.Threading.Timer(new TimerCallback(DoSomething4), null, 400, 1400);
+            t4.Change(0, 1000); //enable
         }
-        private void timer4_Tick(object sender, EventArgs e)
+        private void DoSomething4(object obj)
         {
-
+            //it executes every second            
             btn_Tafel4.BackColor = Color.LightSkyBlue;
 
             min++;
-            lbl_tijdtafel4.Text = min + " Min";       //zetten tijd van de timer, dit is MINUTEN maar interval is gezet op SECONDEN
+            this.SetText4(min + " Min");    //zetten tijd van de timer, dit is MINUTEN maar interval is gezet op SECONDEN
 
             if (min >= 10)                          //zetten kleuren van de button als hij 10 min bezig is.
             {
@@ -298,6 +315,22 @@ namespace WindowsFormsApplication1
             }
 
         }
+
+        //private void timer4_Tick(object sender, EventArgs e)
+        //{
+
+        //    btn_Tafel4.BackColor = Color.LightSkyBlue;
+
+        //    min++;
+        //    lbl_tijdtafel4.Text = min + " Min";            //zetten tijd van de timer, dit is MINUTEN maar interval is gezet op SECONDEN
+
+        //    if (min >= 10)                          //zetten kleuren van de button als hij 10 min bezig is.
+        //    {
+        //        btn_Tafel4.BackColor = Color.IndianRed;
+        //        btn_Tafel4.ForeColor = Color.White;
+        //    }
+
+        //}
 
         //5
         public void maakTimer5() // maken timer 
@@ -460,7 +493,65 @@ namespace WindowsFormsApplication1
         //    SqlCommand command = new SqlCommand("UPDATE Table SET TafelId = " + tafelgetal, conn);
         //}
 
+        //---------------------------------SAFE NEERZETTEN VAN TEXT--------------------------
+        private void SetText1(string text)
+        {
+            if (this.lbl_test1.InvokeRequired)
+            {
+                SetTextCallback d = new SetTextCallback(SetText1);
+                this.Invoke(d, new object[] { text });
+            }
+            else
+            {
+                this.lbl_test1.Text = text;
+            }
+        }
+        private void SetText2(string text)
+        {
+            if (tafelgetal == 2)
+            {
+                if (this.lnl_tijdtafel2.InvokeRequired)
+                {
+                    SetTextCallback d = new SetTextCallback(SetText2);
+                    this.Invoke(d, new object[] { text });
+                }
+                else
+                {
+                    this.lnl_tijdtafel2.Text = text;
+                }
+            }
+        }
+        
+        private void SetText3(string text)
+        {
+            if (tafelgetal == 3)
+            {
+                if (this.lbl_tijdtafel3.InvokeRequired)
+                {
+                    SetTextCallback d = new SetTextCallback(SetText3);
+                    this.Invoke(d, new object[] { text });
+                }
+                else
+                {
+                    this.lbl_tijdtafel3.Text = text;
+                }
+            }
+        }
 
-
+        private void SetText4(string text)
+        {
+            if (tafelgetal == 4)
+            {
+                if (this.lbl_tijdtafel4.InvokeRequired)
+                {
+                    SetTextCallback d = new SetTextCallback(SetText4);
+                    this.Invoke(d, new object[] { text });
+                }
+                else
+                {
+                    this.lbl_tijdtafel4.Text = text;
+                }
+            }
+        }
     }
 }

@@ -79,7 +79,7 @@ namespace WindowsFormsApplication1
 
             foreach (MenuItemsClass item in items)
             {
-                
+
                 ListViewItem isGerechtAlBesteld = listview_huidige_bestelling.FindItemWithText(item.naam);
                 if (isGerechtAlBesteld != null) //wanneer er al een gerecht is besteld wordt het aantal van de hoeveelheid besteldeitems van de voorraad die nog over is gehaald
                 {
@@ -105,7 +105,7 @@ namespace WindowsFormsApplication1
             {
 
                 MenuItemsClass GeselecteerdeItem = (MenuItemsClass)BestellingItem.Tag;
-                
+
 
                 if (GeselecteerdeItem.voorraad < 1)
                 {
@@ -213,16 +213,20 @@ namespace WindowsFormsApplication1
 
         public void button1_Click(object sender, EventArgs e)
         {
-            foreach (TafelOverzichtClass TafelOverzicht in MenuItemsDAO.haalTafelOp())
-            {
 
-                ListViewItem TafelId = new ListViewItem(TafelOverzicht.TafelId.ToString());
-                ListViewItem tafelbezet = new ListViewItem(TafelOverzicht.Bezet.ToString());
-                //lijstitem.SubItems.Add(TafelOverzicht.TafelId.ToString());
-                //lijstitem.SubItems.Add(TafelOverzicht.Bezet.ToString());
-
-            }
         }
+
+
+        public bool timerenable1 = false;
+        public bool timerenable2 = false;
+        public bool timerenable3 = false;
+        public bool timerenable4 = false;
+        public bool timerenable5 = false;
+        public bool timerenable6 = false;
+        public bool timerenable7 = false;
+        public bool timerenable8 = false;
+        public bool timerenable9 = false;
+        public bool timerenable10 = false;
         private void btn_stuurbestelling_Click_1(object sender, EventArgs e)
         {
             ListView.ListViewItemCollection besteldeItems = listview_huidige_bestelling.Items;
@@ -253,21 +257,47 @@ namespace WindowsFormsApplication1
                 MenuItemsDAO.WijzigVoorraad(besteldItem.menu_id, besteldItem.aantal);
             }
 
-            //TAFELID BART NOG REGELEN
             int tafel = tafelOverzicht.tafelgetal;
+            if (tafel == 1)
+            {
+                timerenable1 = true;
+                System.Timers.Timer t1 = new System.Timers.Timer();
+                t1.Interval = 1000;
+                t1.Elapsed += new ElapsedEventHandler(tafelOverzicht.t1_Tick);
+            }
+
+            if (tafel == 2)
+                timerenable2 = true;
+            if (tafel == 3)
+                timerenable3 = true;
+            if (tafel == 4)
+                timerenable4 = true;
+            if (tafel == 5)
+                timerenable5 = true;
+            if (tafel == 6)
+                timerenable6 = true;
+            if (tafel == 7)
+                timerenable7 = true;
+            if (tafel == 8)
+                timerenable8 = true;
+            if (tafel == 9)
+                timerenable9 = true;
+            if (tafel == 10)
+                timerenable10 = true;
 
             List<int> bestellingIDs = MenuItemsDAO.haalBestellingIdOp();
             int hoogsteBestellingID = bestellingIDs.Max();
             int barBestellingID = hoogsteBestellingID++;
             int keukenBestellingID = barBestellingID++;
-            
 
 
-            
-    }
 
 
- 
+        }
+
+
+
+
     }
 
 }
