@@ -81,7 +81,7 @@ namespace WindowsFormsApplication1
 
             foreach (MenuItemsClass item in items)
             {
-                
+
                 ListViewItem isGerechtAlBesteld = listview_huidige_bestelling.FindItemWithText(item.naam);
                 if (isGerechtAlBesteld != null) //wanneer er al een gerecht is besteld wordt het aantal van de hoeveelheid besteldeitems van de voorraad die nog over is gehaald
                 {
@@ -107,7 +107,7 @@ namespace WindowsFormsApplication1
             {
 
                 MenuItemsClass GeselecteerdeItem = (MenuItemsClass)BestellingItem.Tag;
-                
+
 
                 if (GeselecteerdeItem.voorraad < 1)
                 {
@@ -229,7 +229,7 @@ namespace WindowsFormsApplication1
             }
 
             openen.Show(this);
-            }
+        }
 
         private void btn_stuurbestelling_Click_1(object sender, EventArgs e)
         {
@@ -259,8 +259,8 @@ namespace WindowsFormsApplication1
                 MenuItemsDAO.WijzigVoorraad(besteldItem.menu_id, besteldItem.aantal);
             }
 
-            
-            
+
+
             //if (tafel == 1)
             //{
             //    timerenable1 = true;
@@ -288,7 +288,7 @@ namespace WindowsFormsApplication1
             //if (tafel == 10)
             //    timerenable10 = true; 
 
-           // int tafel = 5;
+            // int tafel = 5;
 
             string opmerking = txt_opmerking.Text;
             DateTime actueleTijd = DateTime.Now;
@@ -302,7 +302,7 @@ namespace WindowsFormsApplication1
 
             MenuItemsDAO.VerstuurBestelling(BarMenu_ID, BarAantal, tafel, barBestellingID, actueleTijd, opmerking, personeels_id);
             MenuItemsDAO.VerstuurBestelling(KeukenMenu_ID, KeukenAantal, tafel, keukenBestellingID, actueleTijd, opmerking, personeels_id);
-            
+
 
             //-----------------------------ZETTEN VAN TIJDSTIP VAN GEPLAATSTE BESTELLING------------------------
             DateTime tijdnu = DateTime.Now;
@@ -327,25 +327,27 @@ namespace WindowsFormsApplication1
                 openen.Label9Text = tijdnu.ToString("H:mm");
             if (tafelgetal == 10)
                 openen.Label10Text = tijdnu.ToString("H:mm");
-            
+
             openen.ShowDialog(this);
 
-        //private TafelOverzicht TafelOverzicht()
-        //{
-        //    throw new NotImplementedException();
-        //}
+            //private TafelOverzicht TafelOverzicht()
+            //{
+            //    throw new NotImplementedException();
+            //}
 
-        //private TafelOverzicht tafelOverzicht()
-        //{
-        //    throw new NotImplementedException();
-        //}
-
-            
+            //private TafelOverzicht tafelOverzicht()
+            //{
+            //    throw new NotImplementedException();
+            //}
 
 
- 
+
+
+
+        }
+
     }
-
 }
+
 
 
