@@ -15,8 +15,8 @@ namespace WindowsFormsApplication1
     public partial class BestellingOpnemen : Form
     {
         BestellingOpnemenDAO MenuItemsDAO;
-        TafelOverzicht tafelOverzicht;
         List<MenuItemsClass> DinerKaartLijst = new List<MenuItemsClass>();
+
 
 
 
@@ -241,30 +241,35 @@ namespace WindowsFormsApplication1
                     //alle dranken
                     BarMenu_ID.Add(besteldItem.menu_id);
                     BarAantal.Add(besteldItem.aantal);
-
                 }
                 else
                 {
                     // alle gerechten
                     KeukenMenu_ID.Add(besteldItem.menu_id);
                     KeukenAantal.Add(besteldItem.aantal);
-
                 }
                 MenuItemsDAO.WijzigVoorraad(besteldItem.menu_id, besteldItem.aantal);
             }
 
-            //TAFELID BART NOG REGELEN
-            int tafel = tafelOverzicht.tafelgetal;
+
+            int tafel = 5;
+
+            string opmerking = txt_opmerking.Text;
+            DateTime actueleTijd = DateTime.Now;
+            int personeels_id = 1; //wijzigen!!!
 
             List<int> bestellingIDs = MenuItemsDAO.haalBestellingIdOp();
             int hoogsteBestellingID = bestellingIDs.Max();
-            int barBestellingID = hoogsteBestellingID++;
-            int keukenBestellingID = barBestellingID++;
-            
+            int barBestellingID = hoogsteBestellingID + 1;
+            int keukenBestellingID = barBestellingID + 1;
 
+            MenuItemsDAO.VerstuurBestelling(BarMenu_ID, BarAantal, tafel, barBestellingID, actueleTijd, opmerking, personeels_id);
+            MenuItemsDAO.VerstuurBestelling(KeukenMenu_ID, KeukenAantal, tafel, keukenBestellingID, actueleTijd, opmerking, personeels_id);
 
             
     }
+
+
 
 
  
