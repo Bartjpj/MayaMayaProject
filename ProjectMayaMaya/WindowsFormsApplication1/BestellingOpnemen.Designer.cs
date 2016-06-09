@@ -44,13 +44,15 @@
             this.button1 = new System.Windows.Forms.Button();
             this.flow_menuCategorie = new System.Windows.Forms.FlowLayoutPanel();
             this.flow_MenuKaart = new System.Windows.Forms.FlowLayoutPanel();
+            this.txt_opmerking = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(292, 14);
+            this.label1.Location = new System.Drawing.Point(292, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(201, 25);
             this.label1.TabIndex = 56;
@@ -103,9 +105,9 @@
             // btn_stuurbestelling
             // 
             this.btn_stuurbestelling.BackColor = System.Drawing.Color.LightGreen;
-            this.btn_stuurbestelling.Location = new System.Drawing.Point(672, 459);
+            this.btn_stuurbestelling.Location = new System.Drawing.Point(672, 451);
             this.btn_stuurbestelling.Name = "btn_stuurbestelling";
-            this.btn_stuurbestelling.Size = new System.Drawing.Size(93, 41);
+            this.btn_stuurbestelling.Size = new System.Drawing.Size(99, 49);
             this.btn_stuurbestelling.TabIndex = 82;
             this.btn_stuurbestelling.Text = "Stuur Bestelling";
             this.btn_stuurbestelling.UseVisualStyleBackColor = false;
@@ -113,13 +115,15 @@
             // 
             // btn_verwijderBestelling
             // 
+            this.btn_verwijderBestelling.BackColor = System.Drawing.Color.Crimson;
             this.btn_verwijderBestelling.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_verwijderBestelling.Location = new System.Drawing.Point(405, 449);
+            this.btn_verwijderBestelling.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btn_verwijderBestelling.Location = new System.Drawing.Point(10, 450);
             this.btn_verwijderBestelling.Name = "btn_verwijderBestelling";
             this.btn_verwijderBestelling.Size = new System.Drawing.Size(177, 50);
             this.btn_verwijderBestelling.TabIndex = 84;
             this.btn_verwijderBestelling.Text = "Verwijder hele bestelling";
-            this.btn_verwijderBestelling.UseVisualStyleBackColor = true;
+            this.btn_verwijderBestelling.UseVisualStyleBackColor = false;
             this.btn_verwijderBestelling.Click += new System.EventHandler(this.btn_verwijderGerecht_Click);
             // 
             // label2
@@ -128,9 +132,9 @@
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(124, 183);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(170, 20);
+            this.label2.Size = new System.Drawing.Size(141, 20);
             this.label2.TabIndex = 85;
-            this.label2.Text = "Dinerkaart Gerechten";
+            this.label2.Text = "Selecteer product";
             // 
             // label3
             // 
@@ -187,16 +191,36 @@
             // 
             // flow_MenuKaart
             // 
-            this.flow_MenuKaart.Location = new System.Drawing.Point(10, 65);
+            this.flow_MenuKaart.Location = new System.Drawing.Point(10, 64);
             this.flow_MenuKaart.Name = "flow_MenuKaart";
             this.flow_MenuKaart.Size = new System.Drawing.Size(758, 52);
             this.flow_MenuKaart.TabIndex = 99;
+            // 
+            // txt_opmerking
+            // 
+            this.txt_opmerking.Location = new System.Drawing.Point(193, 475);
+            this.txt_opmerking.Multiline = true;
+            this.txt_opmerking.Name = "txt_opmerking";
+            this.txt_opmerking.Size = new System.Drawing.Size(470, 25);
+            this.txt_opmerking.TabIndex = 100;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(345, 451);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(159, 16);
+            this.label4.TabIndex = 101;
+            this.label4.Text = "Voeg een opmerking toe:";
             // 
             // BestellingOpnemen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(775, 502);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.txt_opmerking);
             this.Controls.Add(this.flow_MenuKaart);
             this.Controls.Add(this.flow_menuCategorie);
             this.Controls.Add(this.button1);
@@ -233,5 +257,7 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.FlowLayoutPanel flow_menuCategorie;
         private System.Windows.Forms.FlowLayoutPanel flow_MenuKaart;
+        private System.Windows.Forms.TextBox txt_opmerking;
+        private System.Windows.Forms.Label label4;
     }
 }

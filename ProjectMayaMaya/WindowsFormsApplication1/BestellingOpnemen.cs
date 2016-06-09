@@ -182,11 +182,7 @@ namespace WindowsFormsApplication1
                         regel.SubItems[1].Text = (int.Parse(regel.SubItems[1].Text) - 1).ToString();
                     }
                 }
-
-                    
             }
-
-
         }
 
         private void btn_verwijderGerecht_Click(object sender, EventArgs e)
@@ -221,7 +217,11 @@ namespace WindowsFormsApplication1
         private void btn_stuurbestelling_Click_1(object sender, EventArgs e)
         {
 
+
+
         }
+
+
  
     }
 
