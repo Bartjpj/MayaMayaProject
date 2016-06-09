@@ -29,7 +29,6 @@ namespace WindowsFormsApplication1
             {
                 int TafelId = (int)reader["TafelId"];
                 bool Bezet = (bool)reader["Bezet"];
-                //Onderzoeken wrm dit niet werkt
 
                 TafelOverzichtClass TafelOverzichtDAO = new TafelOverzichtClass(TafelId, Bezet);
                 TafelOverzichtTable.Add(TafelOverzichtDAO);
