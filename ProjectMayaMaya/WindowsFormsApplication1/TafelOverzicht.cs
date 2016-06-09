@@ -9,7 +9,7 @@ using System.Timers;
 using System.Diagnostics;
 using System.Data.SqlClient;
 using System.Configuration;
-using System.Threading.Tasks;
+using System.Threading;
 using System.Windows.Forms;
 
 namespace WindowsFormsApplication1
@@ -70,35 +70,11 @@ namespace WindowsFormsApplication1
 
             tafelgetal = 1;
 
-            updateTafelID();
-
+            //updateTafelID();
             maakTimer1();
 
+
         }
-        //public void maakTimer1() // maken timer 1
-        //{
-        //    System.Windows.Forms.Timer t1 = new System.Windows.Forms.Timer();
-        //    t1.Interval = 1000;                             //1000 (ms) is 1 seconde, als je min wilt, zet dan op 10000 ms
-        //    t1.Tick += new EventHandler(t1_Tick);
-        //    t1.Enabled = true;
-
-        //}
-        //int min;
-        //private void t1_Tick(object sender, EventArgs e)
-        //{
-
-        //    btn_Tafel1.BackColor = Color.LightSkyBlue;
-
-        //    min++;
-        //    lbl_test1.Text = min + " Min";       //zetten tijd van de timer, dit is MINUTEN maar interval is gezet op SECONDEN
-
-        //    if (min >= 10)                          //zetten kleuren van de button als hij 10 min bezig is.
-        //    {
-        //        btn_Tafel1.BackColor = Color.IndianRed;
-        //        btn_Tafel1.ForeColor = Color.White;
-        //    }
-
-        //}
 
         //2
         public void btn_Tafel2_Click(object sender, EventArgs e)
@@ -108,7 +84,7 @@ namespace WindowsFormsApplication1
 
             tafelgetal = 2;
 
-            updateTafelID();
+            //updateTafelID();
 
             maakTimer2();
         }
@@ -120,7 +96,7 @@ namespace WindowsFormsApplication1
             openKiesopname.Show(this);
             tafelgetal = 3;
 
-            updateTafelID();
+            //updateTafelID();
 
             maakTimer3();
 
@@ -133,7 +109,7 @@ namespace WindowsFormsApplication1
             openKiesopname.Show(this);
             tafelgetal = 4;
 
-            updateTafelID();
+            //updateTafelID();
 
             maakTimer4();
 
@@ -146,7 +122,7 @@ namespace WindowsFormsApplication1
             openKiesopname.Show(this);
             tafelgetal = 5;
 
-            updateTafelID();
+            //updateTafelID();
 
             maakTimer5();
 
@@ -159,7 +135,7 @@ namespace WindowsFormsApplication1
             openKiesopname.Show(this);
             tafelgetal = 6;
 
-            updateTafelID();
+            //updateTafelID();
 
             maakTimer6();
 
@@ -172,7 +148,7 @@ namespace WindowsFormsApplication1
             openKiesopname.Show(this);
             tafelgetal = 7;
 
-            updateTafelID();
+            //updateTafelID();
 
             maakTimer7();
 
@@ -185,7 +161,7 @@ namespace WindowsFormsApplication1
             openKiesopname.Show(this);
             tafelgetal = 8;
 
-            updateTafelID();
+            //updateTafelID();
 
             maakTimer8();
 
@@ -198,7 +174,7 @@ namespace WindowsFormsApplication1
             openKiesopname.Show(this);
             tafelgetal = 9;
 
-            updateTafelID();
+            //updateTafelID();
 
             maakTimer9();
 
@@ -211,28 +187,27 @@ namespace WindowsFormsApplication1
             openKiesopname.Show(this);
             tafelgetal = 10;
 
-            updateTafelID();
+            //updateTafelID();
 
             maakTimer10();
 
         }
 
-
-
-
         public void lbl_tijdtafel1_Click(object sender, EventArgs e)
         {
+
         }
+        
         //---------------TIMERS EN MAKEN VAN METHODES-------------------------:
+        int min;
         private void maakTimer1() // maken timer 1
         {
             System.Windows.Forms.Timer t1 = new System.Windows.Forms.Timer();
             t1.Interval = 1000;                             //1000 (ms) is 1 seconde, als je min wilt, zet dan op 10000 ms
             t1.Tick += new EventHandler(t1_Tick);
             t1.Enabled = true;
-
         }
-        int min;
+        
         private void t1_Tick(object sender, EventArgs e)
         {
 
@@ -273,7 +248,7 @@ namespace WindowsFormsApplication1
             }
 
         }
-        
+
         //3
         public void maakTimer3() // maken timer 
         {
@@ -323,7 +298,7 @@ namespace WindowsFormsApplication1
             }
 
         }
-        
+
         //5
         public void maakTimer5() // maken timer 
         {
@@ -474,18 +449,18 @@ namespace WindowsFormsApplication1
 
         }
         //---------------------------------UPDATEN VAN DE TAFELID NAAR DE DATABASE-------------------
-        public void updateTafelID()
-        {
-            string connString = ConfigurationManager
-            .ConnectionStrings["BestellingConnectionStringSQL"]
-            .ConnectionString;
-            SqlConnection conn = new SqlConnection(connString);
-            conn.Open();
+        //public void updateTafelID()
+        //{
+        //    string connString = ConfigurationManager
+        //    .ConnectionStrings["BestellingConnectionStringSQL"]
+        //    .ConnectionString;
+        //    SqlConnection conn = new SqlConnection(connString);
+        //    conn.Open();
 
-            SqlCommand command = new SqlCommand("UPDATE Table SET TafelId = " + tafelgetal, conn);
-        }
+        //    SqlCommand command = new SqlCommand("UPDATE Table SET TafelId = " + tafelgetal, conn);
+        //}
 
-        
+
 
     }
 }
