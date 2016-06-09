@@ -214,16 +214,13 @@ namespace WindowsFormsApplication1
 
         }
 
-        bool start = false;
-        
-        public void startenTimer()
-        {
-            start = true;
-        }
-
         public void button1_Click(object sender, EventArgs e)
         {
-            startenTimer();
+
+        }
+        private void btn_stuurbestelling_Click_1(object sender, EventArgs e)
+        {
+
         }
  
     }

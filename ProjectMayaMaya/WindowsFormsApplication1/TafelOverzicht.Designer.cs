@@ -50,7 +50,7 @@
             this.lbl_tijdtafel9 = new System.Windows.Forms.Label();
             this.lbl_tijdtafel10 = new System.Windows.Forms.Label();
             this.lbl_Kiestafel = new System.Windows.Forms.Label();
-            this.lbl_test = new System.Windows.Forms.Label();
+            this.lbl_test1 = new System.Windows.Forms.Label();
             this.lbl_tijd = new System.Windows.Forms.Label();
             this.lbl_tijd2 = new System.Windows.Forms.Label();
             this.lbl_tijd3 = new System.Windows.Forms.Label();
@@ -61,6 +61,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btn_Tafel1
@@ -311,13 +312,13 @@
             this.lbl_Kiestafel.TabIndex = 23;
             this.lbl_Kiestafel.Text = "Kies een Tafel:";
             // 
-            // lbl_test
+            // lbl_test1
             // 
-            this.lbl_test.AutoSize = true;
-            this.lbl_test.Location = new System.Drawing.Point(294, 136);
-            this.lbl_test.Name = "lbl_test";
-            this.lbl_test.Size = new System.Drawing.Size(0, 13);
-            this.lbl_test.TabIndex = 27;
+            this.lbl_test1.AutoSize = true;
+            this.lbl_test1.Location = new System.Drawing.Point(294, 136);
+            this.lbl_test1.Name = "lbl_test1";
+            this.lbl_test1.Size = new System.Drawing.Size(0, 13);
+            this.lbl_test1.TabIndex = 27;
             // 
             // lbl_tijd
             // 
@@ -409,11 +410,22 @@
             this.label6.TabIndex = 37;
             this.label6.Text = "Tijd:";
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(474, 33);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(67, 27);
+            this.button1.TabIndex = 38;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // TafelOverzicht
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(775, 502);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -424,7 +436,7 @@
             this.Controls.Add(this.lbl_tijd3);
             this.Controls.Add(this.lbl_tijd2);
             this.Controls.Add(this.lbl_tijd);
-            this.Controls.Add(this.lbl_test);
+            this.Controls.Add(this.lbl_test1);
             this.Controls.Add(this.lbl_Kiestafel);
             this.Controls.Add(this.lbl_tijdtafel10);
             this.Controls.Add(this.lbl_tijdtafel9);
@@ -478,7 +490,7 @@
         private System.Windows.Forms.Label lbl_tijdtafel9;
         private System.Windows.Forms.Label lbl_tijdtafel10;
         private System.Windows.Forms.Label lbl_Kiestafel;
-        private System.Windows.Forms.Label lbl_test;
+        private System.Windows.Forms.Label lbl_test1;
         private System.Windows.Forms.Label lbl_tijd;
         private System.Windows.Forms.Label lbl_tijd2;
         private System.Windows.Forms.Label lbl_tijd3;
@@ -489,5 +501,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Button button1;
     }
 }
