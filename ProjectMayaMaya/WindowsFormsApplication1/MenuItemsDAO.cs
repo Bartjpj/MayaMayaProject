@@ -146,10 +146,32 @@ namespace WindowsFormsApplication1
         }
 
 
+        public List<TafelOverzichtClass> haalTafelOp() // deze methode haalt de gegevens op voor het BestellingMenu overzicht
+        {
+            string connString = ConfigurationManager
+            .ConnectionStrings["BestellingConnectionStringSQL"]
+            .ConnectionString;
+            SqlConnection conn = new SqlConnection(connString);
+            conn.Open();
 
+            SqlCommand command = new SqlCommand("SELECT bestelling_id FROM Bestelling", conn); // deze query zorgt ervoor dat we alle data hebben die we bij BestellingMenu nodig hebben 
+            SqlDataReader reader = command.ExecuteReader();
 
+            List<TafelOverzichtClass> TafelTable = new List<TafelOverzichtClass>();
 
+            while (reader.Read())
+            {
+                int TafelId = (int)reader["TafelId"];
+                bool Bezet = (bool)reader["Bezet"];
 
+                TafelOverzichtClass TafelTableDAO = new TafelOverzichtClass(TafelId, Bezet);
+                TafelTable.Add(TafelTableDAO);
+            }
+
+            conn.Close();
+            return TafelTable;
+        }
     }
 }
+
 
