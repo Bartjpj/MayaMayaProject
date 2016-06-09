@@ -292,14 +292,15 @@ namespace WindowsFormsApplication1
             string opmerking = txt_opmerking.Text;
             DateTime actueleTijd = DateTime.Now;
             int personeels_id = 1; //wijzigen!!!
+            int tafel = 7;
 
-            List<int> bestellingIDs = MenuItemsDAO.haalBestellingIdOp();
-            int hoogsteBestellingID = bestellingIDs.Max();
+            List<int> IDs = MenuItemsDAO.haalIdOp();
+            int hoogsteBestellingID = IDs.Max();
             int barBestellingID = hoogsteBestellingID + 1;
             int keukenBestellingID = barBestellingID + 1;
 
-            //MenuItemsDAO.VerstuurBestelling(BarMenu_ID, BarAantal, tafel, barBestellingID, actueleTijd, opmerking, personeels_id);
-           // MenuItemsDAO.VerstuurBestelling(KeukenMenu_ID, KeukenAantal, tafel, keukenBestellingID, actueleTijd, opmerking, personeels_id);
+            MenuItemsDAO.VerstuurBestelling(BarMenu_ID, BarAantal, tafel, barBestellingID, actueleTijd, opmerking, personeels_id);
+            MenuItemsDAO.VerstuurBestelling(KeukenMenu_ID, KeukenAantal, tafel, keukenBestellingID, actueleTijd, opmerking, personeels_id);
             
 
     }

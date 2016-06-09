@@ -95,6 +95,28 @@ namespace WindowsFormsApplication1
             return CategorieTable;
         }
 
+        public List<int> haalIdOp()
+        {
+            string connString = ConfigurationManager
+            .ConnectionStrings["BestellingConnectionStringSQL"]
+            .ConnectionString;
+            SqlConnection conn = new SqlConnection(connString);
+            conn.Open();
+
+            SqlCommand command = new SqlCommand("SELECT id FROM Bestelling", conn); // deze query zorgt ervoor dat we alle data hebben die we bij BestellingMenu nodig hebben 
+            SqlDataReader reader = command.ExecuteReader();
+
+            List<int> ids = new List<int>();
+
+            while (reader.Read())
+            {
+                int id = (int)reader["id"];
+                ids.Add(id);
+            }
+            conn.Close();
+            return ids;
+        }
+
         public List<int> haalBestellingIdOp()
         {
             string connString = ConfigurationManager
@@ -119,6 +141,8 @@ namespace WindowsFormsApplication1
 
 
 
+
+
         public void VerstuurBestelling(List<int> Menu_ID, List<int> Aantal, int tafel, int BestellingID, DateTime actueleTijd, string opmerking, int personeel_id)
         {
             string connString = ConfigurationManager
@@ -129,9 +153,16 @@ namespace WindowsFormsApplication1
             var IDenAantal = Menu_ID.Zip(Aantal, (id, aantal) => new { Menu_ID = id, Aantal = aantal }); //maak één lijst van 2 lijsten zodat je er met één foreach doorheen kan lopen.
             foreach (var idAantal in IDenAantal)
             {
-                SqlCommand command = new SqlCommand("INSERT INTO Bestelling (bestelling_id, tafel_id, kaart_id, personeel_id, datum_tijd, keuken_gereed, bar_gereed, opmerking) VALUES (" + BestellingID + ", " + tafel + ", " + 1 + ", " + 1 + ", '" + actueleTijd + "', " + 0 + ", " + 0 + ", '" + opmerking + "');", conn); // deze query zorgt ervoor dat we alle data hebben die we bij BestellingMenu nodig hebben 
+                List<int> bestellingIds = haalBestellingIdOp();
+                int hoogstebestelling = bestellingIds.Max();
+                hoogstebestelling++;
+
+
+                string sql1 = string.Format("INSERT INTO Bestelling (bestelling_id, tafel_id, kaart_id, personeel_id, datum_tijd, keuken_gereed, bar_gereed, opmerking, id) VALUES (" + hoogstebestelling + ", " + tafel + ", " + 1 + ", " + 1 + ", '" + actueleTijd + "', " + 0 + ", " + 0 + ", '" + opmerking + "', " + BestellingID + ");");
+                SqlCommand command = new SqlCommand(sql1, conn); // deze query zorgt ervoor dat we alle data hebben die we bij BestellingMenu nodig hebben 
                 command.ExecuteNonQuery();
-                SqlCommand command2 = new SqlCommand("INSERT INTO BestellingItems (BestellingId, ItemId, Aantal) VALUES (" + BestellingID + ", " + idAantal.Menu_ID + ", " + idAantal.Aantal + ");", conn);
+                string sql2 = string.Format("INSERT INTO BestellingItems (BestellingId, ItemId, Aantal) VALUES (" + hoogstebestelling + ", " + idAantal.Menu_ID + ", " + idAantal.Aantal + ");");
+                SqlCommand command2 = new SqlCommand(sql2, conn);
                 command2.ExecuteNonQuery();
 
             }
