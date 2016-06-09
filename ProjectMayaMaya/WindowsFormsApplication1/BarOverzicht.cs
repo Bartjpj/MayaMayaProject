@@ -178,6 +178,7 @@ namespace WindowsFormsApplication1
 
         private void btn_refresh_Click(object sender, EventArgs e)
         {
+     
             listView1.Items.Clear();
 
             foreach (BarOverzichtClass barOverzicht in BarOverzichtDAO.haalBarOverzicht_TabelOp())
@@ -195,6 +196,7 @@ namespace WindowsFormsApplication1
 
 
             }
+            this.Focus();
        
         }
 
@@ -206,10 +208,11 @@ namespace WindowsFormsApplication1
         private void createTafels()
         {
             List<int> tafelNummers = BarOverzichtDAO.haalTafelNrOp();
-            
+            List<int> tafelNummersDistinct = tafelNummers.Distinct().ToList();
             flowLayoutPanel1.Controls.Clear();
-            foreach (int tafelNummer in tafelNummers) 
+            foreach (int tafelNummer in tafelNummersDistinct) 
             {
+                
                 Button b = new Button();
                 b.Tag = tafelNummer;
                 b.Name = "Tafel " + tafelNummer.ToString();
@@ -217,8 +220,10 @@ namespace WindowsFormsApplication1
                 b.AutoSize = false;
                 b.Click += new EventHandler(button_Click);
                 flowLayoutPanel1.Controls.Add(b);
+                
+              
             }
-            }
+        }
         private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
         {
            
