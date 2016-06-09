@@ -19,7 +19,7 @@ namespace WindowsFormsApplication1
             SqlConnection conn = new SqlConnection(connString);
             conn.Open();
 
-            SqlCommand command = new SqlCommand("SELECT bestelling_id, tafel_id, Aantal, Bestelling.datum_tijd, Menuitem.naam FROM Bestelling, BestellingItems, Menuitem, Menucategorie, Menukaart WHERE  bestelling_id = BestellingId AND ItemId = menu_id AND Menuitem.categorie_id = Menucategorie.categorie_id AND Menukaart.kaart_id = Menucategorie.kaart_id AND Menukaart.kaart_id = 3 AND bar_gereed = 0;", conn);
+            SqlCommand command = new SqlCommand("SELECT bestelling_id, tafel_id, Aantal, datum_tijd, Menuitem.naam FROM Bestelling, BestellingItems, Menuitem, Menucategorie, Menukaart WHERE  bestelling_id = BestellingId AND ItemId = menu_id AND Menuitem.categorie_id = Menucategorie.categorie_id AND Menukaart.kaart_id = Menucategorie.kaart_id AND Menukaart.kaart_id = 3 AND bar_gereed = 0;", conn);
             // deze query zorgt ervoor dat we alle data hebben die we bij BestellingMenu nodig hebben 
             SqlDataReader reader = command.ExecuteReader();
          
@@ -42,6 +42,7 @@ namespace WindowsFormsApplication1
             return BarOverzichtTable;
           
         }
+
         public List<BarOverzichtClass> haalBestellingTafel(int tafelNr)
         {
             string connString = ConfigurationManager
@@ -71,6 +72,7 @@ namespace WindowsFormsApplication1
             return BarOverzichtTable;
             
         }
+
         public void updateTafelsGereed(int tafelNr)
         {
             string connString = ConfigurationManager
@@ -84,6 +86,7 @@ namespace WindowsFormsApplication1
 
             conn.Close();
         }
+
         public List<int> haalTafelNrOp()
         {
             string connString = ConfigurationManager
@@ -108,6 +111,7 @@ namespace WindowsFormsApplication1
             return TafelNummers;
 
         }
+
         //public List<BarOverzichtClass> dagBarOverzicht()
         //{
         //    string connString = ConfigurationManager

@@ -118,12 +118,13 @@ namespace WindowsFormsApplication1
                 //}
                 ListViewItem lijstItem = new ListViewItem(barOverzicht.bestelling_id.ToString());
                 lijstItem.SubItems.Add(barOverzicht.tafel_id.ToString());
-                lijstItem.SubItems.Add(barOverzicht.aantal.ToString());
                 lijstItem.SubItems.Add(barOverzicht.naam.ToString());
+                lijstItem.SubItems.Add(barOverzicht.aantal.ToString());
                 lijstItem.SubItems.Add(barOverzicht.datum_tijd.ToString());
                 listView1.Items.Add(lijstItem);
             }
             createTafels();
+
         }
 
         private void gbox_bestelling3_Enter(object sender, EventArgs e)
@@ -178,7 +179,7 @@ namespace WindowsFormsApplication1
 
         private void btn_refresh_Click(object sender, EventArgs e)
         {
-     
+          
             listView1.Items.Clear();
 
             foreach (BarOverzichtClass barOverzicht in BarOverzichtDAO.haalBarOverzicht_TabelOp())
@@ -192,11 +193,12 @@ namespace WindowsFormsApplication1
                 lijstItem.SubItems.Add(barOverzicht.tafel_id.ToString());
                 lijstItem.SubItems.Add(barOverzicht.aantal.ToString());
                 lijstItem.SubItems.Add(barOverzicht.naam.ToString());
+                lijstItem.SubItems.Add(barOverzicht.datum_tijd.ToString());
                 listView1.Items.Add(lijstItem);
 
 
             }
-            this.Focus();
+      
        
         }
 
