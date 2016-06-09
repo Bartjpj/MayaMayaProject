@@ -95,10 +95,85 @@ namespace WindowsFormsApplication1
             return CategorieTable;
         }
 
+        public List<int> haalBestellingIdOp()
+        {
+            string connString = ConfigurationManager
+            .ConnectionStrings["BestellingConnectionStringSQL"]
+            .ConnectionString;
+            SqlConnection conn = new SqlConnection(connString);
+            conn.Open();
+
+            SqlCommand command = new SqlCommand("SELECT bestelling_id FROM Bestelling", conn); // deze query zorgt ervoor dat we alle data hebben die we bij BestellingMenu nodig hebben 
+            SqlDataReader reader = command.ExecuteReader();
+
+            List<int> Bestellingen = new List<int>();
+
+            while (reader.Read())
+            {
+                int bestelling_id = (int)reader["bestelling_id"];
+                Bestellingen.Add(bestelling_id);
+            }
+            conn.Close();
+            return Bestellingen;
+        }
 
 
 
+        public void VerstuurBestelling()
+        {
+            string connString = ConfigurationManager
+            .ConnectionStrings["BestellingConnectionStringSQL"]
+            .ConnectionString;
+            SqlConnection conn = new SqlConnection(connString);
+            conn.Open();
 
+            SqlCommand command = new SqlCommand("SELECT categorie_id, kaart_id, naam FROM Menucategorie WHERE kaart_id = ", conn); // deze query zorgt ervoor dat we alle data hebben die we bij BestellingMenu nodig hebben 
+            SqlDataReader reader = command.ExecuteReader();
+            conn.Close();
+        }
+
+        public void WijzigVoorraad(int menu_id, int aantal)
+        {
+            string connString = ConfigurationManager
+            .ConnectionStrings["BestellingConnectionStringSQL"]
+            .ConnectionString;
+            SqlConnection conn = new SqlConnection(connString);
+            conn.Open();
+
+            SqlCommand command = new SqlCommand("UPDATE Menuitem SET voorraad = voorraad - " + aantal + " WHERE menu_id = " + menu_id, conn); // deze query zorgt ervoor dat we alle data hebben die we bij BestellingMenu nodig hebben 
+            command.ExecuteNonQuery();
+            
+            conn.Close();
+        }
+
+
+
+        public List<TafelOverzichtClass> haalTafelOp() // deze methode haalt de gegevens op voor het BestellingMenu overzicht
+        {
+            string connString = ConfigurationManager
+            .ConnectionStrings["BestellingConnectionStringSQL"]
+            .ConnectionString;
+            SqlConnection conn = new SqlConnection(connString);
+            conn.Open();
+
+            SqlCommand command = new SqlCommand("SELECT bestelling_id FROM Bestelling", conn); // deze query zorgt ervoor dat we alle data hebben die we bij BestellingMenu nodig hebben 
+            SqlDataReader reader = command.ExecuteReader();
+
+            List<TafelOverzichtClass> TafelTable = new List<TafelOverzichtClass>();
+
+            while (reader.Read())
+            {
+                int TafelId = (int)reader["TafelId"];
+                bool Bezet = (bool)reader["Bezet"];
+
+                TafelOverzichtClass TafelTableDAO = new TafelOverzichtClass(TafelId, Bezet);
+                TafelTable.Add(TafelTableDAO);
+            }
+
+            conn.Close();
+            return TafelTable;
+        }
     }
 }
+
 
