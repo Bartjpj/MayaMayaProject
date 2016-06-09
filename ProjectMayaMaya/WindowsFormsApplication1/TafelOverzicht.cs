@@ -25,7 +25,7 @@ namespace WindowsFormsApplication1
         }
         TafelOverzichtDAO TafelOverzichtDAO;
         List<TafelOverzichtClass> tafellijst = new List<TafelOverzichtClass>();
-        public int tafelgetal = 15;
+        public int tafelgetal;
 
 
 
