@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Timers;
+using System.Diagnostics;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -37,51 +38,46 @@ namespace WindowsFormsApplication1
             TerugNaarHoofdmenu.Top = this.Top;
             TerugNaarHoofdmenu.Size = this.Size;
         }
+        
+        private void button1_Click(object sender, EventArgs e)
+        {
+            foreach (TafelOverzichtClass TafelOverzicht in TafelOverzichtDAO.haalTafelOverzicht_TabelOp())
+            {
 
+                ListViewItem TafelId = new ListViewItem(TafelOverzicht.TafelId.ToString());
+                ListViewItem tafelbezet = new ListViewItem(TafelOverzicht.Bezet.ToString());
+                //lijstitem.SubItems.Add(TafelOverzicht.TafelId.ToString());
+                //lijstitem.SubItems.Add(TafelOverzicht.Bezet.ToString());
+
+            }
+        }
         private void rbtn_BestellingOpnemen_CheckedChanged(object sender, EventArgs e)
         {
 
         }
-        //public void button1_Click(object sender, EventArgs e)
-        //{
-        //    foreach (TafelOverzichtClass TafelOverzicht in TafelOverzichtDAO.haalTafelOverzicht_TabelOp())
-        //    {
-
-        //        ListViewItem lijstitem = new ListViewItem(TafelOverzicht.TafelId.ToString());
-        //        lijstitem.SubItems.Add(TafelOverzicht.TafelId.ToString());
-        //        lijstitem.SubItems.Add(TafelOverzicht.Bezet.ToString());
-        //        listView_tafeloverzicht.Items.Add(lijstitem);
-
-        //    }
-        //}
         //-----------------TAFELS--------------------------------:
         // BestellingMenu bestellingmenuActiveren = new BestellingMenu();
 
-        int tafelgetal;
         //1
         public void btn_Tafel1_Click(object sender, EventArgs e)
         {
-            maakTimer1();
-            tafelgetal = 1;
+            KiesOpname openKiesopname1 = new KiesOpname();
+            openKiesopname1.Show(this);
+
         }
-        public void maakTimer1()
+        public void maakStopwatch1(ListViewItem tafelId, ListViewItem tafelbezet)
         {
-            KiesOpname openKiesopname = new KiesOpname();
-            openKiesopname.Show(this);
-            
-            ////maak een timer aan.
-            //System.Windows.Forms.Timer t1 = new System.Windows.Forms.Timer();
-            //t1.Interval = 1000;
-            //t1.Tick += new EventHandler(t1_Tick);
-            ////t1.Start();
+
+            Stopwatch s1 = new Stopwatch();
+            if (tafelId == tafelbezet)
+            {
+                lbl_test1.Text = "{:mm} Min" + s1.Elapsed.ToString();
+            }
         }
 
         public void startTimerEcht(bool start, System.Windows.Forms.Timer t1)
         {
-            if (start == true)
-            {
-                t1.Start();
-            }
+
         }
 
         //2
@@ -167,6 +163,8 @@ namespace WindowsFormsApplication1
         {
 
         }
+
+
 
     }
 }
