@@ -224,10 +224,45 @@ namespace WindowsFormsApplication1
         }
         private void btn_stuurbestelling_Click_1(object sender, EventArgs e)
         {
+            ListView.ListViewItemCollection besteldeItems = listview_huidige_bestelling.Items;
+            List<int> BarMenu_ID = new List<int>();
+            List<int> BarAantal = new List<int>();
+            List<int> KeukenMenu_ID = new List<int>();
+            List<int> KeukenAantal = new List<int>();
+
+            ListViewItem KeukenBestelling = new ListViewItem();
+
+            foreach (ListViewItem regel in besteldeItems)
+            {
+                BesteldeItemClass besteldItem = (BesteldeItemClass)regel.Tag;
+                if (besteldItem.categorie_id >= 8)
+                {
+                    //alle dranken
+                    BarMenu_ID.Add(besteldItem.menu_id);
+                    BarAantal.Add(besteldItem.aantal);
+
+                }
+                else
+                {
+                    // alle gerechten
+                    KeukenMenu_ID.Add(besteldItem.menu_id);
+                    KeukenAantal.Add(besteldItem.aantal);
+
+                }
+                MenuItemsDAO.WijzigVoorraad(besteldItem.menu_id, besteldItem.aantal);
+            }
+
+            //TAFELID BART NOG REGELEN
+
+            List<int> bestellingIDs = MenuItemsDAO.haalBestellingIdOp();
+            int hoogsteBestellingID = bestellingIDs.Max();
+            int barBestellingID = hoogsteBestellingID++;
+            int keukenBestellingID = barBestellingID++;
+            
 
 
-
-        }
+            
+    }
 
 
  
