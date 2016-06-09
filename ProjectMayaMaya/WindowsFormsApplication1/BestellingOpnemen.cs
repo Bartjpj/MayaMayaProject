@@ -249,14 +249,20 @@ namespace WindowsFormsApplication1
                     KeukenAantal.Add(besteldItem.aantal);
 
                 }
+                MenuItemsDAO.WijzigVoorraad(besteldItem.menu_id, besteldItem.aantal);
             }
 
             //TAFELID BART NOG REGELEN
 
+            List<int> bestellingIDs = MenuItemsDAO.haalBestellingIdOp();
+            int hoogsteBestellingID = bestellingIDs.Max();
+            int barBestellingID = hoogsteBestellingID++;
+            int keukenBestellingID = barBestellingID++;
             
 
 
-        }
+            
+    }
 
 
  

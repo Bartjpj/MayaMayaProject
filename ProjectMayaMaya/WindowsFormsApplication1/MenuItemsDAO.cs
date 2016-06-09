@@ -132,7 +132,7 @@ namespace WindowsFormsApplication1
             conn.Close();
         }
 
-        public void WijzigVoorraad()
+        public void WijzigVoorraad(int menu_id, int aantal)
         {
             string connString = ConfigurationManager
             .ConnectionStrings["BestellingConnectionStringSQL"]
@@ -140,10 +140,12 @@ namespace WindowsFormsApplication1
             SqlConnection conn = new SqlConnection(connString);
             conn.Open();
 
-            SqlCommand command = new SqlCommand("", conn); // deze query zorgt ervoor dat we alle data hebben die we bij BestellingMenu nodig hebben 
-            SqlDataReader reader = command.ExecuteReader();
+            SqlCommand command = new SqlCommand("UPDATE Menuitem SET voorraad = voorraad - " + aantal + " WHERE menu_id = " + menu_id, conn); // deze query zorgt ervoor dat we alle data hebben die we bij BestellingMenu nodig hebben 
+            command.ExecuteNonQuery();
+            
             conn.Close();
         }
+
 
 
         public List<TafelOverzichtClass> haalTafelOp() // deze methode haalt de gegevens op voor het BestellingMenu overzicht
