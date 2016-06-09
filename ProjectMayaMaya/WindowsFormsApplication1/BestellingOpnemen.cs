@@ -92,7 +92,6 @@ namespace WindowsFormsApplication1
                 lijstItem.SubItems.Add(item.voorraad.ToString());
                 lijstItem.Tag = item;
                 listview_diner.Items.Add(lijstItem);
-
             }
         }
 
@@ -105,6 +104,7 @@ namespace WindowsFormsApplication1
             {
 
                 MenuItemsClass GeselecteerdeItem = (MenuItemsClass)BestellingItem.Tag;
+                
 
                 if (GeselecteerdeItem.voorraad < 1)
                 {
@@ -120,13 +120,16 @@ namespace WindowsFormsApplication1
                 if (isItemAlEensBesteld != null)
                 {
                     isItemAlEensBesteld.SubItems[1].Text = (int.Parse(isItemAlEensBesteld.SubItems[1].Text) + 1).ToString();
-                    ListViewItem selecteerbareRegel = listview_diner.FindItemWithText(GeselecteerdeItem.naam);
+                    BesteldeItemClass besteldItem = (BesteldeItemClass)isItemAlEensBesteld.Tag;
+                    besteldItem.aantal++;
+                    isItemAlEensBesteld.Tag = besteldItem;
                 }
                 else
                 {
-                    ListViewItem bestelItem = new ListViewItem(GeselecteerdeItem.naam);
-                    bestelItem.SubItems.Add("1");
-                    listview_huidige_bestelling.Items.Add(bestelItem);
+                    isItemAlEensBesteld = new ListViewItem(GeselecteerdeItem.naam);
+                    isItemAlEensBesteld.SubItems.Add("1");
+                    isItemAlEensBesteld.Tag = new BesteldeItemClass(GeselecteerdeItem.menu_id, GeselecteerdeItem.categorie_id, GeselecteerdeItem.naam, GeselecteerdeItem.prijs, GeselecteerdeItem.voorraad, 1, "");
+                    listview_huidige_bestelling.Items.Add(isItemAlEensBesteld);
                 }
             }
         }
@@ -135,14 +138,56 @@ namespace WindowsFormsApplication1
         private void listview_huidige_bestelling_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+            ListView.SelectedListViewItemCollection regels = this.listview_huidige_bestelling.SelectedItems;
 
+            foreach (ListViewItem regel in regels)
+            {
+                BesteldeItemClass itemUitRegel = (BesteldeItemClass)regel.Tag;
+                ListViewItem isRegelNogZichtbaar = listview_diner.FindItemWithText(itemUitRegel.naam);
 
-
+                if (isRegelNogZichtbaar != null) //wanneer in de forms een andere pagina open is dan pakt hij een andere manier van verwijderen.
+                {
+                    if (itemUitRegel.aantal < 2)
+                    {
+                        ListViewItem menuRegel = listview_diner.FindItemWithText(itemUitRegel.naam);
+                        MenuItemsClass itemUitMenu = (MenuItemsClass)menuRegel.Tag;
+                        itemUitMenu.voorraad++;
+                        menuRegel.Tag = itemUitMenu;
+                        menuRegel.SubItems[2].Text = (int.Parse(menuRegel.SubItems[2].Text) + 1).ToString();
+                        listview_huidige_bestelling.Items.Remove(regel);
+                    }
+                    else
+                    {
+                        ListViewItem menuRegel = listview_diner.FindItemWithText(itemUitRegel.naam);
+                        MenuItemsClass itemUitMenu = (MenuItemsClass)menuRegel.Tag;
+                        itemUitMenu.voorraad++;
+                        menuRegel.Tag = itemUitMenu;
+                        menuRegel.SubItems[2].Text = (int.Parse(menuRegel.SubItems[2].Text) + 1).ToString();
+                        regel.SubItems[1].Text = (int.Parse(regel.SubItems[1].Text) - 1).ToString();
+                        itemUitRegel.aantal--;
+                        regel.Tag = itemUitRegel;
+                    }
+                }
+                else
+                {
+                    if (itemUitRegel.aantal < 2)
+                    {
+                        listview_huidige_bestelling.Items.Remove(regel);
+                    }
+                    else
+                    {
+                        BesteldeItemClass isItemAlBesteld = (BesteldeItemClass)regel.Tag;
+                        isItemAlBesteld.aantal--;
+                        regel.Tag = isItemAlBesteld;
+                        regel.SubItems[1].Text = (int.Parse(regel.SubItems[1].Text) - 1).ToString();
+                    }
+                }
+            }
         }
 
         private void btn_verwijderGerecht_Click(object sender, EventArgs e)
         {
-            //listview_huidige_bestelling.Items.Clear();
+            listview_huidige_bestelling.Items.Clear();
         }
 
         private void btn_LUNCHnaarDRANKEN_Click(object sender, EventArgs e)
@@ -180,7 +225,11 @@ namespace WindowsFormsApplication1
         private void btn_stuurbestelling_Click_1(object sender, EventArgs e)
         {
 
+
+
         }
+
+
  
     }
 
