@@ -41,6 +41,7 @@
             this.btn_refresh = new System.Windows.Forms.Button();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.button1 = new System.Windows.Forms.Button();
+            this.Datum_tijd = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // lbl_OpenstaandeBestellingenKeuken
@@ -87,7 +88,8 @@
             this.BestellingID,
             this.Tafel_id,
             this.Aantal,
-            this.Item});
+            this.Item,
+            this.Datum_tijd});
             this.listView1.FullRowSelect = true;
             this.listView1.GridLines = true;
             this.listView1.Location = new System.Drawing.Point(12, 156);
@@ -147,6 +149,11 @@
             this.button1.Text = "button1";
             this.button1.UseVisualStyleBackColor = true;
             // 
+            // Datum_tijd
+            // 
+            this.Datum_tijd.Text = "Datum/tijd";
+            this.Datum_tijd.Width = 114;
+            // 
             // BarOverzicht
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -181,5 +188,6 @@
         private System.Windows.Forms.Button btn_refresh;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ColumnHeader Datum_tijd;
     }
 }
