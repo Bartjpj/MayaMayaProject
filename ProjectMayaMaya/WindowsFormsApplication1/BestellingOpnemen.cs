@@ -81,7 +81,7 @@ namespace WindowsFormsApplication1
 
             foreach (MenuItemsClass item in items)
             {
-
+                
                 ListViewItem isGerechtAlBesteld = listview_huidige_bestelling.FindItemWithText(item.naam);
                 if (isGerechtAlBesteld != null) //wanneer er al een gerecht is besteld wordt het aantal van de hoeveelheid besteldeitems van de voorraad die nog over is gehaald
                 {
@@ -107,7 +107,7 @@ namespace WindowsFormsApplication1
             {
 
                 MenuItemsClass GeselecteerdeItem = (MenuItemsClass)BestellingItem.Tag;
-
+                
 
                 if (GeselecteerdeItem.voorraad < 1)
                 {
@@ -229,7 +229,7 @@ namespace WindowsFormsApplication1
             }
 
             openen.Show(this);
-        }
+            }
 
         private void btn_stuurbestelling_Click_1(object sender, EventArgs e)
         {
@@ -259,13 +259,49 @@ namespace WindowsFormsApplication1
                 MenuItemsDAO.WijzigVoorraad(besteldItem.menu_id, besteldItem.aantal);
             }
 
-            List<int> bestellingIDs = MenuItemsDAO.haalBestellingIdOp();
-            int hoogsteBestellingID = bestellingIDs.Max();
+            
+            
+            //if (tafel == 1)
+            //{
+            //    timerenable1 = true;
+            //    system.timers.timer t1 = new system.timers.timer();
+            //    t1.interval = 1000;
+            //    t1.elapsed += new elapsedeventhandler(idontknow.t1_tick);
+            //}
+
+            //if (tafel == 2)
+            //    timerenable2 = true;
+            //if (tafel == 3)
+            //    timerenable3 = true;
+            //if (tafel == 4)
+            //    timerenable4 = true;
+            //if (tafel == 5)
+            //    timerenable5 = true;
+            //if (tafel == 6)
+            //    timerenable6 = true;
+            //if (tafel == 7)
+            //    timerenable7 = true;
+            //if (tafel == 8)
+            //    timerenable8 = true;
+            //if (tafel == 9)
+            //    timerenable9 = true;
+            //if (tafel == 10)
+            //    timerenable10 = true; 
+
+           // int tafel = 5;
+
+            string opmerking = txt_opmerking.Text;
+            DateTime actueleTijd = DateTime.Now;
+            int personeels_id = 1; //wijzigen!!!
+            int tafel = 7;
+
+            List<int> IDs = MenuItemsDAO.haalIdOp();
+            int hoogsteBestellingID = IDs.Max();
             int barBestellingID = hoogsteBestellingID + 1;
             int keukenBestellingID = barBestellingID + 1;
 
-            //MenuItemsDAO.VerstuurBestelling(BarMenu_ID, BarAantal, tafel, barBestellingID, actueleTijd, opmerking, personeels_id);
-           // MenuItemsDAO.VerstuurBestelling(KeukenMenu_ID, KeukenAantal, tafel, keukenBestellingID, actueleTijd, opmerking, personeels_id);
+            MenuItemsDAO.VerstuurBestelling(BarMenu_ID, BarAantal, tafel, barBestellingID, actueleTijd, opmerking, personeels_id);
+            MenuItemsDAO.VerstuurBestelling(KeukenMenu_ID, KeukenAantal, tafel, keukenBestellingID, actueleTijd, opmerking, personeels_id);
             
 
             //-----------------------------ZETTEN VAN TIJDSTIP VAN GEPLAATSTE BESTELLING------------------------
@@ -304,10 +340,10 @@ namespace WindowsFormsApplication1
         //    throw new NotImplementedException();
         //}
 
+            
 
 
-
-
+ 
     }
 
 }
