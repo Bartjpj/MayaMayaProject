@@ -167,7 +167,15 @@ namespace WindowsFormsApplication1
 
         public void button1_Click(object sender, EventArgs e)
         {
+            foreach (TafelOverzichtClass TafelOverzicht in MenuItemsDAO.haalTafelOp())
+            {
 
+                ListViewItem TafelId = new ListViewItem(TafelOverzicht.TafelId.ToString());
+                ListViewItem tafelbezet = new ListViewItem(TafelOverzicht.Bezet.ToString());
+                //lijstitem.SubItems.Add(TafelOverzicht.TafelId.ToString());
+                //lijstitem.SubItems.Add(TafelOverzicht.Bezet.ToString());
+
+            }
         }
         private void btn_stuurbestelling_Click_1(object sender, EventArgs e)
         {

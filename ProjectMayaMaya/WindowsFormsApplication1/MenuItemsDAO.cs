@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace WindowsFormsApplication1
 {
-   public class BestellingOpnemenDAO
+    public class BestellingOpnemenDAO
     {
 
 
@@ -94,11 +94,33 @@ namespace WindowsFormsApplication1
             conn.Close();
             return CategorieTable;
         }
+        public List<TafelOverzichtClass> haalTafelOp() // deze methode haalt de gegevens op voor het BestellingMenu overzicht
+        {
+            string connString = ConfigurationManager
+            .ConnectionStrings["BestellingConnectionStringSQL"]
+            .ConnectionString;
+            SqlConnection conn = new SqlConnection(connString);
+            conn.Open();
 
+            SqlCommand command = new SqlCommand("SELECT *  FROM Tafel ", conn);
+            // deze query zorgt ervoor dat we alle data hebben die we bij BestellingMenu nodig hebben 
+            SqlDataReader reader = command.ExecuteReader();
 
+            List<TafelOverzichtClass> TafelTable = new List<TafelOverzichtClass>();
 
+            while (reader.Read())
+            {
+                int TafelId = (int)reader["TafelId"];
+                bool Bezet = (bool)reader["Bezet"];
 
+                TafelOverzichtClass TafelTableDAO = new TafelOverzichtClass(TafelId, Bezet);
+                TafelTable.Add(TafelTableDAO);
+            }
 
+            conn.Close();
+            return TafelTable;
+        }
     }
 }
+
 

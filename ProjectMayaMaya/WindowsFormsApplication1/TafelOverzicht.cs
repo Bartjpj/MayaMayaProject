@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Timers;
 using System.Diagnostics;
+using System.Data.SqlClient;
+using System.Configuration;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -23,7 +25,6 @@ namespace WindowsFormsApplication1
         TafelOverzichtDAO TafelOverzichtDAO;
         List<TafelOverzichtClass> tafellijst = new List<TafelOverzichtClass>();
 
-        BestellingOpnemen start;
 
         public TafelOverzicht()
         {
@@ -38,7 +39,7 @@ namespace WindowsFormsApplication1
             TerugNaarHoofdmenu.Top = this.Top;
             TerugNaarHoofdmenu.Size = this.Size;
         }
-        
+
         private void button1_Click(object sender, EventArgs e)
         {
             foreach (TafelOverzichtClass TafelOverzicht in TafelOverzichtDAO.haalTafelOverzicht_TabelOp())
@@ -48,7 +49,6 @@ namespace WindowsFormsApplication1
                 ListViewItem tafelbezet = new ListViewItem(TafelOverzicht.Bezet.ToString());
                 //lijstitem.SubItems.Add(TafelOverzicht.TafelId.ToString());
                 //lijstitem.SubItems.Add(TafelOverzicht.Bezet.ToString());
-
             }
         }
         private void rbtn_BestellingOpnemen_CheckedChanged(object sender, EventArgs e)
@@ -57,6 +57,10 @@ namespace WindowsFormsApplication1
         }
         //-----------------TAFELS--------------------------------:
         // BestellingMenu bestellingmenuActiveren = new BestellingMenu();
+        int tafelgetal;
+
+
+
 
         //1
         public void btn_Tafel1_Click(object sender, EventArgs e)
@@ -64,21 +68,41 @@ namespace WindowsFormsApplication1
             KiesOpname openKiesopname1 = new KiesOpname();
             openKiesopname1.Show(this);
 
+            tafelgetal = 1;
+            updateTafelID();
+
+            maakTimer1();
+
         }
-        public void maakStopwatch1(ListViewItem tafelId, ListViewItem tafelbezet)
+        public void maakTimer1() // maken timer 1
+        {
+            System.Windows.Forms.Timer t1 = new System.Windows.Forms.Timer();
+            t1.Interval = 1000;                             //1000 (ms) is 1 seconde, als je min wilt, zet dan op 10000 ms
+            t1.Tick += new EventHandler(t1_Tick);
+            t1.Enabled = true;
+
+        }
+        int min;
+        private void t1_Tick(object sender, EventArgs e)
         {
 
-            Stopwatch s1 = new Stopwatch();
-            if (tafelId == tafelbezet)
+            btn_Tafel1.BackColor = Color.LightSkyBlue;
+
+            min++;
+            lbl_test1.Text = min + " Min";       //zetten tijd van de timer, dit is MINUTEN maar interval is gezet op SECONDEN
+
+            if (min >= 10)                          //zetten kleuren van de button als hij 10 min bezig is.
             {
-                lbl_test1.Text = "{:mm} Min" + s1.Elapsed.ToString();
+                btn_Tafel1.BackColor = Color.IndianRed;
+                btn_Tafel1.ForeColor = Color.White;
             }
-        }
-
-        public void startTimerEcht(bool start, System.Windows.Forms.Timer t1)
-        {
 
         }
+
+
+
+
+
 
         //2
         public void btn_Tafel2_Click(object sender, EventArgs e)
@@ -158,12 +182,16 @@ namespace WindowsFormsApplication1
         public void lbl_tijdtafel1_Click(object sender, EventArgs e)
         {
         }
-
-        public void Tafel1kleur(bool bezett1, bool tafelkleurt1)
+        public void updateTafelID()
         {
+            string connString = ConfigurationManager
+            .ConnectionStrings["BestellingConnectionStringSQL"]
+            .ConnectionString;
+            SqlConnection conn = new SqlConnection(connString);
+            conn.Open();
 
+            SqlCommand command = new SqlCommand("UPDATE Table SET TafelId = " + tafelgetal, conn);
         }
-
 
 
     }
