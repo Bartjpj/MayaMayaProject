@@ -21,14 +21,19 @@ namespace WindowsFormsApplication1
             //base.OnLoad(e);
             //this.Location = Owner.Location;
             //this.Size = Owner.Size;
+
         }
         TafelOverzichtDAO TafelOverzichtDAO;
         List<TafelOverzichtClass> tafellijst = new List<TafelOverzichtClass>();
+        public int tafelgetal;
+
 
 
         public TafelOverzicht()
         {
+
             InitializeComponent();
+                    
         }
         private void btn_TAFELnaarHM_Click(object sender, EventArgs e)
         {
@@ -82,13 +87,13 @@ namespace WindowsFormsApplication1
             get { return lnl_tijdtafel2.Text; }
             set { lnl_tijdtafel2.Text = value; }
         }
-       
+
         //3
         public void btn_Tafel3_Click(object sender, EventArgs e)
         {
             KiesOpname openKiesopname = new KiesOpname();
             openKiesopname.Show(this);
-            tafelgetal = 3;
+            this.tafelgetal = 3;
 
             //updateTafelID();
 
@@ -98,13 +103,13 @@ namespace WindowsFormsApplication1
             get { return lbl_tijdtafel3.Text; }
             set { lbl_tijdtafel3.Text = value; }
         }
-        
+
         //4
         public void btn_Tafel4_Click(object sender, EventArgs e)
         {
             KiesOpname openKiesopname = new KiesOpname();
             openKiesopname.Show(this);
-            tafelgetal = 4;
+            this.tafelgetal = 4;
 
             //updateTafelID();
 
@@ -120,7 +125,7 @@ namespace WindowsFormsApplication1
         {
             KiesOpname openKiesopname = new KiesOpname();
             openKiesopname.Show(this);
-            tafelgetal = 5;
+            this.tafelgetal = 5;
 
             //updateTafelID();
 
@@ -135,7 +140,7 @@ namespace WindowsFormsApplication1
         {
             KiesOpname openKiesopname = new KiesOpname();
             openKiesopname.Show(this);
-            tafelgetal = 6;
+            this.tafelgetal = 6;
 
             //updateTafelID();
 
@@ -151,7 +156,7 @@ namespace WindowsFormsApplication1
         {
             KiesOpname openKiesopname = new KiesOpname();
             openKiesopname.Show(this);
-            tafelgetal = 7;
+            this.tafelgetal = 7;
 
             //updateTafelID();
 
@@ -166,7 +171,7 @@ namespace WindowsFormsApplication1
         {
             KiesOpname openKiesopname = new KiesOpname();
             openKiesopname.Show(this);
-            tafelgetal = 8;
+            this.tafelgetal = 8;
 
             //updateTafelID();
 
@@ -181,7 +186,7 @@ namespace WindowsFormsApplication1
         {
             KiesOpname openKiesopname = new KiesOpname();
             openKiesopname.Show(this);
-            tafelgetal = 9;
+            this.tafelgetal = 9;
 
             //updateTafelID();
 
@@ -196,7 +201,7 @@ namespace WindowsFormsApplication1
         {
             KiesOpname openKiesopname = new KiesOpname();
             openKiesopname.Show(this);
-            tafelgetal = 10;
+            this.tafelgetal = 10;
 
             //updateTafelID();
 
@@ -215,7 +220,7 @@ namespace WindowsFormsApplication1
         //---------------TIMERS EN MAKEN VAN METHODES-------------------------:
         int min;
         BestellingOpnemen bestellingOpnemen;
-        
+
 
         //---------------------------------UPDATEN VAN DE TAFELID NAAR DE DATABASE-------------------
         //public void updateTafelID()

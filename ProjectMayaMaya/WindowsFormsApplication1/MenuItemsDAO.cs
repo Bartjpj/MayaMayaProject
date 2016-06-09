@@ -119,16 +119,22 @@ namespace WindowsFormsApplication1
 
 
 
-        public void VerstuurBestelling()
+        public void VerstuurBestelling(List<int> Menu_ID, List<int> Aantal, int tafel, int BestellingID, DateTime actueleTijd, string opmerking, int personeel_id)
         {
             string connString = ConfigurationManager
             .ConnectionStrings["BestellingConnectionStringSQL"]
             .ConnectionString;
             SqlConnection conn = new SqlConnection(connString);
             conn.Open();
+            var IDenAantal = Menu_ID.Zip(Aantal, (id, aantal) => new { Menu_ID = id, Aantal = aantal }); //maak één lijst van 2 lijsten zodat je er met één foreach doorheen kan lopen.
+            foreach (var idAantal in IDenAantal)
+            {
+                SqlCommand command = new SqlCommand("INSERT INTO Bestelling (bestelling_id, tafel_id, kaart_id, personeel_id, datum_tijd, keuken_gereed, bar_gereed, opmerking) VALUES (" + BestellingID + ", " + tafel + ", " + 1 + ", " + 1 + ", '" + actueleTijd + "', " + 0 + ", " + 0 + ", '" + opmerking + "');", conn); // deze query zorgt ervoor dat we alle data hebben die we bij BestellingMenu nodig hebben 
+                command.ExecuteNonQuery();
+                SqlCommand command2 = new SqlCommand("INSERT INTO BestellingItems (BestellingId, ItemId, Aantal) VALUES (" + BestellingID + ", " + idAantal.Menu_ID + ", " + idAantal.Aantal + ");", conn);
+                command2.ExecuteNonQuery();
 
-            SqlCommand command = new SqlCommand("SELECT categorie_id, kaart_id, naam FROM Menucategorie WHERE kaart_id = ", conn); // deze query zorgt ervoor dat we alle data hebben die we bij BestellingMenu nodig hebben 
-            SqlDataReader reader = command.ExecuteReader();
+            }
             conn.Close();
         }
 

@@ -17,6 +17,8 @@ namespace WindowsFormsApplication1
         BestellingOpnemenDAO MenuItemsDAO;
         private TafelOverzicht tafelOverzicht;
         List<MenuItemsClass> DinerKaartLijst = new List<MenuItemsClass>();
+        TafelOverzicht tafelOverzicht = new TafelOverzicht();
+
 
 
 
@@ -247,22 +249,24 @@ namespace WindowsFormsApplication1
                     //alle dranken
                     BarMenu_ID.Add(besteldItem.menu_id);
                     BarAantal.Add(besteldItem.aantal);
-
                 }
                 else
                 {
                     // alle gerechten
                     KeukenMenu_ID.Add(besteldItem.menu_id);
                     KeukenAantal.Add(besteldItem.aantal);
-
                 }
                 MenuItemsDAO.WijzigVoorraad(besteldItem.menu_id, besteldItem.aantal);
             }
 
             List<int> bestellingIDs = MenuItemsDAO.haalBestellingIdOp();
             int hoogsteBestellingID = bestellingIDs.Max();
-            int barBestellingID = hoogsteBestellingID++;
-            int keukenBestellingID = barBestellingID++;
+            int barBestellingID = hoogsteBestellingID + 1;
+            int keukenBestellingID = barBestellingID + 1;
+
+            //MenuItemsDAO.VerstuurBestelling(BarMenu_ID, BarAantal, tafel, barBestellingID, actueleTijd, opmerking, personeels_id);
+           // MenuItemsDAO.VerstuurBestelling(KeukenMenu_ID, KeukenAantal, tafel, keukenBestellingID, actueleTijd, opmerking, personeels_id);
+            
 
             //-----------------------------ZETTEN VAN TIJDSTIP VAN GEPLAATSTE BESTELLING------------------------
             DateTime tijdnu = DateTime.Now;
@@ -289,10 +293,17 @@ namespace WindowsFormsApplication1
                 openen.Label10Text = tijdnu.ToString("H:mm");
             
             openen.ShowDialog(this);
-            
 
+        //private TafelOverzicht TafelOverzicht()
+        //{
+        //    throw new NotImplementedException();
+        //}
 
-        }
+        //private TafelOverzicht tafelOverzicht()
+        //{
+        //    throw new NotImplementedException();
+        //}
+
 
 
 
