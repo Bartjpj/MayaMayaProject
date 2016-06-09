@@ -15,6 +15,7 @@ namespace WindowsFormsApplication1
     public partial class BestellingOpnemen : Form
     {
         BestellingOpnemenDAO MenuItemsDAO;
+        TafelOverzicht tafelOverzicht;
         List<MenuItemsClass> DinerKaartLijst = new List<MenuItemsClass>();
 
 
@@ -253,6 +254,7 @@ namespace WindowsFormsApplication1
             }
 
             //TAFELID BART NOG REGELEN
+            int tafel = tafelOverzicht.tafelgetal;
 
             List<int> bestellingIDs = MenuItemsDAO.haalBestellingIdOp();
             int hoogsteBestellingID = bestellingIDs.Max();
