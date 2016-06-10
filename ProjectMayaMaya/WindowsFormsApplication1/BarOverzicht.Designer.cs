@@ -36,13 +36,13 @@
             this.listView1 = new System.Windows.Forms.ListView();
             this.Bestellingid = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Tafel_id = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.Aantal = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Item = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Aantal = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Datum_tijd = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.opmerking = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.btn_refresh = new System.Windows.Forms.Button();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.button1 = new System.Windows.Forms.Button();
-            this.Datum_tijd = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.opmerking = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // lbl_OpenstaandeBestellingenKeuken
@@ -113,17 +113,27 @@
             this.Tafel_id.Text = "Tafel_id";
             this.Tafel_id.Width = 50;
             // 
+            // Item
+            // 
+            this.Item.DisplayIndex = 3;
+            this.Item.Text = "Item";
+            this.Item.Width = 151;
+            // 
             // Aantal
             // 
             this.Aantal.DisplayIndex = 2;
             this.Aantal.Text = "Aantal";
             this.Aantal.Width = 43;
             // 
-            // Item
+            // Datum_tijd
             // 
-            this.Item.DisplayIndex = 3;
-            this.Item.Text = "Item";
-            this.Item.Width = 151;
+            this.Datum_tijd.Text = "Datum/tijd";
+            this.Datum_tijd.Width = 114;
+            // 
+            // opmerking
+            // 
+            this.opmerking.Text = "Opmerking";
+            this.opmerking.Width = 200;
             // 
             // btn_refresh
             // 
@@ -154,16 +164,6 @@
             this.button1.Text = "Dagoverzicht";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // Datum_tijd
-            // 
-            this.Datum_tijd.Text = "Datum/tijd";
-            this.Datum_tijd.Width = 114;
-            // 
-            // opmerking
-            // 
-            this.opmerking.Text = "Opmerking";
-            this.opmerking.Width = 200;
             // 
             // BarOverzicht
             // 
