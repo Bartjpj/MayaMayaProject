@@ -14,12 +14,12 @@ namespace WindowsFormsApplication1
 {
     public partial class InlogSchermBediening : Form
     {
-        protected override void OnLoad(EventArgs e) // is de verwijzing, niets veranderen AUB
-        {
-            base.OnLoad(e);
-            this.Location = Owner.Location;
-            this.Size = Owner.Size;
-        }
+        //protected override void OnLoad(EventArgs e) // is de verwijzing, niets veranderen AUB
+        //{
+        //    base.OnLoad(e);
+        //    this.Location = Owner.Location;
+        //    this.Size = Owner.Size;
+        //}
         public InlogSchermBediening()
         {
             InitializeComponent();
@@ -27,12 +27,13 @@ namespace WindowsFormsApplication1
 
         private void btn_INLOGGENnaarHM_Click(object sender, EventArgs e)
         {
-            HoofdMenu TerugNaarHoofdmenu = new HoofdMenu();
-            TerugNaarHoofdmenu.Show();
-            TerugNaarHoofdmenu.Left = this.Left; // geeft de grote aan van deze form voor het te openen form
-            TerugNaarHoofdmenu.Top = this.Top;
-            TerugNaarHoofdmenu.Size = this.Size;
-            this.Hide();
+            //HoofdMenu TerugNaarHoofdmenu = new HoofdMenu();
+            //TerugNaarHoofdmenu.Show();
+            //TerugNaarHoofdmenu.Left = this.Left; // geeft de grote aan van deze form voor het te openen form
+            //TerugNaarHoofdmenu.Top = this.Top;
+            //TerugNaarHoofdmenu.Size = this.Size;
+            //this.Hide();
+            this.Close();
         }
 
         private int txt_PersoneelsID_TextChanged(object sender, EventArgs e)
