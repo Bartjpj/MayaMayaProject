@@ -29,6 +29,15 @@ namespace WindowsFormsApplication1
 
         //private void updateWaarden()
         //{
+        public int _tafelgetal;
+        public int GetalTafel
+        {
+            get { return _tafelgetal; }
+            set { _tafelgetal = value; }
+        }
+
+
+
         //    List<AfrekenenClass> Rekening = AfrekenenDAO.getallewaardenDAO();
         //    int totaalPrijs = 0;
         //    int btwHoog = 0;
@@ -68,11 +77,11 @@ namespace WindowsFormsApplication1
             this.Hide();
         }
         public int tafelgetal;
-        public int GetalTafel
-        {
-            get { return tafelgetal; }
-            set { tafelgetal = value; }
-        }
+        //public int GetalTafel
+        //{
+         //   get { return tafelgetal; }
+        //    set { tafelgetal = value; }
+       // }
         //public int TafelLabel
         //{
         //    //get{return lbl_klaargemeldetafel.Text;}

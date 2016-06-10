@@ -63,7 +63,7 @@ namespace WindowsFormsApplication1
                 Button btn = new Button();
                 btn.Text = categorie.naam;
                 btn.Tag = categorie;
-                btn.Size = new Size(150, 49);
+                btn.Size = new Size(120, 49);
                 btn.Click += new System.EventHandler(this.btn_categorie_Click);
                 flow_menuCategorie.Controls.Add(btn);
             }
@@ -273,7 +273,7 @@ namespace WindowsFormsApplication1
             string opmerking = txt_opmerking.Text;
             DateTime actueleTijd = DateTime.Now;
             int personeels_id = 1; //wijzigen!!!
-            int tafel = 7;
+            int tafel = tafelgetal;
 
             List<int> bestellingIDs = MenuItemsDAO.haalBestellingIdOp();
             int hoogsteBestellingID = bestellingIDs.Max();
