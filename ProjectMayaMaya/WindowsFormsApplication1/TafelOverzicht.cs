@@ -18,9 +18,9 @@ namespace WindowsFormsApplication1
     {
         protected override void OnLoad(EventArgs e) // is de verwijzing voor de grootte van de form, niets veranderen AUB
         {
-            //base.OnLoad(e);
-            //this.Location = Owner.Location;
-            //this.Size = Owner.Size;
+            base.OnLoad(e);
+            this.Location = Owner.Location;
+            this.Size = Owner.Size;
 
         }
         TafelOverzichtDAO TafelOverzichtDAO;
@@ -58,7 +58,7 @@ namespace WindowsFormsApplication1
 
         //-----------------TAFELS--------------------------------:
         // BestellingMenu bestellingmenuActiveren = new BestellingMenu();
-        public int tafelgetal;
+        //public int tafelgetal;
         //1
         public void btn_Tafel1_Click(object sender, EventArgs e)
         {
