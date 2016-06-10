@@ -17,7 +17,7 @@ namespace WindowsFormsApplication1
         protected override void OnLoad(EventArgs e) // is de verwijzing, niets veranderen AUB
         {
             //base.OnLoad(e);
-            //this.Location = Owner.Location;       //vragen aan ivo
+            //this.Location = Owner.Location;
             //this.Size = Owner.Size;
         }
         public InlogSchermBediening()
