@@ -79,6 +79,7 @@ namespace WindowsFormsApplication1
                 lijstItem.SubItems.Add(barOverzicht.naam.ToString());
                 lijstItem.SubItems.Add(barOverzicht.aantal.ToString());
                 lijstItem.SubItems.Add(barOverzicht.datum_tijd.ToString());
+                lijstItem.SubItems.Add(barOverzicht.opmerking.ToString());
                 listView1.Items.Add(lijstItem);
 
                 //for (int i = listView1.Items.Count - 1; i >= 0; i--)
@@ -123,6 +124,7 @@ namespace WindowsFormsApplication1
                 lijstItem.SubItems.Add(barOverzicht.naam.ToString());
                 lijstItem.SubItems.Add(barOverzicht.aantal.ToString());
                 lijstItem.SubItems.Add(barOverzicht.datum_tijd.ToString());
+                lijstItem.SubItems.Add(barOverzicht.opmerking.ToString());
                 listView1.Items.Add(lijstItem);
             }
             createTafels();
@@ -182,6 +184,7 @@ namespace WindowsFormsApplication1
                 lijstItem.SubItems.Add(barOverzicht.naam.ToString());
                 lijstItem.SubItems.Add(barOverzicht.aantal.ToString());
                 lijstItem.SubItems.Add(barOverzicht.datum_tijd.ToString());
+                lijstItem.SubItems.Add(barOverzicht.opmerking.ToString());
                 listView1.Items.Add(lijstItem);
 
 
@@ -218,6 +221,30 @@ namespace WindowsFormsApplication1
         {
            
             
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+            listView1.Items.Clear();
+
+            foreach (BarOverzichtClass barOverzicht in BarOverzichtDAO.haalDagBarOverzicht())
+            {
+                //for (int i = listView1.Items.Count - 1; i >= 0; i--)
+                //{
+                //    //ListViewItem get = new ListViewItem
+                //    listView1.Items[i].Remove();
+                //}
+                ListViewItem lijstItem = new ListViewItem(barOverzicht.bestelling_id.ToString());
+                lijstItem.SubItems.Add(barOverzicht.tafel_id.ToString());
+                lijstItem.SubItems.Add(barOverzicht.naam.ToString());
+                lijstItem.SubItems.Add(barOverzicht.aantal.ToString());
+                lijstItem.SubItems.Add(barOverzicht.datum_tijd.ToString());
+                lijstItem.SubItems.Add(barOverzicht.opmerking.ToString());
+                listView1.Items.Add(lijstItem);
+
+
+            }
         }
     }
 }

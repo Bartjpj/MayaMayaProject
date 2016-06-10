@@ -42,6 +42,7 @@
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.button1 = new System.Windows.Forms.Button();
             this.Datum_tijd = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.opmerking = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // lbl_OpenstaandeBestellingenKeuken
@@ -89,7 +90,8 @@
             this.Tafel_id,
             this.Item,
             this.Aantal,
-            this.Datum_tijd});
+            this.Datum_tijd,
+            this.opmerking});
             this.listView1.FullRowSelect = true;
             this.listView1.GridLines = true;
             this.listView1.Location = new System.Drawing.Point(12, 156);
@@ -104,20 +106,22 @@
             // Bestellingid
             // 
             this.Bestellingid.Text = "Bestelling_id";
-            this.Bestellingid.Width = 140;
+            this.Bestellingid.Width = 80;
             // 
             // Tafel_id
             // 
             this.Tafel_id.Text = "Tafel_id";
-            this.Tafel_id.Width = 105;
+            this.Tafel_id.Width = 50;
             // 
             // Aantal
             // 
+            this.Aantal.DisplayIndex = 2;
             this.Aantal.Text = "Aantal";
-            this.Aantal.Width = 163;
+            this.Aantal.Width = 43;
             // 
             // Item
             // 
+            this.Item.DisplayIndex = 3;
             this.Item.Text = "Item";
             this.Item.Width = 151;
             // 
@@ -142,17 +146,24 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(327, 405);
+            this.button1.BackColor = System.Drawing.Color.Maroon;
+            this.button1.Location = new System.Drawing.Point(12, 95);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(145, 45);
             this.button1.TabIndex = 12;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Text = "Dagoverzicht";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Datum_tijd
             // 
             this.Datum_tijd.Text = "Datum/tijd";
             this.Datum_tijd.Width = 114;
+            // 
+            // opmerking
+            // 
+            this.opmerking.Text = "Opmerking";
+            this.opmerking.Width = 200;
             // 
             // BarOverzicht
             // 
@@ -189,5 +200,6 @@
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ColumnHeader Datum_tijd;
+        private System.Windows.Forms.ColumnHeader opmerking;
     }
 }

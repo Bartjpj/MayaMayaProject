@@ -268,26 +268,6 @@ namespace WindowsFormsApplication1
             //    t1.interval = 1000;
             //    t1.elapsed += new elapsedeventhandler(idontknow.t1_tick);
             //}
-
-            //if (tafel == 2)
-            //    timerenable2 = true;
-            //if (tafel == 3)
-            //    timerenable3 = true;
-            //if (tafel == 4)
-            //    timerenable4 = true;
-            //if (tafel == 5)
-            //    timerenable5 = true;
-            //if (tafel == 6)
-            //    timerenable6 = true;
-            //if (tafel == 7)
-            //    timerenable7 = true;
-            //if (tafel == 8)
-            //    timerenable8 = true;
-            //if (tafel == 9)
-            //    timerenable9 = true;
-            //if (tafel == 10)
-            //    timerenable10 = true; 
-
             // int tafel = 5;
 
             string opmerking = txt_opmerking.Text;
@@ -295,8 +275,8 @@ namespace WindowsFormsApplication1
             int personeels_id = 1; //wijzigen!!!
             int tafel = 7;
 
-            List<int> IDs = MenuItemsDAO.haalIdOp();
-            int hoogsteBestellingID = IDs.Max();
+            List<int> bestellingIDs = MenuItemsDAO.haalBestellingIdOp();
+            int hoogsteBestellingID = bestellingIDs.Max();
             int barBestellingID = hoogsteBestellingID + 1;
             int keukenBestellingID = barBestellingID + 1;
 
@@ -329,7 +309,7 @@ namespace WindowsFormsApplication1
                 openen.Label10Text = tijdnu.ToString("H:mm");
 
             openen.ShowDialog(this);
-
+            this.Close();
             //private TafelOverzicht TafelOverzicht()
             //{
             //    throw new NotImplementedException();

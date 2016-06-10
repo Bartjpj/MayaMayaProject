@@ -39,6 +39,7 @@
             this.btn_gereed_keuken = new System.Windows.Forms.Button();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.Datum_tijd = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Opmerking = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // btn_KeukenNaarHoofdmenu
@@ -71,7 +72,8 @@
             this.Tafel_id,
             this.Aantal,
             this.Item,
-            this.Datum_tijd});
+            this.Datum_tijd,
+            this.Opmerking});
             this.bestellingOverzichtKeukenView.FullRowSelect = true;
             this.bestellingOverzichtKeukenView.GridLines = true;
             this.bestellingOverzichtKeukenView.Location = new System.Drawing.Point(34, 132);
@@ -90,7 +92,7 @@
             // Tafel_id
             // 
             this.Tafel_id.Text = "Tafel_id";
-            this.Tafel_id.Width = 70;
+            this.Tafel_id.Width = 51;
             // 
             // Item
             // 
@@ -137,7 +139,12 @@
             // Datum_tijd
             // 
             this.Datum_tijd.Text = "Datum/Tijd";
-            this.Datum_tijd.Width = 95;
+            this.Datum_tijd.Width = 118;
+            // 
+            // Opmerking
+            // 
+            this.Opmerking.Text = "Opmerking";
+            this.Opmerking.Width = 175;
             // 
             // keukenBestellingOverzicht
             // 
@@ -171,5 +178,6 @@
         private System.Windows.Forms.Button btn_gereed_keuken;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.ColumnHeader Datum_tijd;
+        private System.Windows.Forms.ColumnHeader Opmerking;
     }
 }

@@ -53,6 +53,7 @@ namespace WindowsFormsApplication1
                 lijstItem.SubItems.Add(keukenOverzicht.aantal.ToString());
                 lijstItem.SubItems.Add(keukenOverzicht.naam.ToString());
                 lijstItem.SubItems.Add(keukenOverzicht.datum_tijd.ToString());
+                lijstItem.SubItems.Add(keukenOverzicht.opmerking.ToString());
                 bestellingOverzichtKeukenView.Items.Add(lijstItem);
             }
 
@@ -78,6 +79,7 @@ namespace WindowsFormsApplication1
                 lijstItem.SubItems.Add(keukenOverzicht.aantal.ToString());
                 lijstItem.SubItems.Add(keukenOverzicht.naam.ToString());
                 lijstItem.SubItems.Add(keukenOverzicht.datum_tijd.ToString());
+                lijstItem.SubItems.Add(keukenOverzicht.opmerking.ToString());
                 bestellingOverzichtKeukenView.Items.Add(lijstItem);
             }
             createTafels();
@@ -120,7 +122,10 @@ namespace WindowsFormsApplication1
                 lijstItem.SubItems.Add(keukenOverzicht.tafel_id.ToString());
                 lijstItem.SubItems.Add(keukenOverzicht.aantal.ToString());
                 lijstItem.SubItems.Add(keukenOverzicht.naam.ToString());
+                lijstItem.SubItems.Add(keukenOverzicht.datum_tijd.ToString());
+                lijstItem.SubItems.Add(keukenOverzicht.opmerking.ToString());
                 bestellingOverzichtKeukenView.Items.Add(lijstItem);
+              
             }
         }
 

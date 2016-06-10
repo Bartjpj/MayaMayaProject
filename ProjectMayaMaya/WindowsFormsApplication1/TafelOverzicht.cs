@@ -18,15 +18,24 @@ namespace WindowsFormsApplication1
     {
         protected override void OnLoad(EventArgs e) // is de verwijzing voor de grootte van de form, niets veranderen AUB
         {
-            //base.OnLoad(e);
-            //this.Location = Owner.Location;
-            //this.Size = Owner.Size;
+            base.OnLoad(e);
+            this.Location = Owner.Location;
+            this.Size = Owner.Size;
 
         }
         TafelOverzichtDAO TafelOverzichtDAO;
         List<TafelOverzichtClass> tafellijst = new List<TafelOverzichtClass>();
         public int tafelgetal;
-
+        public static TafelOverzicht tafeloverzicht
+        {
+            get
+            {
+                if (_tafelOverzicht == null)
+                    _tafelOverzicht = new TafelOverzicht();
+                return _tafelOverzicht;
+            }
+        }
+        private static TafelOverzicht _tafelOverzicht;
 
 
         public TafelOverzicht()
@@ -46,20 +55,13 @@ namespace WindowsFormsApplication1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            foreach (TafelOverzichtClass TafelOverzicht in TafelOverzichtDAO.haalTafelOverzicht_TabelOp())
-            {
 
-                ListViewItem TafelId = new ListViewItem(TafelOverzicht.TafelId.ToString());
-                ListViewItem tafelbezet = new ListViewItem(TafelOverzicht.Bezet.ToString());
-                //lijstitem.SubItems.Add(TafelOverzicht.TafelId.ToString());
-                //lijstitem.SubItems.Add(TafelOverzicht.Bezet.ToString());
-            }
         }
 
         //-----------------TAFELS--------------------------------:
         // BestellingMenu bestellingmenuActiveren = new BestellingMenu();
         //public int tafelgetal;
-        ////1
+        //1
         public void btn_Tafel1_Click(object sender, EventArgs e)
         {
             //tafelgetal = 1;
