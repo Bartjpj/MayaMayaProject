@@ -51,6 +51,9 @@
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.lbl_tafelNummerDisplay = new System.Windows.Forms.Label();
             this.lbl_opmerking = new System.Windows.Forms.Label();
+            this.lbl_btwinc = new System.Windows.Forms.Label();
+            this.fooit = new System.Windows.Forms.Label();
+            this.lbl_totaal = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lbl_rekening
@@ -136,7 +139,7 @@
             // lbl_btwhooggetal
             // 
             this.lbl_btwhooggetal.AutoSize = true;
-            this.lbl_btwhooggetal.Location = new System.Drawing.Point(654, 441);
+            this.lbl_btwhooggetal.Location = new System.Drawing.Point(443, 448);
             this.lbl_btwhooggetal.Name = "lbl_btwhooggetal";
             this.lbl_btwhooggetal.Size = new System.Drawing.Size(0, 13);
             this.lbl_btwhooggetal.TabIndex = 13;
@@ -144,7 +147,7 @@
             // lbl_btwlaaggetal
             // 
             this.lbl_btwlaaggetal.AutoSize = true;
-            this.lbl_btwlaaggetal.Location = new System.Drawing.Point(654, 472);
+            this.lbl_btwlaaggetal.Location = new System.Drawing.Point(443, 479);
             this.lbl_btwlaaggetal.Name = "lbl_btwlaaggetal";
             this.lbl_btwlaaggetal.Size = new System.Drawing.Size(0, 13);
             this.lbl_btwlaaggetal.TabIndex = 14;
@@ -171,6 +174,7 @@
             this.btn_printrekening.TabIndex = 22;
             this.btn_printrekening.Text = "Print Rekening";
             this.btn_printrekening.UseVisualStyleBackColor = false;
+            this.btn_printrekening.Click += new System.EventHandler(this.btn_printrekening_Click);
             // 
             // radioButton1
             // 
@@ -215,6 +219,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(61, 20);
             this.textBox1.TabIndex = 26;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // listview_rekening
             // 
@@ -231,6 +236,7 @@
             this.listview_rekening.TabIndex = 88;
             this.listview_rekening.UseCompatibleStateImageBehavior = false;
             this.listview_rekening.View = System.Windows.Forms.View.Details;
+            this.listview_rekening.SelectedIndexChanged += new System.EventHandler(this.listview_rekening_SelectedIndexChanged);
             // 
             // bestelling
             // 
@@ -262,11 +268,38 @@
             this.lbl_opmerking.Size = new System.Drawing.Size(0, 13);
             this.lbl_opmerking.TabIndex = 90;
             // 
+            // lbl_btwinc
+            // 
+            this.lbl_btwinc.AutoSize = true;
+            this.lbl_btwinc.Location = new System.Drawing.Point(443, 422);
+            this.lbl_btwinc.Name = "lbl_btwinc";
+            this.lbl_btwinc.Size = new System.Drawing.Size(0, 13);
+            this.lbl_btwinc.TabIndex = 91;
+            // 
+            // fooit
+            // 
+            this.fooit.AutoSize = true;
+            this.fooit.Location = new System.Drawing.Point(443, 395);
+            this.fooit.Name = "fooit";
+            this.fooit.Size = new System.Drawing.Size(0, 13);
+            this.fooit.TabIndex = 92;
+            // 
+            // lbl_totaal
+            // 
+            this.lbl_totaal.AutoSize = true;
+            this.lbl_totaal.Location = new System.Drawing.Point(443, 375);
+            this.lbl_totaal.Name = "lbl_totaal";
+            this.lbl_totaal.Size = new System.Drawing.Size(0, 13);
+            this.lbl_totaal.TabIndex = 93;
+            // 
             // Afrekenen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(775, 502);
+            this.Controls.Add(this.lbl_totaal);
+            this.Controls.Add(this.fooit);
+            this.Controls.Add(this.lbl_btwinc);
             this.Controls.Add(this.lbl_opmerking);
             this.Controls.Add(this.lbl_tafelNummerDisplay);
             this.Controls.Add(this.listview_rekening);
@@ -289,6 +322,7 @@
             this.Controls.Add(this.lbl_rekening);
             this.Name = "Afrekenen";
             this.Text = "Afrekenen";
+            this.Load += new System.EventHandler(this.Afrekenen_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -319,6 +353,9 @@
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.Label lbl_tafelNummerDisplay;
         private System.Windows.Forms.Label lbl_opmerking;
+        private System.Windows.Forms.Label lbl_btwinc;
+        private System.Windows.Forms.Label fooit;
+        private System.Windows.Forms.Label lbl_totaal;
 
     }
 }
