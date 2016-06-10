@@ -77,7 +77,7 @@
             this.btn_INLOGGENnaarHM.Name = "btn_INLOGGENnaarHM";
             this.btn_INLOGGENnaarHM.Size = new System.Drawing.Size(111, 49);
             this.btn_INLOGGENnaarHM.TabIndex = 7;
-            this.btn_INLOGGENnaarHM.Text = "Terug naar Hoofdmenu";
+            this.btn_INLOGGENnaarHM.Text = "X";
             this.btn_INLOGGENnaarHM.UseVisualStyleBackColor = false;
             this.btn_INLOGGENnaarHM.Click += new System.EventHandler(this.btn_INLOGGENnaarHM_Click);
             // 
