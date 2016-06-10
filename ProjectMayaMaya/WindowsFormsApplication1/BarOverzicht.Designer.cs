@@ -34,7 +34,7 @@
             this.btn_BARnaarHM = new System.Windows.Forms.Button();
             this.btn_BestellingGereed = new System.Windows.Forms.Button();
             this.listView1 = new System.Windows.Forms.ListView();
-            this.BestellingID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Bestellingid = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Tafel_id = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Aantal = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Item = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -85,7 +85,7 @@
             // listView1
             // 
             this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.BestellingID,
+            this.Bestellingid,
             this.Tafel_id,
             this.Aantal,
             this.Item,
@@ -101,10 +101,10 @@
             this.listView1.View = System.Windows.Forms.View.Details;
             this.listView1.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged_1);
             // 
-            // BestellingID
+            // Bestellingid
             // 
-            this.BestellingID.Text = "Bestelling_id";
-            this.BestellingID.Width = 140;
+            this.Bestellingid.Text = "Bestelling_id";
+            this.Bestellingid.Width = 140;
             // 
             // Tafel_id
             // 
@@ -181,7 +181,7 @@
         private System.Windows.Forms.Button btn_BARnaarHM;
         private System.Windows.Forms.Button btn_BestellingGereed;
         private System.Windows.Forms.ListView listView1;
-        private System.Windows.Forms.ColumnHeader BestellingID;
+        private System.Windows.Forms.ColumnHeader Bestellingid;
         private System.Windows.Forms.ColumnHeader Tafel_id;
         private System.Windows.Forms.ColumnHeader Aantal;
         private System.Windows.Forms.ColumnHeader Item;
