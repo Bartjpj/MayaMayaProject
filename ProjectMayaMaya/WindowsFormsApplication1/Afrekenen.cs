@@ -22,15 +22,44 @@ namespace WindowsFormsApplication1
         {
             InitializeComponent();
 
-            updateWaarden();
+            //updateWaarden();
 
 
         }
 
-        private void updateWaarden()
-        {
+        //private void updateWaarden()
+        //{
+        //    List<AfrekenenClass> Rekening = AfrekenenDAO.getallewaardenDAO();
+        //    int totaalPrijs = 0;
+        //    int btwHoog = 0;
+        //    int btwLaag = 0;
+        //    int fooi = 0;
 
-        }
+        //    foreach (AfrekenenClass item in Rekening) {
+        //        ListViewItem lijstItem = new ListViewItem(item.naam);
+        //        lijstItem.SubItems.Add(item.prijs);
+        //        lijstItem.SubItems.Add(item.aantal);
+        //        lijstItem.SubItems.Add(item.categorie_id);
+        //        listview_rekening.Items.Add(lijstItem);
+        //        totaalPrijs += item.prijs * item.aantal;
+        //        if (item.categorie_id >= 8 && item.categorie_id <= 10) {
+        //            btwHoog += item.prijs * 0.21;
+        //        } else {
+        //            btwLaag += item.prijs * 0.06;
+        //        }
+                
+        //    }
+
+        //    lbl_opmerking.Text = "blabla";
+
+        //    foreach (ListViewItem nogeenItem in listview_rekening) {
+
+        //    }
+ 
+        //    if (X.categorie_id >= 8 && X.categorie_id <= 10) {
+
+        //    }
+        //}
 
         private void BTN_AFREKENENnaarTAFELOVERZICHT_Click(object sender, EventArgs e)
         {

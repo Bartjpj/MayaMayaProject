@@ -290,25 +290,65 @@ namespace WindowsFormsApplication1
             //TafelOverzicht tafeloverzicht;
             //TafelOverzicht.tafeloverzicht.Show(this);
             if (tafelgetal == 1)
+            {
                 openen.Label1Text = tijdnu.ToString("H:mm");
+                openen.ButtonColor1 = Color.LightSkyBlue;
+            }
+
             if (tafelgetal == 2)
+            {
                 openen.Label2Text = tijdnu.ToString("H:mm");
+                openen.ButtonColor2 = Color.LightSkyBlue;
+            }
+
             if (tafelgetal == 3)
+            {
                 openen.Label3Text = tijdnu.ToString("H:mm");
+                openen.ButtonColor3 = Color.LightSkyBlue;
+            }
+
             if (tafelgetal == 4)
+            {
                 openen.Label4Text = tijdnu.ToString("H:mm");
+                openen.ButtonColor4 = Color.LightSkyBlue;
+            }
+
             if (tafelgetal == 5)
+            {
                 openen.Label5Text = tijdnu.ToString("H:mm");
+                openen.ButtonColor5 = Color.LightSkyBlue;
+            }
+
             if (tafelgetal == 6)
+            {
                 openen.Label6Text = tijdnu.ToString("H:mm");
+                openen.ButtonColor6 = Color.LightSkyBlue;
+            }
+
             if (tafelgetal == 7)
+            {
                 openen.Label7Text = tijdnu.ToString("H:mm");
+                openen.ButtonColor7 = Color.LightSkyBlue;
+            }
+
             if (tafelgetal == 8)
+            {
                 openen.Label8Text = tijdnu.ToString("H:mm");
+                openen.ButtonColor8 = Color.LightSkyBlue;
+            }
+
             if (tafelgetal == 9)
+            {
                 openen.Label9Text = tijdnu.ToString("H:mm");
+                openen.ButtonColor9 = Color.LightSkyBlue;
+            }
+
             if (tafelgetal == 10)
+            {
                 openen.Label10Text = tijdnu.ToString("H:mm");
+                openen.ButtonColor10 = Color.LightSkyBlue;
+            }
+
 
             openen.ShowDialog(this);
             this.Close();
