@@ -26,6 +26,7 @@ namespace WindowsFormsApplication1
         TafelOverzichtDAO TafelOverzichtDAO;
         List<TafelOverzichtClass> tafellijst = new List<TafelOverzichtClass>();
         public int tafelgetal;
+
         public static TafelOverzicht tafeloverzicht
         {
             get
@@ -98,7 +99,7 @@ namespace WindowsFormsApplication1
             //this.tafelgetal = 3;
 
             //updateTafelID();
-
+            openKiesopname.GetalTafel = tafelgetal;
         }
         public string Label3Text
         {
@@ -114,7 +115,7 @@ namespace WindowsFormsApplication1
             //this.tafelgetal = 4;
 
             //updateTafelID();
-
+            openKiesopname.GetalTafel = tafelgetal;
         }
         public string Label4Text
         {
@@ -130,7 +131,7 @@ namespace WindowsFormsApplication1
             //this.tafelgetal = 5;
 
             //updateTafelID();
-
+            openKiesopname.GetalTafel = tafelgetal;
         }
         public string Label5Text
         {
@@ -145,7 +146,7 @@ namespace WindowsFormsApplication1
             //this.tafelgetal = 6;
 
             //updateTafelID();
-
+            openKiesopname.GetalTafel = tafelgetal;
         }
         public string Label6Text
         {
@@ -161,7 +162,7 @@ namespace WindowsFormsApplication1
             //this.tafelgetal = 7;
 
             //updateTafelID();
-
+            openKiesopname.GetalTafel = tafelgetal;
         }
         public string Label7Text
         {
@@ -176,7 +177,7 @@ namespace WindowsFormsApplication1
             //this.tafelgetal = 8;
 
             //updateTafelID();
-
+            openKiesopname.GetalTafel = tafelgetal;
         }
         public string Label8Text
         {
@@ -191,7 +192,7 @@ namespace WindowsFormsApplication1
             //this.tafelgetal = 9;
 
             //updateTafelID();
-
+            openKiesopname.GetalTafel = tafelgetal;
         }
         public string Label9Text
         {
@@ -204,7 +205,7 @@ namespace WindowsFormsApplication1
             KiesOpname openKiesopname = new KiesOpname();
             openKiesopname.Show(this);
             //updateTafelID();
-
+            openKiesopname.GetalTafel = tafelgetal;
         }
         public string Label10Text
         {

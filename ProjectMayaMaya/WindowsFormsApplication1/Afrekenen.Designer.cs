@@ -28,10 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lbl_klaargemeld = new System.Windows.Forms.Label();
             this.lbl_rekening = new System.Windows.Forms.Label();
-            this.lstbox_eindrekening = new System.Windows.Forms.ListBox();
-            this.lbl_klaargemeldetafel = new System.Windows.Forms.Label();
             this.lbl_opmerkingen = new System.Windows.Forms.Label();
             this.lbl_subtotaal = new System.Windows.Forms.Label();
             this.lbl_fooilabel = new System.Windows.Forms.Label();
@@ -39,57 +36,32 @@
             this.lbl_btwhoog = new System.Windows.Forms.Label();
             this.lbl_btwlaag = new System.Windows.Forms.Label();
             this.lbl_subtotaalgetal = new System.Windows.Forms.Label();
-            this.lbl_fooigetal = new System.Windows.Forms.Label();
             this.lbl_incbtwgetal = new System.Windows.Forms.Label();
             this.lbl_btwhooggetal = new System.Windows.Forms.Label();
             this.lbl_btwlaaggetal = new System.Windows.Forms.Label();
-            this.btn_plus = new System.Windows.Forms.Button();
-            this.btn_min = new System.Windows.Forms.Button();
-            this.btn_cbutton = new System.Windows.Forms.Button();
-            this.btn_pinbetalen = new System.Windows.Forms.Button();
-            this.btn_creditcardbetalen = new System.Windows.Forms.Button();
-            this.btn_contantbetalen = new System.Windows.Forms.Button();
             this.BTN_AFREKENENnaarTAFELOVERZICHT = new System.Windows.Forms.Button();
             this.btn_printrekening = new System.Windows.Forms.Button();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.radioButton3 = new System.Windows.Forms.RadioButton();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.listview_rekening = new System.Windows.Forms.ListView();
+            this.bestelling = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.aantal = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.lbl_tafelNummerDisplay = new System.Windows.Forms.Label();
+            this.lbl_opmerking = new System.Windows.Forms.Label();
             this.SuspendLayout();
-            // 
-            // lbl_klaargemeld
-            // 
-            this.lbl_klaargemeld.AutoSize = true;
-            this.lbl_klaargemeld.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_klaargemeld.Location = new System.Drawing.Point(7, 62);
-            this.lbl_klaargemeld.Name = "lbl_klaargemeld";
-            this.lbl_klaargemeld.Size = new System.Drawing.Size(144, 25);
-            this.lbl_klaargemeld.TabIndex = 0;
-            this.lbl_klaargemeld.Text = "Klaar gemeld:";
             // 
             // lbl_rekening
             // 
             this.lbl_rekening.AutoSize = true;
             this.lbl_rekening.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_rekening.Location = new System.Drawing.Point(317, 59);
+            this.lbl_rekening.Location = new System.Drawing.Point(237, 21);
             this.lbl_rekening.Name = "lbl_rekening";
             this.lbl_rekening.Size = new System.Drawing.Size(109, 25);
             this.lbl_rekening.TabIndex = 1;
             this.lbl_rekening.Text = "Rekening:";
-            // 
-            // lstbox_eindrekening
-            // 
-            this.lstbox_eindrekening.FormattingEnabled = true;
-            this.lstbox_eindrekening.Location = new System.Drawing.Point(322, 87);
-            this.lstbox_eindrekening.Name = "lstbox_eindrekening";
-            this.lstbox_eindrekening.Size = new System.Drawing.Size(441, 251);
-            this.lstbox_eindrekening.TabIndex = 2;
-            // 
-            // lbl_klaargemeldetafel
-            // 
-            this.lbl_klaargemeldetafel.AutoSize = true;
-            this.lbl_klaargemeldetafel.Location = new System.Drawing.Point(91, 87);
-            this.lbl_klaargemeldetafel.Name = "lbl_klaargemeldetafel";
-            this.lbl_klaargemeldetafel.Size = new System.Drawing.Size(60, 13);
-            this.lbl_klaargemeldetafel.TabIndex = 3;
-            this.lbl_klaargemeldetafel.Text = "Tafel hier...";
-            this.lbl_klaargemeldetafel.Click += new System.EventHandler(this.lbl_klaargemeldetafel_Click);
             // 
             // lbl_opmerkingen
             // 
@@ -112,7 +84,7 @@
             // lbl_fooilabel
             // 
             this.lbl_fooilabel.AutoSize = true;
-            this.lbl_fooilabel.Location = new System.Drawing.Point(364, 395);
+            this.lbl_fooilabel.Location = new System.Drawing.Point(364, 398);
             this.lbl_fooilabel.Name = "lbl_fooilabel";
             this.lbl_fooilabel.Size = new System.Drawing.Size(27, 13);
             this.lbl_fooilabel.TabIndex = 6;
@@ -150,122 +122,38 @@
             this.lbl_subtotaalgetal.AutoSize = true;
             this.lbl_subtotaalgetal.Location = new System.Drawing.Point(654, 375);
             this.lbl_subtotaalgetal.Name = "lbl_subtotaalgetal";
-            this.lbl_subtotaalgetal.Size = new System.Drawing.Size(25, 13);
+            this.lbl_subtotaalgetal.Size = new System.Drawing.Size(0, 13);
             this.lbl_subtotaalgetal.TabIndex = 10;
-            this.lbl_subtotaalgetal.Text = "000";
-            // 
-            // lbl_fooigetal
-            // 
-            this.lbl_fooigetal.AutoSize = true;
-            this.lbl_fooigetal.Location = new System.Drawing.Point(654, 391);
-            this.lbl_fooigetal.Name = "lbl_fooigetal";
-            this.lbl_fooigetal.Size = new System.Drawing.Size(25, 13);
-            this.lbl_fooigetal.TabIndex = 11;
-            this.lbl_fooigetal.Text = "000";
             // 
             // lbl_incbtwgetal
             // 
             this.lbl_incbtwgetal.AutoSize = true;
             this.lbl_incbtwgetal.Location = new System.Drawing.Point(654, 422);
             this.lbl_incbtwgetal.Name = "lbl_incbtwgetal";
-            this.lbl_incbtwgetal.Size = new System.Drawing.Size(25, 13);
+            this.lbl_incbtwgetal.Size = new System.Drawing.Size(0, 13);
             this.lbl_incbtwgetal.TabIndex = 12;
-            this.lbl_incbtwgetal.Text = "000";
             // 
             // lbl_btwhooggetal
             // 
             this.lbl_btwhooggetal.AutoSize = true;
             this.lbl_btwhooggetal.Location = new System.Drawing.Point(654, 441);
             this.lbl_btwhooggetal.Name = "lbl_btwhooggetal";
-            this.lbl_btwhooggetal.Size = new System.Drawing.Size(25, 13);
+            this.lbl_btwhooggetal.Size = new System.Drawing.Size(0, 13);
             this.lbl_btwhooggetal.TabIndex = 13;
-            this.lbl_btwhooggetal.Text = "000";
             // 
             // lbl_btwlaaggetal
             // 
             this.lbl_btwlaaggetal.AutoSize = true;
             this.lbl_btwlaaggetal.Location = new System.Drawing.Point(654, 472);
             this.lbl_btwlaaggetal.Name = "lbl_btwlaaggetal";
-            this.lbl_btwlaaggetal.Size = new System.Drawing.Size(25, 13);
+            this.lbl_btwlaaggetal.Size = new System.Drawing.Size(0, 13);
             this.lbl_btwlaaggetal.TabIndex = 14;
-            this.lbl_btwlaaggetal.Text = "000";
-            // 
-            // btn_plus
-            // 
-            this.btn_plus.BackColor = System.Drawing.Color.LimeGreen;
-            this.btn_plus.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_plus.ForeColor = System.Drawing.Color.White;
-            this.btn_plus.Location = new System.Drawing.Point(705, 344);
-            this.btn_plus.Name = "btn_plus";
-            this.btn_plus.Size = new System.Drawing.Size(58, 44);
-            this.btn_plus.TabIndex = 15;
-            this.btn_plus.Text = "+";
-            this.btn_plus.UseVisualStyleBackColor = false;
-            // 
-            // btn_min
-            // 
-            this.btn_min.BackColor = System.Drawing.Color.Red;
-            this.btn_min.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_min.ForeColor = System.Drawing.Color.Transparent;
-            this.btn_min.Location = new System.Drawing.Point(705, 391);
-            this.btn_min.Name = "btn_min";
-            this.btn_min.Size = new System.Drawing.Size(58, 44);
-            this.btn_min.TabIndex = 16;
-            this.btn_min.Text = "-";
-            this.btn_min.UseVisualStyleBackColor = false;
-            // 
-            // btn_cbutton
-            // 
-            this.btn_cbutton.BackColor = System.Drawing.Color.Maroon;
-            this.btn_cbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_cbutton.ForeColor = System.Drawing.Color.White;
-            this.btn_cbutton.Location = new System.Drawing.Point(705, 441);
-            this.btn_cbutton.Name = "btn_cbutton";
-            this.btn_cbutton.Size = new System.Drawing.Size(58, 44);
-            this.btn_cbutton.TabIndex = 17;
-            this.btn_cbutton.Text = "C";
-            this.btn_cbutton.UseVisualStyleBackColor = false;
-            this.btn_cbutton.Click += new System.EventHandler(this.btn_cbutton_Click);
-            // 
-            // btn_pinbetalen
-            // 
-            this.btn_pinbetalen.BackColor = System.Drawing.Color.Maroon;
-            this.btn_pinbetalen.ForeColor = System.Drawing.Color.White;
-            this.btn_pinbetalen.Location = new System.Drawing.Point(7, 345);
-            this.btn_pinbetalen.Name = "btn_pinbetalen";
-            this.btn_pinbetalen.Size = new System.Drawing.Size(309, 43);
-            this.btn_pinbetalen.TabIndex = 18;
-            this.btn_pinbetalen.Text = "Pin";
-            this.btn_pinbetalen.UseVisualStyleBackColor = false;
-            this.btn_pinbetalen.Click += new System.EventHandler(this.btn_pinbetalen_Click);
-            // 
-            // btn_creditcardbetalen
-            // 
-            this.btn_creditcardbetalen.BackColor = System.Drawing.Color.Maroon;
-            this.btn_creditcardbetalen.ForeColor = System.Drawing.Color.White;
-            this.btn_creditcardbetalen.Location = new System.Drawing.Point(7, 395);
-            this.btn_creditcardbetalen.Name = "btn_creditcardbetalen";
-            this.btn_creditcardbetalen.Size = new System.Drawing.Size(309, 43);
-            this.btn_creditcardbetalen.TabIndex = 19;
-            this.btn_creditcardbetalen.Text = "Creditcard (VISA/AMEX)";
-            this.btn_creditcardbetalen.UseVisualStyleBackColor = false;
-            // 
-            // btn_contantbetalen
-            // 
-            this.btn_contantbetalen.BackColor = System.Drawing.Color.Maroon;
-            this.btn_contantbetalen.ForeColor = System.Drawing.Color.White;
-            this.btn_contantbetalen.Location = new System.Drawing.Point(7, 445);
-            this.btn_contantbetalen.Name = "btn_contantbetalen";
-            this.btn_contantbetalen.Size = new System.Drawing.Size(309, 43);
-            this.btn_contantbetalen.TabIndex = 20;
-            this.btn_contantbetalen.Text = "Contant";
-            this.btn_contantbetalen.UseVisualStyleBackColor = false;
             // 
             // BTN_AFREKENENnaarTAFELOVERZICHT
             // 
             this.BTN_AFREKENENnaarTAFELOVERZICHT.BackColor = System.Drawing.Color.Maroon;
             this.BTN_AFREKENENnaarTAFELOVERZICHT.ForeColor = System.Drawing.Color.White;
-            this.BTN_AFREKENENnaarTAFELOVERZICHT.Location = new System.Drawing.Point(12, 12);
+            this.BTN_AFREKENENnaarTAFELOVERZICHT.Location = new System.Drawing.Point(7, 12);
             this.BTN_AFREKENENnaarTAFELOVERZICHT.Name = "BTN_AFREKENENnaarTAFELOVERZICHT";
             this.BTN_AFREKENENnaarTAFELOVERZICHT.Size = new System.Drawing.Size(111, 49);
             this.BTN_AFREKENENnaarTAFELOVERZICHT.TabIndex = 21;
@@ -277,30 +165,120 @@
             // 
             this.btn_printrekening.BackColor = System.Drawing.Color.LightSkyBlue;
             this.btn_printrekening.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btn_printrekening.Location = new System.Drawing.Point(7, 278);
+            this.btn_printrekening.Location = new System.Drawing.Point(7, 372);
             this.btn_printrekening.Name = "btn_printrekening";
             this.btn_printrekening.Size = new System.Drawing.Size(309, 43);
             this.btn_printrekening.TabIndex = 22;
             this.btn_printrekening.Text = "Print Rekening";
             this.btn_printrekening.UseVisualStyleBackColor = false;
             // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButton1.Location = new System.Drawing.Point(12, 441);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(49, 24);
+            this.radioButton1.TabIndex = 23;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "Pin";
+            this.radioButton1.UseVisualStyleBackColor = true;
+            // 
+            // radioButton2
+            // 
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.BackColor = System.Drawing.SystemColors.Control;
+            this.radioButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButton2.Location = new System.Drawing.Point(94, 441);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(100, 24);
+            this.radioButton2.TabIndex = 24;
+            this.radioButton2.TabStop = true;
+            this.radioButton2.Text = "Creditcard";
+            this.radioButton2.UseVisualStyleBackColor = false;
+            // 
+            // radioButton3
+            // 
+            this.radioButton3.AutoSize = true;
+            this.radioButton3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButton3.Location = new System.Drawing.Point(232, 441);
+            this.radioButton3.Name = "radioButton3";
+            this.radioButton3.Size = new System.Drawing.Size(84, 24);
+            this.radioButton3.TabIndex = 25;
+            this.radioButton3.TabStop = true;
+            this.radioButton3.Text = "Contant";
+            this.radioButton3.UseVisualStyleBackColor = true;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(637, 395);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(61, 20);
+            this.textBox1.TabIndex = 26;
+            // 
+            // listview_rekening
+            // 
+            this.listview_rekening.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.bestelling,
+            this.aantal,
+            this.columnHeader1});
+            this.listview_rekening.FullRowSelect = true;
+            this.listview_rekening.GridLines = true;
+            this.listview_rekening.Location = new System.Drawing.Point(7, 78);
+            this.listview_rekening.Name = "listview_rekening";
+            this.listview_rekening.Size = new System.Drawing.Size(756, 260);
+            this.listview_rekening.Sorting = System.Windows.Forms.SortOrder.Ascending;
+            this.listview_rekening.TabIndex = 88;
+            this.listview_rekening.UseCompatibleStateImageBehavior = false;
+            this.listview_rekening.View = System.Windows.Forms.View.Details;
+            // 
+            // bestelling
+            // 
+            this.bestelling.Text = "Naam";
+            this.bestelling.Width = 300;
+            // 
+            // aantal
+            // 
+            this.aantal.Text = "Aantal";
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "Prijs";
+            // 
+            // lbl_tafelNummerDisplay
+            // 
+            this.lbl_tafelNummerDisplay.AutoSize = true;
+            this.lbl_tafelNummerDisplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_tafelNummerDisplay.Location = new System.Drawing.Point(377, 21);
+            this.lbl_tafelNummerDisplay.Name = "lbl_tafelNummerDisplay";
+            this.lbl_tafelNummerDisplay.Size = new System.Drawing.Size(0, 24);
+            this.lbl_tafelNummerDisplay.TabIndex = 89;
+            // 
+            // lbl_opmerking
+            // 
+            this.lbl_opmerking.AutoSize = true;
+            this.lbl_opmerking.Location = new System.Drawing.Point(443, 345);
+            this.lbl_opmerking.Name = "lbl_opmerking";
+            this.lbl_opmerking.Size = new System.Drawing.Size(0, 13);
+            this.lbl_opmerking.TabIndex = 90;
+            // 
             // Afrekenen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(775, 502);
+            this.Controls.Add(this.lbl_opmerking);
+            this.Controls.Add(this.lbl_tafelNummerDisplay);
+            this.Controls.Add(this.listview_rekening);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.radioButton3);
+            this.Controls.Add(this.radioButton2);
+            this.Controls.Add(this.radioButton1);
             this.Controls.Add(this.btn_printrekening);
             this.Controls.Add(this.BTN_AFREKENENnaarTAFELOVERZICHT);
-            this.Controls.Add(this.btn_contantbetalen);
-            this.Controls.Add(this.btn_creditcardbetalen);
-            this.Controls.Add(this.btn_pinbetalen);
-            this.Controls.Add(this.btn_cbutton);
-            this.Controls.Add(this.btn_min);
-            this.Controls.Add(this.btn_plus);
             this.Controls.Add(this.lbl_btwlaaggetal);
             this.Controls.Add(this.lbl_btwhooggetal);
             this.Controls.Add(this.lbl_incbtwgetal);
-            this.Controls.Add(this.lbl_fooigetal);
             this.Controls.Add(this.lbl_subtotaalgetal);
             this.Controls.Add(this.lbl_btwlaag);
             this.Controls.Add(this.lbl_btwhoog);
@@ -308,10 +286,7 @@
             this.Controls.Add(this.lbl_fooilabel);
             this.Controls.Add(this.lbl_subtotaal);
             this.Controls.Add(this.lbl_opmerkingen);
-            this.Controls.Add(this.lbl_klaargemeldetafel);
-            this.Controls.Add(this.lstbox_eindrekening);
             this.Controls.Add(this.lbl_rekening);
-            this.Controls.Add(this.lbl_klaargemeld);
             this.Name = "Afrekenen";
             this.Text = "Afrekenen";
             this.ResumeLayout(false);
@@ -321,10 +296,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Label lbl_klaargemeld;
         private System.Windows.Forms.Label lbl_rekening;
-        private System.Windows.Forms.ListBox lstbox_eindrekening;
-        private System.Windows.Forms.Label lbl_klaargemeldetafel;
         private System.Windows.Forms.Label lbl_opmerkingen;
         private System.Windows.Forms.Label lbl_subtotaal;
         private System.Windows.Forms.Label lbl_fooilabel;
@@ -332,18 +304,21 @@
         private System.Windows.Forms.Label lbl_btwhoog;
         private System.Windows.Forms.Label lbl_btwlaag;
         private System.Windows.Forms.Label lbl_subtotaalgetal;
-        private System.Windows.Forms.Label lbl_fooigetal;
         private System.Windows.Forms.Label lbl_incbtwgetal;
         private System.Windows.Forms.Label lbl_btwhooggetal;
         private System.Windows.Forms.Label lbl_btwlaaggetal;
-        private System.Windows.Forms.Button btn_plus;
-        private System.Windows.Forms.Button btn_min;
-        private System.Windows.Forms.Button btn_cbutton;
-        private System.Windows.Forms.Button btn_pinbetalen;
-        private System.Windows.Forms.Button btn_creditcardbetalen;
-        private System.Windows.Forms.Button btn_contantbetalen;
         private System.Windows.Forms.Button BTN_AFREKENENnaarTAFELOVERZICHT;
         private System.Windows.Forms.Button btn_printrekening;
+        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.RadioButton radioButton3;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.ListView listview_rekening;
+        private System.Windows.Forms.ColumnHeader bestelling;
+        private System.Windows.Forms.ColumnHeader aantal;
+        private System.Windows.Forms.ColumnHeader columnHeader1;
+        private System.Windows.Forms.Label lbl_tafelNummerDisplay;
+        private System.Windows.Forms.Label lbl_opmerking;
 
     }
 }

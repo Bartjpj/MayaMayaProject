@@ -147,8 +147,9 @@ namespace WindowsFormsApplication1
         {
             BarOverzichtClass isGereedmelding = new BarOverzichtClass();
 
-            for (int i = listView1.Items.Count - 1; i >= 0; i--)
-            {
+            ListView.SelectedListViewItemCollection regels = this.listView1.SelectedItems;
+            foreach (ListViewItem regel in regels)
+                {
                 if (listView1.Items[i].Selected)
                 {
                     listView1.Items[i].Remove();
@@ -242,9 +243,9 @@ namespace WindowsFormsApplication1
                 lijstItem.SubItems.Add(barOverzicht.datum_tijd.ToString());
                 lijstItem.SubItems.Add(barOverzicht.opmerking.ToString());
                 listView1.Items.Add(lijstItem);
-
-
-            }
+           
+            
         }
     }
+}
 }

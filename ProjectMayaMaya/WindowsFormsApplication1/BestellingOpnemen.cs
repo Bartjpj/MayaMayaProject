@@ -287,6 +287,8 @@ namespace WindowsFormsApplication1
             //-----------------------------ZETTEN VAN TIJDSTIP VAN GEPLAATSTE BESTELLING------------------------
             DateTime tijdnu = DateTime.Now;
             TafelOverzicht openen = new TafelOverzicht();
+            //TafelOverzicht tafeloverzicht;
+            //TafelOverzicht.tafeloverzicht.Show(this);
             if (tafelgetal == 1)
                 openen.Label1Text = tijdnu.ToString("H:mm");
             if (tafelgetal == 2)
