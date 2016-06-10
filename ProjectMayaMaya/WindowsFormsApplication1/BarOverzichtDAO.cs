@@ -73,7 +73,7 @@ namespace WindowsFormsApplication1
             
         }
 
-        public void updateTafelsGereed(int tafelNr)
+        public void updateTafelsGereed(int tafelNr, int bestelling_id)
         {
             string connString = ConfigurationManager
             .ConnectionStrings["BestellingConnectionStringSQL"]
@@ -81,7 +81,7 @@ namespace WindowsFormsApplication1
             SqlConnection conn = new SqlConnection(connString);
             conn.Open();
 
-            SqlCommand command = new SqlCommand("UPDATE Bestelling SET bar_gereed=1 WHERE bar_gereed = 0 AND tafel_id =" + tafelNr , conn);
+            SqlCommand command = new SqlCommand("UPDATE Bestelling SET bar_gereed=1 WHERE bar_gereed = 0 AND tafel_id =" + tafelNr + "AND bestelling_id= " + bestelling_id, conn);
             command.ExecuteNonQuery();
 
             conn.Close();

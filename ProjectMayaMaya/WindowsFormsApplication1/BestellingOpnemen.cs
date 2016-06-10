@@ -295,8 +295,8 @@ namespace WindowsFormsApplication1
             int personeels_id = 1; //wijzigen!!!
             int tafel = 7;
 
-            List<int> IDs = MenuItemsDAO.haalIdOp();
-            int hoogsteBestellingID = IDs.Max();
+            List<int> bestellingIDs = MenuItemsDAO.haalBestellingIdOp();
+            int hoogsteBestellingID = bestellingIDs.Max();
             int barBestellingID = hoogsteBestellingID + 1;
             int keukenBestellingID = barBestellingID + 1;
 
