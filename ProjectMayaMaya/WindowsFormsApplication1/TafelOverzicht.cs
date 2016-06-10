@@ -26,7 +26,16 @@ namespace WindowsFormsApplication1
         TafelOverzichtDAO TafelOverzichtDAO;
         List<TafelOverzichtClass> tafellijst = new List<TafelOverzichtClass>();
         public int tafelgetal;
-
+        public static TafelOverzicht tafeloverzicht
+        {
+            get
+            {
+                if (_tafelOverzicht == null)
+                    _tafelOverzicht = new TafelOverzicht();
+                return _tafelOverzicht;
+            }
+        }
+        private static TafelOverzicht _tafelOverzicht;
 
 
         public TafelOverzicht()
@@ -46,14 +55,7 @@ namespace WindowsFormsApplication1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            foreach (TafelOverzichtClass TafelOverzicht in TafelOverzichtDAO.haalTafelOverzicht_TabelOp())
-            {
 
-                ListViewItem TafelId = new ListViewItem(TafelOverzicht.TafelId.ToString());
-                ListViewItem tafelbezet = new ListViewItem(TafelOverzicht.Bezet.ToString());
-                //lijstitem.SubItems.Add(TafelOverzicht.TafelId.ToString());
-                //lijstitem.SubItems.Add(TafelOverzicht.Bezet.ToString());
-            }
         }
 
         //-----------------TAFELS--------------------------------:

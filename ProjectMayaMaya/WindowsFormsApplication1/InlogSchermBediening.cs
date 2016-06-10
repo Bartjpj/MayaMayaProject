@@ -98,11 +98,11 @@ namespace WindowsFormsApplication1
                 inlogFout.Show(this);
             }
         }
-
-        private void btn_InloggenSkippen_Click(object sender, EventArgs e)
+        
+        private void btn_InloggenSkippen_Click(object sender, EventArgs e) // experimentje
         {
-            TafelOverzicht openTafelOverzicht = new TafelOverzicht();
-            openTafelOverzicht.Show(this);
+            TafelOverzicht tafelForm = new TafelOverzicht();
+            tafelForm.Show(this);
             this.Hide();
         }
 
