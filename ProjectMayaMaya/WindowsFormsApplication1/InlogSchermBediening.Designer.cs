@@ -51,6 +51,7 @@
             // 
             this.txt_PersoneelsID.Location = new System.Drawing.Point(322, 181);
             this.txt_PersoneelsID.Name = "txt_PersoneelsID";
+            this.txt_PersoneelsID.PasswordChar = '*';
             this.txt_PersoneelsID.Size = new System.Drawing.Size(224, 20);
             this.txt_PersoneelsID.TabIndex = 2;
             this.txt_PersoneelsID.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_PersoneelsID_KeyPress);

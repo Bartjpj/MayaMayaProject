@@ -16,9 +16,9 @@ namespace WindowsFormsApplication1
     {
         protected override void OnLoad(EventArgs e) // is de verwijzing, niets veranderen AUB
         {
-            //base.OnLoad(e);
-            //this.Location = Owner.Location;
-            //this.Size = Owner.Size;
+            base.OnLoad(e);
+            this.Location = Owner.Location;
+            this.Size = Owner.Size;
         }
         public InlogSchermBediening()
         {
@@ -82,13 +82,13 @@ namespace WindowsFormsApplication1
             else if (juisteCode && functieGebruiker == "Bar")
             {
                 BarOverzicht barForm = new BarOverzicht(new BarOverzichtDAO());
-                barForm.Show();
+                barForm.Show(this);
                 this.Hide();
             }
             else if (juisteCode && functieGebruiker == "Keuken")
             {
                 keukenBestellingOverzicht keukenForm = new keukenBestellingOverzicht(new keukenBestellingOverzichtDAO());
-                keukenForm.Show();
+                keukenForm.Show(this);
                 this.Hide();
             }
             else
