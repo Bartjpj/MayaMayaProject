@@ -15,6 +15,7 @@ namespace WindowsFormsApplication1
     public partial class BestellingOpnemen : Form
     {
         BestellingOpnemenDAO MenuItemsDAO;
+        private TafelOverzicht tafelOverzicht;
         List<MenuItemsClass> DinerKaartLijst = new List<MenuItemsClass>();
         TafelOverzicht tafelOverzicht = new TafelOverzicht();
 
@@ -80,7 +81,7 @@ namespace WindowsFormsApplication1
 
             foreach (MenuItemsClass item in items)
             {
-                
+
                 ListViewItem isGerechtAlBesteld = listview_huidige_bestelling.FindItemWithText(item.naam);
                 if (isGerechtAlBesteld != null) //wanneer er al een gerecht is besteld wordt het aantal van de hoeveelheid besteldeitems van de voorraad die nog over is gehaald
                 {
@@ -106,7 +107,7 @@ namespace WindowsFormsApplication1
             {
 
                 MenuItemsClass GeselecteerdeItem = (MenuItemsClass)BestellingItem.Tag;
-                
+
 
                 if (GeselecteerdeItem.voorraad < 1)
                 {
@@ -211,24 +212,24 @@ namespace WindowsFormsApplication1
 
 
         }
-
+        //---------------------------TAFELGETAL INITIALIZEREN------------------
+        public int tafelgetal;
+        public int GetalTafel
+        {
+            get { return tafelgetal; }
+            set { tafelgetal = value; }
+        }
         public void button1_Click(object sender, EventArgs e)
         {
-
+            DateTime tijdnu = DateTime.Now;
+            TafelOverzicht openen = new TafelOverzicht();
+            if (tafelgetal == 1)
+            {
+                openen.Label1Text = tijdnu.ToString("H:mm");
             }
 
-
-        public bool timerenable1 = false;
-        public bool timerenable2 = false;
-        public bool timerenable3 = false;
-        public bool timerenable4 = false;
-        public bool timerenable5 = false;
-        public bool timerenable6 = false;
-        public bool timerenable7 = false;
-        public bool timerenable8 = false;
-        public bool timerenable9 = false;
-        public bool timerenable10 = false;
-
+            openen.Show(this);
+        }
 
         private void btn_stuurbestelling_Click_1(object sender, EventArgs e)
         {
@@ -258,8 +259,8 @@ namespace WindowsFormsApplication1
                 MenuItemsDAO.WijzigVoorraad(besteldItem.menu_id, besteldItem.aantal);
             }
 
-            
-            
+
+
             //if (tafel == 1)
             //{
             //    timerenable1 = true;
@@ -287,7 +288,7 @@ namespace WindowsFormsApplication1
             //if (tafel == 10)
             //    timerenable10 = true; 
 
-           // int tafel = 5;
+            // int tafel = 5;
 
             string opmerking = txt_opmerking.Text;
             DateTime actueleTijd = DateTime.Now;
@@ -301,26 +302,52 @@ namespace WindowsFormsApplication1
 
             MenuItemsDAO.VerstuurBestelling(BarMenu_ID, BarAantal, tafel, barBestellingID, actueleTijd, opmerking, personeels_id);
             MenuItemsDAO.VerstuurBestelling(KeukenMenu_ID, KeukenAantal, tafel, keukenBestellingID, actueleTijd, opmerking, personeels_id);
-            
+
+
+            //-----------------------------ZETTEN VAN TIJDSTIP VAN GEPLAATSTE BESTELLING------------------------
+            DateTime tijdnu = DateTime.Now;
+            TafelOverzicht openen = new TafelOverzicht();
+            if (tafelgetal == 1)
+                openen.Label1Text = tijdnu.ToString("H:mm");
+            if (tafelgetal == 2)
+                openen.Label2Text = tijdnu.ToString("H:mm");
+            if (tafelgetal == 3)
+                openen.Label3Text = tijdnu.ToString("H:mm");
+            if (tafelgetal == 4)
+                openen.Label4Text = tijdnu.ToString("H:mm");
+            if (tafelgetal == 5)
+                openen.Label5Text = tijdnu.ToString("H:mm");
+            if (tafelgetal == 6)
+                openen.Label6Text = tijdnu.ToString("H:mm");
+            if (tafelgetal == 7)
+                openen.Label7Text = tijdnu.ToString("H:mm");
+            if (tafelgetal == 8)
+                openen.Label8Text = tijdnu.ToString("H:mm");
+            if (tafelgetal == 9)
+                openen.Label9Text = tijdnu.ToString("H:mm");
+            if (tafelgetal == 10)
+                openen.Label10Text = tijdnu.ToString("H:mm");
+
+            openen.ShowDialog(this);
+
+            //private TafelOverzicht TafelOverzicht()
+            //{
+            //    throw new NotImplementedException();
+            //}
+
+            //private TafelOverzicht tafelOverzicht()
+            //{
+            //    throw new NotImplementedException();
+            //}
+
+
+
+
+
+        }
 
     }
-
-        //private TafelOverzicht TafelOverzicht()
-        //{
-        //    throw new NotImplementedException();
-        //}
-
-        //private TafelOverzicht tafelOverzicht()
-        //{
-        //    throw new NotImplementedException();
-        //}
-
-            
-
-
- 
-    }
-
 }
+
 
 

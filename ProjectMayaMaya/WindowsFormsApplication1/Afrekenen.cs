@@ -29,5 +29,38 @@ namespace WindowsFormsApplication1
             openKiesOpname.Show(this);
             this.Hide();
         }
+        public int tafelgetal;
+        public int GetalTafel
+        {
+            get { return tafelgetal; }
+            set { tafelgetal = value; }
+        }
+        //public int TafelLabel
+        //{
+        //    //get{return lbl_klaargemeldetafel.Text;}
+        //    //set{lbl_klaargemeldetafel.Text = value.ToString();}
+
+        //}
+        private void btn_pinbetalen_Click(object sender, EventArgs e)
+        {
+
+        }
+        TafelOverzicht tafelOverzicht;
+
+        private void lbl_klaargemeldetafel_Click(object sender, EventArgs e)
+        {
+            int tafelnr = tafelOverzicht.tafelgetal;
+            lbl_klaargemeld.Text = tafelnr.ToString();
+
+        }
+        public bool klaarmelden = false;
+
+        public void btn_cbutton_Click(object sender, EventArgs e)
+        {
+            int tafelnr = tafelOverzicht.tafelgetal;
+            if (tafelnr == 1)
+                klaarmelden = true;
+
+        }
     }
 }

@@ -32,7 +32,6 @@
             this.btn_afrekenen = new System.Windows.Forms.Button();
             this.btn_KIESOPNnaarTAFELOVERZICHT = new System.Windows.Forms.Button();
             this.lbl_kieseenoptie = new System.Windows.Forms.Label();
-            this.btn_BezetMelden = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btn_BestellingOpnemen
@@ -84,22 +83,11 @@
             this.lbl_kieseenoptie.TabIndex = 3;
             this.lbl_kieseenoptie.Text = "Kies een optie voor deze tafel";
             // 
-            // btn_BezetMelden
-            // 
-            this.btn_BezetMelden.Location = new System.Drawing.Point(72, 382);
-            this.btn_BezetMelden.Name = "btn_BezetMelden";
-            this.btn_BezetMelden.Size = new System.Drawing.Size(240, 48);
-            this.btn_BezetMelden.TabIndex = 4;
-            this.btn_BezetMelden.Text = "Bezet Melden";
-            this.btn_BezetMelden.UseVisualStyleBackColor = true;
-            this.btn_BezetMelden.Click += new System.EventHandler(this.btn_BezetMelden_Click);
-            // 
             // KiesOpname
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(775, 502);
-            this.Controls.Add(this.btn_BezetMelden);
             this.Controls.Add(this.lbl_kieseenoptie);
             this.Controls.Add(this.btn_KIESOPNnaarTAFELOVERZICHT);
             this.Controls.Add(this.btn_afrekenen);
@@ -117,6 +105,5 @@
         private System.Windows.Forms.Button btn_afrekenen;
         private System.Windows.Forms.Button btn_KIESOPNnaarTAFELOVERZICHT;
         private System.Windows.Forms.Label lbl_kieseenoptie;
-        private System.Windows.Forms.Button btn_BezetMelden;
     }
 }

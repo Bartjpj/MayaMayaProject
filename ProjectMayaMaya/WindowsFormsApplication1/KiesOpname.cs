@@ -26,15 +26,23 @@ namespace WindowsFormsApplication1
 
         private void btn_BestellingOpnemen_Click(object sender, EventArgs e)
         {
-            BestellingMenu openBestellingmenu = new BestellingMenu();
-            openBestellingmenu.Show(this);
+            BestellingOpnemenDAO dinerkaart = new BestellingOpnemenDAO();
+            BestellingOpnemen openDinerkaart = new BestellingOpnemen(dinerkaart);
+            openDinerkaart.GetalTafel = tafelgetal;
+            openDinerkaart.Show(this);
             this.Hide();
         }
-
+        public int tafelgetal;
+        public int GetalTafel
+        {
+            get { return tafelgetal; }
+            set { tafelgetal = value; }
+        }
         private void btn_afrekenen_Click(object sender, EventArgs e)
         {
             Afrekenen openAfrekenscherm = new Afrekenen();
             openAfrekenscherm.Show(this);
+            //openAfrekenscherm.TafelLabel = tafelgetal;
             this.Hide();
         }
 
@@ -51,7 +59,11 @@ namespace WindowsFormsApplication1
         TafelOverzicht tafelOverzicht;
         public void btn_BezetMelden_Click(object sender, EventArgs e)
         {
-            
+            int tafelnr = tafelOverzicht.tafelgetal;
+            if (tafelnr == 1)
+            {
+                //tafelOverzicht.btn_Tafel1.BackColor = Color.LightSkyBlue;
+            }
         }
     }
 }
