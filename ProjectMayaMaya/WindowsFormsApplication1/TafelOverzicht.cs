@@ -18,15 +18,25 @@ namespace WindowsFormsApplication1
     {
         protected override void OnLoad(EventArgs e) // is de verwijzing voor de grootte van de form, niets veranderen AUB
         {
-            //base.OnLoad(e);
-            //this.Location = Owner.Location;
-            //this.Size = Owner.Size;
+            base.OnLoad(e);
+            this.Location = Owner.Location;
+            this.Size = Owner.Size;
 
         }
         TafelOverzichtDAO TafelOverzichtDAO;
         List<TafelOverzichtClass> tafellijst = new List<TafelOverzichtClass>();
         public int tafelgetal;
 
+        public static TafelOverzicht tafeloverzicht
+        {
+            get
+            {
+                if (_tafelOverzicht == null)
+                    _tafelOverzicht = new TafelOverzicht();
+                return _tafelOverzicht;
+            }
+        }
+        private static TafelOverzicht _tafelOverzicht;
 
 
         public TafelOverzicht()
@@ -46,14 +56,7 @@ namespace WindowsFormsApplication1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            foreach (TafelOverzichtClass TafelOverzicht in TafelOverzichtDAO.haalTafelOverzicht_TabelOp())
-            {
 
-                ListViewItem TafelId = new ListViewItem(TafelOverzicht.TafelId.ToString());
-                ListViewItem tafelbezet = new ListViewItem(TafelOverzicht.Bezet.ToString());
-                //lijstitem.SubItems.Add(TafelOverzicht.TafelId.ToString());
-                //lijstitem.SubItems.Add(TafelOverzicht.Bezet.ToString());
-            }
         }
 
         //-----------------TAFELS--------------------------------:
@@ -96,7 +99,7 @@ namespace WindowsFormsApplication1
             this.tafelgetal = 3;
 
             //updateTafelID();
-
+            openKiesopname.GetalTafel = tafelgetal;
         }
         public string Label3Text
         {
@@ -112,7 +115,7 @@ namespace WindowsFormsApplication1
             this.tafelgetal = 4;
 
             //updateTafelID();
-
+            openKiesopname.GetalTafel = tafelgetal;
         }
         public string Label4Text
         {
@@ -128,7 +131,7 @@ namespace WindowsFormsApplication1
             this.tafelgetal = 5;
 
             //updateTafelID();
-
+            openKiesopname.GetalTafel = tafelgetal;
         }
         public string Label5Text
         {
@@ -143,7 +146,7 @@ namespace WindowsFormsApplication1
             this.tafelgetal = 6;
 
             //updateTafelID();
-
+            openKiesopname.GetalTafel = tafelgetal;
         }
         public string Label6Text
         {
@@ -159,7 +162,7 @@ namespace WindowsFormsApplication1
             this.tafelgetal = 7;
 
             //updateTafelID();
-
+            openKiesopname.GetalTafel = tafelgetal;
         }
         public string Label7Text
         {
@@ -174,7 +177,7 @@ namespace WindowsFormsApplication1
             this.tafelgetal = 8;
 
             //updateTafelID();
-
+            openKiesopname.GetalTafel = tafelgetal;
         }
         public string Label8Text
         {
@@ -189,7 +192,7 @@ namespace WindowsFormsApplication1
             this.tafelgetal = 9;
 
             //updateTafelID();
-
+            openKiesopname.GetalTafel = tafelgetal;
         }
         public string Label9Text
         {
@@ -204,7 +207,7 @@ namespace WindowsFormsApplication1
             this.tafelgetal = 10;
 
             //updateTafelID();
-
+            openKiesopname.GetalTafel = tafelgetal;
         }
         public string Label10Text
         {

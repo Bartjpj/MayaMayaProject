@@ -50,6 +50,7 @@ namespace WindowsFormsApplication1
 
         private void btn_BestellingMENUnaarTAFELOVERZICHT_Click(object sender, EventArgs e)
         {
+            
             KiesOpname openKiesOpname = new KiesOpname();
             openKiesOpname.Show(this);
             this.Hide();
@@ -73,10 +74,11 @@ namespace WindowsFormsApplication1
 
         private void btn_dinerkaart_Click(object sender, EventArgs e)
         {
+            this.Close();
             BestellingOpnemenDAO dinerkaart = new BestellingOpnemenDAO();
             BestellingOpnemen openDinerkaart = new BestellingOpnemen(dinerkaart);
             openDinerkaart.Show(this);
-            this.Hide();
+            
         }
     }
 

@@ -16,9 +16,9 @@ namespace WindowsFormsApplication1
     {
         protected override void OnLoad(EventArgs e) // is de verwijzing, niets veranderen AUB
         {
-            //base.OnLoad(e);
-            //this.Location = Owner.Location;       //vragen aan ivo
-            //this.Size = Owner.Size;
+            base.OnLoad(e);
+            this.Location = Owner.Location;
+            this.Size = Owner.Size;
         }
         public InlogSchermBediening()
         {
@@ -76,33 +76,33 @@ namespace WindowsFormsApplication1
             if (juisteCode && functieGebruiker == "Bediening") // ga naar tafeloverzicht als het true is, geef een alert als het false.
             {
                 TafelOverzicht tafelForm = new TafelOverzicht();
-                tafelForm.Show();
+                tafelForm.Show(this);
                 this.Hide();
             }
             else if (juisteCode && functieGebruiker == "Bar")
             {
                 BarOverzicht barForm = new BarOverzicht(new BarOverzichtDAO());
-                barForm.Show();
+                barForm.Show(this);
                 this.Hide();
             }
             else if (juisteCode && functieGebruiker == "Keuken")
             {
                 keukenBestellingOverzicht keukenForm = new keukenBestellingOverzicht(new keukenBestellingOverzichtDAO());
-                keukenForm.Show();
+                keukenForm.Show(this);
                 this.Hide();
             }
             else
             {
                 inlogFoutAlert inlogFout = new inlogFoutAlert();
                 inlogFout.StartPosition = FormStartPosition.CenterParent;
-                inlogFout.ShowDialog(this);
+                inlogFout.Show(this);
             }
         }
-
-        private void btn_InloggenSkippen_Click(object sender, EventArgs e)
+        
+        private void btn_InloggenSkippen_Click(object sender, EventArgs e) // experimentje
         {
-            TafelOverzicht openTafelOverzicht = new TafelOverzicht();
-            openTafelOverzicht.ShowDialog(this);
+            TafelOverzicht tafelForm = new TafelOverzicht();
+            tafelForm.Show(this);
             this.Hide();
         }
 

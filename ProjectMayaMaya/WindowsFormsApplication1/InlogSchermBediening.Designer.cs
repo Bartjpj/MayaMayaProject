@@ -31,7 +31,6 @@
             this.lbl_personeelid = new System.Windows.Forms.Label();
             this.txt_PersoneelsID = new System.Windows.Forms.TextBox();
             this.btn_inloggen = new System.Windows.Forms.Button();
-            this.lbl_Bedieninglogininfo = new System.Windows.Forms.Label();
             this.btn_INLOGGENnaarHM = new System.Windows.Forms.Button();
             this.btn_InloggenSkippen = new System.Windows.Forms.Button();
             this.lbl_personeelsleden = new System.Windows.Forms.Label();
@@ -49,9 +48,12 @@
             // 
             // txt_PersoneelsID
             // 
+            this.txt_PersoneelsID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_PersoneelsID.Location = new System.Drawing.Point(322, 181);
+            this.txt_PersoneelsID.MaxLength = 9;
             this.txt_PersoneelsID.Name = "txt_PersoneelsID";
-            this.txt_PersoneelsID.Size = new System.Drawing.Size(224, 20);
+            this.txt_PersoneelsID.PasswordChar = '*';
+            this.txt_PersoneelsID.Size = new System.Drawing.Size(224, 26);
             this.txt_PersoneelsID.TabIndex = 2;
             this.txt_PersoneelsID.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_PersoneelsID_KeyPress);
             // 
@@ -59,23 +61,13 @@
             // 
             this.btn_inloggen.BackColor = System.Drawing.Color.LimeGreen;
             this.btn_inloggen.ForeColor = System.Drawing.Color.White;
-            this.btn_inloggen.Location = new System.Drawing.Point(322, 207);
+            this.btn_inloggen.Location = new System.Drawing.Point(322, 225);
             this.btn_inloggen.Name = "btn_inloggen";
             this.btn_inloggen.Size = new System.Drawing.Size(65, 35);
             this.btn_inloggen.TabIndex = 5;
             this.btn_inloggen.Text = "Inloggen";
             this.btn_inloggen.UseVisualStyleBackColor = false;
             this.btn_inloggen.Click += new System.EventHandler(this.btn_inloggen_Click);
-            // 
-            // lbl_Bedieninglogininfo
-            // 
-            this.lbl_Bedieninglogininfo.AutoSize = true;
-            this.lbl_Bedieninglogininfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Bedieninglogininfo.Location = new System.Drawing.Point(182, 116);
-            this.lbl_Bedieninglogininfo.Name = "lbl_Bedieninglogininfo";
-            this.lbl_Bedieninglogininfo.Size = new System.Drawing.Size(303, 31);
-            this.lbl_Bedieninglogininfo.TabIndex = 6;
-            this.lbl_Bedieninglogininfo.Text = "Bediening hier inloggen:";
             // 
             // btn_INLOGGENnaarHM
             // 
@@ -93,7 +85,7 @@
             // 
             this.btn_InloggenSkippen.BackColor = System.Drawing.Color.Maroon;
             this.btn_InloggenSkippen.ForeColor = System.Drawing.Color.White;
-            this.btn_InloggenSkippen.Location = new System.Drawing.Point(455, 208);
+            this.btn_InloggenSkippen.Location = new System.Drawing.Point(455, 225);
             this.btn_InloggenSkippen.Name = "btn_InloggenSkippen";
             this.btn_InloggenSkippen.Size = new System.Drawing.Size(91, 34);
             this.btn_InloggenSkippen.TabIndex = 8;
@@ -110,15 +102,14 @@
             this.lbl_personeelsleden.TabIndex = 9;
             // 
             // InlogSchermBediening
-            // whutt
+            // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(690, 501);
+            this.ClientSize = new System.Drawing.Size(775, 502);
             this.Controls.Add(this.lbl_personeelsleden);
             this.Controls.Add(this.btn_InloggenSkippen);
             this.Controls.Add(this.btn_INLOGGENnaarHM);
-            this.Controls.Add(this.lbl_Bedieninglogininfo);
             this.Controls.Add(this.btn_inloggen);
             this.Controls.Add(this.txt_PersoneelsID);
             this.Controls.Add(this.lbl_personeelid);
@@ -138,7 +129,6 @@
         private System.Windows.Forms.Label lbl_personeelid;
         private System.Windows.Forms.TextBox txt_PersoneelsID;
         private System.Windows.Forms.Button btn_inloggen;
-        private System.Windows.Forms.Label lbl_Bedieninglogininfo;
         private System.Windows.Forms.Button btn_INLOGGENnaarHM;
         private System.Windows.Forms.Button btn_InloggenSkippen;
         private System.Windows.Forms.Label lbl_personeelsleden;
