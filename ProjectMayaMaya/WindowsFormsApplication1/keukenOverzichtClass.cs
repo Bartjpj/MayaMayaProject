@@ -17,7 +17,7 @@ namespace WindowsFormsApplication1
         public DateTime datum_tijd { get; set; }
         public string opmerking { get; set; }
         //De constructor wordt aangemaakt
-        public keukenOverzichtClass(int bestelling_id, int tafel_id, int aantal, string naam, DateTime datum_tijd, string opmerking)
+        public keukenOverzichtClass(int bestelling_id, int tafel_id, string naam, int aantal, DateTime datum_tijd, string opmerking)
         {
             this.bestelling_id = bestelling_id;
             this.tafel_id = tafel_id;

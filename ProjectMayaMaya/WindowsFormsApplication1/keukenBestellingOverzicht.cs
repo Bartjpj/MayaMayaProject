@@ -145,6 +145,7 @@ namespace WindowsFormsApplication1
             List<int> tafelNummers = keukenBestellingOverzichtDAO.haalTafelNrOp();
             List<int> tafelNummersDistinct = tafelNummers.Distinct().ToList();
             flowLayoutPanel1.Controls.Clear();
+
             foreach (int tafelNummer in tafelNummersDistinct)
             {
 
@@ -152,6 +153,7 @@ namespace WindowsFormsApplication1
                 b.Tag = tafelNummer;
                 b.Name = "Tafel " + tafelNummer.ToString();
                 b.Text = "Tafel " + tafelNummer.ToString();
+                b.BackColor = Color.DodgerBlue;
                 b.AutoSize = false;
                 b.Click += new EventHandler(button_Click);
                 flowLayoutPanel1.Controls.Add(b);
@@ -164,6 +166,34 @@ namespace WindowsFormsApplication1
 
 
         private void flowLayoutPanel1_Paint_1(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            bestellingOverzichtKeukenView.Items.Clear();
+            foreach (keukenOverzichtClass keukenOverzicht in keukenBestellingOverzichtDAO.haalDagKeukenBestelling())
+            {
+                //for (int i = listView1.Items.Count - 1; i >= 0; i--)
+                //{
+                //    //ListViewItem get = new ListViewItem
+                //    listView1.Items[i].Remove();
+                //}
+                ListViewItem lijstItem = new ListViewItem(keukenOverzicht.bestelling_id.ToString());
+                lijstItem.SubItems.Add(keukenOverzicht.tafel_id.ToString());
+                lijstItem.SubItems.Add(keukenOverzicht.aantal.ToString());
+                lijstItem.SubItems.Add(keukenOverzicht.naam.ToString());
+                lijstItem.SubItems.Add(keukenOverzicht.datum_tijd.ToString());
+                lijstItem.SubItems.Add(keukenOverzicht.opmerking.ToString());
+                bestellingOverzichtKeukenView.Items.Add(lijstItem);
+
+
+            }
+
+        }
+
+        private void lbl_OpenstaandeBestellingenKeuken_Click(object sender, EventArgs e)
         {
 
         }

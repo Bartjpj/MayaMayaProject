@@ -206,11 +206,12 @@ namespace WindowsFormsApplication1
             flowLayoutPanel1.Controls.Clear();
             foreach (int tafelNummer in tafelNummersDistinct) 
             {
-                
+
                 Button b = new Button();
                 b.Tag = tafelNummer;
                 b.Name = "Tafel " + tafelNummer.ToString();
                 b.Text = "Tafel " + tafelNummer.ToString();
+                b.BackColor = Color.DodgerBlue;
                 b.AutoSize = false;
                 b.Click += new EventHandler(button_Click);
                 flowLayoutPanel1.Controls.Add(b);
