@@ -329,7 +329,7 @@ namespace WindowsFormsApplication1
                 openen.Label10Text = tijdnu.ToString("H:mm");
 
             openen.ShowDialog(this);
-
+            this.Close();
             //private TafelOverzicht TafelOverzicht()
             //{
             //    throw new NotImplementedException();

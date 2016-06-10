@@ -76,7 +76,7 @@ namespace WindowsFormsApplication1
             if (juisteCode && functieGebruiker == "Bediening") // ga naar tafeloverzicht als het true is, geef een alert als het false.
             {
                 TafelOverzicht tafelForm = new TafelOverzicht();
-                tafelForm.Show();
+                tafelForm.Show(this);
                 this.Hide();
             }
             else if (juisteCode && functieGebruiker == "Bar")
@@ -95,14 +95,14 @@ namespace WindowsFormsApplication1
             {
                 inlogFoutAlert inlogFout = new inlogFoutAlert();
                 inlogFout.StartPosition = FormStartPosition.CenterParent;
-                inlogFout.ShowDialog(this);
+                inlogFout.Show(this);
             }
         }
 
         private void btn_InloggenSkippen_Click(object sender, EventArgs e)
         {
             TafelOverzicht openTafelOverzicht = new TafelOverzicht();
-            openTafelOverzicht.ShowDialog(this);
+            openTafelOverzicht.Show(this);
             this.Hide();
         }
 
