@@ -89,6 +89,7 @@
             this.lbl_klaargemeldetafel.Size = new System.Drawing.Size(60, 13);
             this.lbl_klaargemeldetafel.TabIndex = 3;
             this.lbl_klaargemeldetafel.Text = "Tafel hier...";
+            this.lbl_klaargemeldetafel.Click += new System.EventHandler(this.lbl_klaargemeldetafel_Click);
             // 
             // lbl_opmerkingen
             // 
@@ -224,6 +225,7 @@
             this.btn_cbutton.TabIndex = 17;
             this.btn_cbutton.Text = "C";
             this.btn_cbutton.UseVisualStyleBackColor = false;
+            this.btn_cbutton.Click += new System.EventHandler(this.btn_cbutton_Click);
             // 
             // btn_pinbetalen
             // 
@@ -235,6 +237,7 @@
             this.btn_pinbetalen.TabIndex = 18;
             this.btn_pinbetalen.Text = "Pin";
             this.btn_pinbetalen.UseVisualStyleBackColor = false;
+            this.btn_pinbetalen.Click += new System.EventHandler(this.btn_pinbetalen_Click);
             // 
             // btn_creditcardbetalen
             // 

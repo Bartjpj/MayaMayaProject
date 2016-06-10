@@ -18,6 +18,11 @@ namespace WindowsFormsApplication1
             this.Bezet = Bezet;
         }
 
+        public TafelOverzichtClass(int TafelId)
+        {
+            this.TafelId = TafelId;
+        }
+
 
 
         
