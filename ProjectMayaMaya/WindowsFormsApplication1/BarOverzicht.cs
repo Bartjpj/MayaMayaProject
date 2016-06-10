@@ -18,6 +18,7 @@ namespace WindowsFormsApplication1
         List<BarOverzichtClass> bestellingslijst = new List<BarOverzichtClass>();
         ListViewItem lijstItem;
         public int tafelNr;
+        public int bestellingId;
        
        
         protected override void OnLoad(EventArgs e) // is de verwijzing, niets veranderen AUB
@@ -143,38 +144,15 @@ namespace WindowsFormsApplication1
 
         private void btn_BestellingGereed_Click(object sender, EventArgs e)
         {
-            BarOverzichtClass isGereedmelding = new BarOverzichtClass();
-            int bestellings_id = 0;
-            ////var item = listView1.SelectedItems[0];
-            //bool isGereed = true;
-    //        foreach (BarOverzichtClass barOverzicht in BarOverzichtDAO.haalBarOverzicht_TabelOp())
-            { 
 
-                for (int i = listView1.Items.Count - 1; i >= 0; i--)
-                {
-
-                    if (listView1.Items[i].Selected)
-                    {
-                        //item = listView1.SelectedItems[i];
-
-
-                        BarOverzichtClass GeselecteerdeItem = new BarOverzichtClass();
-
-                        GeselecteerdeItem = (BarOverzichtClass)listView1.SelectedItems[i].Tag;
-                        bestellings_id = GeselecteerdeItem.bestelling_id;
-                        listView1.Items[i].Remove();
-
-                  
-
-                    }
-                }
-
-               
-
-                
-                //Bestelling_id = Int32.Parse(listView1.[Bestellingid].Text);
-                BarOverzichtDAO.updateTafelsGereed(tafelNr, bestellings_id);
-                }
+            ListView.SelectedListViewItemCollection regels = this.listView1.SelectedItems;
+            foreach (ListViewItem regel in regels)
+            {
+                BarOverzichtClass itemUitRegel = (BarOverzichtClass)regel.Tag;
+                bestellingId = itemUitRegel.bestelling_id;
+                tafelNr = itemUitRegel.tafel_id;
+            }
+            BarOverzichtDAO.updateTafelsGereed(this.tafelNr, this.bestellingId);
               
             
             // ...

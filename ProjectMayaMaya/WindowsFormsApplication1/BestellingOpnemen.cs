@@ -17,7 +17,7 @@ namespace WindowsFormsApplication1
         BestellingOpnemenDAO MenuItemsDAO;
         private TafelOverzicht tafelOverzicht;
         List<MenuItemsClass> DinerKaartLijst = new List<MenuItemsClass>();
-        TafelOverzicht tafelOverzicht = new TafelOverzicht();
+        //TafelOverzicht tafelOverzicht = new TafelOverzicht();
 
 
 

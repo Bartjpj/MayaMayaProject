@@ -58,7 +58,7 @@ namespace WindowsFormsApplication1
 
         //-----------------TAFELS--------------------------------:
         // BestellingMenu bestellingmenuActiveren = new BestellingMenu();
-        public int tafelgetal;
+        //public int tafelgetal;
         //1
         public void btn_Tafel1_Click(object sender, EventArgs e)
         {
