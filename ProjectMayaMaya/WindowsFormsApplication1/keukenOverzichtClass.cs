@@ -24,6 +24,6 @@ namespace WindowsFormsApplication1
             this.naam = naam;
             this.datum_tijd = datum_tijd;
         }
-        public keukenOverzichtClass() { }
+        public keukenOverzichtClass(){}
     }
 }

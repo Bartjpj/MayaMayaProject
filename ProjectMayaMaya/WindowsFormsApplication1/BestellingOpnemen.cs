@@ -15,9 +15,9 @@ namespace WindowsFormsApplication1
     public partial class BestellingOpnemen : Form
     {
         BestellingOpnemenDAO MenuItemsDAO;
-        private TafelOverzicht tafelOverzicht;
+        //private TafelOverzicht tafelOverzicht;
         List<MenuItemsClass> DinerKaartLijst = new List<MenuItemsClass>();
-        TafelOverzicht tafelOverzicht = new TafelOverzicht();
+        //TafelOverzicht tafelOverzicht = new TafelOverzicht();
 
 
 

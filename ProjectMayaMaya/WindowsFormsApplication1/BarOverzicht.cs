@@ -18,7 +18,7 @@ namespace WindowsFormsApplication1
         List<BarOverzichtClass> bestellingslijst = new List<BarOverzichtClass>();
         ListViewItem lijstItem;
         public int tafelNr;
-       
+        public int bestellings_id;
        
         protected override void OnLoad(EventArgs e) // is de verwijzing, niets veranderen AUB
         {
@@ -63,7 +63,7 @@ namespace WindowsFormsApplication1
 
         private void button_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Bestellinglijst wordt geopend voor " + ((Button)sender).Name);
+            //MessageBox.Show("Bestellinglijst wordt geopend voor " + ((Button)sender).Name);
 
             Button btn = (Button)sender;
             tafelNr = Int32.Parse(btn.Text.Substring(5).Trim());
@@ -74,10 +74,10 @@ namespace WindowsFormsApplication1
             List<BarOverzichtClass> items = BarOverzichtDAO.haalBestellingTafel(tafelNr); // parameter wordt hier meegegeven aan Dao zodat er per tafel de bestellingen opgehaald kunnen worden.
             foreach (BarOverzichtClass barOverzicht in items)
             {
-                lijstItem = new ListViewItem(barOverzicht.bestelling_id.ToString());
+               ListViewItem lijstItem = new ListViewItem(barOverzicht.bestelling_id.ToString());
                 lijstItem.SubItems.Add(barOverzicht.tafel_id.ToString());
-                lijstItem.SubItems.Add(barOverzicht.aantal.ToString());
                 lijstItem.SubItems.Add(barOverzicht.naam.ToString());
+                lijstItem.SubItems.Add(barOverzicht.aantal.ToString());
                 lijstItem.SubItems.Add(barOverzicht.datum_tijd.ToString());
                 listView1.Items.Add(lijstItem);
 
@@ -118,7 +118,7 @@ namespace WindowsFormsApplication1
                 //    //ListViewItem get = new ListViewItem
                 //    listView1.Items[i].Remove();
                 //}
-                lijstItem = new ListViewItem(barOverzicht.bestelling_id.ToString());
+                ListViewItem lijstItem = new ListViewItem(barOverzicht.bestelling_id.ToString());
                 lijstItem.SubItems.Add(barOverzicht.tafel_id.ToString());
                 lijstItem.SubItems.Add(barOverzicht.naam.ToString());
                 lijstItem.SubItems.Add(barOverzicht.aantal.ToString());
@@ -144,44 +144,17 @@ namespace WindowsFormsApplication1
         private void btn_BestellingGereed_Click(object sender, EventArgs e)
         {
             BarOverzichtClass isGereedmelding = new BarOverzichtClass();
-            int bestellings_id = 0;
-            ////var item = listView1.SelectedItems[0];
-            //bool isGereed = true;
-    //        foreach (BarOverzichtClass barOverzicht in BarOverzichtDAO.haalBarOverzicht_TabelOp())
-            { 
 
-                for (int i = listView1.Items.Count - 1; i >= 0; i--)
+            for (int i = listView1.Items.Count - 1; i >= 0; i--)
+            {
+                if (listView1.Items[i].Selected)
                 {
+                    listView1.Items[i].Remove();
 
-                    if (listView1.Items[i].Selected)
-                    {
-                        //item = listView1.SelectedItems[i];
-
-
-                        BarOverzichtClass GeselecteerdeItem = new BarOverzichtClass();
-
-                        GeselecteerdeItem = (BarOverzichtClass)listView1.SelectedItems[i].Tag;
-                        bestellings_id = GeselecteerdeItem.bestelling_id;
-                        listView1.Items[i].Remove();
-
-                  
-
-                    }
                 }
-
-               
-
-                
-                //Bestelling_id = Int32.Parse(listView1.[Bestellingid].Text);
-                BarOverzichtDAO.updateTafelsGereed(tafelNr, bestellings_id);
-                }
-              
-            
-            // ...
-           // isGereedmelding.bestellingGereed(tafelNr);
-
-            // refresh het hele scherm
-            bestellingslijst = BarOverzichtDAO.haalBarOverzicht_TabelOp(); // haal de bestelling op
+            }
+            BarOverzichtDAO.updateTafelsGereed(tafelNr);
+            bestellingslijst = BarOverzichtDAO.haalBarOverzicht_TabelOp();
             DisplayBestellingen();
         }
 
@@ -206,8 +179,8 @@ namespace WindowsFormsApplication1
                 //}
                 ListViewItem lijstItem = new ListViewItem(barOverzicht.bestelling_id.ToString());
                 lijstItem.SubItems.Add(barOverzicht.tafel_id.ToString());
-                lijstItem.SubItems.Add(barOverzicht.aantal.ToString());
                 lijstItem.SubItems.Add(barOverzicht.naam.ToString());
+                lijstItem.SubItems.Add(barOverzicht.aantal.ToString());
                 lijstItem.SubItems.Add(barOverzicht.datum_tijd.ToString());
                 listView1.Items.Add(lijstItem);
 

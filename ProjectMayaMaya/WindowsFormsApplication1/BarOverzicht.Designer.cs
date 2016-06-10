@@ -87,8 +87,8 @@
             this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.Bestellingid,
             this.Tafel_id,
-            this.Aantal,
             this.Item,
+            this.Aantal,
             this.Datum_tijd});
             this.listView1.FullRowSelect = true;
             this.listView1.GridLines = true;

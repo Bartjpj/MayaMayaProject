@@ -33,8 +33,8 @@
             this.bestellingOverzichtKeukenView = new System.Windows.Forms.ListView();
             this.Bestelling_id = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Tafel_id = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.Aantal = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Item = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Aantal = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.btn_keukenOverzicht = new System.Windows.Forms.Button();
             this.btn_gereed_keuken = new System.Windows.Forms.Button();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
@@ -85,22 +85,24 @@
             // Bestelling_id
             // 
             this.Bestelling_id.Text = "BestellingID";
-            this.Bestelling_id.Width = 149;
+            this.Bestelling_id.Width = 70;
             // 
             // Tafel_id
             // 
             this.Tafel_id.Text = "Tafel_id";
-            this.Tafel_id.Width = 163;
-            // 
-            // Aantal
-            // 
-            this.Aantal.Text = "Aantal";
-            this.Aantal.Width = 116;
+            this.Tafel_id.Width = 70;
             // 
             // Item
             // 
+            this.Item.DisplayIndex = 2;
             this.Item.Text = "Item";
-            this.Item.Width = 176;
+            this.Item.Width = 270;
+            // 
+            // Aantal
+            // 
+            this.Aantal.DisplayIndex = 3;
+            this.Aantal.Text = "Aantal";
+            this.Aantal.Width = 45;
             // 
             // btn_keukenOverzicht
             // 
@@ -163,8 +165,8 @@
         private System.Windows.Forms.ListView bestellingOverzichtKeukenView;
         private System.Windows.Forms.ColumnHeader Bestelling_id;
         private System.Windows.Forms.ColumnHeader Tafel_id;
-        private System.Windows.Forms.ColumnHeader Aantal;
         private System.Windows.Forms.ColumnHeader Item;
+        private System.Windows.Forms.ColumnHeader Aantal;
         private System.Windows.Forms.Button btn_keukenOverzicht;
         private System.Windows.Forms.Button btn_gereed_keuken;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;

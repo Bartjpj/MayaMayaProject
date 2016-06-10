@@ -58,14 +58,14 @@ namespace WindowsFormsApplication1
 
         //-----------------TAFELS--------------------------------:
         // BestellingMenu bestellingmenuActiveren = new BestellingMenu();
-        public int tafelgetal;
-        //1
+        //public int tafelgetal;
+        ////1
         public void btn_Tafel1_Click(object sender, EventArgs e)
         {
-            tafelgetal = 1;
+            //tafelgetal = 1;
             KiesOpname openKiesopname1 = new KiesOpname();
             openKiesopname1.Show(this);
-            openKiesopname1.GetalTafel = tafelgetal;
+            //openKiesopname1.GetalTafel = tafelgetal;
         }
         public string Label1Text
         {
@@ -79,8 +79,8 @@ namespace WindowsFormsApplication1
             KiesOpname openKiesopname = new KiesOpname();
             openKiesopname.Show(this);
 
-            tafelgetal = 2;
-            openKiesopname.GetalTafel = tafelgetal;
+            //tafelgetal = 2;
+            //openKiesopname.GetalTafel = tafelgetal;
         }
         public string Label2Text
         {
@@ -93,7 +93,7 @@ namespace WindowsFormsApplication1
         {
             KiesOpname openKiesopname = new KiesOpname();
             openKiesopname.Show(this);
-            this.tafelgetal = 3;
+            //this.tafelgetal = 3;
 
             //updateTafelID();
 
@@ -109,7 +109,7 @@ namespace WindowsFormsApplication1
         {
             KiesOpname openKiesopname = new KiesOpname();
             openKiesopname.Show(this);
-            this.tafelgetal = 4;
+            //this.tafelgetal = 4;
 
             //updateTafelID();
 
@@ -125,7 +125,7 @@ namespace WindowsFormsApplication1
         {
             KiesOpname openKiesopname = new KiesOpname();
             openKiesopname.Show(this);
-            this.tafelgetal = 5;
+            //this.tafelgetal = 5;
 
             //updateTafelID();
 
@@ -140,7 +140,7 @@ namespace WindowsFormsApplication1
         {
             KiesOpname openKiesopname = new KiesOpname();
             openKiesopname.Show(this);
-            this.tafelgetal = 6;
+            //this.tafelgetal = 6;
 
             //updateTafelID();
 
@@ -156,7 +156,7 @@ namespace WindowsFormsApplication1
         {
             KiesOpname openKiesopname = new KiesOpname();
             openKiesopname.Show(this);
-            this.tafelgetal = 7;
+            //this.tafelgetal = 7;
 
             //updateTafelID();
 
@@ -171,7 +171,7 @@ namespace WindowsFormsApplication1
         {
             KiesOpname openKiesopname = new KiesOpname();
             openKiesopname.Show(this);
-            this.tafelgetal = 8;
+            //this.tafelgetal = 8;
 
             //updateTafelID();
 
@@ -186,7 +186,7 @@ namespace WindowsFormsApplication1
         {
             KiesOpname openKiesopname = new KiesOpname();
             openKiesopname.Show(this);
-            this.tafelgetal = 9;
+            //this.tafelgetal = 9;
 
             //updateTafelID();
 
@@ -201,8 +201,6 @@ namespace WindowsFormsApplication1
         {
             KiesOpname openKiesopname = new KiesOpname();
             openKiesopname.Show(this);
-            this.tafelgetal = 10;
-
             //updateTafelID();
 
         }
@@ -250,7 +248,7 @@ namespace WindowsFormsApplication1
         }
         private void SetText2(string text)
         {
-            if (tafelgetal == 2)
+            //if (tafelgetal == 2)
             {
                 if (this.lnl_tijdtafel2.InvokeRequired)
                 {
@@ -266,7 +264,7 @@ namespace WindowsFormsApplication1
         
         private void SetText3(string text)
         {
-            if (tafelgetal == 3)
+            //if (tafelgetal == 3)
             {
                 if (this.lbl_tijdtafel3.InvokeRequired)
                 {
@@ -282,7 +280,7 @@ namespace WindowsFormsApplication1
 
         private void SetText4(string text)
         {
-            if (tafelgetal == 4)
+            //if (tafelgetal == 4)
             {
                 if (this.lbl_tijdtafel4.InvokeRequired)
                 {
