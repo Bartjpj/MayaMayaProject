@@ -150,11 +150,11 @@ namespace WindowsFormsApplication1
             ListView.SelectedListViewItemCollection regels = this.listView1.SelectedItems;
             foreach (ListViewItem regel in regels)
                 {
-                if (listView1.Items[i].Selected)
-                {
-                    listView1.Items[i].Remove();
-
-                }
+               // if (listView1.Items[i].Selected)
+               // {
+                //    listView1.Items[i].Remove();
+                //
+                //}
             }
             BarOverzichtDAO.updateTafelsGereed(tafelNr);
             bestellingslijst = BarOverzichtDAO.haalBarOverzicht_TabelOp();

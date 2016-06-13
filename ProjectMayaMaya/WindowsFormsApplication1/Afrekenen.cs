@@ -59,7 +59,7 @@ namespace WindowsFormsApplication1
         private void lbl_klaargemeldetafel_Click(object sender, EventArgs e)
         {
             int tafelnr = tafelOverzicht.tafelgetal;
-            lbl_klaargemeld.Text = tafelnr.ToString();
+            //lbl_klaargemeld.Text = tafelnr.ToString();
 
         }
         public bool klaarmelden = false;
