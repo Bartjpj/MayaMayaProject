@@ -147,18 +147,18 @@ namespace WindowsFormsApplication1
         {
             BarOverzichtClass isGereedmelding = new BarOverzichtClass();
 
-            ListView.SelectedListViewItemCollection regels = this.listView1.SelectedItems;
-            foreach (ListViewItem regel in regels)
+            for (int i = listView1.Items.Count - 1; i >= 0; i--)
                 {
-               // if (listView1.Items[i].Selected)
-               // {
-                //    listView1.Items[i].Remove();
-                //
-                //}
+                if (listView1.Items[i].Selected)
+                {
+                    listView1.Items[i].Remove();
+
+                }
             }
             BarOverzichtDAO.updateTafelsGereed(tafelNr);
             bestellingslijst = BarOverzichtDAO.haalBarOverzicht_TabelOp();
             DisplayBestellingen();
+
         }
 
 
@@ -211,6 +211,7 @@ namespace WindowsFormsApplication1
                 b.Tag = tafelNummer;
                 b.Name = "Tafel " + tafelNummer.ToString();
                 b.Text = "Tafel " + tafelNummer.ToString();
+                b.BackColor = Color.DodgerBlue;
                 b.AutoSize = false;
                 b.Click += new EventHandler(button_Click);
                 flowLayoutPanel1.Controls.Add(b);

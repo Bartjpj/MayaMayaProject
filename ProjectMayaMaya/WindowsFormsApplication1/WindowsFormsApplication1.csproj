@@ -52,6 +52,7 @@
     <Compile Include="Afrekenen.Designer.cs">
       <DependentUpon>Afrekenen.cs</DependentUpon>
     </Compile>
+    <Compile Include="AfrekenenClass.cs" />
     <Compile Include="BarOverzichtClass.cs" />
     <Compile Include="BarOverzichtDAO.cs" />
     <Compile Include="BesteldeItemClass.cs" />
@@ -146,7 +147,7 @@
     <Compile Include="PersoneelslidID.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Rekening.cs" />
+    <Compile Include="AfrekenenDAO.cs" />
     <Compile Include="rekeningEnum.cs" />
     <Compile Include="TafelOverzichtDAO.cs" />
     <Compile Include="TafelOverzichtClass.cs" />

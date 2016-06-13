@@ -33,13 +33,14 @@
             this.bestellingOverzichtKeukenView = new System.Windows.Forms.ListView();
             this.Bestelling_id = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Tafel_id = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.Item = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Aantal = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Item = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Datum_tijd = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Opmerking = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.btn_keukenOverzicht = new System.Windows.Forms.Button();
             this.btn_gereed_keuken = new System.Windows.Forms.Button();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.Datum_tijd = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.Opmerking = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btn_KeukenNaarHoofdmenu
@@ -59,11 +60,13 @@
             // 
             this.lbl_OpenstaandeBestellingenKeuken.AutoSize = true;
             this.lbl_OpenstaandeBestellingenKeuken.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_OpenstaandeBestellingenKeuken.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.lbl_OpenstaandeBestellingenKeuken.Location = new System.Drawing.Point(253, 49);
             this.lbl_OpenstaandeBestellingenKeuken.Name = "lbl_OpenstaandeBestellingenKeuken";
             this.lbl_OpenstaandeBestellingenKeuken.Size = new System.Drawing.Size(242, 24);
             this.lbl_OpenstaandeBestellingenKeuken.TabIndex = 2;
             this.lbl_OpenstaandeBestellingenKeuken.Text = "Openstaande Bestellingen: ";
+            this.lbl_OpenstaandeBestellingenKeuken.Click += new System.EventHandler(this.lbl_OpenstaandeBestellingenKeuken_Click);
             // 
             // bestellingOverzichtKeukenView
             // 
@@ -94,17 +97,27 @@
             this.Tafel_id.Text = "Tafel_id";
             this.Tafel_id.Width = 51;
             // 
+            // Aantal
+            // 
+            this.Aantal.DisplayIndex = 3;
+            this.Aantal.Text = "Aantal";
+            this.Aantal.Width = 45;
+            // 
             // Item
             // 
             this.Item.DisplayIndex = 2;
             this.Item.Text = "Item";
             this.Item.Width = 270;
             // 
-            // Aantal
+            // Datum_tijd
             // 
-            this.Aantal.DisplayIndex = 3;
-            this.Aantal.Text = "Aantal";
-            this.Aantal.Width = 45;
+            this.Datum_tijd.Text = "Datum/Tijd";
+            this.Datum_tijd.Width = 118;
+            // 
+            // Opmerking
+            // 
+            this.Opmerking.Text = "Opmerking";
+            this.Opmerking.Width = 175;
             // 
             // btn_keukenOverzicht
             // 
@@ -130,33 +143,37 @@
             // 
             // flowLayoutPanel1
             // 
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(536, 12);
+            this.flowLayoutPanel1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(501, 12);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(251, 100);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(294, 114);
             this.flowLayoutPanel1.TabIndex = 8;
             this.flowLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel1_Paint_1);
             // 
-            // Datum_tijd
+            // button1
             // 
-            this.Datum_tijd.Text = "Datum/Tijd";
-            this.Datum_tijd.Width = 118;
-            // 
-            // Opmerking
-            // 
-            this.Opmerking.Text = "Opmerking";
-            this.Opmerking.Width = 175;
+            this.button1.BackColor = System.Drawing.Color.Maroon;
+            this.button1.Location = new System.Drawing.Point(339, 402);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(136, 44);
+            this.button1.TabIndex = 9;
+            this.button1.Text = "Dagoverzicht";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // keukenBestellingOverzicht
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(823, 458);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.btn_gereed_keuken);
             this.Controls.Add(this.btn_keukenOverzicht);
             this.Controls.Add(this.bestellingOverzichtKeukenView);
             this.Controls.Add(this.lbl_OpenstaandeBestellingenKeuken);
             this.Controls.Add(this.btn_KeukenNaarHoofdmenu);
+            this.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "keukenBestellingOverzicht";
             this.Text = "keukenBestellingOverzicht";
@@ -179,5 +196,6 @@
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.ColumnHeader Datum_tijd;
         private System.Windows.Forms.ColumnHeader Opmerking;
+        private System.Windows.Forms.Button button1;
     }
 }
