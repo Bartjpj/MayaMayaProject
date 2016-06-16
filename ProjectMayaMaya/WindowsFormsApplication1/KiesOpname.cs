@@ -12,6 +12,7 @@ namespace WindowsFormsApplication1
 {
     public partial class KiesOpname : Form
     {
+        AfrekenenDAO afrekeningDAO;
         protected override void OnLoad(EventArgs e) // is de verwijzing, niets veranderen AUB
         {
             base.OnLoad(e);
@@ -40,7 +41,7 @@ namespace WindowsFormsApplication1
         }
         private void btn_afrekenen_Click(object sender, EventArgs e)
         {
-            Afrekenen openAfrekenscherm = new Afrekenen();
+            Afrekenen openAfrekenscherm = new Afrekenen(new AfrekenenDAO());
             openAfrekenscherm.Show(this);
             //openAfrekenscherm.TafelLabel = tafelgetal;
             this.Hide();

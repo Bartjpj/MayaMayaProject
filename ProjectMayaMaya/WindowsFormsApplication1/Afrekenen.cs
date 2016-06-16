@@ -13,7 +13,7 @@ namespace WindowsFormsApplication1
     public partial class Afrekenen : Form
     {
         List<AfrekenenBLL> afrekenLijst = new List<AfrekenenBLL>();
-
+        AfrekenenDAO AfrekeningDAO;
 
         protected override void OnLoad(EventArgs e) // is de verwijzing, niets veranderen AUB
         {
@@ -21,9 +21,14 @@ namespace WindowsFormsApplication1
             this.Location = Owner.Location;
             this.Size = Owner.Size;
         }
-        public Afrekenen()
+     
+        public Afrekenen(AfrekenenDAO AfrekeningDAO)
         {
             InitializeComponent();
+            this.AfrekeningDAO = AfrekeningDAO;
+
+            afrekenLijst = AfrekeningDAO.haalMenuItemsOp(3);
+
             DisplayBestellingen();
 
             waardenInvoegen();
@@ -163,7 +168,7 @@ namespace WindowsFormsApplication1
 
         private void lbl_klaargemeldetafel_Click(object sender, EventArgs e)
         {
-            int tafelnr = tafelOverzicht.tafelgetal;
+            int tafelNr = tafelOverzicht.tafelgetal;
             //lbl_klaargemeld.Text = tafelnr.ToString();
 
         }
@@ -184,14 +189,15 @@ namespace WindowsFormsApplication1
 
         private void DisplayBestellingen()
         {
+            
             listview_rekening.Items.Clear();
             foreach (AfrekenenBLL afrekeningOverzicht in this.afrekenLijst)
             {
 
-                ListViewItem lijstItem = new ListViewItem(afrekeningOverzicht.bestelling_id.ToString());
-                lijstItem.SubItems.Add(afrekeningOverzicht.tafel_id.ToString());
-                lijstItem.SubItems.Add(afrekeningOverzicht.Aantal.ToString());
+                ListViewItem lijstItem = new ListViewItem(afrekeningOverzicht.tafel_id.ToString());
                 lijstItem.SubItems.Add(afrekeningOverzicht.Menuitem.ToString());
+                lijstItem.SubItems.Add(afrekeningOverzicht.Aantal.ToString());
+               
                 lijstItem.SubItems.Add(afrekeningOverzicht.prijs.ToString());
                 listview_rekening.Items.Add(lijstItem);
 

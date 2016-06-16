@@ -46,14 +46,15 @@
             this.radioButton3 = new System.Windows.Forms.RadioButton();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.listview_rekening = new System.Windows.Forms.ListView();
-            this.bestelling = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.tafel_id = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.aantal = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.naam = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.lbl_tafelNummerDisplay = new System.Windows.Forms.Label();
             this.lbl_opmerking = new System.Windows.Forms.Label();
             this.lbl_btwinc = new System.Windows.Forms.Label();
             this.fooit = new System.Windows.Forms.Label();
             this.lbl_totaal = new System.Windows.Forms.Label();
+            this.Prijs = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // lbl_rekening
@@ -224,9 +225,10 @@
             // listview_rekening
             // 
             this.listview_rekening.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.bestelling,
+            this.tafel_id,
+            this.naam,
             this.aantal,
-            this.columnHeader1});
+            this.Prijs});
             this.listview_rekening.FullRowSelect = true;
             this.listview_rekening.GridLines = true;
             this.listview_rekening.Location = new System.Drawing.Point(7, 78);
@@ -238,18 +240,18 @@
             this.listview_rekening.View = System.Windows.Forms.View.Details;
             this.listview_rekening.SelectedIndexChanged += new System.EventHandler(this.listview_rekening_SelectedIndexChanged);
             // 
-            // bestelling
+            // tafel_id
             // 
-            this.bestelling.Text = "Naam";
-            this.bestelling.Width = 300;
+            this.tafel_id.Text = "Tafel";
+            this.tafel_id.Width = 300;
             // 
             // aantal
             // 
             this.aantal.Text = "Aantal";
             // 
-            // columnHeader1
+            // naam
             // 
-            this.columnHeader1.Text = "Prijs";
+            this.naam.Text = "Naam";
             // 
             // lbl_tafelNummerDisplay
             // 
@@ -291,6 +293,10 @@
             this.lbl_totaal.Name = "lbl_totaal";
             this.lbl_totaal.Size = new System.Drawing.Size(0, 13);
             this.lbl_totaal.TabIndex = 93;
+            // 
+            // Prijs
+            // 
+            this.Prijs.Text = "Prijs";
             // 
             // Afrekenen
             // 
@@ -348,14 +354,15 @@
         private System.Windows.Forms.RadioButton radioButton3;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.ListView listview_rekening;
-        private System.Windows.Forms.ColumnHeader bestelling;
+        private System.Windows.Forms.ColumnHeader tafel_id;
         private System.Windows.Forms.ColumnHeader aantal;
-        private System.Windows.Forms.ColumnHeader columnHeader1;
+        private System.Windows.Forms.ColumnHeader naam;
         private System.Windows.Forms.Label lbl_tafelNummerDisplay;
         private System.Windows.Forms.Label lbl_opmerking;
         private System.Windows.Forms.Label lbl_btwinc;
         private System.Windows.Forms.Label fooit;
         private System.Windows.Forms.Label lbl_totaal;
+        private System.Windows.Forms.ColumnHeader Prijs;
 
     }
 }
