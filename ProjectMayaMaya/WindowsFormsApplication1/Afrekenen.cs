@@ -106,7 +106,7 @@ namespace WindowsFormsApplication1
 
             foreach (ListViewItem rij in bepaaldeVariabele)
             {
-                afrekenenBLL rekeningItem = (afrekenenBLL)rij.Tag;
+                AfrekenenBLL rekeningItem = (AfrekenenBLL)rij.Tag;
 
                 if (rekeningItem.categorie >= 8)
                 {
