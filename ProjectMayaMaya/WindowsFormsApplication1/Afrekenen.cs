@@ -83,7 +83,8 @@ namespace WindowsFormsApplication1
         {
             
             listview_rekening.Items.Clear();
-            foreach (AfrekenenBLL afrekeningOverzicht in this.afrekenLijst)
+            List<AfrekenenBLL> geheleLijst = AfrekeningDAO.haalMenuItemsOp(3);
+            foreach (AfrekenenBLL afrekeningOverzicht in geheleLijst)
             {
 
                 ListViewItem lijstItem = new ListViewItem(afrekeningOverzicht.tafel_id.ToString());
@@ -94,19 +95,18 @@ namespace WindowsFormsApplication1
 
             }
 
-            string opmerking = txt_Opmerking.Text;
             double btwHoog = 0;
             double btwLaag = 0;
             double totaalBtw = 0;
             double subtotaal = 0;
 
             ListView.ListViewItemCollection rekeningListview = listview_rekening.Items;
-            
+
 
             foreach (ListViewItem regel in rekeningListview)
             {
-                blabla.Tag = regel;
-                AfrekenenBLL rekeningItem = (AfrekenenBLL)blabla.Tag;
+
+                AfrekenenBLL rekeningItem = (AfrekenenBLL)regel.Tag;
 
 
 
@@ -151,10 +151,6 @@ namespace WindowsFormsApplication1
             {
                 AfrekenenBLL rekeningItem = (AfrekenenBLL)rij.Tag;
             }
-
-
-
-
 
 
             listview_rekening.Items.Clear();
