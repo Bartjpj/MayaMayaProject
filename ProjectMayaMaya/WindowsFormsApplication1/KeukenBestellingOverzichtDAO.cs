@@ -79,7 +79,7 @@ namespace WindowsFormsApplication1
             SqlConnection conn = new SqlConnection(connString);
             conn.Open();
 
-            SqlCommand command = new SqlCommand("SELECT bestelling_id, tafel_id, Aantal, Bestelling.datum_tijd, Menuitem.naam, opmerking FROM Bestelling, BestellingItems, Menuitem, Menucategorie, Menukaart WHERE tafel_id =  " + tafelNr + " AND bestelling_id = BestellingId AND ItemId = menu_id AND Menuitem.categorie_id = Menucategorie.categorie_id AND Menukaart.kaart_id = Menucategorie.kaart_id AND Menukaart.kaart_id != 3", conn);
+            SqlCommand command = new SqlCommand("SELECT bestelling_id, tafel_id, Aantal, Bestelling.datum_tijd, Menuitem.naam, opmerking FROM Bestelling, BestellingItems, Menuitem, Menucategorie, Menukaart WHERE tafel_id =  " + tafelNr + " AND bestelling_id = BestellingId AND ItemId = menu_id AND Menuitem.categorie_id = Menucategorie.categorie_id AND Menukaart.kaart_id = Menucategorie.kaart_id AND Menukaart.kaart_id != 3 AND Bestelling.keuken_gereed = 0", conn);
             // deze query zorgt ervoor dat we alle data hebben die we bij BestellingMenu nodig hebben 
             SqlDataReader reader = command.ExecuteReader();
             List<keukenOverzichtBLL> KeukenOverzichtTable = new List<keukenOverzichtBLL>();
