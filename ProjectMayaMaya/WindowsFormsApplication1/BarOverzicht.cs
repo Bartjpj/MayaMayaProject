@@ -13,13 +13,13 @@ using System.Data.SqlClient;
 namespace WindowsFormsApplication1
 {
     public partial class BarOverzicht : Form
-    {   
+    {
         BarOverzichtDAO BarOverzichtDAO;
         List<BarOverzichtBLL> bestellingslijst = new List<BarOverzichtBLL>();
         ListViewItem lijstItem;
         public int tafelNr;
         public int bestellings_id;
-     
+       
         protected override void OnLoad(EventArgs e) // is de verwijzing, niets veranderen AUB
         {
             base.OnLoad(e);
@@ -75,22 +75,22 @@ namespace WindowsFormsApplication1
             this.Hide();
         }
 
-
+            
         private void voegListViewItemsToe(BarOverzichtBLL barOverzicht)
         {
             string opmerking = " ";
-            ListViewItem lijstItem = new ListViewItem(barOverzicht.bestelling_id.ToString());
-            lijstItem.SubItems.Add(barOverzicht.tafel_id.ToString());
-            lijstItem.SubItems.Add(barOverzicht.naam.ToString());
-            lijstItem.SubItems.Add(barOverzicht.aantal.ToString());
-            lijstItem.SubItems.Add(barOverzicht.datum_tijd.ToString());
+                ListViewItem lijstItem = new ListViewItem(barOverzicht.bestelling_id.ToString());
+                lijstItem.SubItems.Add(barOverzicht.tafel_id.ToString());
+                lijstItem.SubItems.Add(barOverzicht.naam.ToString());
+                lijstItem.SubItems.Add(barOverzicht.aantal.ToString());
+                lijstItem.SubItems.Add(barOverzicht.datum_tijd.ToString());
             if (barOverzicht.opmerking.Contains("0081") || barOverzicht.opmerking.Contains("0083"))
             {
                 opmerking = barOverzicht.opmerking.Substring(4);
             }
             else { opmerking = " "; }
             lijstItem.SubItems.Add(opmerking);
-            listView1.Items.Add(lijstItem);
+                listView1.Items.Add(lijstItem);
         } // methode om listviewItems toe te voegen 
         private void DisplayBestellingen()
         {
@@ -147,15 +147,15 @@ namespace WindowsFormsApplication1
 
             foreach (BarOverzichtBLL barOverzicht in BarOverzichtDAO.haalBarOverzicht_TabelOp())
             {
-                
+
                 voegListViewItemsToe(barOverzicht);
-
-
-            }
       
        
         }
 
+
+        }
+ 
         private void createTafels() // methode om de tafels in het flowpanel te weergeven.
         {
             List<int> tafelNummers = BarOverzichtDAO.haalTafelNrOp(); // haalt de tafelnr's op uit de database en stopt ze in een list van tafelnummers

@@ -32,7 +32,7 @@ namespace WindowsFormsApplication1
 
         public void waardenInvoegen()
         {
-         
+
          string naam1 = "Gebakken	kabeljauw met curry-sabayon";
          string naam2 = "Provençaalse	vissoep	met	rouille, oude kaas en croutons";
          string naam3 = "Hertenstoofpotje	met	rode kool";

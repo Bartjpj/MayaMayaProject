@@ -41,11 +41,12 @@
             this.listview_huidige_bestelling = new System.Windows.Forms.ListView();
             this.bestelling = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.aantal = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.button1 = new System.Windows.Forms.Button();
             this.flow_menuCategorie = new System.Windows.Forms.FlowLayoutPanel();
             this.flow_MenuKaart = new System.Windows.Forms.FlowLayoutPanel();
             this.txt_opmerking = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.checkbox_keuken = new System.Windows.Forms.CheckBox();
+            this.checkbox_bar = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // label1
@@ -171,17 +172,6 @@
             // 
             this.aantal.Text = "Aantal";
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(653, 9);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(112, 30);
-            this.button1.TabIndex = 88;
-            this.button1.Text = "test";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // flow_menuCategorie
             // 
             this.flow_menuCategorie.Location = new System.Drawing.Point(10, 123);
@@ -208,22 +198,45 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(345, 451);
+            this.label4.Location = new System.Drawing.Point(193, 456);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(159, 16);
             this.label4.TabIndex = 101;
             this.label4.Text = "Voeg een opmerking toe:";
+            // 
+            // checkbox_keuken
+            // 
+            this.checkbox_keuken.AutoSize = true;
+            this.checkbox_keuken.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkbox_keuken.Location = new System.Drawing.Point(358, 455);
+            this.checkbox_keuken.Name = "checkbox_keuken";
+            this.checkbox_keuken.Size = new System.Drawing.Size(94, 19);
+            this.checkbox_keuken.TabIndex = 104;
+            this.checkbox_keuken.Text = "Voor keuken";
+            this.checkbox_keuken.UseVisualStyleBackColor = true;
+            // 
+            // checkbox_bar
+            // 
+            this.checkbox_bar.AutoSize = true;
+            this.checkbox_bar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkbox_bar.Location = new System.Drawing.Point(458, 455);
+            this.checkbox_bar.Name = "checkbox_bar";
+            this.checkbox_bar.Size = new System.Drawing.Size(72, 19);
+            this.checkbox_bar.TabIndex = 105;
+            this.checkbox_bar.Text = "Voor bar";
+            this.checkbox_bar.UseVisualStyleBackColor = true;
             // 
             // BestellingOpnemen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(775, 502);
+            this.Controls.Add(this.checkbox_bar);
+            this.Controls.Add(this.checkbox_keuken);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txt_opmerking);
             this.Controls.Add(this.flow_MenuKaart);
             this.Controls.Add(this.flow_menuCategorie);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.listview_huidige_bestelling);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -254,10 +267,11 @@
         private System.Windows.Forms.ListView listview_huidige_bestelling;
         private System.Windows.Forms.ColumnHeader bestelling;
         private System.Windows.Forms.ColumnHeader aantal;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.FlowLayoutPanel flow_menuCategorie;
         private System.Windows.Forms.FlowLayoutPanel flow_MenuKaart;
         private System.Windows.Forms.TextBox txt_opmerking;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.CheckBox checkbox_keuken;
+        private System.Windows.Forms.CheckBox checkbox_bar;
     }
 }
