@@ -12,6 +12,7 @@ namespace WindowsFormsApplication1
 {
     public partial class Afrekenen : Form
     {
+        List<AfrekenenBLL> afrekenLijst = new List<AfrekenenBLL>();
 
 
         protected override void OnLoad(EventArgs e) // is de verwijzing, niets veranderen AUB
@@ -23,7 +24,7 @@ namespace WindowsFormsApplication1
         public Afrekenen()
         {
             InitializeComponent();
-
+            DisplayBestellingen();
 
             waardenInvoegen();
 
@@ -56,36 +57,36 @@ namespace WindowsFormsApplication1
         double btwLaag = ((prijs1 * aantal1 + prijs2 * aantal2 + prijs3 + aantal3) * btw2);
         double btwHoog = ((prijs4 * aantal4) * btw);
 
-        ListViewItem listViewItem1 = new ListViewItem(naam1);
-        listViewItem1.SubItems.Add(aantal1.ToString());
-        listViewItem1.SubItems.Add(prijs1.ToString());
+        //ListViewItem listViewItem1 = new ListViewItem(naam1);
+        //listViewItem1.SubItems.Add(aantal1.ToString());
+        //listViewItem1.SubItems.Add(prijs1.ToString());
 
-        listview_rekening.Items.Add(listViewItem1);
+        //listview_rekening.Items.Add(listViewItem1);
 
-        ListViewItem listViewItem2 = new ListViewItem(naam2);
-        listViewItem2.SubItems.Add(aantal2.ToString());
-        listViewItem2.SubItems.Add(prijs2.ToString());
+        //ListViewItem listViewItem2 = new ListViewItem(naam2);
+        //listViewItem2.SubItems.Add(aantal2.ToString());
+        //listViewItem2.SubItems.Add(prijs2.ToString());
 
-        listview_rekening.Items.Add(listViewItem2);
+        //listview_rekening.Items.Add(listViewItem2);
 
-        ListViewItem listViewItem3 = new ListViewItem(naam3);
-        listViewItem3.SubItems.Add(aantal3.ToString());
-        listViewItem3.SubItems.Add(prijs3.ToString());
+        //ListViewItem listViewItem3 = new ListViewItem(naam3);
+        //listViewItem3.SubItems.Add(aantal3.ToString());
+        //listViewItem3.SubItems.Add(prijs3.ToString());
 
-        listview_rekening.Items.Add(listViewItem3);
+        //listview_rekening.Items.Add(listViewItem3);
 
-        ListViewItem listViewItem4 = new ListViewItem(naam4);
-        listViewItem4.SubItems.Add(aantal4.ToString());
-        listViewItem4.SubItems.Add(prijs4.ToString());
+        //ListViewItem listViewItem4 = new ListViewItem(naam4);
+        //listViewItem4.SubItems.Add(aantal4.ToString());
+        //listViewItem4.SubItems.Add(prijs4.ToString());
 
-        listview_rekening.Items.Add(listViewItem4);
+        //listview_rekening.Items.Add(listViewItem4);
 
         lbl_opmerking.Text = "Geen saus";
         lbl_totaal.Text = totaalPrijs.ToString();
         fooit.Text = fooi.ToString();
         lbl_btwinc.Text = (btwLaag + btwHoog).ToString();
-        lbl_btwlaaggetal.Text = btw.ToString();
-        lbl_btwhooggetal.Text = btw2.ToString();
+        lbl_btwlaaggetal.Text = btwLaag.ToString();
+        lbl_btwhooggetal.Text = btwHoog.ToString();
 
 
 
@@ -178,6 +179,24 @@ namespace WindowsFormsApplication1
 
         private void listview_rekening_SelectedIndexChanged(object sender, EventArgs e)
         {
+
+        }
+
+        private void DisplayBestellingen()
+        {
+            listview_rekening.Items.Clear();
+            foreach (AfrekenenBLL afrekeningOverzicht in this.afrekenLijst)
+            {
+
+                ListViewItem lijstItem = new ListViewItem(afrekeningOverzicht.bestelling_id.ToString());
+                lijstItem.SubItems.Add(afrekeningOverzicht.tafel_id.ToString());
+                lijstItem.SubItems.Add(afrekeningOverzicht.Aantal.ToString());
+                lijstItem.SubItems.Add(afrekeningOverzicht.Menuitem.ToString());
+                lijstItem.SubItems.Add(afrekeningOverzicht.prijs.ToString());
+                listview_rekening.Items.Add(lijstItem);
+
+            }
+           
 
         }
 

@@ -11,7 +11,7 @@ namespace WindowsFormsApplication1
 {
     public class BarOverzichtDAO
     {
-        public List<BarOverzichtClass> haalBarOverzicht_TabelOp() // deze methode haalt de gegevens op voor het BestellingMenu overzicht
+        public List<BarOverzichtBLL> haalBarOverzicht_TabelOp() // deze methode haalt de gegevens op voor het BestellingMenu overzicht
         {
             string connString = ConfigurationManager
             .ConnectionStrings["BestellingConnectionStringSQL"]
@@ -24,7 +24,7 @@ namespace WindowsFormsApplication1
             SqlDataReader reader = command.ExecuteReader();
          
 
-            List<BarOverzichtClass> BarOverzichtTable = new List<BarOverzichtClass>();
+            List<BarOverzichtBLL> BarOverzichtTable = new List<BarOverzichtBLL>();
 
             while (reader.Read())
             {
@@ -36,7 +36,7 @@ namespace WindowsFormsApplication1
                 string opmerking = (string)reader["opmerking"];
                 //Onderzoeken wrm dit niet werkt
 
-                BarOverzichtClass BarOverzichtDAO = new BarOverzichtClass(bestelling_id, tafel_id, Aantal, Menuitem, datum_tijd, opmerking);
+                BarOverzichtBLL BarOverzichtDAO = new BarOverzichtBLL(bestelling_id, tafel_id, Aantal, Menuitem, datum_tijd, opmerking);
                 BarOverzichtTable.Add(BarOverzichtDAO);
             }
             conn.Close();
@@ -44,7 +44,7 @@ namespace WindowsFormsApplication1
           
         }
 
-        public List<BarOverzichtClass> haalDagBarOverzicht() // deze methode haalt de gegevens op voor het BestellingMenu overzicht
+        public List<BarOverzichtBLL> haalDagBarOverzicht() // deze methode haalt de gegevens op voor het BestellingMenu overzicht
         {
             string connString = ConfigurationManager
             .ConnectionStrings["BestellingConnectionStringSQL"]
@@ -57,7 +57,7 @@ namespace WindowsFormsApplication1
             SqlDataReader reader = command.ExecuteReader();
 
 
-            List<BarOverzichtClass> BarOverzichtTable = new List<BarOverzichtClass>();
+            List<BarOverzichtBLL> BarOverzichtTable = new List<BarOverzichtBLL>();
 
             while (reader.Read())
             {
@@ -69,7 +69,7 @@ namespace WindowsFormsApplication1
                 string opmerking = (string)reader["opmerking"];
                 //Onderzoeken wrm dit niet werkt
 
-                BarOverzichtClass BarOverzichtDAO = new BarOverzichtClass(bestelling_id, tafel_id, Aantal, Menuitem, datum_tijd, opmerking);
+                BarOverzichtBLL BarOverzichtDAO = new BarOverzichtBLL(bestelling_id, tafel_id, Aantal, Menuitem, datum_tijd, opmerking);
                 BarOverzichtTable.Add(BarOverzichtDAO);
             }
             conn.Close();
@@ -77,7 +77,7 @@ namespace WindowsFormsApplication1
 
         }
 
-        public List<BarOverzichtClass> haalBestellingTafel(int tafelNr)
+        public List<BarOverzichtBLL> haalBestellingTafel(int tafelNr)
         {
             string connString = ConfigurationManager
            .ConnectionStrings["BestellingConnectionStringSQL"]
@@ -88,7 +88,7 @@ namespace WindowsFormsApplication1
             SqlCommand command = new SqlCommand("SELECT bestelling_id, tafel_id, Aantal, Bestelling.datum_tijd, Menuitem.naam, opmerking FROM Bestelling, BestellingItems, Menuitem, Menucategorie, Menukaart WHERE tafel_id =  "+ tafelNr +" AND bestelling_id = BestellingId AND ItemId = menu_id AND Menuitem.categorie_id = Menucategorie.categorie_id AND Menukaart.kaart_id = Menucategorie.kaart_id AND Menukaart.kaart_id = 3", conn);
             // deze query zorgt ervoor dat we alle data hebben die we bij BestellingMenu nodig hebben 
             SqlDataReader reader = command.ExecuteReader();
-            List<BarOverzichtClass> BarOverzichtTable = new List<BarOverzichtClass>();
+            List<BarOverzichtBLL> BarOverzichtTable = new List<BarOverzichtBLL>();
 
             while (reader.Read())
             {
@@ -101,7 +101,7 @@ namespace WindowsFormsApplication1
 
                 //Onderzoeken wrm dit niet werkt
 
-                BarOverzichtClass BarOverzichtDAO = new BarOverzichtClass(bestelling_id, tafel_id, Aantal, Menuitem, datum_tijd, opmerking);
+                BarOverzichtBLL BarOverzichtDAO = new BarOverzichtBLL(bestelling_id, tafel_id, Aantal, Menuitem, datum_tijd, opmerking);
                 BarOverzichtTable.Add(BarOverzichtDAO);
             }
             conn.Close();
