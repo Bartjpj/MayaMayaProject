@@ -18,7 +18,7 @@ namespace WindowsFormsApplication1
             SqlConnection conn = new SqlConnection(connString);
             conn.Open();
 
-            SqlCommand command = new SqlCommand("SELECT tafel_id, Aantal, Bestelling.bestelling_id Menuitem.naam, Menuitem.prijs FROM Bestelling, BestellingItems, Menuitem, Menucategorie, Menukaart WHERE  bestelling_id = BestellingId AND tafel_id = " + tafelNr + " AND ItemId = menu_id AND Menuitem.categorie_id = Menucategorie.categorie_id AND Menukaart.kaart_id = Menucategorie.kaart_id  AND is_betaald = 0 ", conn); // deze query zorgt ervoor dat we alle data hebben die we bij BestellingMenu nodig hebben 
+            SqlCommand command = new SqlCommand("SELECT tafel_id, Aantal, Menucategorie.categorie_id, Bestelling.bestelling_id, Menuitem.naam, Menuitem.prijs FROM Bestelling, BestellingItems, Menuitem, Menucategorie, Menukaart WHERE  bestelling_id = BestellingId AND tafel_id = " + tafelNr + " AND ItemId = menu_id AND Menuitem.categorie_id = Menucategorie.categorie_id AND Menukaart.kaart_id = Menucategorie.kaart_id  AND is_betaald = 0 ", conn); // deze query zorgt ervoor dat we alle data hebben die we bij BestellingMenu nodig hebben 
             SqlDataReader reader = command.ExecuteReader();
 
             List<AfrekenenBLL> AfrekenTable = new List<AfrekenenBLL>();
@@ -27,13 +27,14 @@ namespace WindowsFormsApplication1
             {
 
                 int tafel_id = (int)reader["tafel_id"];
-                // int bestellingID = (int)reader["bestelling_id"];
                 int Aantal = (int)reader["Aantal"];
+                int categorie_id = (int)reader["categorie_id"];
+                int bestellingID = (int)reader["bestelling_id"];
                 string Menuitem = (string)reader["naam"];
                 double prijs = (double)reader["prijs"];
-              
 
-                AfrekenenBLL AfrekeneningDAO = new AfrekenenBLL( tafel_id, Aantal, Menuitem, prijs);
+
+                AfrekenenBLL AfrekeneningDAO = new AfrekenenBLL(tafel_id, Aantal, categorie_id, bestellingID, Menuitem, prijs);
                 AfrekenTable.Add(AfrekeneningDAO);
             }
 

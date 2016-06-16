@@ -89,26 +89,28 @@ namespace WindowsFormsApplication1
                 ListViewItem lijstItem = new ListViewItem(afrekeningOverzicht.tafel_id.ToString());
                 lijstItem.SubItems.Add(afrekeningOverzicht.Menuitem.ToString());
                 lijstItem.SubItems.Add(afrekeningOverzicht.Aantal.ToString());
-               
                 lijstItem.SubItems.Add(afrekeningOverzicht.prijs.ToString());
                 listview_rekening.Items.Add(lijstItem);
 
             }
 
             string opmerking = txt_Opmerking.Text;
-            int bijFooi = Int32.Parse(txt_fooi.Text); //wanneer er iets nieuws ingetikt wordt bij fooi moet subtotaal een nieuwe waarden krijgen
-            int btwHoog = 0;
-            int btwLaag = 0;
-            int totaalBtw = 0;
-            int subtotaal = 0;
+            double btwHoog = 0;
+            double btwLaag = 0;
+            double totaalBtw = 0;
+            double subtotaal = 0;
 
-            ListView.ListViewItemCollection bepaaldeVariabele = listview_rekening.Items;
+            ListView.ListViewItemCollection rekeningListview = listview_rekening.Items;
+            
 
-            foreach (ListViewItem rij in bepaaldeVariabele)
+            foreach (ListViewItem regel in rekeningListview)
             {
-                AfrekenenBLL rekeningItem = (AfrekenenBLL)rij.Tag;
+                blabla.Tag = regel;
+                AfrekenenBLL rekeningItem = (AfrekenenBLL)blabla.Tag;
 
-                if (rekeningItem.categorie >= 8)
+
+
+                if (rekeningItem.categorie_id >= 8)
                 {
                     btwLaag += rekeningItem.prijs * 0.06;
                     totaalBtw += btwLaag;
@@ -147,7 +149,7 @@ namespace WindowsFormsApplication1
 
             foreach (ListViewItem rij in bepaaldeVariabele)
             {
-                afrekenenBLL rekeningItem = (afrekenenBLL)rij.Tag;
+                AfrekenenBLL rekeningItem = (AfrekenenBLL)rij.Tag;
             }
 
 

@@ -264,11 +264,11 @@ namespace WindowsFormsApplication1
 
             if (checkbox_bar.Checked && checkbox_keuken.Checked) //er wordt een code meegegeven aan de query, waardoor het systeem weet of dit voor de keuken, bar of beide bestemd is.
             {
-                opmerking = "0083" + opmerking;
+                opmerking = "1" + opmerking;
             } else if (checkbox_keuken.Checked){
-                opmerking = "0082" + opmerking;
+                opmerking = "2" + opmerking;
             } else if (checkbox_bar.Checked) {
-                opmerking = "0081" + opmerking;
+                opmerking = "3" + opmerking;
             }
 
 
