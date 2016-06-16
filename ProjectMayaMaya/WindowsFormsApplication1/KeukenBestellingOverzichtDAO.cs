@@ -10,7 +10,7 @@ namespace WindowsFormsApplication1
 {
   public  class keukenBestellingOverzichtDAO
     {
-        public List<keukenOverzichtClass> haalKeukenBestelling_TabelOp() // deze methode haalt de gegevens op voor het BestellingMenu overzicht
+        public List<keukenOverzichtBLL> haalKeukenBestelling_TabelOp() // deze methode haalt de gegevens op voor het BestellingMenu overzicht
         {
             string connString = ConfigurationManager
             .ConnectionStrings["BestellingConnectionStringSQL"]
@@ -22,7 +22,7 @@ namespace WindowsFormsApplication1
             // deze query zorgt ervoor dat we alle data hebben die we bij BestellingMenu nodig hebben 
             SqlDataReader reader = command.ExecuteReader();
 
-            List<keukenOverzichtClass> KeukenOverzichTable = new List<keukenOverzichtClass>();
+            List<keukenOverzichtBLL> KeukenOverzichTable = new List<keukenOverzichtBLL>(); // maakt lijst van keukenOverzichtBLL om vervolgens het object te vullen
 
             while (reader.Read())
             {
@@ -33,14 +33,14 @@ namespace WindowsFormsApplication1
                 DateTime datum_tijd = (DateTime)reader["datum_tijd"];
                 string opmerking = (string)reader["opmerking"];
 
-                keukenOverzichtClass KeukenOverzichtDAO = new keukenOverzichtClass(bestelling_id, tafel_id, Menuitem, Aantal, datum_tijd, opmerking);
+                keukenOverzichtBLL KeukenOverzichtDAO = new keukenOverzichtBLL(bestelling_id, tafel_id, Menuitem, Aantal, datum_tijd, opmerking);
                 KeukenOverzichTable.Add(KeukenOverzichtDAO);
             }
 
             conn.Close();
             return KeukenOverzichTable;
         }
-        public List<keukenOverzichtClass> haalDagKeukenBestelling() // deze methode haalt de gegevens op voor het BestellingMenu overzicht
+        public List<keukenOverzichtBLL> haalDagKeukenBestelling() // deze methode haalt de gegevens op voor het BestellingMenu overzicht
         {
             string connString = ConfigurationManager
             .ConnectionStrings["BestellingConnectionStringSQL"]
@@ -52,7 +52,7 @@ namespace WindowsFormsApplication1
             // deze query zorgt ervoor dat we alle data hebben die we bij BestellingMenu nodig hebben 
             SqlDataReader reader = command.ExecuteReader();
 
-            List<keukenOverzichtClass> KeukenOverzichTable = new List<keukenOverzichtClass>();
+            List<keukenOverzichtBLL> KeukenOverzichTable = new List<keukenOverzichtBLL>();
 
             while (reader.Read())
             {
@@ -63,7 +63,7 @@ namespace WindowsFormsApplication1
                 DateTime datum_tijd = (DateTime)reader["datum_tijd"];
                 string opmerking = (string)reader["opmerking"];
 
-                keukenOverzichtClass KeukenOverzichtDAO = new keukenOverzichtClass(bestelling_id, tafel_id, Menuitem, Aantal, datum_tijd, opmerking);
+                keukenOverzichtBLL KeukenOverzichtDAO = new keukenOverzichtBLL(bestelling_id, tafel_id, Menuitem, Aantal, datum_tijd, opmerking);
                 KeukenOverzichTable.Add(KeukenOverzichtDAO);
             }
 
@@ -71,7 +71,7 @@ namespace WindowsFormsApplication1
             return KeukenOverzichTable;
         }
 
-        public List<keukenOverzichtClass> haalBestellingTafel(int tafelNr)
+        public List<keukenOverzichtBLL> haalBestellingTafel(int tafelNr)
         {
             string connString = ConfigurationManager
            .ConnectionStrings["BestellingConnectionStringSQL"]
@@ -82,7 +82,7 @@ namespace WindowsFormsApplication1
             SqlCommand command = new SqlCommand("SELECT bestelling_id, tafel_id, Aantal, Bestelling.datum_tijd, Menuitem.naam, opmerking FROM Bestelling, BestellingItems, Menuitem, Menucategorie, Menukaart WHERE tafel_id =  " + tafelNr + " AND bestelling_id = BestellingId AND ItemId = menu_id AND Menuitem.categorie_id = Menucategorie.categorie_id AND Menukaart.kaart_id = Menucategorie.kaart_id AND Menukaart.kaart_id != 3", conn);
             // deze query zorgt ervoor dat we alle data hebben die we bij BestellingMenu nodig hebben 
             SqlDataReader reader = command.ExecuteReader();
-            List<keukenOverzichtClass> KeukenOverzichtTable = new List<keukenOverzichtClass>();
+            List<keukenOverzichtBLL> KeukenOverzichtTable = new List<keukenOverzichtBLL>();
 
             while (reader.Read())
             {
@@ -94,7 +94,7 @@ namespace WindowsFormsApplication1
                 string opmerking = (string)reader["opmerking"];
                 //Onderzoeken wrm dit niet werkt
 
-                keukenOverzichtClass keukenOverzichtDAO = new keukenOverzichtClass(bestelling_id, tafel_id,  Menuitem, Aantal, datum_tijd, opmerking);
+                keukenOverzichtBLL keukenOverzichtDAO = new keukenOverzichtBLL(bestelling_id, tafel_id,  Menuitem, Aantal, datum_tijd, opmerking);
                 KeukenOverzichtTable.Add(keukenOverzichtDAO);
             }
             conn.Close();

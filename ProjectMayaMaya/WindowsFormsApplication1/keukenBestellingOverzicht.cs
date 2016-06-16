@@ -13,7 +13,7 @@ namespace WindowsFormsApplication1
     public partial class keukenBestellingOverzicht : Form
     {
         keukenBestellingOverzichtDAO keukenBestellingOverzichtDAO; // initialisatie van het DAO object voor keukenoverzicht die in deze klasse wordt gebruikt.
-        List<keukenOverzichtClass> bestellingslijst = new List<keukenOverzichtClass>(); // initialisatie van een lijst van bestellingen, deze wordt later in de klas gebruikt
+        List<keukenOverzichtBLL> bestellingslijst = new List<keukenOverzichtBLL>(); // initialisatie van een lijst van bestellingen, deze wordt later in de klas gebruikt
         public int tafelNr; // initialisatie van de variable tafelNr
 
         protected override void OnLoad(EventArgs e)
@@ -44,8 +44,8 @@ namespace WindowsFormsApplication1
             // ... moet de parameter tafelNr meegeven aan de Dao zodat een query gemaakt kan worden om deze specifieke tafel op te halen
             bestellingOverzichtKeukenView.Items.Clear();
 
-            List<keukenOverzichtClass> items = keukenBestellingOverzichtDAO.haalBestellingTafel(tafelNr);
-            foreach (keukenOverzichtClass keukenOverzicht in items)
+            List<keukenOverzichtBLL> items = keukenBestellingOverzichtDAO.haalBestellingTafel(tafelNr);
+            foreach (keukenOverzichtBLL keukenOverzicht in items)
             {
 
                 voegListViewItemsToe(keukenOverzicht); // het keukenOverzicht object wordt hier aan de methode voegListVietItemsToe meegegeven zodat de items in de listview kunnen komen.
@@ -67,7 +67,7 @@ namespace WindowsFormsApplication1
         private void DisplayBestellingen()
         {
             bestellingOverzichtKeukenView.Items.Clear();
-            foreach (keukenOverzichtClass keukenOverzicht in this.bestellingslijst)
+            foreach (keukenOverzichtBLL keukenOverzicht in this.bestellingslijst)
             {
 
                 voegListViewItemsToe(keukenOverzicht);
@@ -81,7 +81,7 @@ namespace WindowsFormsApplication1
 
         }
 
-        private void voegListViewItemsToe(keukenOverzichtClass keukenOverzicht)
+        private void voegListViewItemsToe(keukenOverzichtBLL keukenOverzicht)
         {
             string opmerking = " ";
             ListViewItem lijstItem = new ListViewItem(keukenOverzicht.bestelling_id.ToString());
@@ -100,7 +100,7 @@ namespace WindowsFormsApplication1
 
         private void btn_gereed_keuken_Click(object sender, EventArgs e)
         {
-            keukenOverzichtClass isGereedmelding = new keukenOverzichtClass();
+            keukenOverzichtBLL isGereedmelding = new keukenOverzichtBLL();
 
             for (int i = bestellingOverzichtKeukenView.Items.Count - 1; i >= 0; i--)
             {
@@ -125,7 +125,7 @@ namespace WindowsFormsApplication1
         {
             bestellingOverzichtKeukenView.Items.Clear();
 
-            foreach (keukenOverzichtClass keukenOverzicht in keukenBestellingOverzichtDAO.haalKeukenBestelling_TabelOp())
+            foreach (keukenOverzichtBLL keukenOverzicht in keukenBestellingOverzichtDAO.haalKeukenBestelling_TabelOp())
             {
                 voegListViewItemsToe(keukenOverzicht);
 
@@ -173,10 +173,10 @@ namespace WindowsFormsApplication1
 
         } // flowpanel voor de lopende bestellingen bij tafels die nog niet gereed zijn gemeld.
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btn_dagKeukenOverzicht_Click(object sender, EventArgs e)
         {
             bestellingOverzichtKeukenView.Items.Clear();
-            foreach (keukenOverzichtClass keukenOverzicht in keukenBestellingOverzichtDAO.haalDagKeukenBestelling())
+            foreach (keukenOverzichtBLL keukenOverzicht in keukenBestellingOverzichtDAO.haalDagKeukenBestelling())
             {
                 
 
