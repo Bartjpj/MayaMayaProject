@@ -95,7 +95,7 @@ namespace WindowsFormsApplication1
             }
             createTafels();
 
-        }
+        } // methode om de bestellingen te laten zien
 
         private void gbox_bestelling3_Enter(object sender, EventArgs e)
         {
@@ -105,25 +105,23 @@ namespace WindowsFormsApplication1
         private void listView1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
-        }
-
-            
+        } 
 
         private void btn_BestellingGereed_Click(object sender, EventArgs e)
         {
-            BarOverzichtBLL isGereedmelding = new BarOverzichtBLL();
 
-            for (int i = listView1.Items.Count - 1; i >= 0; i--)
+
+            for (int i = listView1.Items.Count - 1; i >= 0; i--) // selecteer eerste item van listview indien geklikt op button in flowpanel om vervolgens te verwijderen
             {
-                if (listView1.Items[i].Selected)
+                if (listView1.Items[i].Selected)// als listview item selected dan verwijderen op moment dat er geklikt wordt.
                 {
                     listView1.Items[i].Remove();
 
                 }
             }
-            BarOverzichtDAO.updateTafelsGereed(tafelNr);
-            bestellingslijst = BarOverzichtDAO.haalBarOverzicht_TabelOp();
-            DisplayBestellingen();
+            BarOverzichtDAO.updateTafelsGereed(tafelNr); // update tafel in dao
+            bestellingslijst = BarOverzichtDAO.haalBarOverzicht_TabelOp(); // vul de bestelling lijst opnieuw
+            DisplayBestellingen(); // laat bestelling weer zien
 
         } // gereedknop om bestelling gereed te melden en de listview te legen. Indien bestelling gereed.
 

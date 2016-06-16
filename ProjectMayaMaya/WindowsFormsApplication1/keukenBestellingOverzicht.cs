@@ -62,7 +62,7 @@ namespace WindowsFormsApplication1
             TerugNaarHoofdmenu.Top = this.Top;
             TerugNaarHoofdmenu.Size = this.Size;
             this.Hide();
-        }
+        } // om terug naar het hoofdmenu te gaan
 
         private void DisplayBestellingen()
         {
@@ -74,13 +74,12 @@ namespace WindowsFormsApplication1
 
             }
             createTafels();
-        }
+        } // methode om de bestellingen te laten zien
 
         private void bestellingOverzichtKeukenView_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
-
 
         private void voegListViewItemsToe(keukenOverzichtClass keukenOverzicht)
         {
@@ -105,23 +104,24 @@ namespace WindowsFormsApplication1
 
             for (int i = bestellingOverzichtKeukenView.Items.Count - 1; i >= 0; i--)
             {
-                if (bestellingOverzichtKeukenView.Items[i].Selected)
+                if (bestellingOverzichtKeukenView.Items[i].Selected) 
                 {
                     bestellingOverzichtKeukenView.Items[i].Remove();
 
                 }
             }
-            keukenBestellingOverzichtDAO.updateTafelsGereed(tafelNr);
-            bestellingslijst = keukenBestellingOverzichtDAO.haalKeukenBestelling_TabelOp();
-            DisplayBestellingen();
-        }
+            keukenBestellingOverzichtDAO.updateTafelsGereed(tafelNr); // update tafel in dao
+            bestellingslijst = keukenBestellingOverzichtDAO.haalKeukenBestelling_TabelOp(); // vul de bestelling lijst opnieuw
+            DisplayBestellingen(); // laat bestelling weer zien
+        } // gereedknop om bestelling gereed te melden en de listview te legen. Indien bestelling gereed.
+
 
         private void bestellingOverzichtKeukenView_SelectedIndexChanged_1(object sender, EventArgs e)
         {
 
         }
 
-        private void btn_keukenOverzicht_Click(object sender, EventArgs e)
+        private void btn_keukenOverzicht_Click(object sender, EventArgs e) // refresh button, hier wordt de hele lijst van openstaande bestellingen voor de bar opgehaald uit de database. Deze worden vervolgens in de listview gezet.
         {
             bestellingOverzichtKeukenView.Items.Clear();
 
@@ -145,13 +145,13 @@ namespace WindowsFormsApplication1
 
         private void createTafels()
         {
-            List<int> tafelNummers = keukenBestellingOverzichtDAO.haalTafelNrOp();
-            List<int> tafelNummersDistinct = tafelNummers.Distinct().ToList();
-            flowLayoutPanel1.Controls.Clear();
+            List<int> tafelNummers = keukenBestellingOverzichtDAO.haalTafelNrOp(); // haalt de tafelnr's op uit de database en stopt ze in een list van tafelnummers
+            List<int> tafelNummersDistinct = tafelNummers.Distinct().ToList(); // zorgt ervoor dat er geen dubbele tafelnummers in de flowpanel zitten en stopt die weer in een nieuwe lijst
+            flowLayoutPanel1.Controls.Clear();// cleared eerst de hele flowpanel
 
             foreach (int tafelNummer in tafelNummersDistinct)
             {
-
+                // maakt per tafelnummer die is opgehaald in de database een button aan waar op geklikt kan worden.
                 Button b = new Button();
                 b.Tag = tafelNummer;
                 b.Name = "Tafel " + tafelNummer.ToString();
@@ -163,7 +163,7 @@ namespace WindowsFormsApplication1
 
 
             }
-        }
+        }// methode om de tafels in het flowpanel te weergeven.
       
 
 
@@ -171,9 +171,9 @@ namespace WindowsFormsApplication1
         private void flowLayoutPanel1_Paint_1(object sender, PaintEventArgs e)
         {
 
-        }
+        } // flowpanel voor de lopende bestellingen bij tafels die nog niet gereed zijn gemeld.
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btn_dagKeukenOverzicht(object sender, EventArgs e)
         {
             bestellingOverzichtKeukenView.Items.Clear();
             foreach (keukenOverzichtClass keukenOverzicht in keukenBestellingOverzichtDAO.haalDagKeukenBestelling())
@@ -186,7 +186,7 @@ namespace WindowsFormsApplication1
 
             }
 
-        }
+        } // button om het gehele dagoverzicht van alle bestellingen te zien van de afgelopen 24 uur.
 
         private void lbl_OpenstaandeBestellingenKeuken_Click(object sender, EventArgs e)
         {

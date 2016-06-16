@@ -40,7 +40,7 @@
             this.btn_keukenOverzicht = new System.Windows.Forms.Button();
             this.btn_gereed_keuken = new System.Windows.Forms.Button();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btn_dagKeukenOverzicht = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btn_KeukenNaarHoofdmenu
@@ -150,23 +150,23 @@
             this.flowLayoutPanel1.TabIndex = 8;
             this.flowLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel1_Paint_1);
             // 
-            // button1
+            // btn_dagKeukenOverzicht
             // 
-            this.button1.BackColor = System.Drawing.Color.Maroon;
-            this.button1.Location = new System.Drawing.Point(339, 402);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(136, 44);
-            this.button1.TabIndex = 9;
-            this.button1.Text = "Dagoverzicht";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btn_dagKeukenOverzicht.BackColor = System.Drawing.Color.Maroon;
+            this.btn_dagKeukenOverzicht.Location = new System.Drawing.Point(339, 402);
+            this.btn_dagKeukenOverzicht.Name = "btn_dagKeukenOverzicht";
+            this.btn_dagKeukenOverzicht.Size = new System.Drawing.Size(136, 44);
+            this.btn_dagKeukenOverzicht.TabIndex = 9;
+            this.btn_dagKeukenOverzicht.Text = "Dagoverzicht";
+            this.btn_dagKeukenOverzicht.UseVisualStyleBackColor = false;
+            this.btn_dagKeukenOverzicht.Click += new System.EventHandler(this.button1_Click);
             // 
             // keukenBestellingOverzicht
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(823, 458);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btn_dagKeukenOverzicht);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.btn_gereed_keuken);
             this.Controls.Add(this.btn_keukenOverzicht);
@@ -196,6 +196,6 @@
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.ColumnHeader Datum_tijd;
         private System.Windows.Forms.ColumnHeader Opmerking;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btn_dagKeukenOverzicht;
     }
 }
