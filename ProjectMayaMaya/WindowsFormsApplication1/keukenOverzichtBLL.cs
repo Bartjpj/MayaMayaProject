@@ -26,6 +26,7 @@ namespace WindowsFormsApplication1
             this.datum_tijd = datum_tijd;
             this.opmerking = opmerking;
         }
+        
         public keukenOverzichtBLL(){} // default constructor 
     }
 }

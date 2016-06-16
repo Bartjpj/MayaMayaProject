@@ -40,6 +40,7 @@ namespace WindowsFormsApplication1
             conn.Close();
             return KeukenOverzichTable;
         }
+      
         public List<keukenOverzichtBLL> haalDagKeukenBestelling() // deze methode haalt de gegevens op voor het BestellingMenu overzicht
         {
             string connString = ConfigurationManager
