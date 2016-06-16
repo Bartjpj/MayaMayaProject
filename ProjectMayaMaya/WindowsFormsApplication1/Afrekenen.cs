@@ -37,65 +37,33 @@ namespace WindowsFormsApplication1
 
         public void waardenInvoegen()
         {
+        //string opmerking = txt_Opmerking.Text;
+        //int bijFooi = Int32.Parse(txt_fooi.Text); //wanneer er iets nieuws ingetikt wordt bij fooi moet subtotaal een nieuwe waarden krijgen
+        //int btwHoog = 0;
+        //int btwLaag = 0;
+        //int totaalBtw = 0;
+        //int subtotaal = 0;
 
-         string naam1 = "Gebakken	kabeljauw met curry-sabayon";
-         string naam2 = "Provençaalse	vissoep	met	rouille, oude kaas en croutons";
-         string naam3 = "Hertenstoofpotje	met	rode kool";
-         string naam4 = "Duvel";
+        //ListView.ListViewItemCollection bepaaldeVariabele = listview_rekening.Items;
     
-         double prijs1 = 14.50;
-         double prijs2 = 6.50;
-         double prijs3 = 12.50;
-         double prijs4 = 4.50;
-         double fooi = 0.00;
- 
-         double aantal1 = 2;
-         double aantal2 = 1;
-         double aantal3 = 1;
-         double aantal4 = 4;
-
-         int tafel1 = 3;
-         double btw = 0.21;
-         double btw2 = 0.06;
-
-        double totaalPrijs = (prijs1 * aantal1 + prijs2 * aantal2 + prijs3 + aantal3 + prijs4 + aantal4);
-        double btwLaag = ((prijs1 * aantal1 + prijs2 * aantal2 + prijs3 + aantal3) * btw2);
-        double btwHoog = ((prijs4 * aantal4) * btw);
-
-        //ListViewItem listViewItem1 = new ListViewItem(naam1);
-        //listViewItem1.SubItems.Add(aantal1.ToString());
-        //listViewItem1.SubItems.Add(prijs1.ToString());
-
-        //listview_rekening.Items.Add(listViewItem1);
-
-        //ListViewItem listViewItem2 = new ListViewItem(naam2);
-        //listViewItem2.SubItems.Add(aantal2.ToString());
-        //listViewItem2.SubItems.Add(prijs2.ToString());
-
-        //listview_rekening.Items.Add(listViewItem2);
-
-        //ListViewItem listViewItem3 = new ListViewItem(naam3);
-        //listViewItem3.SubItems.Add(aantal3.ToString());
-        //listViewItem3.SubItems.Add(prijs3.ToString());
-
-        //listview_rekening.Items.Add(listViewItem3);
-
-        //ListViewItem listViewItem4 = new ListViewItem(naam4);
-        //listViewItem4.SubItems.Add(aantal4.ToString());
-        //listViewItem4.SubItems.Add(prijs4.ToString());
-
-        //listview_rekening.Items.Add(listViewItem4);
-
-        lbl_opmerking.Text = "Geen saus";
-        lbl_totaal.Text = totaalPrijs.ToString();
-        fooit.Text = fooi.ToString();
-        lbl_btwinc.Text = (btwLaag + btwHoog).ToString();
-        lbl_btwlaaggetal.Text = btwLaag.ToString();
-        lbl_btwhooggetal.Text = btwHoog.ToString();
-
-
-
-
+        //foreach (ListViewItem rij in bepaaldeVariabele)
+        //{
+        //    if (rij.categorie >= 8)
+        //    {
+        //        btwLaag += rij.prijs * 0.06;
+        //        totaalBtw += btwLaag;
+        //    }
+        //    else
+        //    {
+        //        btwHoog += rij.prijs * 0.21;
+        //        totaalBtw += btwLaag;
+        //    }
+        //    subtotaal += rij.prijs;
+        //}
+        //lbl_btwhooggetal.Text = btwHoog.ToString();
+        //lbl_btwlaaggetal.Text = btwLaag.ToString();
+        //lbl_totaalBTW.Text = totaalBtw.ToString();
+        //lbl_subtotaalgetal.Text = subtotaal.ToString();
         }
 
         //private void updateWaarden()
@@ -108,39 +76,9 @@ namespace WindowsFormsApplication1
         }
 
 
-        
 
-        //    List<AfrekenenClass> Rekening = AfrekenenDAO.getallewaardenDAO();
-        //    int totaalPrijs = 0;
-        //    int btwHoog = 0;
-        //    int btwLaag = 0;
-        //    int fooi = 0;
-
-        //    foreach (AfrekenenClass item in Rekening) {
-        //        ListViewItem lijstItem = new ListViewItem(item.naam);
-        //        lijstItem.SubItems.Add(item.prijs);
-        //        lijstItem.SubItems.Add(item.aantal);
-        //        lijstItem.SubItems.Add(item.categorie_id);
-        //        listview_rekening.Items.Add(lijstItem);
-        //        totaalPrijs += item.prijs * item.aantal;
-        //        if (item.categorie_id >= 8 && item.categorie_id <= 10) {
-        //            btwHoog += item.prijs * 0.21;
-        //        } else {
-        //            btwLaag += item.prijs * 0.06;
-        //        }
-                
-        //    }
-
-        //    lbl_opmerking.Text = "blabla";
-
-        //    foreach (ListViewItem nogeenItem in listview_rekening) {
-
-        //    }
  
-        //    if (X.categorie_id >= 8 && X.categorie_id <= 10) {
 
-        //    }
-        //}
 
         private void BTN_AFREKENENnaarTAFELOVERZICHT_Click(object sender, EventArgs e)
         {

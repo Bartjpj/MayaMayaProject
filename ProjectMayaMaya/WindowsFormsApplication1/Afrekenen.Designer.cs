@@ -44,17 +44,16 @@
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.radioButton3 = new System.Windows.Forms.RadioButton();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txt_fooi = new System.Windows.Forms.TextBox();
             this.listview_rekening = new System.Windows.Forms.ListView();
             this.tafel_id = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.aantal = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.naam = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.lbl_tafelNummerDisplay = new System.Windows.Forms.Label();
             this.lbl_opmerking = new System.Windows.Forms.Label();
-            this.lbl_btwinc = new System.Windows.Forms.Label();
-            this.fooit = new System.Windows.Forms.Label();
+            this.lbl_totaalBTW = new System.Windows.Forms.Label();
             this.lbl_totaal = new System.Windows.Forms.Label();
-            this.Prijs = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.txt_Opmerking = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // lbl_rekening
@@ -72,14 +71,14 @@
             this.lbl_opmerkingen.AutoSize = true;
             this.lbl_opmerkingen.Location = new System.Drawing.Point(364, 345);
             this.lbl_opmerkingen.Name = "lbl_opmerkingen";
-            this.lbl_opmerkingen.Size = new System.Drawing.Size(73, 13);
+            this.lbl_opmerkingen.Size = new System.Drawing.Size(61, 13);
             this.lbl_opmerkingen.TabIndex = 4;
-            this.lbl_opmerkingen.Text = "Opmerkingen:";
+            this.lbl_opmerkingen.Text = "Opmerking:";
             // 
             // lbl_subtotaal
             // 
             this.lbl_subtotaal.AutoSize = true;
-            this.lbl_subtotaal.Location = new System.Drawing.Point(364, 375);
+            this.lbl_subtotaal.Location = new System.Drawing.Point(368, 480);
             this.lbl_subtotaal.Name = "lbl_subtotaal";
             this.lbl_subtotaal.Size = new System.Drawing.Size(55, 13);
             this.lbl_subtotaal.TabIndex = 5;
@@ -88,7 +87,7 @@
             // lbl_fooilabel
             // 
             this.lbl_fooilabel.AutoSize = true;
-            this.lbl_fooilabel.Location = new System.Drawing.Point(364, 398);
+            this.lbl_fooilabel.Location = new System.Drawing.Point(396, 375);
             this.lbl_fooilabel.Name = "lbl_fooilabel";
             this.lbl_fooilabel.Size = new System.Drawing.Size(27, 13);
             this.lbl_fooilabel.TabIndex = 6;
@@ -97,16 +96,16 @@
             // lbl_incbtw
             // 
             this.lbl_incbtw.AutoSize = true;
-            this.lbl_incbtw.Location = new System.Drawing.Point(364, 422);
+            this.lbl_incbtw.Location = new System.Drawing.Point(355, 452);
             this.lbl_incbtw.Name = "lbl_incbtw";
-            this.lbl_incbtw.Size = new System.Drawing.Size(56, 13);
+            this.lbl_incbtw.Size = new System.Drawing.Size(68, 13);
             this.lbl_incbtw.TabIndex = 7;
-            this.lbl_incbtw.Text = "Inc. BTW:";
+            this.lbl_incbtw.Text = "Totaal BTW:";
             // 
             // lbl_btwhoog
             // 
             this.lbl_btwhoog.AutoSize = true;
-            this.lbl_btwhoog.Location = new System.Drawing.Point(364, 445);
+            this.lbl_btwhoog.Location = new System.Drawing.Point(359, 402);
             this.lbl_btwhoog.Name = "lbl_btwhoog";
             this.lbl_btwhoog.Size = new System.Drawing.Size(64, 13);
             this.lbl_btwhoog.TabIndex = 8;
@@ -115,7 +114,7 @@
             // lbl_btwlaag
             // 
             this.lbl_btwlaag.AutoSize = true;
-            this.lbl_btwlaag.Location = new System.Drawing.Point(364, 472);
+            this.lbl_btwlaag.Location = new System.Drawing.Point(361, 422);
             this.lbl_btwlaag.Name = "lbl_btwlaag";
             this.lbl_btwlaag.Size = new System.Drawing.Size(62, 13);
             this.lbl_btwlaag.TabIndex = 9;
@@ -140,7 +139,7 @@
             // lbl_btwhooggetal
             // 
             this.lbl_btwhooggetal.AutoSize = true;
-            this.lbl_btwhooggetal.Location = new System.Drawing.Point(443, 448);
+            this.lbl_btwhooggetal.Location = new System.Drawing.Point(441, 402);
             this.lbl_btwhooggetal.Name = "lbl_btwhooggetal";
             this.lbl_btwhooggetal.Size = new System.Drawing.Size(0, 13);
             this.lbl_btwhooggetal.TabIndex = 13;
@@ -148,7 +147,7 @@
             // lbl_btwlaaggetal
             // 
             this.lbl_btwlaaggetal.AutoSize = true;
-            this.lbl_btwlaaggetal.Location = new System.Drawing.Point(443, 479);
+            this.lbl_btwlaaggetal.Location = new System.Drawing.Point(443, 422);
             this.lbl_btwlaaggetal.Name = "lbl_btwlaaggetal";
             this.lbl_btwlaaggetal.Size = new System.Drawing.Size(0, 13);
             this.lbl_btwlaaggetal.TabIndex = 14;
@@ -214,13 +213,13 @@
             this.radioButton3.Text = "Contant";
             this.radioButton3.UseVisualStyleBackColor = true;
             // 
-            // textBox1
+            // txt_fooi
             // 
-            this.textBox1.Location = new System.Drawing.Point(637, 395);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(61, 20);
-            this.textBox1.TabIndex = 26;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.txt_fooi.Location = new System.Drawing.Point(431, 372);
+            this.txt_fooi.Name = "txt_fooi";
+            this.txt_fooi.Size = new System.Drawing.Size(61, 20);
+            this.txt_fooi.TabIndex = 26;
+            this.txt_fooi.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // listview_rekening
             // 
@@ -270,46 +269,41 @@
             this.lbl_opmerking.Size = new System.Drawing.Size(0, 13);
             this.lbl_opmerking.TabIndex = 90;
             // 
-            // lbl_btwinc
+            // lbl_totaalBTW
             // 
-            this.lbl_btwinc.AutoSize = true;
-            this.lbl_btwinc.Location = new System.Drawing.Point(443, 422);
-            this.lbl_btwinc.Name = "lbl_btwinc";
-            this.lbl_btwinc.Size = new System.Drawing.Size(0, 13);
-            this.lbl_btwinc.TabIndex = 91;
-            // 
-            // fooit
-            // 
-            this.fooit.AutoSize = true;
-            this.fooit.Location = new System.Drawing.Point(443, 395);
-            this.fooit.Name = "fooit";
-            this.fooit.Size = new System.Drawing.Size(0, 13);
-            this.fooit.TabIndex = 92;
+            this.lbl_totaalBTW.AutoSize = true;
+            this.lbl_totaalBTW.Location = new System.Drawing.Point(437, 452);
+            this.lbl_totaalBTW.Name = "lbl_totaalBTW";
+            this.lbl_totaalBTW.Size = new System.Drawing.Size(0, 13);
+            this.lbl_totaalBTW.TabIndex = 91;
             // 
             // lbl_totaal
             // 
             this.lbl_totaal.AutoSize = true;
-            this.lbl_totaal.Location = new System.Drawing.Point(443, 375);
+            this.lbl_totaal.Location = new System.Drawing.Point(441, 480);
             this.lbl_totaal.Name = "lbl_totaal";
             this.lbl_totaal.Size = new System.Drawing.Size(0, 13);
             this.lbl_totaal.TabIndex = 93;
             // 
-            // Prijs
+            // txt_Opmerking
             // 
-            this.Prijs.Text = "Prijs";
+            this.txt_Opmerking.Location = new System.Drawing.Point(431, 344);
+            this.txt_Opmerking.Name = "txt_Opmerking";
+            this.txt_Opmerking.Size = new System.Drawing.Size(332, 20);
+            this.txt_Opmerking.TabIndex = 94;
             // 
             // Afrekenen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(775, 502);
+            this.Controls.Add(this.txt_Opmerking);
             this.Controls.Add(this.lbl_totaal);
-            this.Controls.Add(this.fooit);
-            this.Controls.Add(this.lbl_btwinc);
+            this.Controls.Add(this.lbl_totaalBTW);
             this.Controls.Add(this.lbl_opmerking);
             this.Controls.Add(this.lbl_tafelNummerDisplay);
             this.Controls.Add(this.listview_rekening);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txt_fooi);
             this.Controls.Add(this.radioButton3);
             this.Controls.Add(this.radioButton2);
             this.Controls.Add(this.radioButton1);
@@ -352,17 +346,16 @@
         private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.RadioButton radioButton3;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txt_fooi;
         private System.Windows.Forms.ListView listview_rekening;
         private System.Windows.Forms.ColumnHeader tafel_id;
         private System.Windows.Forms.ColumnHeader aantal;
         private System.Windows.Forms.ColumnHeader naam;
         private System.Windows.Forms.Label lbl_tafelNummerDisplay;
         private System.Windows.Forms.Label lbl_opmerking;
-        private System.Windows.Forms.Label lbl_btwinc;
-        private System.Windows.Forms.Label fooit;
+        private System.Windows.Forms.Label lbl_totaalBTW;
         private System.Windows.Forms.Label lbl_totaal;
-        private System.Windows.Forms.ColumnHeader Prijs;
+        private System.Windows.Forms.TextBox txt_Opmerking;
 
     }
 }
