@@ -239,10 +239,9 @@ namespace WindowsFormsApplication1
             List<int> KeukenMenu_ID = new List<int>();
             List<int> KeukenAantal = new List<int>();
 
-            ListViewItem KeukenBestelling = new ListViewItem();
-
             foreach (ListViewItem regel in besteldeItems)
             {
+                
                 BesteldeItemClass besteldItem = (BesteldeItemClass)regel.Tag;
                 if (besteldItem.categorie_id >= 8)
                 {
