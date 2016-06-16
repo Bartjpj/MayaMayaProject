@@ -74,7 +74,7 @@
     </Compile>
     <Compile Include="DrankenKaartClass.cs" />
     <Compile Include="DrankenKaartDAO.cs" />
-    <Compile Include="keukenOverzichtClass.cs" />
+    <Compile Include="keukenOverzichtBLL.cs" />
     <Compile Include="KeukenBestellingOverzichtDAO.cs" />
     <Compile Include="KiesOpname.cs">
       <SubType>Form</SubType>

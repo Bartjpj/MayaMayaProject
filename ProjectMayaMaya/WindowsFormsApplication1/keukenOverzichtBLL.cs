@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WindowsFormsApplication1
 {
-    public class keukenOverzichtClass
+    public class keukenOverzichtBLL
     {
         //Variabelen worden gedefinieerd
         public int bestelling_id { get; set; }
@@ -17,7 +17,7 @@ namespace WindowsFormsApplication1
         public DateTime datum_tijd { get; set; }
         public string opmerking { get; set; }
         //De constructor wordt aangemaakt
-        public keukenOverzichtClass(int bestelling_id, int tafel_id, string naam, int aantal, DateTime datum_tijd, string opmerking)
+        public keukenOverzichtBLL(int bestelling_id, int tafel_id, string naam, int aantal, DateTime datum_tijd, string opmerking) // constructor met parameters
         {
             this.bestelling_id = bestelling_id;
             this.tafel_id = tafel_id;
@@ -26,6 +26,6 @@ namespace WindowsFormsApplication1
             this.datum_tijd = datum_tijd;
             this.opmerking = opmerking;
         }
-        public keukenOverzichtClass(){}
+        public keukenOverzichtBLL(){} // default constructor 
     }
 }
