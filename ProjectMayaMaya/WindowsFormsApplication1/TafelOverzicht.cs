@@ -350,5 +350,10 @@ namespace WindowsFormsApplication1
         {
 
         }
+
+        private void label10_Click(object sender, EventArgs e)
+        {
+            label10.Text = DateTime.Now.ToShortTimeString();
+        }
     }
 }
