@@ -30,55 +30,9 @@ namespace WindowsFormsApplication1
             afrekenLijst = AfrekeningDAO.haalMenuItemsOp(3);
 
             DisplayBestellingen();
-
-            waardenInvoegen();
-
         }
-
-        public void waardenInvoegen()
-        {
-        //string opmerking = txt_Opmerking.Text;
-        //int bijFooi = Int32.Parse(txt_fooi.Text); //wanneer er iets nieuws ingetikt wordt bij fooi moet subtotaal een nieuwe waarden krijgen
-        //int btwHoog = 0;
-        //int btwLaag = 0;
-        //int totaalBtw = 0;
-        //int subtotaal = 0;
-
-        //ListView.ListViewItemCollection bepaaldeVariabele = listview_rekening.Items;
-    
-        //foreach (ListViewItem rij in bepaaldeVariabele)
-        //{
-        //    if (rij.categorie >= 8)
-        //    {
-        //        btwLaag += rij.prijs * 0.06;
-        //        totaalBtw += btwLaag;
-        //    }
-        //    else
-        //    {
-        //        btwHoog += rij.prijs * 0.21;
-        //        totaalBtw += btwLaag;
-        //    }
-        //    subtotaal += rij.prijs;
-        //}
-        //lbl_btwhooggetal.Text = btwHoog.ToString();
-        //lbl_btwlaaggetal.Text = btwLaag.ToString();
-        //lbl_totaalBTW.Text = totaalBtw.ToString();
-        //lbl_subtotaalgetal.Text = subtotaal.ToString();
-        }
-
-        //private void updateWaarden()
-        //{
-        public int _tafelgetal;
-        public int _GetalTafel
-        {
-            get { return _tafelgetal; }
-            set { _tafelgetal = value; }
-        }
-
-
 
  
-
 
         private void BTN_AFREKENENnaarTAFELOVERZICHT_Click(object sender, EventArgs e)
         {
@@ -140,8 +94,36 @@ namespace WindowsFormsApplication1
                 listview_rekening.Items.Add(lijstItem);
 
             }
-           
 
+            string opmerking = txt_Opmerking.Text;
+            int bijFooi = Int32.Parse(txt_fooi.Text); //wanneer er iets nieuws ingetikt wordt bij fooi moet subtotaal een nieuwe waarden krijgen
+            int btwHoog = 0;
+            int btwLaag = 0;
+            int totaalBtw = 0;
+            int subtotaal = 0;
+
+            ListView.ListViewItemCollection bepaaldeVariabele = listview_rekening.Items;
+
+            foreach (ListViewItem rij in bepaaldeVariabele)
+            {
+                afrekenenBLL rekeningItem = (afrekenenBLL)rij.Tag;
+
+                if (rekeningItem.categorie >= 8)
+                {
+                    btwLaag += rekeningItem.prijs * 0.06;
+                    totaalBtw += btwLaag;
+                }
+                else
+                {
+                    btwHoog += rekeningItem.prijs * 0.21;
+                    totaalBtw += btwLaag;
+                }
+                subtotaal += rekeningItem.prijs;
+            }
+            lbl_btwhooggetal.Text = btwHoog.ToString();
+            lbl_btwlaaggetal.Text = btwLaag.ToString();
+            lbl_totaalBTW.Text = totaalBtw.ToString();
+            lbl_subtotaalgetal.Text = subtotaal.ToString();
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -151,6 +133,28 @@ namespace WindowsFormsApplication1
 
         private void btn_printrekening_Click(object sender, EventArgs e)
         {
+            string opmerking = txt_Opmerking.Text;
+            List<int> Rekening_IDs = AfrekeningDAO.haalRekeningIdOp();
+            int hoogsteRekeningID = Rekening_IDs.Max();
+            int NieuweRekeningID = hoogsteRekeningID + 1;
+            int bestellingID = 1;//bestellingID nog opvragen
+
+            List<int> rekening_id = new List<int>();
+            List<int> bestelling_id = new List<int>();
+            List<int> prijs = new List<int>();
+
+            ListView.ListViewItemCollection bepaaldeVariabele = listview_rekening.Items;
+
+            foreach (ListViewItem rij in bepaaldeVariabele)
+            {
+                afrekenenBLL rekeningItem = (afrekenenBLL)rij.Tag;
+            }
+
+
+
+
+
+
             listview_rekening.Items.Clear();
         }
 

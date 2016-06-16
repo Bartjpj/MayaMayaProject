@@ -260,35 +260,7 @@ namespace WindowsFormsApplication1
             }
 
 
-
-            //if (tafel == 1)
-            //{
-            //    timerenable1 = true;
-            //    system.timers.timer t1 = new system.timers.timer();
-            //    t1.interval = 1000;
-            //    t1.elapsed += new elapsedeventhandler(idontknow.t1_tick);
-            //}
-            // int tafel = 5;
             string opmerking = txt_opmerking.Text;
-
-            //if (checkbox_keuken.Checked && checkbox_bar.Checked) {
-            //        barOpmerking = txt_opmerking.Text;
-            //        keukenOpmerking = txt_opmerking.Text;
-            //    }
-            //    else if (checkbox_keuken.Checked)
-            //    {
-            //        keukenOpmerking = txt_opmerking.Text;
-            //        barOpmerking = txt_opmerking.Text;
-            //    }
-            //    else if (checkbox_bar.Checked)
-            //    {
-            //        barOpmerking = txt_opmerking.Text;
-            //    }
-            //    else
-            //    {
-            //        keukenOpmerking = "";
-            //        barOpmerking = txt_opmerking.Text;
-            //}
 
             if (checkbox_bar.Checked && checkbox_keuken.Checked) //er wordt een code meegegeven aan de query, waardoor het systeem weet of dit voor de keuken, bar of beide bestemd is.
             {
