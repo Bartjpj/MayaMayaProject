@@ -32,7 +32,6 @@
             this.txt_PersoneelsID = new System.Windows.Forms.TextBox();
             this.btn_inloggen = new System.Windows.Forms.Button();
             this.btn_INLOGGENnaarHM = new System.Windows.Forms.Button();
-            this.btn_InloggenSkippen = new System.Windows.Forms.Button();
             this.lbl_personeelsleden = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
@@ -79,19 +78,6 @@
             this.btn_INLOGGENnaarHM.TabIndex = 7;
             this.btn_INLOGGENnaarHM.Text = "X";
             this.btn_INLOGGENnaarHM.UseVisualStyleBackColor = false;
-            this.btn_INLOGGENnaarHM.Click += new System.EventHandler(this.btn_INLOGGENnaarHM_Click);
-            // 
-            // btn_InloggenSkippen
-            // 
-            this.btn_InloggenSkippen.BackColor = System.Drawing.Color.Maroon;
-            this.btn_InloggenSkippen.ForeColor = System.Drawing.Color.White;
-            this.btn_InloggenSkippen.Location = new System.Drawing.Point(455, 225);
-            this.btn_InloggenSkippen.Name = "btn_InloggenSkippen";
-            this.btn_InloggenSkippen.Size = new System.Drawing.Size(91, 34);
-            this.btn_InloggenSkippen.TabIndex = 8;
-            this.btn_InloggenSkippen.Text = "Skip inloggen";
-            this.btn_InloggenSkippen.UseVisualStyleBackColor = false;
-            this.btn_InloggenSkippen.Click += new System.EventHandler(this.btn_InloggenSkippen_Click);
             // 
             // lbl_personeelsleden
             // 
@@ -108,7 +94,6 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(775, 502);
             this.Controls.Add(this.lbl_personeelsleden);
-            this.Controls.Add(this.btn_InloggenSkippen);
             this.Controls.Add(this.btn_INLOGGENnaarHM);
             this.Controls.Add(this.btn_inloggen);
             this.Controls.Add(this.txt_PersoneelsID);
@@ -130,7 +115,6 @@
         private System.Windows.Forms.TextBox txt_PersoneelsID;
         private System.Windows.Forms.Button btn_inloggen;
         private System.Windows.Forms.Button btn_INLOGGENnaarHM;
-        private System.Windows.Forms.Button btn_InloggenSkippen;
         private System.Windows.Forms.Label lbl_personeelsleden;
     }
 }
