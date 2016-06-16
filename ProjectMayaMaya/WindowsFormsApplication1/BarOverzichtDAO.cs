@@ -107,7 +107,7 @@ namespace WindowsFormsApplication1
             conn.Close();
             return BarOverzichtTable;
             
-        }
+        } // haal de bestelling op per tafel
 
         public void updateTafelsGereed(int tafelNr)
         {
@@ -121,9 +121,9 @@ namespace WindowsFormsApplication1
             command.ExecuteNonQuery();
 
             conn.Close();
-        }
+        } // als een tafel gereed wordt gemeld, zorgt deze methode ervoor dat hij in de database wordt geupdate
 
-        public List<int> haalTafelNrOp()
+        public List<int> haalTafelNrOp() // hier worden de tafelnrs uit de database opgehaald
         {
             string connString = ConfigurationManager
                 .ConnectionStrings["BestellingConnectionStringSQL"]
@@ -146,7 +146,7 @@ namespace WindowsFormsApplication1
             conn.Close();
             return TafelNummers;
 
-        }
+        } 
 
         //public List<BarOverzichtClass> dagBarOverzicht()
         //{

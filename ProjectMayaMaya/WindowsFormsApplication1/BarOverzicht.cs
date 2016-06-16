@@ -16,11 +16,10 @@ namespace WindowsFormsApplication1
     {
         BarOverzichtDAO BarOverzichtDAO;
         List<BarOverzichtBLL> bestellingslijst = new List<BarOverzichtBLL>();
-        ListViewItem lijstItem;
         public int tafelNr;
-        public int bestellings_id;
+        
        
-        protected override void OnLoad(EventArgs e) // is de verwijzing, niets veranderen AUB
+        protected override void OnLoad(EventArgs e) // is de verwijzing, niets veranderen AUB 
         {
             base.OnLoad(e);
             this.Location = Owner.Location;
@@ -31,26 +30,19 @@ namespace WindowsFormsApplication1
         {
            InitializeComponent();
 
-           this.BarOverzichtDAO = BarOverzichtDAO; // zet bestellingdao
+           this.BarOverzichtDAO = BarOverzichtDAO; // zet BarOverzichtDAO gelijk aan de BarOverzichtDAO object in de class
 
            bestellingslijst = BarOverzichtDAO.haalBarOverzicht_TabelOp(); // haal de bestelling op
 
-            // bepaal aan welke tafels er een bestelling loopt
-            // ...  
-            List<int> tafelNummers = new List<int>();
-
-
-
-           DisplayBestellingen();
+           DisplayBestellingen(); // methode die de bestellingen displayed in the listview
 
         }
 
         private void button_Click(object sender, EventArgs e)
         {
-            //MessageBox.Show("Bestellinglijst wordt geopend voor " + ((Button)sender).Name);
 
             Button btn = (Button)sender;
-            tafelNr = Int32.Parse(btn.Text.Substring(5).Trim());
+            tafelNr = Int32.Parse(btn.Text.Substring(5).Trim()); // button in flowpanel wordt getrimmed de tekst tafel wordt eraf gehaald en je houdt een nummer over die wordt in de variabele tafelNr gestopt
 
             // ... moet de parameter tafelNr meegeven aan de Dao zodat een query gemaakt kan worden om deze specifieke tafel op te halen
             listView1.Items.Clear();
@@ -60,7 +52,7 @@ namespace WindowsFormsApplication1
             {
 
 
-                voegListViewItemsToe(barOverzicht);
+                voegListViewItemsToe(barOverzicht); // het barOverzicht object wordt hier aan de methode voegListVietItemsToe meegegeven zodat de items in de listview kunnen komen.
 
             }
         }
@@ -84,14 +76,15 @@ namespace WindowsFormsApplication1
                 lijstItem.SubItems.Add(barOverzicht.naam.ToString());
                 lijstItem.SubItems.Add(barOverzicht.aantal.ToString());
                 lijstItem.SubItems.Add(barOverzicht.datum_tijd.ToString());
-            if (barOverzicht.opmerking.Contains("0081") || barOverzicht.opmerking.Contains("0083"))
+            if (barOverzicht.opmerking.Contains("1") || barOverzicht.opmerking.Contains("3"))
             {
-                opmerking = barOverzicht.opmerking.Substring(4);
+                opmerking = barOverzicht.opmerking.Substring(1);
             }
             else { opmerking = " "; }
             lijstItem.SubItems.Add(opmerking);
                 listView1.Items.Add(lijstItem);
         } // methode om listviewItems toe te voegen 
+       
         private void DisplayBestellingen()
         {
             listView1.Items.Clear();
@@ -149,7 +142,6 @@ namespace WindowsFormsApplication1
             {
 
                 voegListViewItemsToe(barOverzicht);
-      
        
         }
 

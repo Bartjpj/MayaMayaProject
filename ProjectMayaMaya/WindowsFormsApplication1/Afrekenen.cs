@@ -108,17 +108,17 @@ namespace WindowsFormsApplication1
             {
                 AfrekenenBLL rekeningItem = (AfrekenenBLL)rij.Tag;
 
-                if (rekeningItem.categorie >= 8)
-                {
-                    btwLaag += rekeningItem.prijs * 0.06;
-                    totaalBtw += btwLaag;
-                }
-                else
-                {
-                    btwHoog += rekeningItem.prijs * 0.21;
-                    totaalBtw += btwLaag;
-                }
-                subtotaal += rekeningItem.prijs;
+                //if (rekeningItem.categorie >= 8)
+                //{
+                //    btwLaag += rekeningItem.prijs * 0.06;
+                //    totaalBtw += btwLaag;
+                //}
+                //else
+                //{
+                //    btwHoog += rekeningItem.prijs * 0.21;
+                //    totaalBtw += btwLaag;
+                //}
+                //subtotaal += rekeningItem.prijs;
             }
             lbl_btwhooggetal.Text = btwHoog.ToString();
             lbl_btwlaaggetal.Text = btwLaag.ToString();
@@ -147,7 +147,7 @@ namespace WindowsFormsApplication1
 
             foreach (ListViewItem rij in bepaaldeVariabele)
             {
-                afrekenenBLL rekeningItem = (afrekenenBLL)rij.Tag;
+                AfrekenenBLL rekeningItem = (AfrekenenBLL)rij.Tag;
             }
 
 

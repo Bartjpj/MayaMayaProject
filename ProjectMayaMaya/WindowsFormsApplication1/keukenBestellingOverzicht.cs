@@ -12,9 +12,9 @@ namespace WindowsFormsApplication1
 {
     public partial class keukenBestellingOverzicht : Form
     {
-        keukenBestellingOverzichtDAO keukenBestellingOverzichtDAO;
-        List<keukenOverzichtClass> bestellingslijst = new List<keukenOverzichtClass>();
-        public int tafelNr;
+        keukenBestellingOverzichtDAO keukenBestellingOverzichtDAO; // initialisatie van het DAO object voor keukenoverzicht die in deze klasse wordt gebruikt.
+        List<keukenOverzichtClass> bestellingslijst = new List<keukenOverzichtClass>(); // initialisatie van een lijst van bestellingen, deze wordt later in de klas gebruikt
+        public int tafelNr; // initialisatie van de variable tafelNr
 
         protected override void OnLoad(EventArgs e)
         {
@@ -23,24 +23,23 @@ namespace WindowsFormsApplication1
             this.Size = Owner.Size;
         }
 
-        public keukenBestellingOverzicht(keukenBestellingOverzichtDAO keukenBestellingOverzichtDAO)
+        public keukenBestellingOverzicht(keukenBestellingOverzichtDAO keukenBestellingOverzichtDAO) // geeft een keukenbestellingdao mee als parameter in de constructor
         {
             InitializeComponent();
 
-            this.keukenBestellingOverzichtDAO = keukenBestellingOverzichtDAO;
+            this.keukenBestellingOverzichtDAO = keukenBestellingOverzichtDAO; // zet keukenBestellingOverzichtDAO gelijk aan de keukenBestellingOverzichtDAO object in de class 
 
-            bestellingslijst = keukenBestellingOverzichtDAO.haalKeukenBestelling_TabelOp();
+            bestellingslijst = keukenBestellingOverzichtDAO.haalKeukenBestelling_TabelOp();  // haal de bestelling op
 
-            List<int> tafelNummers = new List<int>();
-            DisplayBestellingen();
+            DisplayBestellingen(); // methode die de bestellingen displayed in the listview
         }
 
         private void button_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Bestellinglijst wordt geopend voor " + ((Button)sender).Name);
+           
 
-            Button btn = (Button)sender;
-            tafelNr = Int32.Parse(btn.Text.Substring(5).Trim());
+            Button btn = (Button)sender; // 
+            tafelNr = Int32.Parse(btn.Text.Substring(5).Trim()); // button in flowpanel wordt getrimmed de tekst tafel wordt eraf gehaald en je houdt een nummer over die wordt in de variabele tafelNr gestopt
 
             // ... moet de parameter tafelNr meegeven aan de Dao zodat een query gemaakt kan worden om deze specifieke tafel op te halen
             bestellingOverzichtKeukenView.Items.Clear();
@@ -48,13 +47,9 @@ namespace WindowsFormsApplication1
             List<keukenOverzichtClass> items = keukenBestellingOverzichtDAO.haalBestellingTafel(tafelNr);
             foreach (keukenOverzichtClass keukenOverzicht in items)
             {
-                ListViewItem lijstItem = new ListViewItem(keukenOverzicht.bestelling_id.ToString());
-                lijstItem.SubItems.Add(keukenOverzicht.tafel_id.ToString());
-                lijstItem.SubItems.Add(keukenOverzicht.aantal.ToString());
-                lijstItem.SubItems.Add(keukenOverzicht.naam.ToString());
-                lijstItem.SubItems.Add(keukenOverzicht.datum_tijd.ToString());
-                lijstItem.SubItems.Add(keukenOverzicht.opmerking.ToString());
-                bestellingOverzichtKeukenView.Items.Add(lijstItem);
+
+                voegListViewItemsToe(keukenOverzicht); // het keukenOverzicht object wordt hier aan de methode voegListVietItemsToe meegegeven zodat de items in de listview kunnen komen.
+                
             }
 
         }
@@ -74,13 +69,9 @@ namespace WindowsFormsApplication1
             bestellingOverzichtKeukenView.Items.Clear();
             foreach (keukenOverzichtClass keukenOverzicht in this.bestellingslijst)
             {
-                ListViewItem lijstItem = new ListViewItem(keukenOverzicht.bestelling_id.ToString());
-                lijstItem.SubItems.Add(keukenOverzicht.tafel_id.ToString());
-                lijstItem.SubItems.Add(keukenOverzicht.aantal.ToString());
-                lijstItem.SubItems.Add(keukenOverzicht.naam.ToString());
-                lijstItem.SubItems.Add(keukenOverzicht.datum_tijd.ToString());
-                lijstItem.SubItems.Add(keukenOverzicht.opmerking.ToString());
-                bestellingOverzichtKeukenView.Items.Add(lijstItem);
+
+                voegListViewItemsToe(keukenOverzicht);
+
             }
             createTafels();
         }
@@ -88,6 +79,24 @@ namespace WindowsFormsApplication1
         private void bestellingOverzichtKeukenView_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+
+        private void voegListViewItemsToe(keukenOverzichtClass keukenOverzicht)
+        {
+            string opmerking = " ";
+            ListViewItem lijstItem = new ListViewItem(keukenOverzicht.bestelling_id.ToString());
+            lijstItem.SubItems.Add(keukenOverzicht.tafel_id.ToString());
+            lijstItem.SubItems.Add(keukenOverzicht.aantal.ToString());
+            lijstItem.SubItems.Add(keukenOverzicht.naam.ToString());
+            lijstItem.SubItems.Add(keukenOverzicht.datum_tijd.ToString());
+            if (keukenOverzicht.opmerking.Contains("1") || keukenOverzicht.opmerking.Contains("2"))
+            {
+                opmerking = keukenOverzicht.opmerking.Substring(1);
+            }
+            else { opmerking = " "; }
+            lijstItem.SubItems.Add(opmerking);
+            bestellingOverzichtKeukenView.Items.Add(lijstItem);
         }
 
         private void btn_gereed_keuken_Click(object sender, EventArgs e)
@@ -118,14 +127,8 @@ namespace WindowsFormsApplication1
 
             foreach (keukenOverzichtClass keukenOverzicht in keukenBestellingOverzichtDAO.haalKeukenBestelling_TabelOp())
             {
-                ListViewItem lijstItem = new ListViewItem(keukenOverzicht.bestelling_id.ToString());
-                lijstItem.SubItems.Add(keukenOverzicht.tafel_id.ToString());
-                lijstItem.SubItems.Add(keukenOverzicht.aantal.ToString());
-                lijstItem.SubItems.Add(keukenOverzicht.naam.ToString());
-                lijstItem.SubItems.Add(keukenOverzicht.datum_tijd.ToString());
-                lijstItem.SubItems.Add(keukenOverzicht.opmerking.ToString());
-                bestellingOverzichtKeukenView.Items.Add(lijstItem);
-              
+                voegListViewItemsToe(keukenOverzicht);
+
             }
         }
 
@@ -133,7 +136,7 @@ namespace WindowsFormsApplication1
 
         private void groep_BestellingKeukenX_Enter(object sender, EventArgs e)
         {
-            // bestellingoverzicht moet hier komen en die moet zichtbaar zijn voor alle personeelsleden. En gereedgemeld kunnen worden door bijv. chefkok of barman.
+            
         }
 
         
@@ -175,19 +178,11 @@ namespace WindowsFormsApplication1
             bestellingOverzichtKeukenView.Items.Clear();
             foreach (keukenOverzichtClass keukenOverzicht in keukenBestellingOverzichtDAO.haalDagKeukenBestelling())
             {
-                //for (int i = listView1.Items.Count - 1; i >= 0; i--)
-                //{
-                //    //ListViewItem get = new ListViewItem
-                //    listView1.Items[i].Remove();
-                //}
-                ListViewItem lijstItem = new ListViewItem(keukenOverzicht.bestelling_id.ToString());
-                lijstItem.SubItems.Add(keukenOverzicht.tafel_id.ToString());
-                lijstItem.SubItems.Add(keukenOverzicht.aantal.ToString());
-                lijstItem.SubItems.Add(keukenOverzicht.naam.ToString());
-                lijstItem.SubItems.Add(keukenOverzicht.datum_tijd.ToString());
-                lijstItem.SubItems.Add(keukenOverzicht.opmerking.ToString());
-                bestellingOverzichtKeukenView.Items.Add(lijstItem);
+                
 
+                voegListViewItemsToe(keukenOverzicht);
+
+               
 
             }
 
