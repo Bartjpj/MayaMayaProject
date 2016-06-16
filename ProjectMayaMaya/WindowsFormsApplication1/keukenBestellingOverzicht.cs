@@ -173,7 +173,7 @@ namespace WindowsFormsApplication1
 
         } // flowpanel voor de lopende bestellingen bij tafels die nog niet gereed zijn gemeld.
 
-        private void btn_dagKeukenOverzicht(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
             bestellingOverzichtKeukenView.Items.Clear();
             foreach (keukenOverzichtClass keukenOverzicht in keukenBestellingOverzichtDAO.haalDagKeukenBestelling())
