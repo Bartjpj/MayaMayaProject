@@ -227,7 +227,7 @@
             this.tafel_id,
             this.naam,
             this.aantal,
-            this.Prijs});
+            });
             this.listview_rekening.FullRowSelect = true;
             this.listview_rekening.GridLines = true;
             this.listview_rekening.Location = new System.Drawing.Point(7, 78);

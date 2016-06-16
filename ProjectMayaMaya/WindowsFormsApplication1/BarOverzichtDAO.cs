@@ -95,13 +95,13 @@ namespace WindowsFormsApplication1
                 int bestelling_id = (int)reader["bestelling_id"];
                 int tafel_id = (int)reader["tafel_id"];
                 int Aantal = (int)reader["Aantal"];
-                string Menuitem = (string)reader["naam"];
                 DateTime datum_tijd = (DateTime)reader["datum_tijd"];
+                string Menuitem = (string)reader["naam"];
                 string opmerking = (string)reader["opmerking"];
 
                 //Onderzoeken wrm dit niet werkt
 
-                BarOverzichtBLL BarOverzichtDAO = new BarOverzichtBLL(bestelling_id, tafel_id, Aantal, Menuitem, datum_tijd, opmerking);
+                BarOverzichtBLL BarOverzichtDAO = new BarOverzichtBLL(bestelling_id, tafel_id, Aantal, datum_tijd, Menuitem, opmerking);
                 BarOverzichtTable.Add(BarOverzichtDAO);
             }
             conn.Close();
