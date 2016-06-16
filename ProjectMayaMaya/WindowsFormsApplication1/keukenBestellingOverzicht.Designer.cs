@@ -159,7 +159,7 @@
             this.btn_dagKeukenOverzicht.TabIndex = 9;
             this.btn_dagKeukenOverzicht.Text = "Dagoverzicht";
             this.btn_dagKeukenOverzicht.UseVisualStyleBackColor = false;
-            this.btn_dagKeukenOverzicht.Click += new System.EventHandler(this.button1_Click);
+            this.btn_dagKeukenOverzicht.Click += new System.EventHandler(this.btn_dagKeukenOverzicht_Click);
             // 
             // keukenBestellingOverzicht
             // 

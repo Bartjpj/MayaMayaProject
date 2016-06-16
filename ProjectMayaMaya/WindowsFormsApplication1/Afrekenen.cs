@@ -136,11 +136,13 @@ namespace WindowsFormsApplication1
 
         private void btn_printrekening_Click(object sender, EventArgs e)
         {
+            //dit is nutteloos, net te laat.
             string opmerking = txt_Opmerking.Text;
             List<int> Rekening_IDs = AfrekeningDAO.haalRekeningIdOp();
             int hoogsteRekeningID = Rekening_IDs.Max();
             int NieuweRekeningID = hoogsteRekeningID + 1;
-            int bestellingID = 1;//bestellingID nog opvragen
+            List<int> bestellingID = AfrekeningDAO.haalBestellingIDsOp(3);
+            DateTime actueleTijd = DateTime.Now;
 
             List<int> rekening_id = new List<int>();
             List<int> bestelling_id = new List<int>();
