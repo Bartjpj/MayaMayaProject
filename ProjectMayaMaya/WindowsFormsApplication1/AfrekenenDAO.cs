@@ -10,7 +10,7 @@ namespace WindowsFormsApplication1
 {
     class AfrekenenDAO
     {
-        public List<MenuItemsClass> haalMenuItemsOp(int tafelID) // deze methode haalt de gegevens op voor het BestellingMenu overzicht
+        public List<AfrekenenBLL> haalMenuItemsOp(int tafelNr) // deze methode haalt de gegevens op voor het BestellingMenu overzicht
         {
             string connString = ConfigurationManager
             .ConnectionStrings["BestellingConnectionStringSQL"]
@@ -18,25 +18,27 @@ namespace WindowsFormsApplication1
             SqlConnection conn = new SqlConnection(connString);
             conn.Open();
 
-            SqlCommand command = new SqlCommand("SELECT * FROM Menuitem WHERE categorie_id = " + conn); // deze query zorgt ervoor dat we alle data hebben die we bij BestellingMenu nodig hebben 
+            SqlCommand command = new SqlCommand("SELECT bestelling_id, tafel_id, Aantal, datum_tijd, Menuitem.naam, Menuitem.prijs FROM Bestelling, BestellingItems, Menuitem, Menucategorie, Menukaart WHERE  bestelling_id = BestellingId AND ItemId = menu_id AND Menuitem.categorie_id = Menucategorie.categorie_id AND Menukaart.kaart_id = Menucategorie.kaart_id  AND is_betaald = 0 AND tafel_id = " + tafelNr + "" , conn); // deze query zorgt ervoor dat we alle data hebben die we bij BestellingMenu nodig hebben 
             SqlDataReader reader = command.ExecuteReader();
 
-            List<MenuItemsClass> DinerKaartTable = new List<MenuItemsClass>();
+            List<AfrekenenBLL> AfrekenTable = new List<AfrekenenBLL>();
 
             while (reader.Read())
             {
-                int menu_id = (int)reader["menu_id"];
-                int categorie_id = (int)reader["categorie_id"];
-                string naam = (string)reader["naam"];
+                int bestelling_id = (int)reader["bestelling_id"];
+                int tafel_id = (int)reader["tafel_id"];
+                int Aantal = (int)reader["Aantal"];
+                DateTime datum_tijd = (DateTime)reader["datum_tijd"];
+                string Menuitem = (string)reader["naam"];
                 double prijs = (double)reader["prijs"];
-                int voorraad = (int)reader["voorraad"];
+              
 
-                MenuItemsClass DinerKaartDAO = new MenuItemsClass(menu_id, categorie_id, naam, prijs, voorraad);
-                DinerKaartTable.Add(DinerKaartDAO);
+                AfrekenenBLL AfrekeneningDAO = new AfrekenenBLL( bestelling_id, tafel_id, Aantal, datum_tijd, Menuitem, prijs);
+                AfrekenTable.Add(AfrekeneningDAO);
             }
 
             conn.Close();
-            return DinerKaartTable;
+            return AfrekenTable;
         }
     }
 }

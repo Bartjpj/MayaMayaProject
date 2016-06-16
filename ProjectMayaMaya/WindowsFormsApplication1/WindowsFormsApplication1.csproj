@@ -52,8 +52,8 @@
     <Compile Include="Afrekenen.Designer.cs">
       <DependentUpon>Afrekenen.cs</DependentUpon>
     </Compile>
-    <Compile Include="AfrekenenClass.cs" />
-    <Compile Include="BarOverzichtClass.cs" />
+    <Compile Include="AfrekenenBLL.cs" />
+    <Compile Include="BarOverzichtBLL.cs" />
     <Compile Include="BarOverzichtDAO.cs" />
     <Compile Include="BesteldeItemClass.cs" />
     <Compile Include="BestellingOpnemen.cs">

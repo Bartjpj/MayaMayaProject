@@ -12,6 +12,7 @@ namespace WindowsFormsApplication1
 {
     public partial class Afrekenen : Form
     {
+        List<AfrekenenBLL> afrekenLijst = new List<AfrekenenBLL>();
 
 
         protected override void OnLoad(EventArgs e) // is de verwijzing, niets veranderen AUB
@@ -23,7 +24,7 @@ namespace WindowsFormsApplication1
         public Afrekenen()
         {
             InitializeComponent();
-
+            DisplayBestellingen();
 
             waardenInvoegen();
 
@@ -39,7 +40,7 @@ namespace WindowsFormsApplication1
         //int subtotaal = 0;
 
         //ListView.ListViewItemCollection bepaaldeVariabele = listview_rekening.Items;
-
+    
         //foreach (ListViewItem rij in bepaaldeVariabele)
         //{
         //    if (rij.categorie >= 8)
@@ -71,7 +72,7 @@ namespace WindowsFormsApplication1
 
 
 
-
+ 
 
 
         private void BTN_AFREKENENnaarTAFELOVERZICHT_Click(object sender, EventArgs e)
@@ -116,6 +117,24 @@ namespace WindowsFormsApplication1
 
         private void listview_rekening_SelectedIndexChanged(object sender, EventArgs e)
         {
+
+        }
+
+        private void DisplayBestellingen()
+        {
+            listview_rekening.Items.Clear();
+            foreach (AfrekenenBLL afrekeningOverzicht in this.afrekenLijst)
+            {
+
+                ListViewItem lijstItem = new ListViewItem(afrekeningOverzicht.bestelling_id.ToString());
+                lijstItem.SubItems.Add(afrekeningOverzicht.tafel_id.ToString());
+                lijstItem.SubItems.Add(afrekeningOverzicht.Aantal.ToString());
+                lijstItem.SubItems.Add(afrekeningOverzicht.Menuitem.ToString());
+                lijstItem.SubItems.Add(afrekeningOverzicht.prijs.ToString());
+                listview_rekening.Items.Add(lijstItem);
+
+            }
+           
 
         }
 
