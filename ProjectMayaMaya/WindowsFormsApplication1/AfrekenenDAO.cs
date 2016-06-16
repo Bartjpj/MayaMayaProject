@@ -64,6 +64,27 @@ namespace WindowsFormsApplication1
             return rekeningIDs;
         }
 
+        public List<int> haalBestellingIDsOp(int tafelnr)
+        {
+            string connString = ConfigurationManager
+            .ConnectionStrings["BestellingConnectionStringSQL"]
+            .ConnectionString;
+            SqlConnection conn = new SqlConnection(connString);
+            conn.Open();
+
+            SqlCommand command = new SqlCommand("SELECT bestelling_id FROM bestelling WHERE is_betaald = 0 AND tafel_id = " + tafelnr, conn); // deze query zorgt ervoor dat we alle data hebben die we bij BestellingMenu nodig hebben 
+            SqlDataReader reader = command.ExecuteReader();
+
+            List<int> bestellingIDs = new List<int>();
+
+            while (reader.Read())
+            {
+                int bestelling_id = (int)reader["bestelling_id"];
+                bestellingIDs.Add(bestelling_id);
+            }
+            conn.Close();
+            return bestellingIDs;
+        }
 
     }
 }
