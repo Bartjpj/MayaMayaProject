@@ -14,6 +14,7 @@ namespace WindowsFormsApplication1
 {
     public partial class BarOverzicht : Form
     {
+        BestellingOpnemenDAO bestellingOphalen; //IVO
         BarOverzichtDAO BarOverzichtDAO;
         List<BarOverzichtBLL> bestellingslijst = new List<BarOverzichtBLL>();
         public int tafelNr;
@@ -33,6 +34,8 @@ namespace WindowsFormsApplication1
            this.BarOverzichtDAO = BarOverzichtDAO; // zet BarOverzichtDAO gelijk aan de BarOverzichtDAO object in de class
 
            bestellingslijst = BarOverzichtDAO.haalBarOverzicht_TabelOp(); // haal de bestelling op
+           //bestellingOphalen.DuidelijkeNaamVanWatJeOpWiltHalen(); IVO
+            
 
            DisplayBestellingen(); // methode die de bestellingen displayed in the listview
 

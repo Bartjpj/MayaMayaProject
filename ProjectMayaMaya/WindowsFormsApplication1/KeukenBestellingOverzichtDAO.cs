@@ -10,6 +10,7 @@ namespace WindowsFormsApplication1
 {
   public  class keukenBestellingOverzichtDAO
     {
+//---------------------------- Begin KeukenOverzicht Connecties -------------------------------------
         public List<keukenOverzichtBLL> haalKeukenBestelling_TabelOp() // deze methode haalt de gegevens op voor het BestellingMenu overzicht
         {
             string connString = ConfigurationManager
@@ -140,5 +141,6 @@ namespace WindowsFormsApplication1
             return TafelNummers;
 
         }
+        //---------------------------- Begin KeukenOverzicht Connecties -------------------------------------
     }
 }
