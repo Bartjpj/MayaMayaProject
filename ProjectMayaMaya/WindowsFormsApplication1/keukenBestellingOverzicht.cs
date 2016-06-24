@@ -12,6 +12,7 @@ namespace WindowsFormsApplication1
 {
     public partial class keukenBestellingOverzicht : Form
     {
+        BestellingOpnemenDAO bestellingOphalen; //IVO
         keukenBestellingOverzichtDAO keukenBestellingOverzichtDAO; // initialisatie van het DAO object voor keukenoverzicht die in deze klasse wordt gebruikt.
         List<keukenOverzichtBLL> bestellingslijst = new List<keukenOverzichtBLL>(); // initialisatie van een lijst van bestellingen, deze wordt later in de klas gebruikt
         public int tafelNr; // initialisatie van de variable tafelNr
@@ -30,6 +31,7 @@ namespace WindowsFormsApplication1
             this.keukenBestellingOverzichtDAO = keukenBestellingOverzichtDAO; // zet keukenBestellingOverzichtDAO gelijk aan de keukenBestellingOverzichtDAO object in de class 
 
             bestellingslijst = keukenBestellingOverzichtDAO.haalKeukenBestelling_TabelOp();  // haal de bestelling op
+            //bestellingOphalen.DuidelijkeNaamVanWatJeOpWiltHalen(); IVO
 
             DisplayBestellingen(); // methode die de bestellingen displayed in the listview
         }

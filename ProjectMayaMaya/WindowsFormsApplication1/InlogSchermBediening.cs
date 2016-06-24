@@ -25,17 +25,6 @@ namespace WindowsFormsApplication1
             InitializeComponent();
         }
 
-        private void btn_INLOGGENnaarHM_Click(object sender, EventArgs e)
-        {
-            //HoofdMenu TerugNaarHoofdmenu = new HoofdMenu();
-            //TerugNaarHoofdmenu.Show();
-            //TerugNaarHoofdmenu.Left = this.Left; // geeft de grote aan van deze form voor het te openen form
-            //TerugNaarHoofdmenu.Top = this.Top;
-            //TerugNaarHoofdmenu.Size = this.Size;
-            //this.Hide();
-            this.Close();
-        }
-
         private int txt_PersoneelsID_TextChanged(object sender, EventArgs e)
         {
                 int inlogCode = Convert.ToInt32(txt_PersoneelsID.Text); // invoer inlogcode voor een personeelslid 
@@ -68,8 +57,6 @@ namespace WindowsFormsApplication1
             }
             
 
-
-
             //PersoneelsLidDAO personeelsTabel = new PersoneelsLidDAO(); //maak een instantie van constructor zodat we daar de lijst vandaan kunnen halen.
             //lbl_personeelsleden.Text = 
             //lbl_personeelsleden.Text = personeelsTabel.ToString();
@@ -98,15 +85,9 @@ namespace WindowsFormsApplication1
                 inlogFout.StartPosition = FormStartPosition.CenterParent;
                 inlogFout.Show(this);
             }
+
         }
         
-        private void btn_InloggenSkippen_Click(object sender, EventArgs e) // experimentje
-        {
-            TafelOverzicht tafelForm = new TafelOverzicht();
-            tafelForm.Show(this);
-            this.Hide();
-        }
-
 
     }
 }
