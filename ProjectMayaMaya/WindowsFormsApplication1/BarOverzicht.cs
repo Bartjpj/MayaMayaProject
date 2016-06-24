@@ -116,7 +116,7 @@ namespace WindowsFormsApplication1
 
             for (int i = listView1.Items.Count - 1; i >= 0; i--) // selecteer eerste item van listview indien geklikt op button in flowpanel om vervolgens te verwijderen
             {
-                if (listView1.Items[i].Selected)// als listview item selected dan verwijderen op moment dat er geklikt wordt.
+                if (listView1.Items[i].Selected)// als listview item selected dan fverwijderen op moment dat er geklikt wordt.
                 {
                     listView1.Items[i].Remove();
 
