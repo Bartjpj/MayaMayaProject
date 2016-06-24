@@ -86,7 +86,7 @@ namespace WindowsFormsApplication1
             else { opmerking = " "; }
             lijstItem.SubItems.Add(opmerking);
                 listView1.Items.Add(lijstItem);
-        } // methode om listviewItems toe te voegen 
+        } // methode om listviewItems toe te voegen cc
        
         private void DisplayBestellingen()
         {
