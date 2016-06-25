@@ -53,8 +53,6 @@
       <DependentUpon>Afrekenen.cs</DependentUpon>
     </Compile>
     <Compile Include="AfrekenenBLL.cs" />
-    <Compile Include="BarOverzichtBLL.cs" />
-    <Compile Include="BarOverzichtDAO.cs" />
     <Compile Include="BesteldeItemClass.cs" />
     <Compile Include="BestellingOpnemen.cs">
       <SubType>Form</SubType>
@@ -65,17 +63,7 @@
     <Compile Include="BestellingOpnemenKaartenClass.cs" />
     <Compile Include="MenucategorieClass.cs" />
     <Compile Include="MenuItemsClass.cs" />
-    <Compile Include="MenuItemsDAO.cs" />
-    <Compile Include="DrankenKaart.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="DrankenKaart.Designer.cs">
-      <DependentUpon>DrankenKaart.cs</DependentUpon>
-    </Compile>
-    <Compile Include="DrankenKaartClass.cs" />
-    <Compile Include="DrankenKaartDAO.cs" />
-    <Compile Include="keukenOverzichtBLL.cs" />
-    <Compile Include="KeukenBestellingOverzichtDAO.cs" />
+    <Compile Include="BestellingenDAO.cs" />
     <Compile Include="KiesOpname.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -83,14 +71,12 @@
       <DependentUpon>KiesOpname.cs</DependentUpon>
     </Compile>
     <Compile Include="InlogSchermClass.cs" />
-    <Compile Include="BarOverzicht.cs">
+    <Compile Include="BarKeukenOverzicht.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="BarOverzicht.Designer.cs">
-      <DependentUpon>BarOverzicht.cs</DependentUpon>
+    <Compile Include="BarKeukenOverzicht.Designer.cs">
+      <DependentUpon>BarKeukenOverzicht.cs</DependentUpon>
     </Compile>
-    <Compile Include="BestellingMenuClass.cs" />
-    <Compile Include="BestellingMenuuDAO.cs" />
     <Compile Include="BestellingMenu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -110,30 +96,19 @@
     <Compile Include="InlogSchermBediening.Designer.cs">
       <DependentUpon>InlogSchermBediening.cs</DependentUpon>
     </Compile>
-    <Compile Include="Kelner.cs" />
-    <Compile Include="keukenBestellingOverzicht.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="keukenBestellingOverzicht.Designer.cs">
-      <DependentUpon>keukenBestellingOverzicht.cs</DependentUpon>
-    </Compile>
     <Compile Include="HoofdMenu.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="HoofdMenu.Designer.cs">
       <DependentUpon>HoofdMenu.cs</DependentUpon>
     </Compile>
-    <Compile Include="KeukenPersoneelsLid.cs" />
     <Compile Include="LunchKaart.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="LunchKaart.Designer.cs">
       <DependentUpon>LunchKaart.cs</DependentUpon>
     </Compile>
-    <Compile Include="LunchKaartClass.cs" />
-    <Compile Include="LunchKaartDAO.cs" />
     <Compile Include="MenuCategorie.cs" />
-    <Compile Include="MenuItemDAO.cs" />
     <Compile Include="MenuKaart.cs" />
     <Compile Include="NietOpVoorraadAlert.cs">
       <SubType>Form</SubType>
@@ -141,10 +116,7 @@
     <Compile Include="NietOpVoorraadAlert.Designer.cs">
       <DependentUpon>NietOpVoorraadAlert.cs</DependentUpon>
     </Compile>
-    <Compile Include="PersoneelLid.cs" />
-    <Compile Include="PersoneelsLid.cs" />
     <Compile Include="PersoneelsLidDAO.cs" />
-    <Compile Include="PersoneelslidID.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="AfrekenenDAO.cs" />
@@ -160,8 +132,8 @@
     <EmbeddedResource Include="Afrekenen.resx">
       <DependentUpon>Afrekenen.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="BarOverzicht.resx">
-      <DependentUpon>BarOverzicht.cs</DependentUpon>
+    <EmbeddedResource Include="BarKeukenOverzicht.resx">
+      <DependentUpon>BarKeukenOverzicht.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BestellingMenu.resx">
       <DependentUpon>BestellingMenu.cs</DependentUpon>
@@ -169,17 +141,11 @@
     <EmbeddedResource Include="BestellingOpnemen.resx">
       <DependentUpon>BestellingOpnemen.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DrankenKaart.resx">
-      <DependentUpon>DrankenKaart.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="inlogFoutAlert.resx">
       <DependentUpon>inlogFoutAlert.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="InlogSchermBediening.resx">
       <DependentUpon>InlogSchermBediening.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="keukenBestellingOverzicht.resx">
-      <DependentUpon>keukenBestellingOverzicht.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="HoofdMenu.resx">
       <DependentUpon>HoofdMenu.cs</DependentUpon>

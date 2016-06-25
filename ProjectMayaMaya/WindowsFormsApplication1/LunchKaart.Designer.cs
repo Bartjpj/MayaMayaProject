@@ -169,7 +169,7 @@
             this.btn_LUNCHnaarDRANKEN.TabIndex = 15;
             this.btn_LUNCHnaarDRANKEN.Text = "Dranken";
             this.btn_LUNCHnaarDRANKEN.UseVisualStyleBackColor = false;
-            this.btn_LUNCHnaarDRANKEN.Click += new System.EventHandler(this.btn_LUNCHnaarDRANKEN_Click);
+            
             // 
             // label1
             // 

@@ -24,8 +24,8 @@ namespace WindowsFormsApplication1
 
         private void btn_HMnaarBar_Click(object sender, EventArgs e)
         {
-            BarOverzichtDAO BarOverzichtDAO = new BarOverzichtDAO();
-            BarOverzicht barWindowOpenen = new BarOverzicht(BarOverzichtDAO);
+            BestellingenDAO bestellingenDAO = new BestellingenDAO();
+            BarKeukenOverzicht barWindowOpenen = new BarKeukenOverzicht(bestellingenDAO, true);
             barWindowOpenen.Show(this); // verwijst naar winform in grote van parent window (zie OnLoad in te openen form)
             this.Hide();
         }
@@ -45,8 +45,8 @@ namespace WindowsFormsApplication1
 
         private void btn_HMnaarKEUKEN_Click(object sender, EventArgs e)
         {
-            keukenBestellingOverzichtDAO openKeukenoverzicht = new keukenBestellingOverzichtDAO();
-            keukenBestellingOverzicht keukenWindowOpenen = new keukenBestellingOverzicht(openKeukenoverzicht);
+            BestellingenDAO bestellingenDAO = new BestellingenDAO();
+            BarKeukenOverzicht keukenWindowOpenen = new BarKeukenOverzicht(bestellingenDAO, false);
             keukenWindowOpenen.Show(this);
             this.Hide();
         }

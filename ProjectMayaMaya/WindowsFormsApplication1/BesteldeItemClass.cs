@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WindowsFormsApplication1
 {
-    public class BesteldeItemClass : MenuItemsClass
+    public class BesteldeItemClass : MenuItem
     {
         public int aantal; // class die is aangemaakt om het aantal te wijzigen van een bestelditem
         public string opmerking;

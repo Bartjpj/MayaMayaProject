@@ -27,7 +27,7 @@ namespace WindowsFormsApplication1
 
         private void btn_BestellingOpnemen_Click(object sender, EventArgs e)
         {
-            BestellingOpnemenDAO dinerkaart = new BestellingOpnemenDAO();
+            BestellingenDAO dinerkaart = new BestellingenDAO();
             BestellingOpnemen openDinerkaart = new BestellingOpnemen(dinerkaart);
             openDinerkaart.GetalTafel = tafelgetal;
             openDinerkaart.Show(this);

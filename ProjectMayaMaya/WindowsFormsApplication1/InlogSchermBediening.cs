@@ -69,13 +69,15 @@ namespace WindowsFormsApplication1
             }
             else if (juisteCode && functieGebruiker == "Bar")
             {
-                BarOverzicht barForm = new BarOverzicht(new BarOverzichtDAO());
+                BarKeukenOverzicht barForm = new BarKeukenOverzicht(new BestellingenDAO(), true);
+             
                 barForm.Show(this);
                 this.Hide();
             }
             else if (juisteCode && functieGebruiker == "Keuken")
             {
-                keukenBestellingOverzicht keukenForm = new keukenBestellingOverzicht(new keukenBestellingOverzichtDAO());
+              
+                BarKeukenOverzicht keukenForm = new BarKeukenOverzicht(new BestellingenDAO(), false);
                 keukenForm.Show(this);
                 this.Hide();
             }

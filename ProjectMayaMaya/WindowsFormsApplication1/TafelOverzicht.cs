@@ -23,7 +23,7 @@ namespace WindowsFormsApplication1
             this.Size = Owner.Size;
 
         }
-        TafelOverzichtDAO TafelOverzichtDAO;
+        //TafelOverzichtDAO TafelOverzichtDAO;
         List<TafelOverzichtClass> tafellijst = new List<TafelOverzichtClass>();
         public int tafelgetal;
 

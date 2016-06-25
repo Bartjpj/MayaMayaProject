@@ -91,7 +91,7 @@
             this.btn_drankmenu.TabIndex = 25;
             this.btn_drankmenu.Text = "DRANKEN";
             this.btn_drankmenu.UseVisualStyleBackColor = false;
-            this.btn_drankmenu.Click += new System.EventHandler(this.btn_drankmenu_Click);
+           
             // 
             // BestellingMenu
             // 

@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApplication1
 {
-    partial class BarOverzicht
+    partial class BarKeukenOverzicht
     {
         /// <summary>
         /// Required designer variable.
@@ -48,12 +48,13 @@
             // lbl_OpenstaandeBestellingenKeuken
             // 
             this.lbl_OpenstaandeBestellingenKeuken.AutoSize = true;
-            this.lbl_OpenstaandeBestellingenKeuken.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_OpenstaandeBestellingenKeuken.Location = new System.Drawing.Point(226, 50);
+            this.lbl_OpenstaandeBestellingenKeuken.Font = new System.Drawing.Font("Calibri", 16F);
+            this.lbl_OpenstaandeBestellingenKeuken.ForeColor = System.Drawing.SystemColors.Info;
+            this.lbl_OpenstaandeBestellingenKeuken.Location = new System.Drawing.Point(218, 66);
             this.lbl_OpenstaandeBestellingenKeuken.Name = "lbl_OpenstaandeBestellingenKeuken";
-            this.lbl_OpenstaandeBestellingenKeuken.Size = new System.Drawing.Size(237, 24);
+            this.lbl_OpenstaandeBestellingenKeuken.Size = new System.Drawing.Size(250, 27);
             this.lbl_OpenstaandeBestellingenKeuken.TabIndex = 1;
-            this.lbl_OpenstaandeBestellingenKeuken.Text = "Openstaande Bestellingen:";
+            this.lbl_OpenstaandeBestellingenKeuken.Text = "Openstaande Bestellingen";
             // 
             // Bestelling_id
             // 
@@ -61,23 +62,24 @@
             // 
             // btn_BARnaarHM
             // 
-            this.btn_BARnaarHM.BackColor = System.Drawing.Color.Maroon;
+            this.btn_BARnaarHM.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(17)))), ((int)(((byte)(40)))));
+            this.btn_BARnaarHM.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_BARnaarHM.ForeColor = System.Drawing.Color.White;
             this.btn_BARnaarHM.Location = new System.Drawing.Point(12, 12);
             this.btn_BARnaarHM.Name = "btn_BARnaarHM";
-            this.btn_BARnaarHM.Size = new System.Drawing.Size(111, 49);
+            this.btn_BARnaarHM.Size = new System.Drawing.Size(145, 49);
             this.btn_BARnaarHM.TabIndex = 2;
-            this.btn_BARnaarHM.Text = "Terug naar Hoofdmenu";
+            this.btn_BARnaarHM.Text = "Hoofdmenu";
             this.btn_BARnaarHM.UseVisualStyleBackColor = false;
             this.btn_BARnaarHM.Click += new System.EventHandler(this.btn_BARnaarHM_Click);
             // 
             // btn_BestellingGereed
             // 
-            this.btn_BestellingGereed.BackColor = System.Drawing.Color.LimeGreen;
-            this.btn_BestellingGereed.ForeColor = System.Drawing.Color.Black;
-            this.btn_BestellingGereed.Location = new System.Drawing.Point(555, 405);
+            this.btn_BestellingGereed.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(17)))), ((int)(((byte)(40)))));
+            this.btn_BestellingGereed.ForeColor = System.Drawing.Color.White;
+            this.btn_BestellingGereed.Location = new System.Drawing.Point(622, 405);
             this.btn_BestellingGereed.Name = "btn_BestellingGereed";
-            this.btn_BestellingGereed.Size = new System.Drawing.Size(154, 45);
+            this.btn_BestellingGereed.Size = new System.Drawing.Size(145, 46);
             this.btn_BestellingGereed.TabIndex = 5;
             this.btn_BestellingGereed.Text = "Gereed";
             this.btn_BestellingGereed.UseVisualStyleBackColor = false;
@@ -85,6 +87,7 @@
             // 
             // listView1
             // 
+            this.listView1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(246)))), ((int)(((byte)(235)))));
             this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.Bestellingid,
             this.Tafel_id,
@@ -94,14 +97,13 @@
             this.opmerking});
             this.listView1.FullRowSelect = true;
             this.listView1.GridLines = true;
-            this.listView1.Location = new System.Drawing.Point(12, 156);
+            this.listView1.Location = new System.Drawing.Point(12, 158);
             this.listView1.Name = "listView1";
             this.listView1.Size = new System.Drawing.Size(755, 204);
             this.listView1.Sorting = System.Windows.Forms.SortOrder.Ascending;
             this.listView1.TabIndex = 9;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
-            this.listView1.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged_1);
             // 
             // Bestellingid
             // 
@@ -117,7 +119,7 @@
             // 
             this.Item.DisplayIndex = 3;
             this.Item.Text = "Item";
-            this.Item.Width = 151;
+            this.Item.Width = 300;
             // 
             // Aantal
             // 
@@ -137,10 +139,10 @@
             // 
             // btn_refresh
             // 
-            this.btn_refresh.BackColor = System.Drawing.SystemColors.Highlight;
-            this.btn_refresh.Location = new System.Drawing.Point(73, 405);
+            this.btn_refresh.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(17)))), ((int)(((byte)(40)))));
+            this.btn_refresh.Location = new System.Drawing.Point(12, 405);
             this.btn_refresh.Name = "btn_refresh";
-            this.btn_refresh.Size = new System.Drawing.Size(156, 46);
+            this.btn_refresh.Size = new System.Drawing.Size(145, 46);
             this.btn_refresh.TabIndex = 10;
             this.btn_refresh.Text = "Refresh";
             this.btn_refresh.UseVisualStyleBackColor = false;
@@ -148,24 +150,24 @@
             // 
             // lopendeBestellingTafels
             // 
-            this.lopendeBestellingTafels.Location = new System.Drawing.Point(503, 12);
+            this.lopendeBestellingTafels.Location = new System.Drawing.Point(492, 12);
             this.lopendeBestellingTafels.Name = "lopendeBestellingTafels";
             this.lopendeBestellingTafels.Size = new System.Drawing.Size(275, 138);
             this.lopendeBestellingTafels.TabIndex = 11;
-            this.lopendeBestellingTafels.Paint += new System.Windows.Forms.PaintEventHandler(this.lopendeBestellingTafels_Paint);
             // 
             // btn_dagoverzicht
             // 
-            this.btn_dagoverzicht.BackColor = System.Drawing.Color.Maroon;
-            this.btn_dagoverzicht.Location = new System.Drawing.Point(12, 95);
+            this.btn_dagoverzicht.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(17)))), ((int)(((byte)(40)))));
+            this.btn_dagoverzicht.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btn_dagoverzicht.Location = new System.Drawing.Point(323, 405);
             this.btn_dagoverzicht.Name = "btn_dagoverzicht";
-            this.btn_dagoverzicht.Size = new System.Drawing.Size(145, 45);
+            this.btn_dagoverzicht.Size = new System.Drawing.Size(145, 46);
             this.btn_dagoverzicht.TabIndex = 12;
             this.btn_dagoverzicht.Text = "Dagoverzicht";
             this.btn_dagoverzicht.UseVisualStyleBackColor = false;
             this.btn_dagoverzicht.Click += new System.EventHandler(this.btn_dagoverzicht_Click);
             // 
-            // BarOverzicht
+            // BarKeukenOverzicht
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -177,8 +179,10 @@
             this.Controls.Add(this.btn_BestellingGereed);
             this.Controls.Add(this.btn_BARnaarHM);
             this.Controls.Add(this.lbl_OpenstaandeBestellingenKeuken);
-            this.Name = "BarOverzicht";
+            this.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.Name = "BarKeukenOverzicht";
             this.Text = "BarOverzicht";
+            this.Load += new System.EventHandler(this.BarOverzicht_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

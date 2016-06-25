@@ -14,9 +14,9 @@ namespace WindowsFormsApplication1
 {
     public partial class BestellingOpnemen : Form
     {
-        BestellingOpnemenDAO MenuItemsDAO;
+        BestellingenDAO MenuItemsDAO;
         //private TafelOverzicht tafelOverzicht;
-        List<MenuItemsClass> DinerKaartLijst = new List<MenuItemsClass>();
+        List<MenuItem> DinerKaartLijst = new List<MenuItem>();
         //TafelOverzicht tafelOverzicht = new TafelOverzicht();
 
 
@@ -31,7 +31,7 @@ namespace WindowsFormsApplication1
 
 
 
-        public BestellingOpnemen(BestellingOpnemenDAO DinerKaartDAO)
+        public BestellingOpnemen(BestellingenDAO DinerKaartDAO)
         {
             InitializeComponent();
 
@@ -77,9 +77,9 @@ namespace WindowsFormsApplication1
 
             listview_diner.Items.Clear();
 
-            List<MenuItemsClass> items = MenuItemsDAO.haalMenuItemsOp(categorie.categorie_id);
+            List<MenuItem> items = MenuItemsDAO.haalMenuItemsOp(categorie.categorie_id);
 
-            foreach (MenuItemsClass item in items)
+            foreach (MenuItem item in items)
             {
 
                 ListViewItem isGerechtAlBesteld = listview_huidige_bestelling.FindItemWithText(item.naam);
@@ -106,7 +106,7 @@ namespace WindowsFormsApplication1
             foreach (ListViewItem BestellingItem in SelectieBestellingItems)
             {
 
-                MenuItemsClass GeselecteerdeItem = (MenuItemsClass)BestellingItem.Tag;
+                MenuItem GeselecteerdeItem = (MenuItem)BestellingItem.Tag;
 
 
                 if (GeselecteerdeItem.voorraad < 1)
@@ -153,7 +153,7 @@ namespace WindowsFormsApplication1
                     if (itemUitRegel.aantal < 2)
                     {
                         ListViewItem menuRegel = listview_diner.FindItemWithText(itemUitRegel.naam);
-                        MenuItemsClass itemUitMenu = (MenuItemsClass)menuRegel.Tag;
+                        MenuItem itemUitMenu = (MenuItem)menuRegel.Tag;
                         itemUitMenu.voorraad++;
                         menuRegel.Tag = itemUitMenu;
                         menuRegel.SubItems[2].Text = (int.Parse(menuRegel.SubItems[2].Text) + 1).ToString();
@@ -162,7 +162,7 @@ namespace WindowsFormsApplication1
                     else
                     {
                         ListViewItem menuRegel = listview_diner.FindItemWithText(itemUitRegel.naam);
-                        MenuItemsClass itemUitMenu = (MenuItemsClass)menuRegel.Tag;
+                        MenuItem itemUitMenu = (MenuItem)menuRegel.Tag;
                         itemUitMenu.voorraad++;
                         menuRegel.Tag = itemUitMenu;
                         menuRegel.SubItems[2].Text = (int.Parse(menuRegel.SubItems[2].Text) + 1).ToString();
@@ -193,12 +193,7 @@ namespace WindowsFormsApplication1
             listview_huidige_bestelling.Items.Clear();
         }
 
-        private void btn_LUNCHnaarDRANKEN_Click(object sender, EventArgs e)
-        {
-            DrankenKaart openDrankenkaart = new DrankenKaart();
-            openDrankenkaart.Show(this);
-            this.Hide();
-        }
+     
 
         private void btn_DINERnaarBESTELLING_Click(object sender, EventArgs e)
         {

@@ -65,17 +65,12 @@ namespace WindowsFormsApplication1
             this.Hide();
         }
 
-        private void btn_drankmenu_Click(object sender, EventArgs e)
-        {
-            DrankenKaart opendrankenkaart = new DrankenKaart();
-            opendrankenkaart.Show(this);
-            this.Hide();
-        }
+
 
         private void btn_dinerkaart_Click(object sender, EventArgs e)
         {
             this.Close();
-            BestellingOpnemenDAO dinerkaart = new BestellingOpnemenDAO();
+            BestellingenDAO dinerkaart = new BestellingenDAO();
             BestellingOpnemen openDinerkaart = new BestellingOpnemen(dinerkaart);
             openDinerkaart.Show(this);
             
