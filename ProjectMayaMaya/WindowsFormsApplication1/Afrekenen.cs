@@ -133,20 +133,12 @@ namespace WindowsFormsApplication1
             int hoogsteRekeningID = Rekening_IDs.Max();
             int NieuweRekeningID = hoogsteRekeningID + 1;
             List<int> bestellingID = AfrekeningDAO.haalBestellingIDsOp(3);
+            int hoogsteBestellingID = bestellingID.Max();
+            int nieuweBestellingID = hoogsteBestellingID + 1;
             DateTime actueleTijd = DateTime.Now;
 
-            List<int> rekening_id = new List<int>();
-            List<int> bestelling_id = new List<int>();
-            List<int> prijs = new List<int>();
 
-            ListView.ListViewItemCollection bepaaldeVariabele = listview_rekening.Items;
-
-            foreach (ListViewItem rij in bepaaldeVariabele)
-            {
-                AfrekenenBLL rekeningItem = (AfrekenenBLL)rij.Tag;
-            }
-
-
+            
             listview_rekening.Items.Clear();
         }
 
