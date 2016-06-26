@@ -199,8 +199,12 @@ namespace WindowsFormsApplication1
 
         private void btn_DINERnaarBESTELLING_Click(object sender, EventArgs e)
         {
-            BestellingMenu openBestellingMenu = new BestellingMenu();
-            openBestellingMenu.Show(this);
+            KiesOpname TerugNaarKiesOpname = new KiesOpname();
+
+            TerugNaarKiesOpname.Show();
+            TerugNaarKiesOpname.Left = this.Left; // geeft de grote aan van deze form voor het te openen form
+            TerugNaarKiesOpname.Top = this.Top;
+            TerugNaarKiesOpname.Size = this.Size;
             this.Hide();
         }
 

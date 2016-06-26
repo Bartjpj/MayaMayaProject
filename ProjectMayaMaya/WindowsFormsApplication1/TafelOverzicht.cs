@@ -47,11 +47,12 @@ namespace WindowsFormsApplication1
         }
         private void btn_TAFELnaarHM_Click(object sender, EventArgs e)
         {
-            HoofdMenu TerugNaarHoofdmenu = new HoofdMenu();
-            TerugNaarHoofdmenu.Show();
-            TerugNaarHoofdmenu.Left = this.Left;
-            TerugNaarHoofdmenu.Top = this.Top;
-            TerugNaarHoofdmenu.Size = this.Size;
+            InlogSchermBediening TerugNaarInlogscherm = new InlogSchermBediening();
+            TerugNaarInlogscherm.Show();
+            TerugNaarInlogscherm.Left = this.Left; // geeft de grote aan van deze form voor het te openen form
+            TerugNaarInlogscherm.Top = this.Top;
+            TerugNaarInlogscherm.Size = this.Size;
+            this.Hide();
         }
 
         private void button1_Click(object sender, EventArgs e)

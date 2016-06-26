@@ -59,64 +59,77 @@
             // lbl_rekening
             // 
             this.lbl_rekening.AutoSize = true;
-            this.lbl_rekening.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_rekening.Location = new System.Drawing.Point(237, 21);
+            this.lbl_rekening.Font = new System.Drawing.Font("Calibri", 18F);
+            this.lbl_rekening.ForeColor = System.Drawing.SystemColors.Info;
+            this.lbl_rekening.Location = new System.Drawing.Point(334, 21);
             this.lbl_rekening.Name = "lbl_rekening";
-            this.lbl_rekening.Size = new System.Drawing.Size(109, 25);
+            this.lbl_rekening.Size = new System.Drawing.Size(109, 29);
             this.lbl_rekening.TabIndex = 1;
             this.lbl_rekening.Text = "Rekening:";
             // 
             // lbl_opmerkingen
             // 
             this.lbl_opmerkingen.AutoSize = true;
+            this.lbl_opmerkingen.Font = new System.Drawing.Font("Calibri", 9F);
+            this.lbl_opmerkingen.ForeColor = System.Drawing.SystemColors.Info;
             this.lbl_opmerkingen.Location = new System.Drawing.Point(364, 345);
             this.lbl_opmerkingen.Name = "lbl_opmerkingen";
-            this.lbl_opmerkingen.Size = new System.Drawing.Size(61, 13);
+            this.lbl_opmerkingen.Size = new System.Drawing.Size(69, 14);
             this.lbl_opmerkingen.TabIndex = 4;
             this.lbl_opmerkingen.Text = "Opmerking:";
             // 
             // lbl_subtotaal
             // 
             this.lbl_subtotaal.AutoSize = true;
+            this.lbl_subtotaal.Font = new System.Drawing.Font("Calibri", 9F);
+            this.lbl_subtotaal.ForeColor = System.Drawing.SystemColors.Info;
             this.lbl_subtotaal.Location = new System.Drawing.Point(368, 480);
             this.lbl_subtotaal.Name = "lbl_subtotaal";
-            this.lbl_subtotaal.Size = new System.Drawing.Size(55, 13);
+            this.lbl_subtotaal.Size = new System.Drawing.Size(63, 14);
             this.lbl_subtotaal.TabIndex = 5;
             this.lbl_subtotaal.Text = "Subtotaal:";
             // 
             // lbl_fooilabel
             // 
             this.lbl_fooilabel.AutoSize = true;
+            this.lbl_fooilabel.Font = new System.Drawing.Font("Calibri", 9F);
+            this.lbl_fooilabel.ForeColor = System.Drawing.SystemColors.Info;
             this.lbl_fooilabel.Location = new System.Drawing.Point(396, 375);
             this.lbl_fooilabel.Name = "lbl_fooilabel";
-            this.lbl_fooilabel.Size = new System.Drawing.Size(27, 13);
+            this.lbl_fooilabel.Size = new System.Drawing.Size(31, 14);
             this.lbl_fooilabel.TabIndex = 6;
             this.lbl_fooilabel.Text = "Fooi";
             // 
             // lbl_incbtw
             // 
             this.lbl_incbtw.AutoSize = true;
+            this.lbl_incbtw.Font = new System.Drawing.Font("Calibri", 9F);
+            this.lbl_incbtw.ForeColor = System.Drawing.SystemColors.Info;
             this.lbl_incbtw.Location = new System.Drawing.Point(355, 452);
             this.lbl_incbtw.Name = "lbl_incbtw";
-            this.lbl_incbtw.Size = new System.Drawing.Size(68, 13);
+            this.lbl_incbtw.Size = new System.Drawing.Size(71, 14);
             this.lbl_incbtw.TabIndex = 7;
             this.lbl_incbtw.Text = "Totaal BTW:";
             // 
             // lbl_btwhoog
             // 
             this.lbl_btwhoog.AutoSize = true;
+            this.lbl_btwhoog.Font = new System.Drawing.Font("Calibri", 9F);
+            this.lbl_btwhoog.ForeColor = System.Drawing.SystemColors.Info;
             this.lbl_btwhoog.Location = new System.Drawing.Point(359, 402);
             this.lbl_btwhoog.Name = "lbl_btwhoog";
-            this.lbl_btwhoog.Size = new System.Drawing.Size(64, 13);
+            this.lbl_btwhoog.Size = new System.Drawing.Size(65, 14);
             this.lbl_btwhoog.TabIndex = 8;
             this.lbl_btwhoog.Text = "BTW Hoog:";
             // 
             // lbl_btwlaag
             // 
             this.lbl_btwlaag.AutoSize = true;
+            this.lbl_btwlaag.Font = new System.Drawing.Font("Calibri", 9F);
+            this.lbl_btwlaag.ForeColor = System.Drawing.SystemColors.Info;
             this.lbl_btwlaag.Location = new System.Drawing.Point(361, 422);
             this.lbl_btwlaag.Name = "lbl_btwlaag";
-            this.lbl_btwlaag.Size = new System.Drawing.Size(62, 13);
+            this.lbl_btwlaag.Size = new System.Drawing.Size(62, 14);
             this.lbl_btwlaag.TabIndex = 9;
             this.lbl_btwlaag.Text = "BTW Laag:";
             // 
@@ -154,7 +167,8 @@
             // 
             // BTN_AFREKENENnaarTAFELOVERZICHT
             // 
-            this.BTN_AFREKENENnaarTAFELOVERZICHT.BackColor = System.Drawing.Color.Maroon;
+            this.BTN_AFREKENENnaarTAFELOVERZICHT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(17)))), ((int)(((byte)(40)))));
+            this.BTN_AFREKENENnaarTAFELOVERZICHT.Font = new System.Drawing.Font("Calibri", 10F);
             this.BTN_AFREKENENnaarTAFELOVERZICHT.ForeColor = System.Drawing.Color.White;
             this.BTN_AFREKENENnaarTAFELOVERZICHT.Location = new System.Drawing.Point(7, 12);
             this.BTN_AFREKENENnaarTAFELOVERZICHT.Name = "BTN_AFREKENENnaarTAFELOVERZICHT";
@@ -166,8 +180,9 @@
             // 
             // btn_printrekening
             // 
-            this.btn_printrekening.BackColor = System.Drawing.Color.LightSkyBlue;
-            this.btn_printrekening.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btn_printrekening.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(17)))), ((int)(((byte)(40)))));
+            this.btn_printrekening.Font = new System.Drawing.Font("Calibri", 13F);
+            this.btn_printrekening.ForeColor = System.Drawing.SystemColors.Info;
             this.btn_printrekening.Location = new System.Drawing.Point(7, 372);
             this.btn_printrekening.Name = "btn_printrekening";
             this.btn_printrekening.Size = new System.Drawing.Size(309, 43);
@@ -179,10 +194,11 @@
             // radioButton1
             // 
             this.radioButton1.AutoSize = true;
-            this.radioButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButton1.Font = new System.Drawing.Font("Calibri", 13F);
+            this.radioButton1.ForeColor = System.Drawing.SystemColors.Info;
             this.radioButton1.Location = new System.Drawing.Point(12, 441);
             this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(49, 24);
+            this.radioButton1.Size = new System.Drawing.Size(50, 26);
             this.radioButton1.TabIndex = 23;
             this.radioButton1.TabStop = true;
             this.radioButton1.Text = "Pin";
@@ -191,11 +207,12 @@
             // radioButton2
             // 
             this.radioButton2.AutoSize = true;
-            this.radioButton2.BackColor = System.Drawing.SystemColors.Control;
-            this.radioButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(87)))), ((int)(((byte)(64)))));
+            this.radioButton2.Font = new System.Drawing.Font("Calibri", 13F);
+            this.radioButton2.ForeColor = System.Drawing.SystemColors.Info;
             this.radioButton2.Location = new System.Drawing.Point(94, 441);
             this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(100, 24);
+            this.radioButton2.Size = new System.Drawing.Size(104, 26);
             this.radioButton2.TabIndex = 24;
             this.radioButton2.TabStop = true;
             this.radioButton2.Text = "Creditcard";
@@ -204,10 +221,11 @@
             // radioButton3
             // 
             this.radioButton3.AutoSize = true;
-            this.radioButton3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButton3.Font = new System.Drawing.Font("Calibri", 13F);
+            this.radioButton3.ForeColor = System.Drawing.SystemColors.Info;
             this.radioButton3.Location = new System.Drawing.Point(232, 441);
             this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(84, 24);
+            this.radioButton3.Size = new System.Drawing.Size(87, 26);
             this.radioButton3.TabIndex = 25;
             this.radioButton3.TabStop = true;
             this.radioButton3.Text = "Contant";
@@ -223,6 +241,7 @@
             // 
             // listview_rekening
             // 
+            this.listview_rekening.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(246)))), ((int)(((byte)(235)))));
             this.listview_rekening.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.naam,
             this.tafel_id,
@@ -295,6 +314,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(87)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(775, 502);
             this.Controls.Add(this.txt_Opmerking);
             this.Controls.Add(this.lbl_totaal);

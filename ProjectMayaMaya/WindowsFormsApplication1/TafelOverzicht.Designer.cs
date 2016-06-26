@@ -204,7 +204,7 @@
             this.btn_TAFELnaarHM.Name = "btn_TAFELnaarHM";
             this.btn_TAFELnaarHM.Size = new System.Drawing.Size(111, 49);
             this.btn_TAFELnaarHM.TabIndex = 10;
-            this.btn_TAFELnaarHM.Text = "Terug naar Hoofdmenu";
+            this.btn_TAFELnaarHM.Text = "Inlogscherm";
             this.btn_TAFELnaarHM.UseVisualStyleBackColor = false;
             this.btn_TAFELnaarHM.Click += new System.EventHandler(this.btn_TAFELnaarHM_Click);
             // 

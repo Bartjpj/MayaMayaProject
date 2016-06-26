@@ -68,7 +68,7 @@
             this.btn_BARnaarHM.Name = "btn_BARnaarHM";
             this.btn_BARnaarHM.Size = new System.Drawing.Size(145, 49);
             this.btn_BARnaarHM.TabIndex = 2;
-            this.btn_BARnaarHM.Text = "Hoofdmenu";
+            this.btn_BARnaarHM.Text = "Inlogscherm";
             this.btn_BARnaarHM.UseVisualStyleBackColor = false;
             this.btn_BARnaarHM.Click += new System.EventHandler(this.btn_BARnaarHM_Click);
             // 
@@ -149,7 +149,6 @@
             this.lopendeBestellingTafels.Name = "lopendeBestellingTafels";
             this.lopendeBestellingTafels.Size = new System.Drawing.Size(275, 138);
             this.lopendeBestellingTafels.TabIndex = 11;
-      
             // 
             // btn_dagoverzicht
             // 
@@ -168,6 +167,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(87)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(790, 463);
             this.Controls.Add(this.btn_dagoverzicht);
             this.Controls.Add(this.lopendeBestellingTafels);

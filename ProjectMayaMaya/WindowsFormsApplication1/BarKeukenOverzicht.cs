@@ -75,18 +75,12 @@ namespace WindowsFormsApplication1
 
         private void voegListViewItemsToe(MenuItem menuItem)
         {
-            string opmerking = " ";
+          
             ListViewItem lijstItem = new ListViewItem(menuItem.tafel_id.ToString());
             lijstItem.SubItems.Add(menuItem.naam.ToString());
             lijstItem.SubItems.Add(menuItem.aantal.ToString());
             lijstItem.SubItems.Add(menuItem.datum_tijd.ToString());
-          //  lijstItem.BackColor = lijstItem.Index % 2 == 0 ? Color.White: Color.Gray;
-            if (menuItem.opmerking.Contains("1") || menuItem.opmerking.Contains("3"))
-            {
-                opmerking = menuItem.opmerking.Substring(1);
-            }
-            else { opmerking = " "; }
-            lijstItem.SubItems.Add(opmerking);
+            lijstItem.SubItems.Add(menuItem.opmerking);
             listView1.Items.Add(lijstItem);
         } // methode om listviewItems toe te voegen 
        
@@ -157,9 +151,6 @@ namespace WindowsFormsApplication1
 
         private void BarOverzicht_Load(object sender, EventArgs e)
         {
-            
-        
-            this.BackColor = ColorTranslator.FromHtml("#115740");
 
         }
 
