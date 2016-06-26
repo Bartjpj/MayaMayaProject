@@ -18,7 +18,7 @@ namespace WindowsFormsApplication1
             SqlConnection conn = new SqlConnection(connString);
             conn.Open();
 
-            SqlCommand command = new SqlCommand("SELECT tafel_id, Aantal, Menucategorie.categorie_id, Bestelling.bestelling_id, Menuitem.naam, Menuitem.prijs FROM Bestelling, BestellingItems, Menuitem, Menucategorie WHERE  bestelling_id = BestellingId AND tafel_id = " + tafelNr + " AND ItemId = menu_id AND Menuitem.categorie_id = Menucategorie.categorie_id  AND is_betaald = 0", conn); // deze query zorgt ervoor dat we alle data hebben die we bij BestellingMenu nodig hebben 
+            SqlCommand command = new SqlCommand("SELECT tafel_id, Aantal, Menucategorie.categorie_id, Bestelling.bestelling_id, Menuitem.naam, Menuitem.prijs FROM Bestelling, BestellingItems, Menuitem, Menucategorie WHERE  bestelling_id = BestellingId AND tafel_id = " + tafelNr + " AND ItemId = menu_id AND Menuitem.categorie_id = Menucategorie.categorie_id  AND is_betaald = 0 AND bar_gereed = 1 AND keuken_gereed = 1", conn); // deze query zorgt ervoor dat we alle data hebben die we bij BestellingMenu nodig hebben 
             SqlDataReader reader = command.ExecuteReader();
 
             List<AfrekenenBLL> AfrekenTable = new List<AfrekenenBLL>();
