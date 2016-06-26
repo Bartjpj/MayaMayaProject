@@ -18,11 +18,19 @@ namespace WindowsFormsApplication1
             base.OnLoad(e);
             this.Location = Owner.Location;
             this.Size = Owner.Size;
+
         }
         
         public KiesOpname()
         {
             InitializeComponent();
+
+        }
+        public int tafelgetal;
+        public int GetalTafel
+        {
+            get { return tafelgetal; }
+            set { tafelgetal = value; }
         }
 
         private void btn_BestellingOpnemen_Click(object sender, EventArgs e)
@@ -33,12 +41,7 @@ namespace WindowsFormsApplication1
             openDinerkaart.Show(this);
             this.Hide();
         }
-        public int tafelgetal;
-        public int GetalTafel
-        {
-            get { return tafelgetal; }
-            set { tafelgetal = value; }
-        }
+
         private void btn_afrekenen_Click(object sender, EventArgs e)
         {
             Afrekenen openAfrekenscherm = new Afrekenen(new AfrekenenDAO());
