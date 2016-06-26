@@ -86,5 +86,30 @@ namespace WindowsFormsApplication1
             return bestellingIDs;
         }
 
+        public void VerstuurBestellingBar(List<int> Menu_ID, List<int> Aantal, int tafel, int BestellingID, DateTime actueleTijd, string opmerking, int personeel_id)
+        {
+            string connString = ConfigurationManager
+            .ConnectionStrings["BestellingConnectionStringSQL"]
+            .ConnectionString;
+            SqlConnection conn = new SqlConnection(connString);
+            conn.Open();
+
+            string sql1 = string.Format("INSERT INTO Bestelling (bestelling_id, tafel_id, kaart_id, personeel_id, datum_tijd, keuken_gereed, bar_gereed, baropmerking) VALUES (" + BestellingID + ", " + tafel + ", " + 1 + ", " + 1 + ", convert(datetime, '" + actueleTijd + "', 103), " + 0 + ", " + 0 + ", '" + opmerking + "');");
+            SqlCommand command = new SqlCommand(sql1, conn); // deze query zorgt ervoor dat we alle data hebben die we bij BestellingMenu nodig hebben 
+            command.ExecuteNonQuery();
+
+            var IDenAantal = Menu_ID.Zip(Aantal, (id, aantal) => new { Menu_ID = id, Aantal = aantal }); //maak één lijst van 2 lijsten zodat je er met één foreach doorheen kan lopen.
+            foreach (var idAantal in IDenAantal)
+            {
+                string sql2 = string.Format("INSERT INTO BestellingItems (BestellingId, ItemId, Aantal) VALUES (" + BestellingID + ", " + idAantal.Menu_ID + ", " + idAantal.Aantal + ");");
+                SqlCommand command2 = new SqlCommand(sql2, conn);
+                command2.ExecuteNonQuery();
+
+            }
+            conn.Close();
+        }
+
     }
+
+
 }
