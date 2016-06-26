@@ -83,6 +83,8 @@ namespace WindowsFormsApplication1
         {
             double btwHoog = 0;
             double btwLaag = 0;
+            double totaalbtwHoog = 0;
+            double totaalbtwLaag = 0;
             double totaalBtw = 0;
             double subtotaal = 0;
 
@@ -93,7 +95,7 @@ namespace WindowsFormsApplication1
 
                 ListViewItem lijstItem = new ListViewItem(afrekeningOverzicht.Menuitem.ToString());
                 lijstItem.SubItems.Add(afrekeningOverzicht.Aantal.ToString());
-                lijstItem.SubItems.Add(afrekeningOverzicht.prijs.ToString());
+                lijstItem.SubItems.Add(afrekeningOverzicht.prijs.ToString("0.00"));
                 listview_rekening.Items.Add(lijstItem);
                 lijstItem.Tag = afrekeningOverzicht;
 
@@ -101,34 +103,54 @@ namespace WindowsFormsApplication1
 
                 if ((afrekeningOverzicht.categorie_id >= 8) && (afrekeningOverzicht.categorie_id <= 10))
                 {
-                    btwLaag += afrekeningOverzicht.prijs * 0.06;
-                    totaalBtw = totaalBtw + btwLaag;
+                    btwLaag = afrekeningOverzicht.prijs * 0.21 * afrekeningOverzicht.Aantal;
+                    totaalbtwLaag += btwLaag;
+                    totaalBtw += btwLaag;
                 }
                 else
                 {
-                    btwHoog += afrekeningOverzicht.prijs * 0.21;
-                    totaalBtw = totaalBtw + btwHoog;
+                    btwHoog = afrekeningOverzicht.prijs * 0.06 * afrekeningOverzicht.Aantal;
+                    totaalbtwHoog += btwHoog;
+                    totaalBtw += btwHoog;
                 }
-                subtotaal += afrekeningOverzicht.prijs;
+                subtotaal += afrekeningOverzicht.prijs * afrekeningOverzicht.Aantal;
             }
 
-            lbl_btwhooggetal.Text = btwHoog.ToString();
-            lbl_btwlaaggetal.Text = btwLaag.ToString();
-            lbl_totaalBTW.Text = totaalBtw.ToString();
-            lbl_subtotaalgetal.Text = subtotaal.ToString();
+            lbl_btwhooggetal.Text = totaalbtwHoog.ToString("0.00");
+            lbl_btwlaaggetal.Text = totaalbtwLaag.ToString("0.00");
+            lbl_totaalBTW.Text = totaalBtw.ToString("0.00");
+            lbl_subtotaalgetal.Text = subtotaal.ToString("0.00");
+            lbl_GhostSubtotaal.Text = subtotaal.ToString("0.00");
         }
 
         
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            
+            double fooinummer = 0;
+            double laatsteGetal = 0;
+            bool isGelukt = double.TryParse(txt_fooi.Text, out fooinummer);
+            if (isGelukt)
+            {
+                double subtotaal = double.Parse(lbl_GhostSubtotaal.Text);
+                double NieuwSubtotaal = fooinummer + subtotaal;
+                lbl_subtotaalgetal.Text = NieuwSubtotaal.ToString();
+                laatsteGetal = double.Parse(txt_fooi.Text);
+                
+            }
+            else
+            {
+
+                lbl_subtotaalgetal.Text = (double.Parse(lbl_GhostSubtotaal.Text) - laatsteGetal).ToString("0.00");
+            }
         }
+
 
         private void btn_printrekening_Click(object sender, EventArgs e)
         {
             //dit is nutteloos, net te laat.
-            string opmerking = txt_Opmerking.Text;
+            string opmerking = "";
+            opmerking =  "'" + txt_Opmerking.Text + "'";
             List<int> Rekening_IDs = AfrekeningDAO.haalRekeningIdOp();
             int hoogsteRekeningID = Rekening_IDs.Max();
             int NieuweRekeningID = hoogsteRekeningID + 1;
@@ -136,10 +158,15 @@ namespace WindowsFormsApplication1
             int hoogsteBestellingID = bestellingID.Max();
             int nieuweBestellingID = hoogsteBestellingID + 1;
             DateTime actueleTijd = DateTime.Now;
+            
+
+            double prijs = Double.Parse(lbl_subtotaalgetal.Text);
+            AfrekeningDAO.VerstuurBestellingBar(NieuweRekeningID, nieuweBestellingID, actueleTijd, prijs, opmerking);
 
 
             
             listview_rekening.Items.Clear();
+            this.Close();
         }
 
         }

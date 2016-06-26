@@ -18,7 +18,7 @@ namespace WindowsFormsApplication1
             SqlConnection conn = new SqlConnection(connString);
             conn.Open();
 
-            SqlCommand command = new SqlCommand("SELECT tafel_id, Aantal, Menucategorie.categorie_id, Bestelling.bestelling_id, Menuitem.naam, Menuitem.prijs FROM Bestelling, BestellingItems, Menuitem, Menucategorie, Menukaart WHERE  bestelling_id = BestellingId AND tafel_id = " + tafelNr + " AND ItemId = menu_id AND Menuitem.categorie_id = Menucategorie.categorie_id AND Menukaart.kaart_id = Menucategorie.kaart_id  AND is_betaald = 0 ", conn); // deze query zorgt ervoor dat we alle data hebben die we bij BestellingMenu nodig hebben 
+            SqlCommand command = new SqlCommand("SELECT tafel_id, Aantal, Menucategorie.categorie_id, Bestelling.bestelling_id, Menuitem.naam, Menuitem.prijs FROM Bestelling, BestellingItems, Menuitem, Menucategorie WHERE  bestelling_id = BestellingId AND tafel_id = " + tafelNr + " AND ItemId = menu_id AND Menuitem.categorie_id = Menucategorie.categorie_id  AND is_betaald = 0", conn); // deze query zorgt ervoor dat we alle data hebben die we bij BestellingMenu nodig hebben 
             SqlDataReader reader = command.ExecuteReader();
 
             List<AfrekenenBLL> AfrekenTable = new List<AfrekenenBLL>();
@@ -86,26 +86,23 @@ namespace WindowsFormsApplication1
             return bestellingIDs;
         }
 
-        public void VerstuurBestellingBar(List<int> Menu_ID, List<int> Aantal, int tafel, int BestellingID, DateTime actueleTijd, string opmerking, int personeel_id)
+        public void VerstuurBestellingBar(int NieuweRekeningID, int nieuweBestellingID, DateTime actueleTijd, double prijs, string opmerking)
         {
             string connString = ConfigurationManager
             .ConnectionStrings["BestellingConnectionStringSQL"]
             .ConnectionString;
             SqlConnection conn = new SqlConnection(connString);
             conn.Open();
-
-            string sql1 = string.Format("INSERT INTO Bestelling (bestelling_id, tafel_id, kaart_id, personeel_id, datum_tijd, keuken_gereed, bar_gereed, baropmerking) VALUES (" + BestellingID + ", " + tafel + ", " + 1 + ", " + 1 + ", convert(datetime, '" + actueleTijd + "', 103), " + 0 + ", " + 0 + ", '" + opmerking + "');");
+            string sql1 = string.Format("INSERT INTO Rekening (rekening_id, bestelling_id, prijs, opmerking, datum_tijd) VALUES (" + NieuweRekeningID + ", " + nieuweBestellingID + ", " + prijs + ", " + opmerking + ",  convert(datetime, '" + actueleTijd + "', 103));");
             SqlCommand command = new SqlCommand(sql1, conn); // deze query zorgt ervoor dat we alle data hebben die we bij BestellingMenu nodig hebben 
             command.ExecuteNonQuery();
 
-            var IDenAantal = Menu_ID.Zip(Aantal, (id, aantal) => new { Menu_ID = id, Aantal = aantal }); //maak één lijst van 2 lijsten zodat je er met één foreach doorheen kan lopen.
-            foreach (var idAantal in IDenAantal)
-            {
-                string sql2 = string.Format("INSERT INTO BestellingItems (BestellingId, ItemId, Aantal) VALUES (" + BestellingID + ", " + idAantal.Menu_ID + ", " + idAantal.Aantal + ");");
+
+                string sql2 = string.Format("UPDATE Bestelling SET is_betaald = 1 WHERE tafel_id = 3 AND keuken_gereed = 1 AND bar_gereed = 1 AND is_betaald = 0;");
                 SqlCommand command2 = new SqlCommand(sql2, conn);
                 command2.ExecuteNonQuery();
 
-            }
+            
             conn.Close();
         }
 

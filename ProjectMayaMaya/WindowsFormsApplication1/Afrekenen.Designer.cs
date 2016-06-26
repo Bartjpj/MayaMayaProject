@@ -54,6 +54,7 @@
             this.lbl_totaalBTW = new System.Windows.Forms.Label();
             this.lbl_totaal = new System.Windows.Forms.Label();
             this.txt_Opmerking = new System.Windows.Forms.TextBox();
+            this.lbl_GhostSubtotaal = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lbl_rekening
@@ -310,12 +311,22 @@
             this.txt_Opmerking.Size = new System.Drawing.Size(332, 20);
             this.txt_Opmerking.TabIndex = 94;
             // 
+            // lbl_GhostSubtotaal
+            // 
+            this.lbl_GhostSubtotaal.AutoSize = true;
+            this.lbl_GhostSubtotaal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(87)))), ((int)(((byte)(64)))));
+            this.lbl_GhostSubtotaal.Location = new System.Drawing.Point(587, 21);
+            this.lbl_GhostSubtotaal.Name = "lbl_GhostSubtotaal";
+            this.lbl_GhostSubtotaal.Size = new System.Drawing.Size(0, 13);
+            this.lbl_GhostSubtotaal.TabIndex = 95;
+            // 
             // Afrekenen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(87)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(775, 502);
+            this.Controls.Add(this.lbl_GhostSubtotaal);
             this.Controls.Add(this.txt_Opmerking);
             this.Controls.Add(this.lbl_totaal);
             this.Controls.Add(this.lbl_totaalBTW);
@@ -374,6 +385,7 @@
         private System.Windows.Forms.Label lbl_totaalBTW;
         private System.Windows.Forms.Label lbl_totaal;
         private System.Windows.Forms.TextBox txt_Opmerking;
+        private System.Windows.Forms.Label lbl_GhostSubtotaal;
 
     }
 }
