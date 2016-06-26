@@ -81,7 +81,11 @@ namespace WindowsFormsApplication1
 
         private void DisplayBestellingen()
         {
-            
+            double btwHoog = 0;
+            double btwLaag = 0;
+            double totaalBtw = 0;
+            double subtotaal = 0;
+
             listview_rekening.Items.Clear();
             List<AfrekenenBLL> geheleLijst = AfrekeningDAO.haalMenuItemsOp(3);
             foreach (AfrekenenBLL afrekeningOverzicht in geheleLijst)
@@ -92,35 +96,20 @@ namespace WindowsFormsApplication1
                 lijstItem.SubItems.Add(afrekeningOverzicht.prijs.ToString());
                 listview_rekening.Items.Add(lijstItem);
                 lijstItem.Tag = afrekeningOverzicht;
-            }
 
-            double btwHoog = 0;
-            double btwLaag = 0;
-            double totaalBtw = 0;
-            double subtotaal = 0;
+                
 
-
-            ListView.ListViewItemCollection rekeningListview = listview_rekening.Items;
-
-
-            foreach (ListViewItem regel in rekeningListview)
-            {
-
-                AfrekenenBLL rekeningItem = (AfrekenenBLL)regel.Tag;
-
-
-
-                if (rekeningItem.categorie_id >= 8)
+                if ((afrekeningOverzicht.categorie_id >= 8) && (afrekeningOverzicht.categorie_id <= 10))
                 {
-                    btwLaag += rekeningItem.prijs * 0.06;
-                    totaalBtw += btwLaag;
+                    btwLaag += afrekeningOverzicht.prijs * 0.06;
+                    totaalBtw = totaalBtw + btwLaag;
                 }
                 else
                 {
-                    btwHoog += rekeningItem.prijs * 0.21;
-                    totaalBtw += btwLaag;
+                    btwHoog += afrekeningOverzicht.prijs * 0.21;
+                    totaalBtw = totaalBtw + btwHoog;
                 }
-                subtotaal += rekeningItem.prijs;
+                subtotaal += afrekeningOverzicht.prijs;
             }
 
             lbl_btwhooggetal.Text = btwHoog.ToString();
@@ -128,6 +117,8 @@ namespace WindowsFormsApplication1
             lbl_totaalBTW.Text = totaalBtw.ToString();
             lbl_subtotaalgetal.Text = subtotaal.ToString();
         }
+
+        
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
