@@ -26,7 +26,7 @@ namespace WindowsFormsApplication1
             this.Size = Owner.Size;
         }
 
-        public BarKeukenOverzicht(BestellingenDAO bestellingenDAO, bool barView) // geef een bestellingDAO als constructor mee.
+        public BarKeukenOverzicht(BestellingenDAO bestellingenDAO, bool barView) // geef een bestellingDAOf als constructor mee.
         {
            InitializeComponent();
            this.barView = barView;
@@ -76,8 +76,7 @@ namespace WindowsFormsApplication1
         private void voegListViewItemsToe(MenuItem menuItem)
         {
             string opmerking = " ";
-            ListViewItem lijstItem = new ListViewItem(menuItem.bestelling_id.ToString());
-            lijstItem.SubItems.Add(menuItem.tafel_id.ToString());
+            ListViewItem lijstItem = new ListViewItem(menuItem.tafel_id.ToString());
             lijstItem.SubItems.Add(menuItem.naam.ToString());
             lijstItem.SubItems.Add(menuItem.aantal.ToString());
             lijstItem.SubItems.Add(menuItem.datum_tijd.ToString());
@@ -159,7 +158,7 @@ namespace WindowsFormsApplication1
         private void BarOverzicht_Load(object sender, EventArgs e)
         {
             
-            string hex = "";
+        
             this.BackColor = ColorTranslator.FromHtml("#115740");
 
         }
@@ -167,14 +166,6 @@ namespace WindowsFormsApplication1
     
        
 
-        //private void listView1_SelectedIndexChanged(object sender, EventArgs e)
-        //{
 
-        //}
-
-//        private void lopendeBestellingTafels_Paint(object sender, PaintEventArgs e)
-//        {
-
-//        }
 }
 }

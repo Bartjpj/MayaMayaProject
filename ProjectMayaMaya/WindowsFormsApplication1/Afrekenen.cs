@@ -21,16 +21,16 @@ namespace WindowsFormsApplication1
             this.Location = Owner.Location;
             this.Size = Owner.Size;
         }
-
      
         public Afrekenen(AfrekenenDAO AfrekeningDAO)
         {
             InitializeComponent();
             this.AfrekeningDAO = AfrekeningDAO;
 
+            afrekenLijst = AfrekeningDAO.haalMenuItemsOp(3);
+
             DisplayBestellingen();
         }
-
 
  
 
@@ -40,6 +40,12 @@ namespace WindowsFormsApplication1
             openKiesOpname.Show(this);
             this.Hide();
         }
+        public int tafelgetal;
+        //public int GetalTafel
+        //{
+         //   get { return tafelgetal; }
+        //    set { tafelgetal = value; }
+       // }
         //public int TafelLabel
         //{
         //    //get{return lbl_klaargemeldetafel.Text;}
@@ -78,10 +84,6 @@ namespace WindowsFormsApplication1
             
             listview_rekening.Items.Clear();
             List<AfrekenenBLL> geheleLijst = AfrekeningDAO.haalMenuItemsOp(3);
-            double btwHoog = 0;
-            double btwLaag = 0;
-            double totaalBtw = 0;
-            double subtotaal = 0;
             foreach (AfrekenenBLL afrekeningOverzicht in geheleLijst)
             {
 
@@ -90,25 +92,36 @@ namespace WindowsFormsApplication1
                 lijstItem.SubItems.Add(afrekeningOverzicht.prijs.ToString());
                 listview_rekening.Items.Add(lijstItem);
                 lijstItem.Tag = afrekeningOverzicht;
-
-                if (afrekeningOverzicht.categorie_id >= 8)
-                {
-                    btwLaag += afrekeningOverzicht.prijs * 0.06;
-                    totaalBtw += btwLaag;
-                }
-                else
-                {
-                    btwHoog += afrekeningOverzicht.prijs * 0.21;
-                    totaalBtw += btwLaag;
-                }
-                subtotaal += afrekeningOverzicht.prijs;
             }
 
+            double btwHoog = 0;
+            double btwLaag = 0;
+            double totaalBtw = 0;
+            double subtotaal = 0;
 
 
             ListView.ListViewItemCollection rekeningListview = listview_rekening.Items;
 
 
+            foreach (ListViewItem regel in rekeningListview)
+            {
+
+                AfrekenenBLL rekeningItem = (AfrekenenBLL)regel.Tag;
+
+
+
+                if (rekeningItem.categorie_id >= 8)
+                {
+                    btwLaag += rekeningItem.prijs * 0.06;
+                    totaalBtw += btwLaag;
+                }
+                else
+                {
+                    btwHoog += rekeningItem.prijs * 0.21;
+                    totaalBtw += btwLaag;
+                }
+                subtotaal += rekeningItem.prijs;
+            }
 
             lbl_btwhooggetal.Text = btwHoog.ToString();
             lbl_btwlaaggetal.Text = btwLaag.ToString();

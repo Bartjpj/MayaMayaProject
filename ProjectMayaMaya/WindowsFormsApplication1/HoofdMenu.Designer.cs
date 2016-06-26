@@ -37,8 +37,8 @@
             // 
             // btn_HMnaarBediening
             // 
-            this.btn_HMnaarBediening.BackColor = System.Drawing.Color.Maroon;
-            this.btn_HMnaarBediening.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_HMnaarBediening.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(17)))), ((int)(((byte)(40)))));
+            this.btn_HMnaarBediening.Font = new System.Drawing.Font("Calibri", 15F);
             this.btn_HMnaarBediening.ForeColor = System.Drawing.Color.White;
             this.btn_HMnaarBediening.Location = new System.Drawing.Point(21, 203);
             this.btn_HMnaarBediening.Name = "btn_HMnaarBediening";
@@ -50,8 +50,8 @@
             // 
             // btn_HMnaarBar
             // 
-            this.btn_HMnaarBar.BackColor = System.Drawing.Color.Maroon;
-            this.btn_HMnaarBar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_HMnaarBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(17)))), ((int)(((byte)(40)))));
+            this.btn_HMnaarBar.Font = new System.Drawing.Font("Calibri", 15F);
             this.btn_HMnaarBar.ForeColor = System.Drawing.Color.White;
             this.btn_HMnaarBar.Location = new System.Drawing.Point(21, 270);
             this.btn_HMnaarBar.Name = "btn_HMnaarBar";
@@ -65,6 +65,7 @@
             // 
             this.lbl_HMtekst.AutoSize = true;
             this.lbl_HMtekst.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_HMtekst.ForeColor = System.Drawing.SystemColors.Info;
             this.lbl_HMtekst.Location = new System.Drawing.Point(290, 79);
             this.lbl_HMtekst.Name = "lbl_HMtekst";
             this.lbl_HMtekst.Size = new System.Drawing.Size(211, 42);
@@ -73,20 +74,21 @@
             // 
             // btn_ExitWindows
             // 
-            this.btn_ExitWindows.BackColor = System.Drawing.Color.Maroon;
+            this.btn_ExitWindows.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(17)))), ((int)(((byte)(40)))));
+            this.btn_ExitWindows.Font = new System.Drawing.Font("Calibri", 15F);
             this.btn_ExitWindows.ForeColor = System.Drawing.Color.White;
             this.btn_ExitWindows.Location = new System.Drawing.Point(652, 441);
             this.btn_ExitWindows.Name = "btn_ExitWindows";
             this.btn_ExitWindows.Size = new System.Drawing.Size(111, 49);
             this.btn_ExitWindows.TabIndex = 6;
-            this.btn_ExitWindows.Text = "X";
+            this.btn_ExitWindows.Text = "Exit";
             this.btn_ExitWindows.UseVisualStyleBackColor = false;
             this.btn_ExitWindows.Click += new System.EventHandler(this.btn_ExitWindows_Click);
             // 
             // btn_HMnaarKEUKEN
             // 
-            this.btn_HMnaarKEUKEN.BackColor = System.Drawing.Color.Maroon;
-            this.btn_HMnaarKEUKEN.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_HMnaarKEUKEN.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(17)))), ((int)(((byte)(40)))));
+            this.btn_HMnaarKEUKEN.Font = new System.Drawing.Font("Calibri", 15F);
             this.btn_HMnaarKEUKEN.ForeColor = System.Drawing.Color.White;
             this.btn_HMnaarKEUKEN.Location = new System.Drawing.Point(21, 136);
             this.btn_HMnaarKEUKEN.Name = "btn_HMnaarKEUKEN";
@@ -109,6 +111,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "HoofdMenu";
             this.Text = "HoofdMenu";
+            this.Load += new System.EventHandler(this.HoofdMenu_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

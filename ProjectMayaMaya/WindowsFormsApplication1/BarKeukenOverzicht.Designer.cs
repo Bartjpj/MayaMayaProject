@@ -34,7 +34,6 @@
             this.btn_BARnaarHM = new System.Windows.Forms.Button();
             this.btn_BestellingGereed = new System.Windows.Forms.Button();
             this.listView1 = new System.Windows.Forms.ListView();
-            this.Bestellingid = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Tafel_id = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Item = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Aantal = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -63,7 +62,7 @@
             // btn_BARnaarHM
             // 
             this.btn_BARnaarHM.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(17)))), ((int)(((byte)(40)))));
-            this.btn_BARnaarHM.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_BARnaarHM.Font = new System.Drawing.Font("Calibri", 10F);
             this.btn_BARnaarHM.ForeColor = System.Drawing.Color.White;
             this.btn_BARnaarHM.Location = new System.Drawing.Point(12, 12);
             this.btn_BARnaarHM.Name = "btn_BARnaarHM";
@@ -76,6 +75,7 @@
             // btn_BestellingGereed
             // 
             this.btn_BestellingGereed.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(17)))), ((int)(((byte)(40)))));
+            this.btn_BestellingGereed.Font = new System.Drawing.Font("Calibri", 10F);
             this.btn_BestellingGereed.ForeColor = System.Drawing.Color.White;
             this.btn_BestellingGereed.Location = new System.Drawing.Point(622, 405);
             this.btn_BestellingGereed.Name = "btn_BestellingGereed";
@@ -89,7 +89,6 @@
             // 
             this.listView1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(246)))), ((int)(((byte)(235)))));
             this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.Bestellingid,
             this.Tafel_id,
             this.Item,
             this.Aantal,
@@ -105,25 +104,20 @@
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
             // 
-            // Bestellingid
-            // 
-            this.Bestellingid.Text = "Bestelling_id";
-            this.Bestellingid.Width = 80;
-            // 
             // Tafel_id
             // 
-            this.Tafel_id.Text = "Tafel_id";
-            this.Tafel_id.Width = 50;
+            this.Tafel_id.Text = "Tafel";
+            this.Tafel_id.Width = 40;
             // 
             // Item
             // 
-            this.Item.DisplayIndex = 3;
+            this.Item.DisplayIndex = 2;
             this.Item.Text = "Item";
             this.Item.Width = 300;
             // 
             // Aantal
             // 
-            this.Aantal.DisplayIndex = 2;
+            this.Aantal.DisplayIndex = 1;
             this.Aantal.Text = "Aantal";
             this.Aantal.Width = 43;
             // 
@@ -140,6 +134,7 @@
             // btn_refresh
             // 
             this.btn_refresh.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(17)))), ((int)(((byte)(40)))));
+            this.btn_refresh.Font = new System.Drawing.Font("Calibri", 10F);
             this.btn_refresh.Location = new System.Drawing.Point(12, 405);
             this.btn_refresh.Name = "btn_refresh";
             this.btn_refresh.Size = new System.Drawing.Size(145, 46);
@@ -154,12 +149,14 @@
             this.lopendeBestellingTafels.Name = "lopendeBestellingTafels";
             this.lopendeBestellingTafels.Size = new System.Drawing.Size(275, 138);
             this.lopendeBestellingTafels.TabIndex = 11;
+      
             // 
             // btn_dagoverzicht
             // 
             this.btn_dagoverzicht.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(17)))), ((int)(((byte)(40)))));
+            this.btn_dagoverzicht.Font = new System.Drawing.Font("Calibri", 10F);
             this.btn_dagoverzicht.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btn_dagoverzicht.Location = new System.Drawing.Point(323, 405);
+            this.btn_dagoverzicht.Location = new System.Drawing.Point(311, 405);
             this.btn_dagoverzicht.Name = "btn_dagoverzicht";
             this.btn_dagoverzicht.Size = new System.Drawing.Size(145, 46);
             this.btn_dagoverzicht.TabIndex = 12;
@@ -196,7 +193,6 @@
         private System.Windows.Forms.Button btn_BARnaarHM;
         private System.Windows.Forms.Button btn_BestellingGereed;
         private System.Windows.Forms.ListView listView1;
-        private System.Windows.Forms.ColumnHeader Bestellingid;
         private System.Windows.Forms.ColumnHeader Tafel_id;
         private System.Windows.Forms.ColumnHeader Aantal;
         private System.Windows.Forms.ColumnHeader Item;

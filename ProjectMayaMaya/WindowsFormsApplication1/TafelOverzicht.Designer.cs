@@ -65,7 +65,7 @@
             // 
             // btn_Tafel1
             // 
-            this.btn_Tafel1.BackColor = System.Drawing.Color.Silver;
+            this.btn_Tafel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(246)))), ((int)(((byte)(235)))));
             this.btn_Tafel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Tafel1.Location = new System.Drawing.Point(152, 88);
             this.btn_Tafel1.Name = "btn_Tafel1";
@@ -78,7 +78,7 @@
             // 
             // btn_Tafel2
             // 
-            this.btn_Tafel2.BackColor = System.Drawing.Color.Silver;
+            this.btn_Tafel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(246)))), ((int)(((byte)(235)))));
             this.btn_Tafel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Tafel2.Location = new System.Drawing.Point(386, 88);
             this.btn_Tafel2.Name = "btn_Tafel2";
@@ -91,7 +91,7 @@
             // 
             // btn_Tafel3
             // 
-            this.btn_Tafel3.BackColor = System.Drawing.Color.Silver;
+            this.btn_Tafel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(246)))), ((int)(((byte)(235)))));
             this.btn_Tafel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Tafel3.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btn_Tafel3.Location = new System.Drawing.Point(152, 164);
@@ -105,7 +105,7 @@
             // 
             // btn_Tafel4
             // 
-            this.btn_Tafel4.BackColor = System.Drawing.Color.Silver;
+            this.btn_Tafel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(246)))), ((int)(((byte)(235)))));
             this.btn_Tafel4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Tafel4.Location = new System.Drawing.Point(386, 164);
             this.btn_Tafel4.Name = "btn_Tafel4";
@@ -118,7 +118,7 @@
             // 
             // btn_Tafel5
             // 
-            this.btn_Tafel5.BackColor = System.Drawing.Color.Silver;
+            this.btn_Tafel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(246)))), ((int)(((byte)(235)))));
             this.btn_Tafel5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Tafel5.Location = new System.Drawing.Point(152, 240);
             this.btn_Tafel5.Name = "btn_Tafel5";
@@ -131,7 +131,7 @@
             // 
             // btn_Tafel6
             // 
-            this.btn_Tafel6.BackColor = System.Drawing.Color.Silver;
+            this.btn_Tafel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(246)))), ((int)(((byte)(235)))));
             this.btn_Tafel6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Tafel6.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btn_Tafel6.Location = new System.Drawing.Point(386, 240);
@@ -145,7 +145,7 @@
             // 
             // btn_Tafel7
             // 
-            this.btn_Tafel7.BackColor = System.Drawing.Color.Silver;
+            this.btn_Tafel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(246)))), ((int)(((byte)(235)))));
             this.btn_Tafel7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Tafel7.Location = new System.Drawing.Point(152, 316);
             this.btn_Tafel7.Name = "btn_Tafel7";
@@ -158,7 +158,7 @@
             // 
             // btn_Tafel8
             // 
-            this.btn_Tafel8.BackColor = System.Drawing.Color.Silver;
+            this.btn_Tafel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(246)))), ((int)(((byte)(235)))));
             this.btn_Tafel8.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Tafel8.Location = new System.Drawing.Point(386, 316);
             this.btn_Tafel8.Name = "btn_Tafel8";
@@ -171,7 +171,7 @@
             // 
             // btn_Tafel9
             // 
-            this.btn_Tafel9.BackColor = System.Drawing.Color.Silver;
+            this.btn_Tafel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(246)))), ((int)(((byte)(235)))));
             this.btn_Tafel9.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Tafel9.Location = new System.Drawing.Point(152, 392);
             this.btn_Tafel9.Name = "btn_Tafel9";
@@ -184,7 +184,7 @@
             // 
             // btn_Tafel10
             // 
-            this.btn_Tafel10.BackColor = System.Drawing.Color.Silver;
+            this.btn_Tafel10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(246)))), ((int)(((byte)(235)))));
             this.btn_Tafel10.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Tafel10.Location = new System.Drawing.Point(386, 392);
             this.btn_Tafel10.Name = "btn_Tafel10";
@@ -197,7 +197,8 @@
             // 
             // btn_TAFELnaarHM
             // 
-            this.btn_TAFELnaarHM.BackColor = System.Drawing.Color.Maroon;
+            this.btn_TAFELnaarHM.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(17)))), ((int)(((byte)(40)))));
+            this.btn_TAFELnaarHM.Font = new System.Drawing.Font("Calibri", 10F);
             this.btn_TAFELnaarHM.ForeColor = System.Drawing.Color.White;
             this.btn_TAFELnaarHM.Location = new System.Drawing.Point(12, 12);
             this.btn_TAFELnaarHM.Name = "btn_TAFELnaarHM";
@@ -211,6 +212,7 @@
             // 
             this.lbl_tijdtafel3.AutoSize = true;
             this.lbl_tijdtafel3.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_tijdtafel3.ForeColor = System.Drawing.SystemColors.Info;
             this.lbl_tijdtafel3.Location = new System.Drawing.Point(295, 215);
             this.lbl_tijdtafel3.Name = "lbl_tijdtafel3";
             this.lbl_tijdtafel3.Size = new System.Drawing.Size(16, 13);
@@ -221,6 +223,7 @@
             // 
             this.lnl_tijdtafel2.AutoSize = true;
             this.lnl_tijdtafel2.BackColor = System.Drawing.Color.Transparent;
+            this.lnl_tijdtafel2.ForeColor = System.Drawing.SystemColors.Info;
             this.lnl_tijdtafel2.Location = new System.Drawing.Point(525, 136);
             this.lnl_tijdtafel2.Name = "lnl_tijdtafel2";
             this.lnl_tijdtafel2.Size = new System.Drawing.Size(16, 13);
@@ -230,6 +233,7 @@
             // lbl_tijdtafel4
             // 
             this.lbl_tijdtafel4.AutoSize = true;
+            this.lbl_tijdtafel4.ForeColor = System.Drawing.SystemColors.Info;
             this.lbl_tijdtafel4.Location = new System.Drawing.Point(525, 215);
             this.lbl_tijdtafel4.Name = "lbl_tijdtafel4";
             this.lbl_tijdtafel4.Size = new System.Drawing.Size(16, 13);
@@ -239,6 +243,7 @@
             // lbl_tijdtafel5
             // 
             this.lbl_tijdtafel5.AutoSize = true;
+            this.lbl_tijdtafel5.ForeColor = System.Drawing.SystemColors.Info;
             this.lbl_tijdtafel5.Location = new System.Drawing.Point(295, 286);
             this.lbl_tijdtafel5.Name = "lbl_tijdtafel5";
             this.lbl_tijdtafel5.Size = new System.Drawing.Size(16, 13);
@@ -248,6 +253,7 @@
             // lbl_tijdtafel6
             // 
             this.lbl_tijdtafel6.AutoSize = true;
+            this.lbl_tijdtafel6.ForeColor = System.Drawing.SystemColors.Info;
             this.lbl_tijdtafel6.Location = new System.Drawing.Point(525, 286);
             this.lbl_tijdtafel6.Name = "lbl_tijdtafel6";
             this.lbl_tijdtafel6.Size = new System.Drawing.Size(16, 13);
@@ -257,6 +263,7 @@
             // lbl_tijdtafel7
             // 
             this.lbl_tijdtafel7.AutoSize = true;
+            this.lbl_tijdtafel7.ForeColor = System.Drawing.SystemColors.Info;
             this.lbl_tijdtafel7.Location = new System.Drawing.Point(295, 360);
             this.lbl_tijdtafel7.Name = "lbl_tijdtafel7";
             this.lbl_tijdtafel7.Size = new System.Drawing.Size(16, 13);
@@ -266,6 +273,7 @@
             // lbl_tijdtafel8
             // 
             this.lbl_tijdtafel8.AutoSize = true;
+            this.lbl_tijdtafel8.ForeColor = System.Drawing.SystemColors.Info;
             this.lbl_tijdtafel8.Location = new System.Drawing.Point(525, 360);
             this.lbl_tijdtafel8.Name = "lbl_tijdtafel8";
             this.lbl_tijdtafel8.Size = new System.Drawing.Size(16, 13);
@@ -275,6 +283,7 @@
             // lbl_tijdtafel9
             // 
             this.lbl_tijdtafel9.AutoSize = true;
+            this.lbl_tijdtafel9.ForeColor = System.Drawing.SystemColors.Info;
             this.lbl_tijdtafel9.Location = new System.Drawing.Point(295, 440);
             this.lbl_tijdtafel9.Name = "lbl_tijdtafel9";
             this.lbl_tijdtafel9.Size = new System.Drawing.Size(16, 13);
@@ -284,6 +293,7 @@
             // lbl_tijdtafel10
             // 
             this.lbl_tijdtafel10.AutoSize = true;
+            this.lbl_tijdtafel10.ForeColor = System.Drawing.SystemColors.Info;
             this.lbl_tijdtafel10.Location = new System.Drawing.Point(525, 440);
             this.lbl_tijdtafel10.Name = "lbl_tijdtafel10";
             this.lbl_tijdtafel10.Size = new System.Drawing.Size(16, 13);
@@ -293,17 +303,20 @@
             // lbl_Kiestafel
             // 
             this.lbl_Kiestafel.AutoSize = true;
-            this.lbl_Kiestafel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Kiestafel.Font = new System.Drawing.Font("Calibri", 15F);
+            this.lbl_Kiestafel.ForeColor = System.Drawing.SystemColors.Info;
             this.lbl_Kiestafel.Location = new System.Drawing.Point(261, 44);
             this.lbl_Kiestafel.Name = "lbl_Kiestafel";
-            this.lbl_Kiestafel.Size = new System.Drawing.Size(135, 24);
+            this.lbl_Kiestafel.Size = new System.Drawing.Size(123, 24);
             this.lbl_Kiestafel.TabIndex = 23;
-            this.lbl_Kiestafel.Text = "Kies een Tafel:";
+            this.lbl_Kiestafel.Text = "Kies een Tafel";
             // 
             // lbl_test1
             // 
             this.lbl_test1.AutoSize = true;
-            this.lbl_test1.Location = new System.Drawing.Point(295, 136);
+            this.lbl_test1.Font = new System.Drawing.Font("Calibri", 8F);
+            this.lbl_test1.ForeColor = System.Drawing.SystemColors.Info;
+            this.lbl_test1.Location = new System.Drawing.Point(295, 145);
             this.lbl_test1.Name = "lbl_test1";
             this.lbl_test1.Size = new System.Drawing.Size(16, 13);
             this.lbl_test1.TabIndex = 27;
@@ -313,90 +326,110 @@
             // lbl_tijd
             // 
             this.lbl_tijd.AutoSize = true;
+            this.lbl_tijd.Font = new System.Drawing.Font("Calibri", 8F);
+            this.lbl_tijd.ForeColor = System.Drawing.SystemColors.Info;
             this.lbl_tijd.Location = new System.Drawing.Point(262, 123);
             this.lbl_tijd.Name = "lbl_tijd";
-            this.lbl_tijd.Size = new System.Drawing.Size(118, 13);
+            this.lbl_tijd.Size = new System.Drawing.Size(121, 13);
             this.lbl_tijd.TabIndex = 28;
             this.lbl_tijd.Text = "Bestelling geplaatst om:";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Calibri", 8F);
+            this.label1.ForeColor = System.Drawing.SystemColors.Info;
             this.label1.Location = new System.Drawing.Point(263, 202);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(118, 13);
+            this.label1.Size = new System.Drawing.Size(121, 13);
             this.label1.TabIndex = 39;
             this.label1.Text = "Bestelling geplaatst om:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Calibri", 8F);
+            this.label2.ForeColor = System.Drawing.SystemColors.Info;
             this.label2.Location = new System.Drawing.Point(263, 273);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(118, 13);
+            this.label2.Size = new System.Drawing.Size(121, 13);
             this.label2.TabIndex = 40;
             this.label2.Text = "Bestelling geplaatst om:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Calibri", 8F);
+            this.label3.ForeColor = System.Drawing.SystemColors.Info;
             this.label3.Location = new System.Drawing.Point(262, 347);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(118, 13);
+            this.label3.Size = new System.Drawing.Size(121, 13);
             this.label3.TabIndex = 41;
             this.label3.Text = "Bestelling geplaatst om:";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Calibri", 8F);
+            this.label4.ForeColor = System.Drawing.SystemColors.Info;
             this.label4.Location = new System.Drawing.Point(262, 427);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(118, 13);
+            this.label4.Size = new System.Drawing.Size(121, 13);
             this.label4.TabIndex = 42;
             this.label4.Text = "Bestelling geplaatst om:";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Calibri", 8F);
+            this.label5.ForeColor = System.Drawing.SystemColors.Info;
             this.label5.Location = new System.Drawing.Point(497, 123);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(118, 13);
+            this.label5.Size = new System.Drawing.Size(121, 13);
             this.label5.TabIndex = 43;
             this.label5.Text = "Bestelling geplaatst om:";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Calibri", 8F);
+            this.label6.ForeColor = System.Drawing.SystemColors.Info;
             this.label6.Location = new System.Drawing.Point(497, 202);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(118, 13);
+            this.label6.Size = new System.Drawing.Size(121, 13);
             this.label6.TabIndex = 44;
             this.label6.Text = "Bestelling geplaatst om:";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Calibri", 8F);
+            this.label7.ForeColor = System.Drawing.SystemColors.Info;
             this.label7.Location = new System.Drawing.Point(497, 273);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(118, 13);
+            this.label7.Size = new System.Drawing.Size(121, 13);
             this.label7.TabIndex = 45;
             this.label7.Text = "Bestelling geplaatst om:";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Calibri", 8F);
+            this.label8.ForeColor = System.Drawing.SystemColors.Info;
             this.label8.Location = new System.Drawing.Point(497, 347);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(118, 13);
+            this.label8.Size = new System.Drawing.Size(121, 13);
             this.label8.TabIndex = 46;
             this.label8.Text = "Bestelling geplaatst om:";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Calibri", 8F);
+            this.label9.ForeColor = System.Drawing.SystemColors.Info;
             this.label9.Location = new System.Drawing.Point(497, 427);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(118, 13);
+            this.label9.Size = new System.Drawing.Size(121, 13);
             this.label9.TabIndex = 47;
             this.label9.Text = "Bestelling geplaatst om:";
             // 
@@ -414,6 +447,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(87)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(775, 502);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);

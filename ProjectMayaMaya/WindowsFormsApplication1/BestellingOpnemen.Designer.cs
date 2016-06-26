@@ -52,16 +52,17 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Calibri", 15F);
+            this.label1.ForeColor = System.Drawing.SystemColors.Info;
             this.label1.Location = new System.Drawing.Point(292, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(201, 25);
+            this.label1.Size = new System.Drawing.Size(176, 24);
             this.label1.TabIndex = 56;
             this.label1.Text = "Bestelling opnemen";
             // 
             // btn_DINERnaarBESTELLING
             // 
-            this.btn_DINERnaarBESTELLING.BackColor = System.Drawing.Color.Maroon;
+            this.btn_DINERnaarBESTELLING.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(17)))), ((int)(((byte)(40)))));
             this.btn_DINERnaarBESTELLING.ForeColor = System.Drawing.Color.White;
             this.btn_DINERnaarBESTELLING.Location = new System.Drawing.Point(10, 9);
             this.btn_DINERnaarBESTELLING.Name = "btn_DINERnaarBESTELLING";
@@ -73,6 +74,7 @@
             // 
             // listview_diner
             // 
+            this.listview_diner.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(246)))), ((int)(((byte)(235)))));
             this.listview_diner.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.Naam,
             this.Prijs,
@@ -105,7 +107,9 @@
             // 
             // btn_stuurbestelling
             // 
-            this.btn_stuurbestelling.BackColor = System.Drawing.Color.LightGreen;
+            this.btn_stuurbestelling.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(17)))), ((int)(((byte)(40)))));
+            this.btn_stuurbestelling.Font = new System.Drawing.Font("Calibri", 10F);
+            this.btn_stuurbestelling.ForeColor = System.Drawing.SystemColors.Info;
             this.btn_stuurbestelling.Location = new System.Drawing.Point(672, 451);
             this.btn_stuurbestelling.Name = "btn_stuurbestelling";
             this.btn_stuurbestelling.Size = new System.Drawing.Size(99, 49);
@@ -116,8 +120,8 @@
             // 
             // btn_verwijderBestelling
             // 
-            this.btn_verwijderBestelling.BackColor = System.Drawing.Color.Crimson;
-            this.btn_verwijderBestelling.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_verwijderBestelling.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(17)))), ((int)(((byte)(40)))));
+            this.btn_verwijderBestelling.Font = new System.Drawing.Font("Calibri", 10F);
             this.btn_verwijderBestelling.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btn_verwijderBestelling.Location = new System.Drawing.Point(10, 450);
             this.btn_verwijderBestelling.Name = "btn_verwijderBestelling";
@@ -130,25 +134,28 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Calibri", 15F);
+            this.label2.ForeColor = System.Drawing.SystemColors.Info;
             this.label2.Location = new System.Drawing.Point(124, 183);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(141, 20);
+            this.label2.Size = new System.Drawing.Size(157, 24);
             this.label2.TabIndex = 85;
             this.label2.Text = "Selecteer product";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Calibri", 15F);
+            this.label3.ForeColor = System.Drawing.SystemColors.Info;
             this.label3.Location = new System.Drawing.Point(527, 183);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(142, 20);
+            this.label3.Size = new System.Drawing.Size(159, 24);
             this.label3.TabIndex = 86;
             this.label3.Text = "Huidige bestelling";
             // 
             // listview_huidige_bestelling
             // 
+            this.listview_huidige_bestelling.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(246)))), ((int)(((byte)(235)))));
             this.listview_huidige_bestelling.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.bestelling,
             this.aantal});
@@ -174,6 +181,7 @@
             // 
             // flow_menuCategorie
             // 
+            this.flow_menuCategorie.ForeColor = System.Drawing.SystemColors.Info;
             this.flow_menuCategorie.Location = new System.Drawing.Point(10, 123);
             this.flow_menuCategorie.Name = "flow_menuCategorie";
             this.flow_menuCategorie.Size = new System.Drawing.Size(758, 57);
@@ -181,6 +189,7 @@
             // 
             // flow_MenuKaart
             // 
+            this.flow_MenuKaart.ForeColor = System.Drawing.SystemColors.Info;
             this.flow_MenuKaart.Location = new System.Drawing.Point(10, 64);
             this.flow_MenuKaart.Name = "flow_MenuKaart";
             this.flow_MenuKaart.Size = new System.Drawing.Size(758, 52);
@@ -197,20 +206,22 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.label4.ForeColor = System.Drawing.SystemColors.Info;
             this.label4.Location = new System.Drawing.Point(193, 456);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(159, 16);
+            this.label4.Size = new System.Drawing.Size(144, 15);
             this.label4.TabIndex = 101;
             this.label4.Text = "Voeg een opmerking toe:";
             // 
             // checkbox_keuken
             // 
             this.checkbox_keuken.AutoSize = true;
-            this.checkbox_keuken.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkbox_keuken.Font = new System.Drawing.Font("Calibri", 9F);
+            this.checkbox_keuken.ForeColor = System.Drawing.SystemColors.Info;
             this.checkbox_keuken.Location = new System.Drawing.Point(358, 455);
             this.checkbox_keuken.Name = "checkbox_keuken";
-            this.checkbox_keuken.Size = new System.Drawing.Size(94, 19);
+            this.checkbox_keuken.Size = new System.Drawing.Size(93, 18);
             this.checkbox_keuken.TabIndex = 104;
             this.checkbox_keuken.Text = "Voor keuken";
             this.checkbox_keuken.UseVisualStyleBackColor = true;
@@ -218,10 +229,11 @@
             // checkbox_bar
             // 
             this.checkbox_bar.AutoSize = true;
-            this.checkbox_bar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkbox_bar.Font = new System.Drawing.Font("Calibri", 9F);
+            this.checkbox_bar.ForeColor = System.Drawing.SystemColors.Info;
             this.checkbox_bar.Location = new System.Drawing.Point(458, 455);
             this.checkbox_bar.Name = "checkbox_bar";
-            this.checkbox_bar.Size = new System.Drawing.Size(72, 19);
+            this.checkbox_bar.Size = new System.Drawing.Size(71, 18);
             this.checkbox_bar.TabIndex = 105;
             this.checkbox_bar.Text = "Voor bar";
             this.checkbox_bar.UseVisualStyleBackColor = true;
@@ -230,6 +242,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(87)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(775, 502);
             this.Controls.Add(this.checkbox_bar);
             this.Controls.Add(this.checkbox_keuken);

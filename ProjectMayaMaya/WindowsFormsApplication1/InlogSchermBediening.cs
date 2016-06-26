@@ -25,6 +25,11 @@ namespace WindowsFormsApplication1
             InitializeComponent();
         }
 
+        private void InlogSchermBediening_Load(object sender, EventArgs e)
+        {
+            this.BackColor = ColorTranslator.FromHtml("#115740");
+        }
+
         private int txt_PersoneelsID_TextChanged(object sender, EventArgs e)
         {
                 int inlogCode = Convert.ToInt32(txt_PersoneelsID.Text); // invoer inlogcode voor een personeelslid 
@@ -88,8 +93,8 @@ namespace WindowsFormsApplication1
                 inlogFout.Show(this);
             }
 
-        }
-        
 
+        }
+         
     }
 }

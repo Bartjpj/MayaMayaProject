@@ -50,5 +50,10 @@ namespace WindowsFormsApplication1
             keukenWindowOpenen.Show(this);
             this.Hide();
         }
+
+        private void HoofdMenu_Load(object sender, EventArgs e)
+        {
+            this.BackColor = ColorTranslator.FromHtml("#115740");
+        }
     }
 }

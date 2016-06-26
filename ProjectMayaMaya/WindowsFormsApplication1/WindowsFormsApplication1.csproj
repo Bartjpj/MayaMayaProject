@@ -62,7 +62,7 @@
     </Compile>
     <Compile Include="BestellingOpnemenKaartenClass.cs" />
     <Compile Include="MenucategorieClass.cs" />
-    <Compile Include="MenuItemsClass.cs" />
+    <Compile Include="MenuItem.cs" />
     <Compile Include="BestellingenDAO.cs" />
     <Compile Include="KiesOpname.cs">
       <SubType>Form</SubType>
@@ -71,12 +71,6 @@
       <DependentUpon>KiesOpname.cs</DependentUpon>
     </Compile>
     <Compile Include="InlogSchermClass.cs" />
-    <Compile Include="BarKeukenOverzicht.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="BarKeukenOverzicht.Designer.cs">
-      <DependentUpon>BarKeukenOverzicht.cs</DependentUpon>
-    </Compile>
     <Compile Include="BestellingMenu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -116,6 +110,12 @@
     <Compile Include="NietOpVoorraadAlert.Designer.cs">
       <DependentUpon>NietOpVoorraadAlert.cs</DependentUpon>
     </Compile>
+    <Compile Include="BarKeukenOverzicht.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BarKeukenOverzicht.Designer.cs">
+      <DependentUpon>BarKeukenOverzicht.cs</DependentUpon>
+    </Compile>
     <Compile Include="PersoneelsLidDAO.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -131,9 +131,6 @@
     </Compile>
     <EmbeddedResource Include="Afrekenen.resx">
       <DependentUpon>Afrekenen.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="BarKeukenOverzicht.resx">
-      <DependentUpon>BarKeukenOverzicht.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BestellingMenu.resx">
       <DependentUpon>BestellingMenu.cs</DependentUpon>
@@ -158,6 +155,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="NietOpVoorraadAlert.resx">
       <DependentUpon>NietOpVoorraadAlert.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BarKeukenOverzicht.resx">
+      <DependentUpon>BarKeukenOverzicht.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

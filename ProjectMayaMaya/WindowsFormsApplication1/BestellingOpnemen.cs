@@ -45,6 +45,7 @@ namespace WindowsFormsApplication1
                 btn.Text = kaart.naam;
                 btn.Tag = kaart;
                 btn.Size = new Size(221, 49);
+                btn.BackColor = ColorTranslator.FromHtml("#571128");
                 btn.Click += new System.EventHandler(this.btn_kaartCategorie_Click);
                 flow_MenuKaart.Controls.Add(btn);
             }
@@ -64,6 +65,7 @@ namespace WindowsFormsApplication1
                 btn.Text = categorie.naam;
                 btn.Tag = categorie;
                 btn.Size = new Size(120, 49);
+                btn.BackColor = ColorTranslator.FromHtml("#571128");
                 btn.Click += new System.EventHandler(this.btn_categorie_Click);
                 flow_menuCategorie.Controls.Add(btn);
             }
@@ -254,17 +256,15 @@ namespace WindowsFormsApplication1
             }
 
 
-            string barOpmerking = "";
-            string keukenOpmerking = "";
+            string opmerking = txt_opmerking.Text;
 
             if (checkbox_bar.Checked && checkbox_keuken.Checked) //er wordt een code meegegeven aan de query, waardoor het systeem weet of dit voor de keuken, bar of beide bestemd is.
             {
-                barOpmerking = txt_opmerking.Text;
-                keukenOpmerking = txt_opmerking.Text;
+                opmerking = "1" + opmerking;
             } else if (checkbox_keuken.Checked){
-                keukenOpmerking = txt_opmerking.Text;
+                opmerking = "2" + opmerking;
             } else if (checkbox_bar.Checked) {
-                barOpmerking = txt_opmerking.Text;
+                opmerking = "3" + opmerking;
             }
 
 
@@ -277,8 +277,8 @@ namespace WindowsFormsApplication1
             int barBestellingID = hoogsteBestellingID + 1;
             int keukenBestellingID = barBestellingID + 1;
 
-            MenuItemsDAO.VerstuurBestellingBar(BarMenu_ID, BarAantal, tafel, barBestellingID, actueleTijd, barOpmerking, personeels_id);
-            MenuItemsDAO.VerstuurBestellingKeuken(KeukenMenu_ID, KeukenAantal, tafel, keukenBestellingID, actueleTijd, keukenOpmerking, personeels_id);
+            MenuItemsDAO.VerstuurBestelling(BarMenu_ID, BarAantal, tafel, barBestellingID, actueleTijd, opmerking, personeels_id);
+            MenuItemsDAO.VerstuurBestelling(KeukenMenu_ID, KeukenAantal, tafel, keukenBestellingID, actueleTijd, opmerking, personeels_id);
 
 
             //-----------------------------ZETTEN VAN TIJDSTIP VAN GEPLAATSTE BESTELLING------------------------
@@ -365,6 +365,7 @@ namespace WindowsFormsApplication1
 
         }
 
+     
     }
 }
 
