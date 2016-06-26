@@ -256,15 +256,17 @@ namespace WindowsFormsApplication1
             }
 
 
-            string opmerking = txt_opmerking.Text;
+            string barOpmerking = "";
+            string keukenOpmerking = "";
 
             if (checkbox_bar.Checked && checkbox_keuken.Checked) //er wordt een code meegegeven aan de query, waardoor het systeem weet of dit voor de keuken, bar of beide bestemd is.
             {
-                opmerking = "1" + opmerking;
+                barOpmerking = txt_opmerking.Text;
+                keukenOpmerking = txt_opmerking.Text;
             } else if (checkbox_keuken.Checked){
-                opmerking = "2" + opmerking;
+                keukenOpmerking = txt_opmerking.Text;
             } else if (checkbox_bar.Checked) {
-                opmerking = "3" + opmerking;
+                barOpmerking = txt_opmerking.Text;
             }
 
 
@@ -277,8 +279,8 @@ namespace WindowsFormsApplication1
             int barBestellingID = hoogsteBestellingID + 1;
             int keukenBestellingID = barBestellingID + 1;
 
-            MenuItemsDAO.VerstuurBestelling(BarMenu_ID, BarAantal, tafel, barBestellingID, actueleTijd, opmerking, personeels_id);
-            MenuItemsDAO.VerstuurBestelling(KeukenMenu_ID, KeukenAantal, tafel, keukenBestellingID, actueleTijd, opmerking, personeels_id);
+            MenuItemsDAO.VerstuurBestellingBar(BarMenu_ID, BarAantal, tafel, barBestellingID, actueleTijd, barOpmerking, personeels_id);
+            MenuItemsDAO.VerstuurBestellingKeuken(KeukenMenu_ID, KeukenAantal, tafel, keukenBestellingID, actueleTijd, keukenOpmerking, personeels_id);
 
 
             //-----------------------------ZETTEN VAN TIJDSTIP VAN GEPLAATSTE BESTELLING------------------------
