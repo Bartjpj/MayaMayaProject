@@ -26,7 +26,7 @@ namespace WindowsFormsApplication1
             this.Size = Owner.Size;
         }
 
-        public BarKeukenOverzicht(BestellingenDAO bestellingenDAO, bool barView) // geef een bestellingDAOf als constructor mee.
+        public BarKeukenOverzicht(BestellingenDAO bestellingenDAO, bool barView) // geef een bestellingDAO als constructor mee.
         {
            InitializeComponent();
            this.barView = barView;
@@ -54,9 +54,9 @@ namespace WindowsFormsApplication1
             listView1.Items.Clear();
 
             List<MenuItem> items = bestellingenDAO.haalBestellingTafel(tafelNr, barView); // parameter wordt hier meegegeven aan Dao zodat er per tafel de bestellingen opgehaald kunnen worden.
-            foreach (MenuItem barOverzicht in items)
+            foreach (MenuItem barKeukenOverzicht in items)
             {
-                voegListViewItemsToe(barOverzicht); // het barOverzicht object wordt hier aan de methode voegListVietItemsToe meegegeven zodat de items in de listview kunnen komen.
+                voegListViewItemsToe(barKeukenOverzicht); // het barOverzicht object wordt hier aan de methode voegListVietItemsToe meegegeven zodat de items in de listview kunnen komen.
             }
         }
 
@@ -76,6 +76,7 @@ namespace WindowsFormsApplication1
         private void voegListViewItemsToe(MenuItem menuItem)
         {
           
+            
             ListViewItem lijstItem = new ListViewItem(menuItem.tafel_id.ToString());
             lijstItem.SubItems.Add(menuItem.naam.ToString());
             lijstItem.SubItems.Add(menuItem.aantal.ToString());
@@ -87,9 +88,9 @@ namespace WindowsFormsApplication1
         private void DisplayBestellingen()
         {
             listView1.Items.Clear();
-            foreach (MenuItem barOverzicht in this.bestellingslijst)
+            foreach (MenuItem barKeukenOverzicht in this.bestellingslijst)
             {
-                voegListViewItemsToe(barOverzicht);
+                voegListViewItemsToe(barKeukenOverzicht);
 
             }
             createTafels();
@@ -143,9 +144,9 @@ namespace WindowsFormsApplication1
 
             listView1.Items.Clear();
 
-            foreach (MenuItem barOverzicht in bestellingenDAO.haalMenuItems(barView, false))
+            foreach (MenuItem barKeukenOverzicht in bestellingenDAO.haalMenuItems(barView, false))
             {
-                voegListViewItemsToe(barOverzicht);
+                voegListViewItemsToe(barKeukenOverzicht);
             }
         }
 

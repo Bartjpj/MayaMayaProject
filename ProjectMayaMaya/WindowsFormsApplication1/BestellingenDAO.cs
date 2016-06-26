@@ -280,6 +280,7 @@ namespace WindowsFormsApplication1
         public List<MenuItem> haalDagOverzichtXXX(bool dranken) // deze methode haalt de gegevens op voor het BestellingMenu overzicht
         {
             string kaartQuery = "";
+            string keuzeOpmerking = "";
             string connString = ConfigurationManager
             .ConnectionStrings["BestellingConnectionStringSQL"]
             .ConnectionString;
@@ -288,12 +289,14 @@ namespace WindowsFormsApplication1
             if (dranken)
             {
                 kaartQuery = "Menukaart.kaart_id = 3 AND bar_gereed = 1;";
+                keuzeOpmerking = "baropmerking";
             }
             else
             {
                 kaartQuery = "Menukaart.kaart_id != 3 AND keuken_gereed = 1;";
+                keuzeOpmerking = "keukenopmerking";
             }
-            SqlCommand command = new SqlCommand("SELECT bestelling_id, tafel_id, Aantal, datum_tijd, Menuitem.naam, opmerking FROM Bestelling, BestellingItems, Menuitem, Menucategorie, Menukaart WHERE  bestelling_id = BestellingId AND ItemId = menu_id AND Menuitem.categorie_id = Menucategorie.categorie_id AND Menukaart.kaart_id = Menucategorie.kaart_id AND " + kaartQuery, conn);
+            SqlCommand command = new SqlCommand("SELECT bestelling_id, tafel_id, Aantal, datum_tijd, Menuitem.naam, "+keuzeOpmerking+" FROM Bestelling, BestellingItems, Menuitem, Menucategorie, Menukaart WHERE  bestelling_id = BestellingId AND ItemId = menu_id AND Menuitem.categorie_id = Menucategorie.categorie_id AND Menukaart.kaart_id = Menucategorie.kaart_id AND " + kaartQuery, conn);
             // deze query zorgt ervoor dat we alle data hebben die we bij BestellingMenu nodig hebben 
             SqlDataReader reader = command.ExecuteReader();
 
@@ -307,7 +310,7 @@ namespace WindowsFormsApplication1
                 int Aantal = (int)reader["Aantal"];
                 string Menuitem = (string)reader["naam"];
                 DateTime datum_tijd = (DateTime)reader["datum_tijd"];
-                string opmerking = (string)reader["opmerking"];
+                string opmerking = (string)reader[keuzeOpmerking];
                 //Onderzoeken wrm dit niet werkt
 
                 MenuItem BarKeukenOverzichtDAO = new MenuItem(bestelling_id, tafel_id, Aantal, Menuitem, datum_tijd, opmerking);
@@ -321,6 +324,8 @@ namespace WindowsFormsApplication1
         public List<MenuItem> haalBestellingTafel(int tafelNr, bool dranken)
         {
             string kaartQuery = "";
+            string keuzeOpmerking = "";
+
             string connString = ConfigurationManager
            .ConnectionStrings["BestellingConnectionStringSQL"]
            .ConnectionString;
@@ -329,13 +334,15 @@ namespace WindowsFormsApplication1
             if (dranken)
             {
                 kaartQuery = "Menukaart.kaart_id = 3 AND bar_gereed = 0;";
+                keuzeOpmerking = "baropmerking";
 
             }
             else
             {
                 kaartQuery = "Menukaart.kaart_id != 3 AND keuken_gereed = 0;";
+                keuzeOpmerking = "keukenopmerking";
             }
-            SqlCommand command = new SqlCommand("SELECT bestelling_id, tafel_id, Aantal, Bestelling.datum_tijd, Menuitem.naam, opmerking FROM Bestelling, BestellingItems, Menuitem, Menucategorie, Menukaart WHERE tafel_id =  " + tafelNr + " AND bestelling_id = BestellingId AND ItemId = menu_id AND Menuitem.categorie_id = Menucategorie.categorie_id AND Menukaart.kaart_id = Menucategorie.kaart_id AND " + kaartQuery, conn);
+            SqlCommand command = new SqlCommand("SELECT bestelling_id, tafel_id, Aantal, Bestelling.datum_tijd, Menuitem.naam, "+keuzeOpmerking+" FROM Bestelling, BestellingItems, Menuitem, Menucategorie, Menukaart WHERE tafel_id =  " + tafelNr + " AND bestelling_id = BestellingId AND ItemId = menu_id AND Menuitem.categorie_id = Menucategorie.categorie_id AND Menukaart.kaart_id = Menucategorie.kaart_id AND " + kaartQuery, conn);
             // deze query zorgt ervoor dat we alle data hebben die we bij BestellingMenu nodig hebben 
             SqlDataReader reader = command.ExecuteReader();
             List<MenuItem> BarKeukenOverzichtTable = new List<MenuItem>();
@@ -347,7 +354,7 @@ namespace WindowsFormsApplication1
                 int Aantal = (int)reader["Aantal"];
                 string Menuitem = (string)reader["naam"];
                 DateTime datum_tijd = (DateTime)reader["datum_tijd"];
-                string opmerking = (string)reader["opmerking"];
+                string opmerking = (string)reader[keuzeOpmerking];
 
                 //Onderzoeken wrm dit niet werkt
 

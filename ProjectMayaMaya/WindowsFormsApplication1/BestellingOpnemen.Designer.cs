@@ -225,6 +225,7 @@
             this.checkbox_keuken.TabIndex = 104;
             this.checkbox_keuken.Text = "Voor keuken";
             this.checkbox_keuken.UseVisualStyleBackColor = true;
+
             // 
             // checkbox_bar
             // 
