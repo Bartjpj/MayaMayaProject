@@ -137,9 +137,11 @@
             // lbl_subtotaalgetal
             // 
             this.lbl_subtotaalgetal.AutoSize = true;
+            this.lbl_subtotaalgetal.Font = new System.Drawing.Font("Calibri", 9F);
+            this.lbl_subtotaalgetal.ForeColor = System.Drawing.SystemColors.Info;
             this.lbl_subtotaalgetal.Location = new System.Drawing.Point(441, 480);
             this.lbl_subtotaalgetal.Name = "lbl_subtotaalgetal";
-            this.lbl_subtotaalgetal.Size = new System.Drawing.Size(0, 13);
+            this.lbl_subtotaalgetal.Size = new System.Drawing.Size(0, 14);
             this.lbl_subtotaalgetal.TabIndex = 10;
             // 
             // lbl_incbtwgetal
@@ -153,17 +155,21 @@
             // lbl_btwhooggetal
             // 
             this.lbl_btwhooggetal.AutoSize = true;
+            this.lbl_btwhooggetal.Font = new System.Drawing.Font("Calibri", 9F);
+            this.lbl_btwhooggetal.ForeColor = System.Drawing.SystemColors.Info;
             this.lbl_btwhooggetal.Location = new System.Drawing.Point(441, 402);
             this.lbl_btwhooggetal.Name = "lbl_btwhooggetal";
-            this.lbl_btwhooggetal.Size = new System.Drawing.Size(0, 13);
+            this.lbl_btwhooggetal.Size = new System.Drawing.Size(0, 14);
             this.lbl_btwhooggetal.TabIndex = 13;
             // 
             // lbl_btwlaaggetal
             // 
             this.lbl_btwlaaggetal.AutoSize = true;
+            this.lbl_btwlaaggetal.Font = new System.Drawing.Font("Calibri", 9F);
+            this.lbl_btwlaaggetal.ForeColor = System.Drawing.SystemColors.Info;
             this.lbl_btwlaaggetal.Location = new System.Drawing.Point(441, 422);
             this.lbl_btwlaaggetal.Name = "lbl_btwlaaggetal";
-            this.lbl_btwlaaggetal.Size = new System.Drawing.Size(0, 13);
+            this.lbl_btwlaaggetal.Size = new System.Drawing.Size(0, 14);
             this.lbl_btwlaaggetal.TabIndex = 14;
             // 
             // BTN_AFREKENENnaarTAFELOVERZICHT
@@ -291,17 +297,21 @@
             // lbl_totaalBTW
             // 
             this.lbl_totaalBTW.AutoSize = true;
+            this.lbl_totaalBTW.Font = new System.Drawing.Font("Calibri", 9F);
+            this.lbl_totaalBTW.ForeColor = System.Drawing.SystemColors.Info;
             this.lbl_totaalBTW.Location = new System.Drawing.Point(441, 452);
             this.lbl_totaalBTW.Name = "lbl_totaalBTW";
-            this.lbl_totaalBTW.Size = new System.Drawing.Size(0, 13);
+            this.lbl_totaalBTW.Size = new System.Drawing.Size(0, 14);
             this.lbl_totaalBTW.TabIndex = 91;
             // 
             // lbl_totaal
             // 
             this.lbl_totaal.AutoSize = true;
+            this.lbl_totaal.Font = new System.Drawing.Font("Calibri", 9F);
+            this.lbl_totaal.ForeColor = System.Drawing.SystemColors.Info;
             this.lbl_totaal.Location = new System.Drawing.Point(441, 480);
             this.lbl_totaal.Name = "lbl_totaal";
-            this.lbl_totaal.Size = new System.Drawing.Size(0, 13);
+            this.lbl_totaal.Size = new System.Drawing.Size(0, 14);
             this.lbl_totaal.TabIndex = 93;
             // 
             // txt_Opmerking
