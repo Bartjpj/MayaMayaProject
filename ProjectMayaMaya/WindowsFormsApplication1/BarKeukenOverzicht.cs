@@ -62,13 +62,13 @@ namespace WindowsFormsApplication1
 
         private void btn_BARnaarHM_Click(object sender, EventArgs e)
         {
-          
-            HoofdMenu TerugNaarHoofdmenu = new HoofdMenu();
-            
-            TerugNaarHoofdmenu.Show();
-            TerugNaarHoofdmenu.Left = this.Left; // geeft de grote aan van deze form voor het te openen form
-            TerugNaarHoofdmenu.Top = this.Top;
-            TerugNaarHoofdmenu.Size = this.Size;
+
+            InlogSchermBediening TerugNaarInlogscherm = new InlogSchermBediening();
+
+            TerugNaarInlogscherm.Show();
+            TerugNaarInlogscherm.Left = this.Left; // geeft de grote aan van deze form voor het te openen form
+            TerugNaarInlogscherm.Top = this.Top;
+            TerugNaarInlogscherm.Size = this.Size;
             this.Hide();
         }
         
