@@ -18,6 +18,7 @@ namespace WindowsFormsApplication1
         List<MenuItem> bestellingslijst = new List<MenuItem>();
         private int tafelNr;
         private bool barView;
+        int i = 0;
        
         protected override void OnLoad(EventArgs e) // is de verwijzing, niets veranderen AUB 
         {
@@ -53,10 +54,16 @@ namespace WindowsFormsApplication1
             // ... moet de parameter tafelNr meegeven aan de Dao zodat een query gemaakt kan worden om deze specifieke tafel op te halen
             listView1.Items.Clear();
 
-            List<MenuItem> items = bestellingenDAO.haalBestellingTafel(tafelNr, barView); // parameter wordt hier meegegeven aan Dao zodat er per tafel de bestellingen opgehaald kunnen worden.
+            List<MenuItem> items = bestellingenDAO.haalBestellingTafel(tafelNr, barView);
+           // parameter wordt hier meegegeven aan Dao zodat er per tafel de bestellingen opgehaald kunnen worden.
+            i = 0;
             foreach (MenuItem barKeukenOverzicht in items)
             {
-                voegListViewItemsToe(barKeukenOverzicht); // het barOverzicht object wordt hier aan de methode voegListVietItemsToe meegegeven zodat de items in de listview kunnen komen.
+               
+                voegListViewItemsToe(barKeukenOverzicht,i);// het barOverzicht object wordt hier aan de methode voegListVietItemsToe meegegeven zodat de items in de listview kunnen komen.
+
+                i++;
+            
             }
         }
 
@@ -73,7 +80,7 @@ namespace WindowsFormsApplication1
         }
         
 
-        private void voegListViewItemsToe(MenuItem menuItem)
+        private void voegListViewItemsToe(MenuItem menuItem, int i)
         {
           
             
@@ -81,16 +88,25 @@ namespace WindowsFormsApplication1
             lijstItem.SubItems.Add(menuItem.naam.ToString());
             lijstItem.SubItems.Add(menuItem.aantal.ToString());
             lijstItem.SubItems.Add(menuItem.datum_tijd.ToString());
-            lijstItem.SubItems.Add(menuItem.opmerking);
+            if (i == 0)
+            {
+                lijstItem.SubItems.Add(menuItem.opmerking);
+            }
+            else
+            {
+                lijstItem.SubItems.Add("");
+            }
             listView1.Items.Add(lijstItem);
         } // methode om listviewItems toe te voegen 
        
         private void DisplayBestellingen()
         {
             listView1.Items.Clear();
+            i = 0;
             foreach (MenuItem barKeukenOverzicht in this.bestellingslijst)
             {
-                voegListViewItemsToe(barKeukenOverzicht);
+                voegListViewItemsToe(barKeukenOverzicht,i);
+                i++;
 
             }
             createTafels();
@@ -143,11 +159,13 @@ namespace WindowsFormsApplication1
         {
 
             listView1.Items.Clear();
-
+            i = 0;
             foreach (MenuItem barKeukenOverzicht in bestellingenDAO.haalMenuItems(barView, false))
             {
-                voegListViewItemsToe(barKeukenOverzicht);
+                voegListViewItemsToe(barKeukenOverzicht, i);
+                i++;
             }
+           
         }
 
         private void BarOverzicht_Load(object sender, EventArgs e)
