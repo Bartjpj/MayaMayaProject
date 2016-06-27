@@ -32,8 +32,17 @@ namespace WindowsFormsApplication1
 
         private int txt_PersoneelsID_TextChanged(object sender, EventArgs e)
         {
-                int inlogCode = Convert.ToInt32(txt_PersoneelsID.Text); // invoer inlogcode voor een personeelslid 
-                return inlogCode; //geef inlogcode terug aan inlogbutton. Vanuit de button wordt de authenticatie geregeld.
+            int juisteInlogCode;
+                bool inlogCode = Int32.TryParse(txt_PersoneelsID.Text, out juisteInlogCode); // invoer inlogcode voor een personeelslid 
+                if (inlogCode)
+                {
+                    return juisteInlogCode; //geef inlogcode terug aan inlogbutton. Vanuit de button wordt de authenticatie geregeld.
+                }
+                else
+                {
+                    return 0;
+                }
+            
         }
 
         private void txt_PersoneelsID_KeyPress(object sender, KeyPressEventArgs e)
