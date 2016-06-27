@@ -240,6 +240,7 @@
             // 
             // txt_fooi
             // 
+            this.txt_fooi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(246)))), ((int)(((byte)(235)))));
             this.txt_fooi.Location = new System.Drawing.Point(431, 372);
             this.txt_fooi.Name = "txt_fooi";
             this.txt_fooi.Size = new System.Drawing.Size(61, 20);
@@ -316,6 +317,7 @@
             // 
             // txt_Opmerking
             // 
+            this.txt_Opmerking.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(246)))), ((int)(((byte)(235)))));
             this.txt_Opmerking.Location = new System.Drawing.Point(431, 344);
             this.txt_Opmerking.Name = "txt_Opmerking";
             this.txt_Opmerking.Size = new System.Drawing.Size(332, 20);

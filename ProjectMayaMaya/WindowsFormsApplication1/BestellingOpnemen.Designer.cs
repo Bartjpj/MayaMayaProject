@@ -197,6 +197,7 @@
             // 
             // txt_opmerking
             // 
+            this.txt_opmerking.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(246)))), ((int)(((byte)(235)))));
             this.txt_opmerking.Location = new System.Drawing.Point(193, 475);
             this.txt_opmerking.Multiline = true;
             this.txt_opmerking.Name = "txt_opmerking";
@@ -225,7 +226,6 @@
             this.checkbox_keuken.TabIndex = 104;
             this.checkbox_keuken.Text = "Voor keuken";
             this.checkbox_keuken.UseVisualStyleBackColor = true;
-
             // 
             // checkbox_bar
             // 
