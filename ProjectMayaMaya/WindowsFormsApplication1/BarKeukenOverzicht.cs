@@ -123,7 +123,8 @@ namespace WindowsFormsApplication1
                     listView1.Items[i].Remove();
                 }
             }
-            bestellingenDAO.updateTafelsGereed(tafelNr,barView); // update tafel in dao
+            // update tafel in dao
+            bestellingenDAO.updateTafelsGereed(tafelNr,barView); 
             bestellingslijst = bestellingenDAO.haalMenuItems(barView, true); // vul de bestelling lijst opnieuw
             DisplayBestellingen(); // laat bestelling weer zien
 
@@ -131,8 +132,8 @@ namespace WindowsFormsApplication1
 
         private void btn_refresh_Click(object sender, EventArgs e) // refresh button, hier wordt de hele lijst van openstaande bestellingen voor de bar opgehaald uit de database. Deze worden vervolgens in de listview gezet.
         {
-         
-            bestellingslijst = bestellingenDAO.haalMenuItems(barView, true); // vul de bestelling lijst opnieuw
+            // vul de bestelling lijst opnieuw
+            bestellingslijst = bestellingenDAO.haalMenuItems(barView, true); 
             DisplayBestellingen(); // laat bestelling weer zien
         }
  
